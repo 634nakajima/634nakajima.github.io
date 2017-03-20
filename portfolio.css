@@ -18,7 +18,7 @@ body {
 }
  
 h1.titleLogo {
-  padding-top:100px;
+  padding-top:50px;
   color:#003366;
   text-align:center;
   font-family: Logo;
@@ -80,8 +80,8 @@ h1.titleLogo {
 ------------------------- */
 
 .featurette-divider {
-  margin: 70px 0; /* Space out the Bootstrap <hr> more */
-  margin-bottom:70px;
+  margin: 50px 0; /* Space out the Bootstrap <hr> more */
+  margin-bottom:50px;
 }
 
 /* Thin out the marketing headings */
@@ -97,7 +97,12 @@ h1.titleLogo {
 }
 
 .about {
+  padding-top:20px;
   padding-bottom:20px;
+}
+
+.bottom {
+  padding-bottom:50px;
 }
 
 #page-top {
@@ -127,7 +132,7 @@ h1.titleLogo {
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .navbar-wrapper .container {
     padding-right: 15px;
@@ -142,17 +147,15 @@ h1.titleLogo {
   .navbar-wrapper .navbar {
     border-radius: 4px;
   }
-  .featurette-heading {
-    font-size: 50px;
-  }
+
   h1.titleLogo {
-  padding-top:50px;
+  padding-top:0px;
   color:#003366;
   text-align:center;
   font-family: Logo;
   }
   .top {
-    padding-top: 0px;
+    padding-top: 100px;
   }
   .box{
     height:360px;
@@ -164,8 +167,11 @@ h1.titleLogo {
     font-size:16px;
   }
   .about {
-  padding-bottom:20px;
-}
+    padding-bottom:20px;
+  }
+  .bottom {
+    padding-bottom:0px;
+  }
   #page-top {
     bottom: 20px;
     right: 20px;
