@@ -145,6 +145,12 @@ h1.titleLogo {
   .featurette-heading {
     font-size: 50px;
   }
+  h1.titleLogo {
+  padding-top:50px;
+  color:#003366;
+  text-align:center;
+  font-family: Logo;
+  }
   .top {
     padding-top: 0px;
   }
@@ -157,6 +163,9 @@ h1.titleLogo {
   .mytext {
     font-size:16px;
   }
+  .about {
+  padding-bottom:20px;
+}
   #page-top {
     bottom: 20px;
     right: 20px;
