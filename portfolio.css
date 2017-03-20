@@ -96,6 +96,10 @@ h1.titleLogo {
   font-size:14px;
 }
 
+.about {
+  padding-bottom:20px;
+}
+
 #page-top {
     position: fixed;
     bottom: 30px;
