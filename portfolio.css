@@ -18,7 +18,7 @@ body {
 }
  
 h1.titleLogo {
-  font-size:6em;
+  font-size:4em;
   padding-top:50px;
   color:#103099;
   text-align:center;
@@ -150,6 +150,7 @@ h1.titleLogo {
   }
 
   h1.titleLogo {
+  font-size:6em;
   padding-top:0px;
   color:#103080;
   text-align:center;
