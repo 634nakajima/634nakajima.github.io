@@ -1,0 +1,2608 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+    <!-- SEO -->
+    <title>クロスモーダル効果の基礎と製品開発への応用</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p><a href="#slide=10" title="目次へ戻る">目次へ戻る</a></p>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides" class="horizontal">
+
+        <!-- 10:30 ~ 12:00（クロスモーダル効果とは）-->
+        <!-- 1 表紙 -->
+        <section class="bg-black-blue aligncenter">
+          <span class="background dark"
+                style="background-image:url('https://source.unsplash.com/3eAByt3-eOw/')">
+          </span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1 class="text-landing"><strong>クロスモーダル効果の基礎と<br>製品開発への応用</strong></h1>
+            <hr>
+            <p class="text-intro">
+              東京工芸大学芸術学部インタラクティブメディア学科<br>
+              中島 武三志
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <!-- 2 自己紹介 -->
+        <section>
+                  <div class="wrap">
+                    <h2 class="text-landing aligncenter"><strong>自己紹介</strong></h2>
+                    <hr>
+                    <div class="grid ms">
+                      <div class="column">
+                          <ul class="description">
+                            <li><span class="text-label">氏名:</span><br>中島 武三志</li>
+                            <li><span class="text-label">年齢:</span><br>31</li>
+                            <li><span class="text-label">略歴:</span><br>
+                              2013年　早稲田大学　基幹理工学部表現工学科　助手<br>
+                              2016年　早稲田大学大学院　基幹理工学研究科博士後期課程　単位取得後退学<br>
+                              2017年　東京工芸大学　芸術学部インタラクティブメディア学科　助教<br>
+                              2018年　学位取得　博士（工学）</li>
+                            <li><span class="text-label">研究分野:</span><br>感性情報学、認知心理学、バーチャルリアリティ、HCI　...</li>
+                          </ul>
+                      </div>
+                      <div class="column">
+                        <img class="aligncenter" src="./static/images/musashi.jpg" alt="Musashi">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+        <!-- 3 作品紹介 DropNotes -->
+        <section class="fullscreen">
+          <div class="card-50">
+            <div class="flex-content">
+              <p class="text-context">作品紹介</p>
+              <div class="aligncenter">
+                <h2>DropNotes</h2>
+                <p class="text-intro">
+                  色水に音を吹き込み、スポイトで水滴を<br>
+                  滴下して、音楽を制作する作品。
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="./static/images/Dropping.jpg" alt="DropNotes">
+            </figure>
+          </div>
+        </section>
+        <!-- 4 作品動画 DropNotes -->
+        <section class="fullscreen">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/LnDPDzOzDL0?playsinline=1?rel=0" allowfullscreen></iframe>
+          </div>
+        </section>
+        <!-- 5 作品紹介 ドーナツ -->
+        <section class="fullscreen">
+          <div class="card-50">
+            <div class="flex-content">
+              <p class="text-context">作品紹介</p>
+              <div class="aligncenter">
+                <h2>ドーナツの穴を聞く</h2>
+                <p class="text-intro">
+                  ドーナツに穴を開けると、静寂が訪れる<br>
+                  インタラクティブサウンドアート。
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="./static/images/Donuts.jpg" alt="Donuts">
+            </figure>
+          </div>
+        </section>
+        <!-- 6 作品動画 DropNotes -->
+        <section class="fullscreen">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/Hz-NWGlxqCg?rel=0" allowfullscreen></iframe>
+          </div>
+        </section>
+        <!-- 7 作品紹介 ユビキテル -->
+        <section class="fullscreen">
+          <div class="card-50">
+            <div class="flex-content">
+              <p class="text-context">作品紹介</p>
+              <div class="aligncenter">
+                <h2>ユビキテル</h2>
+                <p class="text-intro">
+                  人の意思を映し出す、指形のリズム楽器。
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="./static/images/Ubiquitels.png" alt="Ubiquitels">
+            </figure>
+          </div>
+        </section>
+        <!-- 8 作品動画 ユビキテル -->
+        <section class="fullscreen">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/iiwg8s8P1Zc?rel=0" allowfullscreen></iframe>
+          </div>
+        </section>
+        <!-- 9 アイコンの説明 -->
+        <section>
+                  <div class="wrap aligncenter">
+                    <h2 class="text-landing"><strong>アイコンの説明</strong></h2>
+                    <hr>
+                    <h5>このスライドでは、以下のアイコンを使用しています。</h5><br>
+                      <ul class="flexblock specs aligncenter size-50">
+                        <li>
+                          <div>
+                            <svg class="fa-key">
+                              <use xlink:href="#fa-key"></use>
+                            </svg>
+                            <p class="alignjustify">
+                              このアイコンは、重要なキーワードや専門用語を<br>示しています。
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <svg class="fa-info">
+                              <use xlink:href="#fa-info"></use>
+                            </svg>
+                            <p class="alignjustify">
+                              このアイコンは、様々な補足情報を示しています。
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <svg class="fa-question">
+                              <use xlink:href="#fa-question"></use>
+                            </svg>
+                            <p class="alignjustify">
+                              このアイコンは、質問や問題を示しています。
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+                </section>
+        <!-- 10 目次 -->
+        <section>
+          <div class="wrap aligncenter size-60">
+            <h2><strong>目次</strong></h2>
+            <hr>
+            <ol class="text-cols">
+              <h5><li><a href="#slide=11">クロスモーダル効果とは</a></li></h5>
+                <br>
+                <ol>
+                  <li><a href="#slide=12">生活と密接に関わるクロスモーダル効果</a></li>
+                  <li><a href="#slide=17">視-聴覚間クロスモーダル効果</a></li>
+                  <li><a href="#slide=21">視-触覚間クロスモーダル効果</a></li>
+                  <li><a href="#slide=25">その他のクロスモーダル効果</a></li>
+                </ol>
+                <br>
+              <h5><li><a href="#slide=28">感覚・知覚の基礎</a></li></h5>
+              <br>
+              <ol>
+                <li><a href="#slide=29">視覚</a></li>
+                <li><a href="#slide=38">聴覚</a></li>
+                <li><a href="#slide=41">体性感覚</a></li>
+                <li><a href="#slide=42">嗅覚・味覚</a></li>
+                <li><a href="#slide=44">多感覚統合</a></li>
+                <li><a href="#slide=45">身体性認知</a></li>
+              </ol>
+              <h5><li><a href="#slide=47">五感情報を伝えるメディア技術</a></li></h5>
+              <br>
+              <ol>
+                <li><a href="#slide=48">視覚情報を伝えるインタフェース</a></li>
+                <li><a href="#slide=51">聴覚情報を伝えるインタフェース</a></li>
+                <li><a href="#slide=53">体性感覚情報を伝えるインタフェース</a></li>
+                <li><a href="#slide=56">マルチモーダルインタフェース</a></li>
+              </ol>
+              <br>
+              <h5><li><a href="#slide=60">クロスモーダル効果の応用</a></li></h5>
+              <br>
+              <ol>
+                <li><a href="#slide=61">心を豊かにする五感情報技術</a></li>
+                <li><a href="#slide=62">食品、医療・福祉への応用</a></li>
+                <li><a href="#slide=66">アート・エンタテインメントへの応用</a></li>
+                <li><a href="#slide=70">クロスモーダル効果の定量評価</a></li>
+              </ol>
+              <br>
+              <h5><li><a href="#slide=72">まとめ</a></li></h5>
+            </ol>
+          </div>
+        </section>
+        <!-- 11 １章扉ページ -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2 class="text-landing"><strong>クロスモーダル効果とは</strong></h2>
+            <hr>
+            <ol class="size-30 aligncenter">
+              <li>生活と密接に関わるクロスモーダル効果</li>
+              <li>視-聴覚間クロスモーダル効果</li>
+              <li>視-触覚間クロスモーダル効果</li>
+              <li>その他のクロスモーダル効果</li>
+            </ol>
+          </div>
+        </section>
+        <!-- 12 身近なクロスモーダル効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.1. 生活と密接に関わるクロスモーダル効果</p>
+            <h2>クロスモーダル効果とは、<br>五感の相互作用による様々な知覚現象。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/shaved_ice.jpg" alt="shaved_ice">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        クロスモーダル効果は、私たちの生活のいたるところに潜んでおり、
+                        知らず知らずのうちにその影響を受けています。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        かき氷のシロップは、着色料や香料が違うだけで味は全て同じと言われています。
+                        イチゴ味やメロン味など、私たちの味覚は色に騙されてしまいます。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        最近登場した透明な飲料水は、すっきりとした味わいが特徴です。
+                        こうした味の感じ方は、見た目の効果が大きいと考えられます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 13 ベクション -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.1. 生活と密接に関わるクロスモーダル効果</p>
+            <h2>電車に乗っているとき、隣の電車が動いて<br>いるのに自分が動いている様に錯覚する。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/An4Phd2drlM/" alt="train">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          実際は静止している人間が、視覚情報によって運動しているかのような感覚が生じる現象は、
+                          視覚誘導性自己運動知覚（ベクション）と呼ばれています。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        上記の例は「列車の錯覚」などと呼ばれ、私たちが身近に体験できるベクションの代表例です。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        ベクションが生じる要因として視野の広さが重要であり、視角30°以上が必要と言われています。
+                        また、視野の中心よりも周辺視で運動のあった方が、ベクションが生じやすいことが分かっています。
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 14 オノマトペ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.1. 生活と密接に関わるクロスモーダル効果</p>
+            <h2>五感で感じられる主観的な体験は、<br>オノマトペを通じて的確に表現されている。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/onom.png" alt="onomatope">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        五感で感じられる主観的体験は、なかなか他者と共有しにくいものです。
+                        こうした体験を直接的に言語化するものが擬音語・擬態語（オノマトペ）です。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        オノマトペは①非冗長性、②否定文との相性の悪さの点で、普通の言葉と明らかに異なっており、
+                        抽象的で論理的な文章よりも、直接的で原体験に近い情報を伝えようとしているのが特徴です（喜多、2002）。<br>
+                      </p>
+                      <div>
+                        <svg class="fa-circle-o">
+                          <use xlink:href="#fa-circle-o"></use>
+                        </svg>
+                        <p class="alignjustify">
+                          太郎はスタスタと早歩きをした。<br>
+                          あの石はコロコロと転がった。
+                        </p>
+                        <svg class="fa-ban">
+                          <use xlink:href="#fa-ban"></use>
+                        </svg>
+                        <p class="alignjustify">
+                          太郎は急ぎ足で早歩きをした。<br>
+                          あの石はコロコロと転がらなかった。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 15 ブーバ・キキ効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.1. 生活と密接に関わるクロスモーダル効果</p>
+            <h2>図形の印象から連想される言葉の響きには、<br>人類共通の傾向がある。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Booba-Kiki.svg" alt="boubakiki">
+                <a class="aligncenter" href="https://upload.wikimedia.org/wikipedia/commons/e/e7/Booba-Kiki.svg" target="_blank">
+                  Wikimedia Commons<br>
+                  File:Booba-Kiki.svg<br>
+                  CC BY-SA 3.0
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        左画像内の左右の図形のうち、片方が「ブーバ」で、もう片方が「キキ」という名だとしたら、
+                        どちらが「ブーバ」でどちらが「キキ」だと思いますか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        このような、図形の印象から連想される言葉の響きの密接な関係は
+                        「ブーバ・キキ効果」と呼ばれています。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        一般的に、音から連想される概念は文化や言語によって異なりますが、
+                        この「ブーバ・キキ効果」は文化や言語を超えて共通に見られることが知られています。
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 16 ディスカッション１　クロスモーダル探し -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.1. 生活と密接に関わるクロスモーダル効果</p>
+            <h2>ディスカッション１</h2><h4>私たちの身近にあるクロスモーダル効果を探してみましょう。</h4>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/crossmodality.png" alt="furin">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          例えば、「風鈴の音を聞くと涼しげな雰囲気がする」といった感じで、
+                          思いつくクロスモーダル効果を列挙してみましょう。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          その効果が立証されていなくても、“気がする”程度で構いません。なるべく多く見つけてください。
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 視-聴覚間クロスモーダル効果 -->
+        <!-- 17 共感覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.2. 視-聴覚間クロスモーダル効果</p>
+            <h2>文字や音階に色がついて見える人がいる。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="../static/images/color_sound.png" alt="iPhone">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        音を聴くと色が見えたり、文字に色がついて見えるなど、本来の感覚とは別の感覚刺激を知覚する現象は
+                        「共感覚」と呼ばれています。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        共感覚保持者は200〜25,000人に一人程度で、女性や芸術家に多いと言われています（行場、2007）。
+                      </p>
+                      </h4>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        何となく色を連想するという程度ではなく、
+                        とても強固で自動的なものだということが報告されています（和田、2010）。
+                      </p>
+                      </h4>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 18 マガーク効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.2. 視-聴覚間クロスモーダル効果</p>
+            <h2>人間の耳は、口元の動きに騙される。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/Fke7GWcT5ko?rel=0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        左の映像の男性は何と言っているでしょうか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        本来の口元の動きとは異なる映像と組み合わされた音声を聴くと、
+                        視覚情報に影響を受けて違う発音に知覚される現象が知られており、マガーク効果と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        私たちは耳だけで音を聞いているのではなく、視覚から得られる情報も
+                        重要な手がかりとなっています。
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 19 腹話術師効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.2. 視-聴覚間クロスモーダル効果</p>
+            <h2>腹話術師の声は、人形の口から聞こえてしまう。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/C5IsyLBojuk?rel=0"></iframe>
+                </div>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        二つの単語が重なった音声が流れます。
+                        映像なしと映像ありで、どちらが聞き取りやすいですか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        本来なら腹話術師の口から音が聞こえるはずなのに、人形が口を動かしていると
+                        そこから声が聴こえるように感じられます。これは「腹話術師効果」と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        これは、聴覚よりも視覚の方が空間知覚において信頼性が高いという
+                        ヒューリスティックな知覚特性によって生じるものと考えられています。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 20 交差・反発錯覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.2. 視-聴覚間クロスモーダル効果</p>
+            <h2>聴覚につられて目が騙されることもある。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <video src="./static/images/交差・反発.mp4" controls></video>
+                </div>
+                <br>
+                <a class="aligncenter" href="http://www.kecl.ntt.co.jp/IllusionForum/a/streamOrBounce/ja/index.html" target="_blank">
+                  イリュージョンフォーラム<br>NTTコミュニケーション科学基礎研究所
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        二つの四角が動いている映像が流れます。
+                        交差して見えるでしょうか？それとも衝突して見えるでしょうか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        左の映像の前半は、二つの四角が交差して見える場合が多いですが、
+                        後半では衝突して見えやすくなります。
+                        これは「交差ー反発錯覚」と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        視覚情報の曖昧な部分が、聴覚情報によって補完されていることを示しています。
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 視-触覚間クロスモーダル効果 -->
+        <!-- 20 シャルパンティエ効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.3. 視-触覚間クロスモーダル効果</p>
+            <h2>見た目が大きいと、重く感じる。</h2>
+            <div class="grid sm">
+              <div class="column">
+                  <img class="aligncenter" src="https://source.unsplash.com/qfjuh4OLdxw/" alt="bench press">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        この錯覚は「シャルパンティエ効果」と呼ばれ、
+                        視覚情報が重さの知覚にも影響を及ぼしていることを示唆しています。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        この錯覚は見た目の大きさだけでなく、物体の明度の違いによっても印象が変化し、
+                        知覚される重さに影響を与えることが知られています（Peter、2010）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 21 ラバーハンド錯覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.3. 視-触覚間クロスモーダル効果</p>
+            <h2>ゴムの手が自分の手であるように<br>錯覚する現象がある。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/XXo211NOOy8?rel=0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        ゴムの手を自分の手のに見える位置に置き、ゴムの手と自分の手を同時に撫で続けられると、
+                        ゴムの手だけを撫でたときに自分の手が撫でられたように感じる錯覚があります。
+                        この錯覚は「ラバーハンド錯覚」と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        この錯覚はすぐには生じず、一定の刺激提示時間を要するので（約2～20分）、
+                        錯覚の中でも学習の要素に大きく依存する現象と考えられています（本間、2010）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 22 Pseudo-Haptics -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.3. 視-触覚間クロスモーダル効果</p>
+            <h2>マウスカーソルの動きに抵抗を感じてしまう。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/MVJ-TPrRp8w?rel=0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <p class="aligncenter">Watabnabe, 2013</p>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        自分の身体動作に連動して動く物体（マウスカーソルなど）の動きを変化させると、
+                        手触りや抵抗を感じる現象が知られています。
+                        この感覚は「擬似触覚（Pseudo-Haptics、スード・ハプティクス）」と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        実際に触覚を提示する機械装置とは異なり、錯覚だけで触覚を感じさせられるため、
+                        手間やコストの少ない新たな触覚提示デバイスに応用されています。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 23 微触感錯覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.3. 視-触覚間クロスモーダル効果</p>
+            <h2>スマートグラスで手のひらに仮想の球を表示すると、<br>微かに触れている感じがする。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/morikawa.png" alt="morikawa">
+                <p class="aligncenter">盛川、2013</p>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        身体部位上にスマートグラスなどで仮想物体を表示し、
+                        身体と仮想物体が接触するように表現することで
+                        微弱な触感が生じることが報告されています。
+                        この錯覚は「微触感錯覚」と名付けられています（盛川、2013）。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        微触感錯覚は、身体の運動を伴わない受動的な接触の方が錯覚が生起されやすく、
+                        「冷たさ」や「暖かさ」、「風が当たるような」感覚が生じるようです。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- その他のクロスモーダル効果 -->
+        <!-- 24 色に騙されるワインの味 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.4. その他のクロスモーダル効果</p>
+            <h2>ワインの香りも、色に騙される。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/p1WB-F_p_Vk" alt="wine">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        フランスのボルドー大学ワイン醸造学科の学生に、
+                        赤い着色料で着色された白ワインの香りを評価させると、
+                        赤ワインに使われる典型的な言葉で形容し、
+                        白ワインに用いられる表現は使われなかったそうです（Morrot et al, 2001）。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        これは、たとえ専門的な訓練を受けた人間であっても、
+                        視覚の影響を除外することが困難であることを意味しています。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 25 ポテチのパリパリ感 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">1.4. その他のクロスモーダル効果</p>
+            <h2>ポテチの食感は、音に騙される。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/potatochips.jpg" alt="potatochips">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        ポテトチップスを食べる時の音をマイクで集音し、
+                        音量をあげてヘッドホンから再生すると、
+                        知覚されるパリパリ感が上昇することが知られています（Zampini et al, 2004）。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        他にも、ポテトチップスの咀嚼音を約0.1秒遅らせてヘッドホンから再生すると、
+                        ポテトチップスのザクザク感が上昇することも分かっています（中島、2016）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 26 ディスカッション２　１章のまとめ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">まとめ</p>
+            <h2>ディスカッション２</h2><h4>一番印象深かったクロスモーダル効果について話し合ってみましょう。</h4>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/crossmodality.png" alt="crossmodality">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          １章では、私たちの身近なクロスモーダル効果の紹介から始まり、
+                          視ー聴覚間、視ー触覚間、その他のクロスモーダル効果を示す様々な知覚現象を概説しました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-quetion">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          私たちの知覚は、とても不思議な性質を持っていることが分かりました。どの効果が一番印象深かったでしょうか？
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--27 ２章扉ページ -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2 class="text-landing"><strong>感覚・知覚の基礎</strong></h2>
+            <hr>
+            <ol class="size-20 aligncenter">
+              <li>視覚</li>
+              <li>聴覚</li>
+              <li>体性感覚</li>
+              <li>嗅覚・味覚</li>
+              <li>多感覚統合</li>
+              <li>身体性認知</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 13:00 ~ 14:20（知覚・感覚の基礎） -->
+        <!-- 視覚 -->
+        <!-- 29 色覚、錐体 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>人間は網膜にある３つの色センサで色を見分ける。</h2>
+            <div class="grid">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Cone-response-en.png" alt="potatochips">
+                <a class="aligncenter" href="https://upload.wikimedia.org/wikipedia/commons/2/2a/Cone-response-en.png" target="_blank">
+                  Wikimedia Commons<br>
+                  File:Cone-response-en.png<br>
+                  CC BY-SA 3.0
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        人間の網膜には、錐体と呼ばれる色を識別する視細胞が存在します。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        錐体は光の波長に対する感度ピークが異なる3種類に分けられ、
+                        それぞれL錐体、M錐体、S錐体と呼ばれます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 30 色の恒常性 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>環境が変わっても、同じ色は同じ色に見える。</h2>
+            <div class="grid">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/kitaoka.png" alt="potatochips">
+                <a class="aligncenter" href="http://www.psy.ritsumei.ac.jp/~akitaoka/colorconstancy.html" target="_blank">
+                  Kitaoka, 2009
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        図中の女性の左右の目の色は、どのように見えるでしょうか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        実は、左右の目の色はそれぞれ全く同じ色ですが、
+                        私たちは違う色として知覚してしまいます。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        環境が変わって光の物理的な波長や強度が変化しても、
+                        同じ色は同じ色に知覚される「色恒常性」に基づいた錯覚です。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 31 明るさ知覚、桿体 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>暗い場所では、網膜にある高感度の<br>明るさセンサで物を見る。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/5/52/Nightvision.jpg" alt="night vision">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        錐体が反応できない暗い場所では、桿体がはたらくことで
+                        幅広い明るさの変化に対応することができます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        桿体は色の見え方にほぼ関係ないため、
+                        暗闇では色の違いを見分けることが困難になります。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        視覚系は最適な明るさの感度を保つために、環境に合わせて感度を調節します。
+                        明るいところから暗いところに移った時は暗順応、その逆は明順応と呼ばれます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 32 明るさの恒常性 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>明るさが変わっても、<br>同じ物体の表面は同じ明るさに見える。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Checker_shadow_illusion.svg" alt="checkershadow">
+                <a class="aligncenter" href="https://upload.wikimedia.org/wikipedia/commons/b/be/Checker_shadow_illusion.svg" target="_blank">
+                  Wikipedia<br>
+                  originally published by Adelson<br>
+                  File:Checker shadow illusion.svg<br>
+                  CC BY-SA 4.0
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        左画像のAとBは違う色に見えませんか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        人間の目は違う明るさの環境でも同じ物体の表面は同じ明るさだと知覚します。
+                        これは「明度恒常性」と呼ばれます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 33 仮現運動 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>少しずつ位置をずらした絵を<br>続けて見ると、絵が動いて見える。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/parapara.png" alt="parapara">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        いわゆるパラパラ漫画の原理ですが、心理学では
+                        「古典的仮現運動」と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        2つの光点による最適な仮現運動を生み出す為の、刺激強度、両光点間の空間的隔たり、
+                        提示時間と点滅の間隔時間を合わせた時間に関する法則はコルテの法則と呼ばれています（Korte, 1915）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 34 バイオロジカルモーション -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>人間の関節についた光点だけで、<br>どんな動きか分かる。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/1F5ICP9SYLU?rel=0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        動画内の光点の動きは、何を表しているでしょうか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        人間の目は、光点の動きだけでそれが生物の動きだと知覚できます。
+                        これはバイオロジカルモーション知覚（BM知覚）と呼ばれています。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        光点が静止している状態ではBM知覚は生まれず、
+                        光点の全体的な動きを捉え、統合することでBM知覚が生じると考えられています（松嵜、2008）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 35 シミュラクラ現象 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>全く生き物じゃないのに、<br>生き物に見える。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/simulacra.jpg" alt="simulacra">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        左画像はコンセントですが、人の顔に見えませんか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        人間は、３つの点があると顔に見えてしまうという特性があります。
+                        これはシミュラクラ現象と呼ばれています。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 36 アニマシー知覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>全く生き物じゃないのに、<br>生き物に見える。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <br><br>
+                <div class="embed">
+                  <iframe src="https://www.youtube.com/embed/76p64j3H1Ng?rel=0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <p class="aligncenter">Heider & Simmel, 1944</p>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        左の動画は単に図形が動くだけですが、何か意味を感じませんか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        無生物の動きに生物性、社会性を見出してしまう現象は、
+                        アニマシー知覚と呼ばれています。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 37 サッチャー錯視 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.1. 視覚</p>
+            <h2>顔を逆さにすると、どんな顔かよく分からなくなる。</h2>
+            <div class="grid">
+              <div class="column">
+                <img id="thatcher" class="aligncenter" src="./static/images/thatcher.png" alt="thatcher">
+                <input class="aligncenter" type="button" value="上下反転" onclick="rotate(180);" style="width:100px;height:40px">
+                <p class="aligncenter">Thompson, 1980</p>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-question">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        左画像は逆さにしたサッチャー元英国首相の写真です。
+                        何か違和感を感じますか？
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        顔を逆さにすると、その顔の印象や人物の判断が難しくなる現象があります。
+                        これは「倒立効果」と呼ばれ、その代表例がこの「サッチャー錯視」です。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <script>
+            var d = 0;
+              function rotate(x){
+                var e = document.getElementById("thatcher");
+                d = d + x;
+                e.style.transform = "rotate(" + d + "deg)";
+              }
+          </script>
+        </section>
+        <!-- 聴覚 -->
+        <!-- 38 鼓膜→耳小骨→蝸牛→基底膜→聴神経 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.2. 聴覚</p>
+            <h2>耳の中は音の周波数分析装置になっている。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hearing_mechanics.jpg" alt="hearing">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        音が耳介に到達すると、外耳道を通って鼓膜が振動します。
+                        その後、耳小骨によって内耳の蝸牛へと振動が伝わります。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        さらに、蝸牛内の基底膜を伝って振動が奥へと進みます。
+                        高い音は入口付近、低い音は奥の基底膜を振動させます。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        基底膜の振動によって聴神経が発火し、聴覚中枢へと神経興奮が伝わります。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 39 カクテルパーティ効果 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.2. 聴覚</p>
+            <h2>騒がしいパーティ会場で、<br>自分の名前を呼ばれても気づける。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/fIHozNWfcvs" alt="party">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        人間の耳は、ある程度多くの音源の中からでも、特定の音源に注目して聞き分けられます。
+                        これは音声の「選択的聴取」と呼ばれています。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        ここで紹介したカクテルパーティ効果以外にも、
+                        オーケストラなどの演奏で、特定の楽器の旋律だけを聴き取ることができるのも同じ仕組みです。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 40 ミッシングファンダメンタル -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.2. 聴覚</p>
+            <h2>電話音声には、本来の声の高さと<br>同じ周波数の音は含まれていない。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/9blSF_Ay3MY" alt="telephone">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        音声や楽器の音は複合音と呼ばれ、複数の周波数の純音（音叉の音）が重ね合わさっています。
+                        一般的に、純音であれば周波数の高低と音の高さ感覚（ピッチ）の高低は一致し、
+                        複合音では基本周波数（一番低い周波数）とピッチが一致します。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        しかし、複合音の基本周波数を取り去り、それ以外の音（倍音）のみに加工しても、
+                        残った倍音の一番低い周波数の高さに聞こえず、失われたはずの基本周波数の高さとして聞こえます。
+                        この現象はミッシング・ファンダメンタルと呼ばれます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 先行音効果（今回は省略）-->
+        <!-- 41 体性感覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.3. 体性感覚</p>
+            <h2>体性感覚は、身体に直接触れるものや<br>身体そのものに関する感覚。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/ozN7sC1aGsk" alt="hand">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        体性感覚は、皮膚で感じる皮膚感覚と、奥の筋肉や腱、関節で感じる深部感覚に分類されます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        皮膚感覚は、適度な大きさの機械的刺激に反応する触覚と、
+                        皮膚温よりやや高い温度に反応する温覚、やや低い温度に反応する冷覚、
+                        さらに強い温度・機械的刺激に反応する痛覚に分類されます。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        深部感覚は、自分の身体の位置に関する位置覚と、
+                        身体の動きの方向や速さに関する運動覚、
+                        さらに抵抗に対して関節を保持する力に関する力覚に分類されます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 嗅覚・味覚 -->
+        <!-- 42 嗅覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.4. 嗅覚・味覚</p>
+            <h2>嗅覚のメカニズム</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Olfactory_system.svg" alt="nose">
+                <a class="aligncenter" href="https://upload.wikimedia.org/wikipedia/commons/2/20/Olfactory_system.svg" target="_blank">
+                  Chabacano<br>
+                  File:Olfactory system.svg<br>
+                  CC BY-SA 2.5
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        におい分子は鼻腔内の嗅上皮に到達すると、
+                        嗅細胞の先にあるにおい受容体と結合することで電気信号が発生します。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        その後、信号は嗅球へと伝わり、様々な処理を経てにおいとして認識されます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 43 味覚 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.4. 嗅覚・味覚</p>
+            <h2>味覚のメカニズム</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Taste_bud.svg" alt="taste bud">
+                <a class="aligncenter" href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Taste_bud.svg" target="_blank">
+                  NEUROtiker<br>
+                  File:Taste bud.svg<br>
+                  CC BY-SA 3.0
+                </a>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        甘味、塩味、酸味、苦味、旨味からなる味成分は、
+                        舌の上にある味蕾という味細胞の先端で受容体と結合します。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        その後、味情報は口腔内の場所に応じて鼓索神経、舌咽神経、大錐体神経という３つの味覚神経を介して脳に送られます。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 43 プルースト現象（後回し） -->
+        <!-- 多感覚統合 -->
+        <!-- 44 脳の共通部位が反応している -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.5. 多感覚統合</p>
+            <h2>感覚間の相互作用は、<br>脳機能イメージングによっても立証されている。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/brain.png" alt="brain">
+                <p class="aligncenter">Driver et al., 2008</p>
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        視覚刺激と聴覚刺激を同時に提示した時の脳の活性の強さが、それぞれを単体で提示した時の活性の強さを
+                        足し合わせた時よりも大きくなる（スーパーアディティブ活性）ことが報告されています（Gottfried & Dolan, 2003）。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        また、猿に聴覚刺激と触覚刺激を同時に与えたときの第二聴覚野の信号をfMRIで計測すると、
+                        聴覚刺激のみと比較して信号が強くなることが報告されています（Kayser et al., 2005）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 身体性認知 -->
+        <!-- 45 レストランのメニューブックとジェームズ・ランゲ説-->
+        <section>
+          <div class="wrap">
+            <p class="text-context">2.6. 身体性認知</p>
+            <h2>身体動作は人間の認知過程に<br>大きく影響を及ぼしている。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/smile.png" alt="smile">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        このような特性は身体性と呼ばれます。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p clas="alignjustify">
+                        身体性を示す例として、意図的に作った笑顔でも、
+                        感情を明るくできることが実証されています（Kleinke 2013）。
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        また、喫茶店で注文する品が決まったところでメニューを閉じると、
+                        閉じなかった場合よりも選んだ品に対する満足感が高まるそうです（Gu 2013）。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- アフォーダンス（後回し） -->
+        <!-- 46 ディスカッション３　２章のまとめ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">まとめ</p>
+            <h2>ディスカッション３</h2><h4>人間の感覚・知覚の不思議な性質について話し合ってみましょう。</h4>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/crossmodality.png" alt="crossmodality">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          ２章では、人間の感覚器官の仕組みについて概説しました。
+                          特に、人間の知覚は必ずしも物理世界を正確に写し取っているわけではないことをご紹介しました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-quetion">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          この不思議な性質の中で、最も印象に残ったものは何ですか？
+                          また、今回ご紹介しなかったもので、何かご存知ですか？
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 47 ３章扉ページ -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2 class="text-landing"><strong>五感情報を伝えるメディア技術</strong></h2>
+            <hr>
+            <ol class="size-30 aligncenter">
+              <li>視覚情報を伝えるインタフェース</li>
+              <li>聴覚情報を伝えるインタフェース</li>
+              <li>体性感覚情報を伝えるインタフェース</li>
+              <li>マルチモーダルインタフェース</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 14:30 ~ 15:50（五感情報を伝えるメディア技術） -->
+        <!-- 視覚情報を伝えるインタフェース -->
+        <!-- 48 一般的な視覚情報呈示インタフェース -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.1. 視覚情報を伝えるインタフェース</p>
+            <h2>一般的な視覚情報呈示インタフェース</h2>
+            <ul class="flexblock gallery">
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail" src="https://source.unsplash.com/iopITwyUcTA/800x600">
+                    <figcaption>
+                      <h2>液晶ディスプレイ</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail " src="https://source.unsplash.com/MAYsdoYpGuk/800x600">
+                    <figcaption>
+                      <h2>プロジェクタ</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail" src="https://source.unsplash.com/xGtHjC_QNJM/800x600">
+                    <figcaption>
+                      <h2>ヘッドマウントディスプレイ</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 49 MARIO -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.1. 視覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>MARIO（Kim, 2013）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      空中に投影されたキャラクターの下にブロックを置くと、
+                      ブロックの上を行ったり来たりするインタラクティブ空中映像ディスプレイです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/chK85xBu8AQ?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 50 Fairy Lights -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.1. 視覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>Fairy Lights in Femtoseconds（Ochiai et al., 2015）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      空中で発光するイラストに触れることのできる、
+                      触覚提示＆空中映像ディスプレイです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/AoWi10YVmfE?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 聴覚情報を伝えるインタフェース -->
+        <!-- 51 一般的な聴覚情報呈示インタフェース -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.2. 聴覚情報を伝えるインタフェース</p>
+            <h2>一般的な聴覚情報呈示インタフェース</h2>
+            <ul class="flexblock gallery">
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail" src="https://source.unsplash.com/YU-OA2TvQRQ/800x600">
+                    <figcaption>
+                      <h2>スピーカ</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail " src="https://source.unsplash.com/PvIz8BmuwDw/800x600">
+                    <figcaption>
+                      <h2>ヘッドホン</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img alt="Thumbnail" src="./static/images/main-speaker.png">
+                    <figcaption>
+                      <h2>超指向性スピーカー</h2>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 52 音響樽 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.2. 聴覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>音響樽（伊勢 他, 2012）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      96個のスピーカで物理的に忠実に音場を再現する、
+                      没入型聴覚ディスプレイです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <img src="http://acoust.sie.dendai.ac.jp/crest/wp-content/uploads/2015/10/SoundCask1.jpg" alt="sound cask">
+            </div>
+          </div>
+        </section>
+        <!-- 53 体性感覚情報を伝えるインタフェース -->
+        <!-- Touch USB -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.3. 体性感覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>Touch USB（3DSystems）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      仮想物体に触れて操作することを可能にした、
+                      ３次元触力覚呈示デバイスです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/C_rHAbJJggM?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 54 胎動共有システム -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.3. 体性感覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>胎動共有システム（小坂, 2015）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      11個のソレノイドで胎動を計測・呈示する、
+                      体性感覚ディスプレイです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/moP26cBv6uU?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 55 超音波触覚ディスプレイ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.3. 体性感覚情報を伝えるインタフェース</p>
+            <div class="content-left">
+              <h4>超音波による空中での触覚ディスプレイ（Long, et al., 2014）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      256個のパラメトリックスピーカアレイで空中に触覚を呈示する、
+                      体性感覚ディスプレイです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/uPnHzQ7qJ2Y?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- マルチモーダルインタフェース -->
+        <!-- 56 Sensorama -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.4. マルチモーダルインタフェース</p>
+            <div class="content-left">
+              <h4>Sensorama（Heilig, 1962）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      バイクに乗って走り回り映像だけでなくエンジン音や風、
+                      においも提示される元祖VR体感ゲームです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/veTmp1jCuKw?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 57 SIMVR -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.4. マルチモーダルインタフェース</p>
+            <div class="content-left">
+              <h4>SIMVR（Wizapply, 2016）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      VRコンテンツをよりリアルに楽しむための、
+                      あらゆる方向に回転するVRライドマシンです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/h-qyEJyAjtkY?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 58 霞鈴 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">3.4. マルチモーダルインタフェース</p>
+            <div class="content-left">
+              <h4>霞鈴 -Karin-（中島, 2016）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      霧の生成と結露による水の循環によって、
+                      実際の天気を“感じられる”ビオトープ作品です。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/9NQ8wuuYxVY?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 59 ディスカッション４　３章のまとめ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">まとめ</p>
+            <h2>ディスカッション４</h2><h4>様々な感覚情報呈示技術の応用例について話し合ってみましょう。</h4>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/crossmodality.png" alt="crossmodality">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          ３章では、様々な感覚情報を呈示する最新技術を紹介しました。
+                          ここで紹介した以外にも、様々なインタフェースが開発されています。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-quetion">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          こうした技術は、どのような場面に役立てられるでしょうか？
+                          また、さらに技術を発展させるにはどうすればよいでしょうか？
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 60 ４章扉ページ -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2 class="text-landing"><strong>クロスモーダル効果の応用</strong></h2>
+            <hr>
+            <ol class="size-30 aligncenter">
+              <li>心を豊かにする五感情報技術</li>
+              <li>食品、医療・福祉への応用</li>
+              <li>アート・エンタテインメントへの応用</li>
+              <li>クロスモーダル効果の定量評価</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 16:00 ~ 17:30（クロスモーダル効果の応用、まとめ） -->
+        <!-- 61 心を豊かにする五感情報技術 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.1. 心を豊かにする五感情報技術</p>
+            <h2>情報通信技術は、心を豊かにする<br>手段として発展している。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/KanseiInformationMedia.png" alt="kansei">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          デジタルメディアは、映像や音声、
+                          文字などの情報伝達手段として私たちの生活に浸透しています。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          かつて、こうした技術は物理的・論理的な正確性や効率性に価値が置かれていましたが、
+                          それだけでは難しい時代になってきました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          物質的な豊かさから、心の豊かさへと価値の置き方が移り変わる中、
+                          心を豊かにする手段として、情報通信技術も発展しています。
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 食品、医療・福祉への応用 -->
+        <!-- 食事の支援 -->
+        <!-- 62 Meta Cookie -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.2. 食品、医療・福祉への応用</p>
+            <div class="content-left">
+              <h4>Meta Cookie（Narumi, et al., 2010）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      クッキーに対し、視覚情報と嗅覚情報を重畳することで、クッキーの「風味」を変化させ、
+                      食べる人が受け取る味の認識を変化させるシステムです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/3GnQE9cCf84?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 63 Chewing Jockey -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.2. 食品、医療・福祉への応用</p>
+            <div class="content-left">
+              <h4>Chewing Jockey（Koizumi, et al., 2011）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      咀嚼時に効果音を出したり、咀嚼音を変化させて疑似的に食感を変化させるシステムです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/4Vq-6-ng-44?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 感覚代行 -->
+        <!-- 64 Brain Port -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.2. 食品、医療・福祉への応用</p>
+            <div class="content-left">
+              <h4>BrainPort（Danilov, et al., 2005）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      視覚障害者のための「感覚代行」として、
+                      カメラ映像を舌で感知できる電気刺激に変換し呈示するシステムです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/CNR2gLKnd0g?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 65 NeoSensory VEST -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.2. 食品、医療・福祉への応用</p>
+            <div class="content-left">
+              <h4>Versatile Extra-Sensory Transducer (VEST)（Novich, 2015）</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      聴覚障害者のための「感覚代行」として、
+                      音を振動に変換し、呈示するベストです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/0KzB-GYIKsk?rel=0"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- アート・エンタテインメントへの応用 -->
+        <!-- 体験型アート・エンタテインメント -->
+        <!-- 66 MRBall -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.3. アート・エンタテインメントへの応用</p>
+            <div class="content-left">
+              <h4>現実世界に投影された仮想物体と触れ合うシステム①</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      ヘッドマウントディスプレイ上に表示されたボールを触ると、
+                      わずかに手に触れたような感覚が得られます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <video src="./static/images/MRBall.mp4" controls></video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 67 MRManyCubes -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.3. アート・エンタテインメントへの応用</p>
+            <div class="content-left">
+              <h4>現実世界に投影された仮想物体と触れ合うシステム②</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      ヘッドマウントディスプレイ上に表示されたキューブを触ると、
+                      わずかに手に触れたような感覚が得られます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <video src="./static/images/MRManyCubes.mp4" controls></video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 68 MRMovingCube -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.3. アート・エンタテインメントへの応用</p>
+            <div class="content-left">
+              <h4>現実世界に投影された仮想物体と触れ合うシステム③</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      ヘッドマウントディスプレイ上に表示されたキューブが動き回ると、
+                      アニマシー知覚とともにくすぐったい感覚が得られます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <div class="embed">
+                <video src="./static/images/MRMovingCube.mp4" controls></video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 69 足音 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.3. アート・エンタテインメントへの応用</p>
+            <div class="content-left">
+              <h4>振動スピーカを内蔵したサンダルによる擬似圧覚呈示</h4>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <svg class="fa-info">
+                      <use xlink:href="#fa-info"></use>
+                    </svg>
+                    <p class="alignjustify">
+                      VR空間上で歩き回るとサンダルが振動し、
+                      床の硬さが変化して感じられます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <img src="./static/images/MRShoes.png" alt="MRShoes">
+            </div>
+          </div>
+        </section>
+        <!-- クロスモーダル効果の定量評価 -->
+        <!-- SD法 -->
+        <!-- 70 マグニチュード推定法 -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">4.4. クロスモーダル効果の定量評価</p>
+            <h2>知覚される感覚の大きさの測定には、
+            <br>SD法やマグニチュード推定法が用いられる。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/SD.png" alt="SD">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        SD法とは、「熱いー冷たい」や「高いー低い」といった形容詞対を用意し、
+                        それらを対極とした評定尺度で評価させる方法です。
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-key">
+                        <use xlink:href="#fa-key"></use>
+                      </svg>
+                      <p class="alignjustify">
+                        マグニチュード推定法とは、人間が自分の感覚を量的に把握できると仮定し、
+                        標準刺激に特定の値（10や100など）を割り当て、
+                        それに対してどれくらいの感覚量であったかを数値で報告させる方法です。
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 71 ディスカッション５　４章のまとめ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">まとめ</p>
+            <h2>ディスカッション５</h2><h4>自身の関連分野における応用例について話し合ってみましょう。</h4>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="./static/images/crossmodality.png" alt="crossmodality">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          ４章では、クロスモーダル効果を応用した様々な事例を紹介しました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-quetion">
+                        <use xlink:href="#fa-question"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          もしご自身の関連分野にクロスモーダル効果を役立てるなら、
+                          どのようなアイディアが考えられるでしょうか？
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 72 ５章扉ページ -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2 class="text-landing"><strong>まとめ</strong></h2>
+            <hr>
+          </div>
+        </section>
+
+        <!-- 73 ５章　まとめ -->
+        <section>
+          <div class="wrap">
+            <p class="text-context">5. まとめ</p>
+            <h2>クロスモーダル効果は、<br>心を豊かにする道具になる。</h2>
+            <div class="grid sm">
+              <div class="column">
+                <img class="aligncenter" src="https://source.unsplash.com/VVVLN9tZo4g" alt="happy">
+              </div>
+              <div class="column">
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          このスライドでは、はじめに様々なクロスモーダル効果の実例を通して、その不思議な性質について紹介しました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          さらに、人間の五感のメカニズムを理解し、五感に情報を呈示するインタフェース技術について学びました。
+                        </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-info">
+                        <use xlink:href="#fa-info"></use>
+                      </svg>
+                        <p class="alignjustify">
+                          最後に、私たちの心をより豊かにする手段としてのクロスモーダル効果に着目し、
+                          その可能性について考察しました。
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 74 締め -->
+        <section>
+          <div class="wrap aligncenter">
+            <h2></h2>
+            <hr>
+          </div>
+        </section>
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+    <!-- WebSlides Original Templates -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
