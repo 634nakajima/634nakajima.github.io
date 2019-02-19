@@ -1910,8 +1910,6 @@ About, Philosophy...
     height: 1px;
     position: relative; }
   .specs li:hover {
-    /*-webkit-transform: translateX(0.2rem);
-            transform: translateX(0.2rem); */
     -webkit-transform: scale(1.15,1.15);
             transform: scale(1.15,1.15); }
   .specs li span,
@@ -1932,7 +1930,15 @@ About, Philosophy...
     .specs li img {
       float: left;
       margin-right: 2.4rem; } }
-
+  @media (max-width: 768px) {
+    .specs li {
+      padding-top: 0rem;
+    }
+    .specs li p {
+      line-height:1.5;
+      font-size: 1.6rem; }
+    .specs li svg {
+      width: 3.2rem; } }
 /*=================================================
 6.6 Reasons/Why/Numbers (counter-increment)
 <ul class="flexblock reasons">
