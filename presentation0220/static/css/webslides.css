@@ -1933,6 +1933,8 @@ About, Philosophy...
   @media (max-width: 768px) {
     .specs li {
       padding-top: 0rem;
+      padding-left:0rem;
+      padding-right:0rem;
     }
     .specs li p {
       line-height:1.5;
