@@ -216,7 +216,7 @@ ol {
 
 b {
   font-weight: 600;
-  font-size:120%;
+  font-size:125%;
   color: blue; }
 
 strong {
@@ -1937,7 +1937,7 @@ About, Philosophy...
     width: 6.4rem; }
   .specs li span {
     font-weight: bold;
-    font-size: 2.6rem;
+    font-size: 4.5rem;
     line-height: 1;
     margin-bottom: -2.5rem; }
     .specs li span sup {
