@@ -1760,7 +1760,7 @@ footer .column h3 {
 
 [class*='content-'] .flexblock li p {
   font-size: 2.4rem;
-  line-height: 3.2rem; }
+  line-height: 3.8rem; }
 
 .content-right .flexblock.features li,
 .content-left .flexblock.features li {
@@ -1926,8 +1926,8 @@ About, Philosophy...
     height: 1px;
     position: relative; }
   .specs li:hover {
-    -webkit-transform: scale(1.15,1.15);
-            transform: scale(1.15,1.15); }
+    -webkit-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2); }
   .specs li svg {
     display: block;
     font-size: 6.4rem;
