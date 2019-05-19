@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- SEO -->
-    <title>聴触覚相互作用ワークショップ</title>
+    <title>聴覚と触覚のクロスモダリティ</title>
     <meta name="robots" content="noindex">
     <meta name="description" content="情報活用演習Ⅰの授業スライドです。">
 
@@ -28,20 +28,25 @@
   <body>
     <header role="banner">
       <nav role="navigation">
-        <p><a href="../index.html" title="授業・講演スライド一覧へ戻る">授業・講演スライド一覧へ戻る</a></p>
+        <a href="../index.html" title="授業・講演スライド一覧へ戻る">
+          <h3><svg class="fa-arrow-circle-left">
+            <use xlink:href="#fa-arrow-circle-left"></use>
+          </svg><h3>
+        </a>
       </nav>
     </header>
     <main role="main">
       <article id="webslides" class="horizontal">
-        <section class="bg-white aligncenter">
-          <span class="background dark" style="background-image:url('https://source.unsplash.com/i14h2xyPr18/')"></span>
+        <section class="bg-black">
+          <span class="background dark" style="background-image:url('https://source.unsplash.com/D9kOnC_1AHw/')"></span>
           <div class="wrap">
-            <h2>日常の中の<br><b>触れると音がする</b><br>体験を探してみよう</h2>
+            <p class="text-context">本日のテーマ</p>
+            <h2 class="aligncenter">聴覚と触覚のクロスモダリティ</h2>
           </div>
         </section>
         <section>
           <div class="wrap">
-            <p class="text-context">日常の中の「触れると音がする」体験を探してみよう</p>
+            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
             <h2>触れる行為と音のつながり</h2>
             <div class="grid sm">
               <div class="column">
@@ -51,58 +56,80 @@
                  <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
                    <li><h4 class="alignjustify">人間は<b>触れる</b>行為を通じて世界を探索し、理解している</h4></li>
                    <li><h4 class="alignjustify">触れる行為は<b>さする</b>、<b>叩く</b>、<b>押す</b>など様々</h4></li>
+                   <li><h4 class="alignjustify">触れる行為には<b>音</b>が伴うことが多い</li>
                  </ul>
                </div>
              </div>
           </div>
         </section>
         <section>
+          <script type="text/javascript">
+            function playSound(ele) {
+              if(ele.id == "door") {
+                document.getElementById("doorSound").play();
+              }else if(ele.id == "book") {
+                document.getElementById("bookSound").play();
+              }else if(ele.id == "bath") {
+                document.getElementById("bathSound").play();
+              }
+            }
+          </script>
+          <audio id="doorSound" preload="auto">
+            <source src="https://soundeffect-lab.info/sound/various/mp3/door-wood-knock1.mp3" type="audio/mp3">
+          </audio>
+          <audio id="bookSound" preload="auto">
+            <source src="http://www.kurage-kosho.info/mp3/page01.mp3" type="audio/mp3">
+          </audio>
+          <audio id="bathSound" preload="auto">
+            <source src="bath.mp3" type="audio/mp3">
+          </audio>
           <div class="wrap">
-            <p class="text-context">日常の中の「触れると音がする」体験を探してみよう</p>
+            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
             <h2>触れる行為と音のつながり</h2>
             <ul class="flexblock gallery">
               <li>
-                <a href="#">
-                  <figure>
-                    <img alt="Thumbnail" src="./pics/door86.png">
-                    <figcaption>
-                      <p>ドアを<b>叩く</b>と、<br><b>コンコン</b>と音がする</p>
-                    </figcaption>
-                  </figure>
-                </a>
+                <figure id="door" onclick="playSound(this)">
+                  <img alt="Thumbnail" src="./pics/door86.png">
+                  <figcaption>
+                    <p>ドアを<b>叩く</b>と、<br><b>コンコン</b>と音がする</p>
+                  </figcaption>
+                </figure>
               </li>
               <li>
-                <a href="#">
-                  <figure>
-                    <img alt="Thumbnail " src="./pics/book86.png">
-                    <figcaption>
-                      <p>本を<b>めくると</b>、<br><b>パラパラ</b>と音がする</p>
-                    </figcaption>
-                  </figure>
-                </a>
+                <figure id="book" onclick="playSound(this)">
+                  <img alt="Thumbnail " src="./pics/book86.png">
+                  <figcaption>
+                    <p>本を<b>めくる</b>と、<br><b>パラパラ</b>と音がする</p>
+                  </figcaption>
+                </figure>
               </li>
               <li>
-                <a href="#">
-                  <figure>
-                    <img alt="Thumbnail" src="./pics/bath86.png">
-                    <figcaption>
-                      <p>浴槽を<b>こする</b>と、<br><b>キュッキュッ</b>と音がする</p>
-                    </figcaption>
-                  </figure>
-                </a>
+                <figure id="bath" onclick="playSound(this)">
+                  <img alt="Thumbnail" src="./pics/bath86.png">
+                  <figcaption>
+                    <p>浴槽を<b>こする</b>と、<br><b>キュッキュ</b>と音がする</p>
+                  </figcaption>
+                </figure>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="bg-white">
+          <span class="background dark" style="background-image:url('https://source.unsplash.com/i14h2xyPr18/')"></span>
+          <div class="wrap">
+            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
+            <h2 class="aligncenter">日常の中の<br><b>触れると音がする</b><br>体験を探してみよう</h2>
           </div>
         </section>
         <section>
           <div class="wrap">
             <div>
-              <p class="text-context">日常の中の「触れると音がする」体験を探してみよう</p>
+              <p class="text-context">聴覚と触覚のクロスモダリティ</p>
               <h2>触れると音がする体験を探して録音しよう</h2>
             </div>
             <div class="grid sm">
               <div class="column">
-                <img class="aligncenter" src="https://source.unsplash.com/fB4Zo2jPA3E/800x750" alt="web site">
+                <img class="aligncenter" src="https://source.unsplash.com/fB4Zo2jPA3E/800x750" alt="Microphone">
               </div>
                <div class="column">
                  <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
@@ -122,12 +149,12 @@
         <section>
           <div class="wrap">
             <div>
-              <p class="text-context">日常の中の「触れると音がする」体験を探してみよう</p>
+              <p class="text-context">聴覚と触覚のクロスモダリティ</p>
               <h2>録音した音を擬音語で表そう</h2>
             </div>
             <div class="grid sm">
               <div class="column">
-                <img class="aligncenter" src="../../crossmodal/static/images/onom.png" alt="web site">
+                <img class="aligncenter" src="../../crossmodal/static/images/onom.png" alt="onomatope">
               </div>
                <div class="column">
                  <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
