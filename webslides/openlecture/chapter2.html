@@ -20,6 +20,12 @@
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
     <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
 
+    <!-- CSS Animate -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/animate.css">
+
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/myModal.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <!-- FAVICONS -->
     <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
     <!-- Android -->
@@ -65,7 +71,7 @@
             </li>
             <li>
               <figure>
-                <img alt="Thumbnail" src="https://source.unsplash.com/9blSF_Ay3MY/800x600">
+                <img alt="Thumbnail" src="https://source.unsplash.com/mw6Onwg4frY/800x600">
                 <figcaption class="aligncenter">
                   <h4>電話</h4>
                 </figcaption>
@@ -82,7 +88,81 @@
           </ul>
       </div>
 </section>
-
+<section>
+  <div class="wrap">
+    <h4 class="text-context">2. 感性に作用するデジタルメディア</h4>
+    <h3 class="size-80">
+      <b>デジタルメディア</b>は、人々に驚きや感動を与える
+      <b>表現手段</b>としての側面も持っている
+    </h3>
+    <ul class="flexblock gallery">
+      <li>
+        <figure>
+          <img alt="Thumbnail" src="https://source.unsplash.com/CiUR8zISX60/800x600">
+          <figcaption class="aligncenter">
+            <h4>映画</h4>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Thumbnail" src="https://source.unsplash.com/6ePuSf5Wago/800x600">
+          <figcaption class="aligncenter">
+            <h4>音楽</h4>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Thumbnail" src="https://source.unsplash.com/Ox3SuY9QbDU/800x600">
+          <figcaption class="aligncenter">
+            <h4>アニメーション</h4>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+</div>
+</section>
+<section>
+  <div class="wrap"><label for="trigger">
+    <h4 class="text-context">2. 感性に作用するデジタルメディア</h4>
+    <h3 class="size-80">
+      人間の感性は、
+      <b>主観的</b>、<b>多義的</b>、<b>非合理的</b>
+      な側面を持っており、それが表現に生かされている
+    </h3>
+    </label>
+    <div class="size-80 aligncenter">
+      <ul class="flexblock gallery">
+        <li>
+          <figure>
+            <img alt="Thumbnail" src="https://source.unsplash.com/hjwKMkehBco/800x500">
+            <figcaption class="aligncenter">
+              <h4><b>手書き</b>の手紙</h4>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img alt="E-Impact" src="../static/images/E-Impact.png">
+            <figcaption class="aligncenter">
+              <h4>CGの<b>デフォルメ表現</b></h4>[宇津木 2012]
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal_wrap">
+    <input id="trigger" type="checkbox">
+    <div class="modal_overlay">
+        <label for="trigger" class="modal_trigger"></label>
+        <div class="modal_content aligncenter">
+          <h1>人間の感性を考慮した<br>メディア技術の発展が必要不可欠</h1>
+        </div>
+    </div>
+  </div></label>
+</section>
 </article>
 <!-- end article -->
 </main>
@@ -103,7 +183,6 @@
 <script>
 window.ws = new WebSlides();
 </script>
-
 <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
 <script defer src="../static/js/svg-icons.js"></script>
 
