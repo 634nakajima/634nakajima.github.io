@@ -1,215 +1,300 @@
 <!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SEO -->
-    <title>聴覚と触覚のクロスモダリティ</title>
-    <meta name="robots" content="noindex">
-    <meta name="description" content="情報活用演習Ⅰの授業スライドです。">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- URL CANONICAL -->
-    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+  <!-- SEO -->
+  <title>テクノロジーを駆使した体験型芸術「インタラクティブアート」の世界</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="情報活用演習Ⅰの授業スライドです。">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
-    <!-- CSS WebSlides -->
-    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
-    <!-- Optional - CSS SVG Icons (Font Awesome) -->
-    <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
-    <!-- FAVICONS -->
-    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
-    <!-- Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#333333">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
 
-  </head>
-  <body>
-    <header role="banner">
-      <nav role="navigation">
-        <a href="../index.html" title="授業・講演スライド一覧へ戻る">
-          <h3><svg class="fa-arrow-circle-left">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <a href="../index.html" title="授業・講演スライド一覧へ戻る">
+        <h3><svg class="fa-arrow-circle-left">
             <use xlink:href="#fa-arrow-circle-left"></use>
-          </svg><h3>
-        </a>
-      </nav>
-    </header>
-    <main role="main">
-      <article id="webslides" class="horizontal">
-        <section class="bg-black">
-          <span class="background dark" style="background-image:url('https://source.unsplash.com/D9kOnC_1AHw/')"></span>
-          <div class="wrap">
-            <p class="text-context">本日のテーマ</p>
-            <h2 class="aligncenter">聴覚と触覚のクロスモダリティ</h2>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-            <h2>触れる行為と音のつながり</h2>
-            <div class="grid sm">
-              <div class="column">
-                <img class="aligncenter" src="./pics/handlight.jpg" alt="web site">
-              </div>
-               <div class="column">
-                 <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
-                   <li><h4 class="alignjustify">人間は<b>触れる</b>行為を通じて世界を探索し、理解している</h4></li>
-                   <li><h4 class="alignjustify">触れる行為は<b>さする</b>、<b>叩く</b>、<b>押す</b>など様々</h4></li>
-                   <li><h4 class="alignjustify">触れる行為には<b>音</b>が伴うことが多い</li>
-                 </ul>
-               </div>
-             </div>
-          </div>
-        </section>
-        <section>
-          <script type="text/javascript">
-            function playSound(ele) {
-              if(ele.id == "door") {
-                document.getElementById("doorSound").play();
-              }else if(ele.id == "book") {
-                document.getElementById("bookSound").play();
-              }else if(ele.id == "bath") {
-                document.getElementById("bathSound").play();
-              }
-            }
-          </script>
-          <audio id="doorSound" preload="auto">
-            <source src="https://soundeffect-lab.info/sound/various/mp3/door-wood-knock1.mp3" type="audio/mp3">
-          </audio>
-          <audio id="bookSound" preload="auto">
-            <source src="http://www.kurage-kosho.info/mp3/page01.mp3" type="audio/mp3">
-          </audio>
-          <audio id="bathSound" preload="auto">
-            <source src="https://soundeffect-lab.info/sound/various/mp3/wipe1.mp3" type="audio/mp3">
-          </audio>
-          <div class="wrap">
-            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-            <h2>触れる行為と音のつながり</h2>
-            <ul class="flexblock gallery">
-              <li>
-                <figure id="door" onclick="playSound(this)">
-                  <img alt="Thumbnail" src="./pics/door86.png">
-                  <figcaption>
-                    <p>ドアを<b>叩く</b>と、<br><b>コンコン</b>と音がする</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure id="book" onclick="playSound(this)">
-                  <img alt="Thumbnail " src="./pics/book86.png">
-                  <figcaption>
-                    <p>本を<b>めくる</b>と、<br><b>パラパラ</b>と音がする</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure id="bath" onclick="playSound(this)">
-                  <img alt="Thumbnail" src="./pics/bath86.png">
-                  <figcaption>
-                    <p>浴槽を<b>こする</b>と、<br><b>キュッキュ</b>と音がする</p>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="bg-white">
-          <span class="background dark" style="background-image:url('https://source.unsplash.com/i14h2xyPr18/')"></span>
-          <div class="wrap">
-            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-            <h2 class="aligncenter">日常の中の<br><b>触れると音がする</b><br>体験を探してみよう</h2>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <div>
-              <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-              <h2>触れると音がする体験を探して録音しよう</h2>
-            </div>
-            <div class="grid sm">
-              <div class="column">
-                <img class="aligncenter" src="https://source.unsplash.com/fB4Zo2jPA3E/800x750" alt="Microphone">
-              </div>
-               <div class="column">
-                 <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
-                   <li>
-                     <h4>「触れる」行為は広く解釈して構いません</h4>
-                     <p>・<b>包丁で野菜を切る</b>と、トントンと音がする<br>
-                     ・<b>ボールを蹴る</b>と、ダーンと音がする</p>
-                   </li>
-                   <li>
-                     <h4>スマートフォンの録音アプリを使ってください</h4>
-                   </li>
-                 </ul>
-               </div>
-             </div>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <div>
-              <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-              <h2>録音した音を擬音語で表そう</h2>
-            </div>
-            <div class="grid sm">
-              <div class="column">
-                <img class="aligncenter" src="../../crossmodal/static/images/onom.png" alt="onomatope">
-              </div>
-               <div class="column">
-                 <ul class="flexblock specs"><!-- css 1762行目でフォントサイズ指定可 -->
-                   <li><h4>音は一般的な擬音語で表さなくても構いません</h4>
-                     <p>・ハサミで紙を切ると<b>ジョキッ</b>と音がする<br>
-                    ・ボールを蹴ると、<b>ダーン</b>と音がする</p>
-                   </li>
-                 </ul>
-               </div>
-             </div>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <p class="text-context">聴覚と触覚のクロスモダリティ</p>
-            <h2>探すときのルール</h2>
-            <ul class="flexblock gallery">
-              <li>
-                <figure>
-                  <img alt="Thumbnail" src="./pics/head.jpg">
-                  <figcaption>
-                    <p>壁に頭突きをするなど、<b>不自然</b>な行為で音を出すのは避けましょう</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img alt="Thumbnail " src="https://source.unsplash.com/F8t2VGnI47I/800x600">
-                  <figcaption>
-                    <p>学外には出ず、<br><b>学内</b>で探しましょう</p>
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure>
-                  <img alt="Thumbnail" src="./pics/guitars.jpg">
-                  <figcaption>
-                    <p>同じ物であっても、<b>音に違い</b>があれば構いません</p>
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section>
+          </svg>
+          <h3>
+      </a>
+    </nav>
+  </header>
+  <main role="main">
+    <article id="webslides" class="horizontal">
+      <section class="bg-black">
+        <span class="background dark" style="background-image:url('https://source.unsplash.com/3eAByt3-eOw/')"></span>
+        <p class="text-context">本日のワークショップ</p>
+        <div class="wrap aligncenter">
+          <h1>テクノロジーを駆使した体験型芸術<br /><strong>インタラクティブアート</strong>の世界</h1>
           <hr>
-        </section>
-      </article>
-      <!-- end article -->
-    </main>
-    <!-- end main -->
+          <p class="text-intro">
+            東京工芸大学芸術学部<br>
+            インタラクティブメディア学科　助教<br>
+            中島 武三志
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">自己紹介</p>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="../static/images/musashi.jpg" alt="Musashi">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li><strong>氏名:</strong>
+                  <h4>中島 武三志</h4>
+                </li>
+                <li><strong>年齢:</strong>
+                  <h4>31 歳</h4>
+                </li>
+                <li><strong>研究分野:</strong>
+                  <h4>感性情報学、認知心理学、バーチャルリアリティ、HCI　...</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">プロフィール</p>
+          <ul class="flexblock specs">
+            <li><strong>略歴:</strong>
+              <h4>
+                2013年　早稲田大学　基幹理工学部表現工学科　助手<br>
+                2017年　東京工芸大学　芸術学部インタラクティブメディア学科　助教<br>
+                2018年　学位取得　博士（工学、早稲田大学）<br>
+                2019年　目白大学　外国語学部中国語学科　非常勤講師</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">東京工芸大学の紹介</p>
+          <h2><b>メディア芸術</b>を専門とする大学</h2>
+          <ul class="flexblock specs">
+            <li>
+              <h4>カメラやパソコンなどの<b>メディア技術</b>を駆使した芸術表現を扱う</h4>
+            </li>
+            <li>
+              <h4>写真、映像、デザイン、インタラクティブメディア、アニメーション、<br />ゲーム、マンガの<b>7</b>学科からなる</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 10 目次 -->
+      <section>
+        <div class="wrap aligncenter">
+          <h1><strong>目次</strong></h1>
+          <hr>
+          <div class="toc">
+            <ol class="chapter">
+              <li>
+                <h4><a href="#slide=5">インタラクティブアートとは</a></h4>
+              </li>
+              <li>
+                <h4><a href="#slide=11">インタラクティブアート制作体験</a></h4>
+              </li>
+              <h4><a href="#slide=13">まとめ</a></h4>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <h1><strong>インタラクティブアートとは</strong></h1>
+          <hr>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">1. インタラクティブアートとは</p>
+          <h2 class="size-70">
+            鑑賞者が作品に触れたり体を動かすことで成り立つ<b>参加型</b>のアート。
+          </h2>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/I4YsI1zWq_w/800x600" alt="interactive art">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h4><b>インタラクティブ</b>＝<b>双方向の</b>、<b>対話的な</b><br>という意味。</h4>
+                  </div>
+                </li>
+                <li>
+                  <h4><b>最新のテクノロジー</b>を駆使したインタラクティブアートが盛んに制作されている。</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">1. インタラクティブアートとは</p>
+          <div class="content-left">
+            <h1>PomPom</h1>
+            <h4>（Rozin, 2015）</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h4 class="alignjustify">
+                    白黒の毛皮で明暗が変化する鏡。
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div class="embed">
+              <iframe src="https://www.youtube.com/embed/RdGpF2aslgw?rel=0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">1. インタラクティブアートとは</p>
+          <div class="content-left">
+            <h1>ICEBERG</h1>
+            <h4>(ATOMIC3, 2012)</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h4 class="alignjustify">
+                    トンネルをくぐると音と光が変化する作品。
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div class="embed">
+              <iframe src="https://www.youtube.com/embed/-yy5Rc4jMDI?rel=0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">1. インタラクティブアートとは</p>
+          <div class="content-left">
+            <h1>DropNotes<h1>
+                <h4>（Nakajima et al., 2013）</h4>
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <h4 class="alignjustify">
+                        色水に音を吹き込み、スポイトで水滴を滴下して、音楽を制作する作品。
+                      </h4>
+                    </div>
+                  </li>
+                </ul>
+          </div>
+          <div class="content-left">
+            <div class="embed">
+              <iframe src="https://www.youtube.com/embed/LnDPDzOzDL0?rel=0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <h1><strong>インタラクティブアート制作体験</strong></h1>
+          <hr>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">2. インタラクティブアート制作体験</p>
+          <h3><a href="https://microbit.org/ja/guide/" target="_blank"><b>micro:bit</b></a>と呼ばれる小さなコンピュータを使って、<br /><b>ひよこをかえす</b>アートを作ろう！</h3>
+          <ul class="flexblock gallery">
+            <li>
+              <figure>
+                <img alt="egg" src="./images/egg.png">
+                <figcaption class="aligncenter">
+                  <h4>micro:bitをあたためると<br />LED画面の卵が、、、</h4>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img alt="chick" src="./images/chick.png">
+                <figcaption class="aligncenter">
+                  <h4>ひよこに<br />変わる！</h4>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <h1><strong>まとめ</strong></h1>
+          <hr>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">3. まとめ</p>
+          <h2>
+            <b>インタラクティブアート</b>の世界をご紹介。
+          </h2>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/I4YsI1zWq_w/800x600" alt="interactive">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h4>コンピュータやセンサー等のテクノロジーは、<br /><b>アート表現</b>にも応用されている。</h4>
+                </li>
+                <li>
+                  <h4><b>micro:bit</b>の温度センサとLEDを用いて、<br />ひよこをかえすアートを制作。</h4>
+                </li>
+                <li>
+                  <h4>技術を使いこなす<b>工学的スキル</b>と<br />新たな表現に結びつける<b>芸術的発想</b>の融合。</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
 
-    <!-- WebSlides Original Templates -->
+  <!-- WebSlides Original Templates -->
 
-   <!-- A global footer
+  <!-- A global footer
 
      <footer role="contentinfo">
       <div class="wrap">
@@ -217,14 +302,15 @@
       </div>
     </footer>  -->
 
-    <!-- Required -->
-    <script src="../static/js/webslides.js"></script>
-    <script>
-      window.ws = new WebSlides();
-    </script>
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
 
-    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
-    <script defer src="../static/js/svg-icons.js"></script>
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
 
-  </body>
+</body>
+
 </html>

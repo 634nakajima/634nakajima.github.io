@@ -1926,8 +1926,8 @@ About, Philosophy...
     height: 1px;
     position: relative; }
   .specs li:hover {
-    -webkit-transform: scale(1.2,1.2);
-            transform: scale(1.2,1.2); }
+    -webkit-transform: scale(1.18,1.18);
+            transform: scale(1.18,1.18); }
   .specs li svg {
     display: block;
     font-size: 6.4rem;
