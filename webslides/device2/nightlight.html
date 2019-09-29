@@ -41,7 +41,7 @@
     </nav>
   </header>
   <main role="main">
-    <article id="webslides" class="vertical">
+    <article id="webslides" class="horizontal">
       <!-- 11 １章扉ページ -->
       <section>
         <div class="wrap aligncenter">
@@ -197,7 +197,7 @@
                 <li>
                   <div>
                     <span>1. </span>
-                    <h4 class="alignjustify">検証</h4>
+                    <h4 class="alignjustify">検証（コンパイルとも呼ばれる）</h4>
                     <h5 class="alignjustify">ソースコードに間違い（<b>エラー</b>）がないかをチェック</h5>
                   </div>
                 </li>
@@ -528,7 +528,7 @@ int function(int argument) {
               <li>
                 <div>
                   <span>1. </span>
-                  <h5 class="alignjustify">blink()関数のカッコ内に数値（ミリ秒）を入れると、点滅周期を指定できる。</h5>
+                  <h5 class="alignjustify">blinkInterval()関数のカッコ内に数値（ミリ秒）を入れると、点滅周期を指定できる。</h5>
                 </div>
               </li>
             </ul>
@@ -741,7 +741,7 @@ int function(int argument) {
           </div>
           <div class="content-left">
             <iframe src=https://create.arduino.cc/editor/634nakajima/272745c8-1180-463c-bf6b-8c8fec5461dd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-        </div>
+          </div>
       </section>
 
       <section>
@@ -811,6 +811,47 @@ void loop {
       <section>
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>その他</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">関数や"="の前後のスペースはなくても良いが、可読性の観点からつけるべき。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">変数の型と変数名の間にはスペースが必要</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">引数が多い時は改行することもあるが、そうでない場合は可読性が悪くなる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>コンパイルは通るが、見にくいコード
+void loop(){
+int variable=digitalRead(          10);
+digitalWrite(
+13
+,HIGH
+)
+;}
+          </h5>
+                  </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <h3><strong>よくあるエラー</strong></h3>
           <div class="content-left">
             <ul class="flexblock specs">
@@ -856,7 +897,7 @@ void loop(){
               <li>
                 <div>
                   <span>1. </span>
-                  <h5 class="alignjustify">digitalWrite(LED_BUILTIN, HIGH &ltLOW&gt);は、LEDを点灯 &lt消灯&gt させる関数</h5>
+                  <h5 class="alignjustify">digitalWrite(LED_BUILTIN, HIGH/LOW);は、LEDを点灯 &lt消灯&gt させる関数</h5>
                 </div>
               </li>
               <li>
@@ -882,28 +923,87 @@ void loop(){
       <section>
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>Arduinoでよく使われる関数</strong></h3>
+          <div class="content-left">
+            <h3><strong>電子回路の試作</strong></h3>
+            <h4 class="alignjustify"><b>ブレッドボード</b>を用いて、センサやモータなどの回路を組み立てる。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">ブレッドボードははんだ付けが不要。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">回路を構成する素子を差し込む穴がある。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">右図の線で表された部分が内部で繋がっている。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/breadboard.png" alt="breadboard" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題７</strong></h3>
+            <h4 class="alignjustify">Arduinoを電源にしてLEDを点灯する回路を作ろう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Arduino "5V"ピン > ブレッドボード > 抵抗（330Ω）> LED > Arduino "GND"ピン</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">LEDは流せる電流の向きが決まっており、+側を<b>アノード</b>、-側を<b>カソード</b>と呼ぶ。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">LEDの足の長い方が<b>アノード</b>。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/LED.png" alt="LED" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>電子回路でよく登場する用語</strong></h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
                 <div>
                   <span>•</span>
-                  <h4 class="alignjustify">void pinMode(ピン番号, 入出力);</h4>
-                  <h5>引数のピンを入力（INPUT）か出力（OUTPUT）に設定する。</h5>
+                  <h4 class="alignjustify"><b>電圧</b></h4>
+                  <h5>電気を流す力の大きさ。ボルト。</h5>
                 </div>
               </li>
               <li>
                 <div>
                   <span>•</span>
-                  <h4 class="alignjustify">int digitalRead(ピン番号);</h4>
-                  <h5>ピンに入る電圧をHIGHで返す。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span>•</span>
-                  <h4 class="alignjustify">void analogWrite(ピン番号, 状態);</h4>
-                  <h5>引数で指定したピンから0-255のPWM出力をする。</h5>
+                  <h4 class="alignjustify"><b>電流</b></h4>
+                  <h5>回路に流れている電気の量。アンペア</h5>
                 </div>
               </li>
             </ul>
@@ -913,25 +1013,125 @@ void loop(){
               <li>
                 <div>
                   <span>•</span>
-                  <h4 class="alignjustify">void digitalWrite(ピン番号, 状態);</h4>
-                  <h5>引数のピンをHIGH (5v)かLOW (0v)にする。</h5>
+                  <h4 class="alignjustify"><b>抵抗</b></h4>
+                  <h5>電流の流れにくさ。オーム。または電流を調整する素子。</h5>
                 </div>
               </li>
               <li>
                 <div>
                   <span>•</span>
-                  <h4 class="alignjustify">void analogRead(ピン番号);</h4>
-                  <h5>ピンに入る電圧を0-255（0-5v）の整数値で返す。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span>•</span>
-                  <h4 class="alignjustify">void delay(ミリ秒);</h4>
-                  <h5>引数の値だけ何もしないで待つ。</h5>
+                  <h4 class="alignjustify"><b>GND</b>（グラウンド）</h4>
+                  <h5>電源の-（マイナス）極のこと。</h5>
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>電子回路でよく登場する用語</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify"><b>電圧、電流、抵抗、GND</b>はそれぞれ、<br />水道の<b>水圧、水流、蛇口、排水口</b>のように置き換えるとイメージしやすい。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="https://source.unsplash.com/Vve7XkiUq_Y/600x450" alt="faucet">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>練習２</strong></h3>
+            <h4 class="alignjustify">Arduinoの入出力ピンでLEDを点滅させる回路を作ろう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Arduinoの入出力ピンは電圧をHIGH（5V）かLOW（0V）に切り替えられる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Arduino 13番ピン > ブレッドボード > 抵抗（330Ω）> LED > Arduino "GND"ピン</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">IDEでArduino13番ピンの電圧をHIGH（5V）⇄LOW（0V）に切り替えるプログラムを記述。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/LEDonoff.png" alt="LEDonoff" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題８</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを点灯させる回路を作ろう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">フルカラーLED（アノードコモン）は、長い足が<b>アノード</b>。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Arduino 13,12,11番ピンからそれぞれ抵抗を経由してLEDのカソードに接続。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Arduino13,12,11番ピンの電圧が<b>LOW</b>のとき電流が流れ、LEDが点灯。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/FullcolorLED.png" alt="FullcolorLED" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>練習３</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを異なる色に変化させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">13,12,11番ピンのHIGH/LOWの組み合わせで色が決まる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/FullcolorLED.png" alt="FullcolorLED" />
           </div>
         </div>
       </section>
@@ -1035,6 +1235,105 @@ void loop(){
 
       <section>
         <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題９</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを特定の色で点灯させる関数を定義しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">rPin, gPin, bPinはそれぞれrgbのピン番号（13,12,11）を表す変数。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">loop()内でこれを呼び出すだけで、赤く光る。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/0e20269a-30bc-4e74-9430-8555716e7726/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>練習４</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを様々な色で点灯させる関数を定義しよう。</h4>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/0e20269a-30bc-4e74-9430-8555716e7726/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>補足</strong></h3>
+          <h4>Arduinoでよく用いられる関数</h4>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void pinMode(ピン番号, 入出力);</h4>
+                  <h5>引数のピンを入力（INPUT）か出力（OUTPUT）に設定する。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">int digitalRead(ピン番号);</h4>
+                  <h5>ピンに入る電圧をHIGHで返す。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void analogWrite(ピン番号, 状態);</h4>
+                  <h5>引数で指定したピンから0-255のPWM出力をする。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void digitalWrite(ピン番号, 状態);</h4>
+                  <h5>引数のピンをHIGH (5v)かLOW (0v)にする。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void analogRead(ピン番号);</h4>
+                  <h5>ピンに入る電圧を0-255（0-5v）の整数値で返す。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void delay(ミリ秒);</h4>
+                  <h5>引数の値だけ何もしないで待つ。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<!--
+      <section>
+        <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう</p>
           <div class="content-left">
             <h3><strong>ランプシェードを被せて完成</strong></h3>
@@ -1044,6 +1343,8 @@ void loop(){
           </div>
         </div>
       </section>
+-->
+
       <section>
         <hr>
       </section>
