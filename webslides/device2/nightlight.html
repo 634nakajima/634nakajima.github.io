@@ -41,7 +41,7 @@
     </nav>
   </header>
   <main role="main">
-    <article id="webslides" class="horizontal">
+    <article id="webslides" class="vertical">
       <!-- 11 １章扉ページ -->
       <section>
         <div class="wrap aligncenter">
@@ -274,7 +274,8 @@
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <div class="content-left">
-            <h3><strong>LEDを点滅させる</strong></h3>
+            <h3><strong>例題１</strong></h3>
+            <h4 class="alignjustify">スケッチをArduinoに書き込もう。</h4>
             <ul class="flexblock specs">
               <li>
                 <div>
@@ -380,7 +381,7 @@ int function(int argument) {
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <h3><strong>関数の実行</strong></h3>
           <div class="content-left">
-          <h4>コンピュータにテレビのチャンネルを変えてもらうなら、こう書ける。</h4>
+            <h4>コンピュータにテレビのチャンネルを変えてもらうなら、こう書ける。</h4>
           </div>
           <div class="content-left">
             <pre><h5>関数の実行
@@ -437,6 +438,54 @@ int function(int argument) {
       <section>
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題２</strong></h3>
+            <h4 class="alignjustify">関数を一度だけ実行させてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">pinMode(LED_BUILTIN, OUTPUT);は、Arduinoボード上のLEDを使用可能にする関数</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">blink()は、LEDをチカチカさせる関数</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/230ae0fd-c467-484c-8247-021671c1b9f6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題３</strong></h3>
+            <h4 class="alignjustify">関数を繰り返し実行させてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">loop()関数内に書かれた関数は、繰り返し実行される。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/3b0ce0ae-5e54-460d-a823-f77002eda4b0/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <h3><strong>関数の実行と引数</strong></h3>
           <div class="content-left">
             <h4>チャンネルを変えてもらう際に、番号も一緒に伝えられたら、こう書ける。</h4>
@@ -465,6 +514,27 @@ int function(int argument) {
 
           </h5>
                   </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題４</strong></h3>
+            <h4 class="alignjustify">関数に引数を入れて実行してみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">blink()関数のカッコ内に数値（ミリ秒）を入れると、点滅周期を指定できる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/c3740f94-6761-40f2-b959-a8bb6e6eae38/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -583,129 +653,32 @@ int function(int argument) {
       <section>
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>関数の定義</strong></h3>
           <div class="content-left">
-            <h4>コンピュータにりんごを買ってきてもらう関数を定義するなら、こう書ける。</h4>
-          </div>
-          <div class="content-left">
-            <pre><h5>関数の定義
-
-①果物 ②りんごを買う(③お金 ④日本円) {
-    ⑤スーパーに行く(自転車);
-    ⑤りんごをカゴに入れる(1コ);
-    ⑤レジでお金を払う(日本円, りんご, 1コ);
-    return りんご;
-}
-</h5>
-            </pre>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>関数の定義</strong></h3>
-          <div class="content-left">
+            <h3><strong>例題５</strong></h3>
+            <h4 class="alignjustify">関数の戻り値を変数に入れてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <div>
                   <span>1. </span>
-                  <h4 class="alignjustify">戻り値の型</h4>
-                  <h5>コンピュータから受け取る処理結果の種類（果物）</h5>
+                  <h5 class="alignjustify">random()関数のカッコ内に数値を入れると、0からその値までのランダムな値を返してくれる。</h5>
                 </div>
               </li>
               <li>
                 <div>
                   <span>2. </span>
-                  <h4 class="alignjustify">関数名</h4>
-                  <h5>処理内容を表す名前（りんごを買う　※プログラマが名付ける）</h5>
+                  <h5 class="alignjustify">random()関数の戻り値を、randomIntervalという名前の変数に入れよう。</h5>
                 </div>
               </li>
               <li>
                 <div>
                   <span>3. </span>
-                  <h4 class="alignjustify">引数の型</h4>
-                  <h5>処理に必要な情報の種類（お金）</h5>
+                  <h5 class="alignjustify">randomIntervalで受け取った値をblinkInterval()の引数に入れよう。</h5>
                 </div>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <pre><h5>関数の定義
-
-①void ②function(③int ④argument) {
-    ⑤subfunction(arg);
-}
-</h5>
-            </pre>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>関数の定義</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <span>4. </span>
-                  <h4 class="alignjustify">引数名</h4>
-                  <h5>処理に必要な情報を表す名前（日本円　※プログラマが名付ける）</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span>5. </span>
-                  <h4 class="alignjustify">処理内容</h4>
-                  <h5 class="alignjustify">すでに別の場所で定義された関数で命令を記述（スーパーへ行く、カゴに入れるなど）</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><h5>関数の定義
-
-①void ②function(③int ④argument) {
-    ⑤subfunction(arg);
-}
-</h5>
-            </pre>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>例題１</strong></h3>
-          <div class="content-left">
-            <h4 class="alignjustify">LEDの点滅周期を変えてみよう</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <span>1. </span>
-                  <h5 class="alignjustify">digitalWrite(LED_BUILTIN, HIGH &ltLOW&gt);は、LEDを点灯 &lt消灯&gt させる関数</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span>2. </span>
-                  <h5 class="alignjustify">delay()は、引数の値（ミリ秒）だけ何もしないで待つ関数</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span>3. </span>
-                  <h5 class="alignjustify">引数の値を変えることで、点滅周期を変えることができる</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/fad8cb66-3bbd-40fb-ae6e-f58fa8f28017/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/71953a88-af7d-4b15-b054-a62479d80df4/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -715,18 +688,18 @@ int function(int argument) {
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <h3><strong>コメント</strong></h3>
           <div class="content-left">
-            <h4>チャンネルを変えてもらう際に、番号も一緒に伝えられたら、こう書ける。</h4>
+            <h4>ソースコードに注釈をつける。</h4>
             <ul class="flexblock specs">
               <li>
                 <div>
                   <span>•</span>
-                  <h5 class="alignjustify">１種類の関数で表せる。</h5>
+                  <h5 class="alignjustify"><b>//</b>を先頭につけた行は、コンパイル時に無視される。</h5>
                 </div>
               </li>
               <li>
                 <div>
                   <span>•</span>
-                  <h5 class="alignjustify">関数の実行に必要な値を<b>引数</b>と呼ぶ。</h5>
+                  <h5 class="alignjustify">複数行コメントは、<b>/*</b>と<b>*/</b>で囲む。</h5>
                 </div>
               </li>
             </ul>
@@ -748,32 +721,87 @@ int function(int argument) {
       <section>
         <div class="wrap">
           <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h3><strong>インデント</strong></h3>
           <div class="content-left">
-            <h4>チャンネルを変えてもらう際に、番号も一緒に伝えられたら、こう書ける。</h4>
+            <h3><strong>例題６</strong></h3>
+            <h4 class="alignjustify">注釈を入れてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <span>•</span>
-                  <h5 class="alignjustify">１種類の関数で表せる。</h5>
+                  <span>1. </span>
+                  <h5 class="alignjustify">blink()の上の行に、関数の説明を加えよう。</h5>
                 </div>
               </li>
               <li>
                 <div>
-                  <span>•</span>
-                  <h5 class="alignjustify">関数の実行に必要な値を<b>引数</b>と呼ぶ。</h5>
+                  <span>2. </span>
+                  <h5 class="alignjustify">blinkInterval()の上の行に、複数行で説明を加えよう。</h5>
                 </div>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <pre><h5>異なるチャンネルを同じ関数で実行
+            <iframe src=https://create.arduino.cc/editor/634nakajima/272745c8-1180-463c-bf6b-8c8fec5461dd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+        </div>
+      </section>
 
-テレビをつける();
-チャンネルを変える(1);
-チャンネルを変える(4);
-チャンネルを変える(5);
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <div class="content-left">
+            <h3><strong>例題７</strong></h3>
+            <h4 class="alignjustify">コメントアウトしてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">動作確認のために特定の関数を一時的に無視することを<b>コメントアウト</b>と呼ぶ。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">blink()かblinkInterval()のどちらかをコメントアウトしてみよう。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/272745c8-1180-463c-bf6b-8c8fec5461dd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
 
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>インデント</strong></h3>
+          <div class="content-left">
+            <h4>可読性を向上させるための字下げ。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">Tabキーを押して、ソースコードの階層を見やすくする。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">⌘Tで、自動でインデントをつけられる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>× インデントなし
+void loop {
+function1();
+}
+
+○ インデントあり
+void loop {
+  function1();
+}
           </h5>
                   </pre>
           </div>
@@ -820,63 +848,187 @@ void loop(){
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
           <div class="content-left">
-            <h3><strong>LEDを点滅させる回路</strong></h3>
+            <h3><strong>練習１</strong></h3>
+            <h4 class="alignjustify">LEDの点滅周期を変えてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">digitalWrite(LED_BUILTIN, HIGH &ltLOW&gt);は、LEDを点灯 &lt消灯&gt させる関数</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">delay()は、引数の値（ミリ秒）だけ何もしないで待つ関数</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>3. </span>
+                  <h5 class="alignjustify">引数の値を変えることで、点滅周期を変えることができる</h5>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="content-left">
-            <iframe width="560" height="350" src="https://www.tinkercad.com/embed/gwbgVpP6QHe?editbtn=1" frameborder="0" marginwidth="0" marginheight="30" scrolling="no">
-            </iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
-          <div class="content-left">
-            <h3><strong>異なる明るさでLEDを点滅させる回路</strong></h3>
-          </div>
-          <div class="content-left">
-            <iframe width="560" height="350" src="https://www.tinkercad.com/embed/dX8x0jkDc9O?editbtn=1" frameborder="0" marginwidth="0" marginheight="30" scrolling="no">
-            </iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
-          <div class="content-left">
-            <h3><strong>フルカラーLEDで異なる色を点灯させる回路</strong></h3>
-          </div>
-          <div class="content-left">
-            <iframe width="560" height="350" src="https://www.tinkercad.com/embed/iWbRRmM72l1?editbtn=1" frameborder="0" marginwidth="0" marginheight="30" scrolling="no">
-            </iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/fad8cb66-3bbd-40fb-ae6e-f58fa8f28017/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>Arduinoでよく使われる関数</strong></h3>
           <div class="content-left">
-            <h3><strong>スイッチを押すごとにLEDが点灯/消灯する回路</strong></h3>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void pinMode(ピン番号, 入出力);</h4>
+                  <h5>引数のピンを入力（INPUT）か出力（OUTPUT）に設定する。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">int digitalRead(ピン番号);</h4>
+                  <h5>ピンに入る電圧をHIGHで返す。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void analogWrite(ピン番号, 状態);</h4>
+                  <h5>引数で指定したピンから0-255のPWM出力をする。</h5>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="content-left">
-            <iframe width="560" height="350" src="https://www.tinkercad.com/embed/9XslQYgBdVX?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void digitalWrite(ピン番号, 状態);</h4>
+                  <h5>引数のピンをHIGH (5v)かLOW (0v)にする。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void analogRead(ピン番号);</h4>
+                  <h5>ピンに入る電圧を0-255（0-5v）の整数値で返す。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h4 class="alignjustify">void delay(ミリ秒);</h4>
+                  <h5>引数の値だけ何もしないで待つ。</h5>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>関数の定義</strong></h3>
           <div class="content-left">
-            <h3><strong>周囲が暗くなったらLEDを点灯させる回路</strong></h3>
+            <h4>コンピュータにりんごを買ってきてもらう関数を定義するなら、こう書ける。</h4>
           </div>
           <div class="content-left">
-            <iframe width="560" height="350" src="https://www.tinkercad.com/embed/95AKYZjygj9?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <pre><h5>関数の定義
+
+      ①果物 ②りんごを買う(③お金 ④日本円) {
+          ⑤スーパーに行く(自転車);
+          ⑤りんごをカゴに入れる(1コ);
+          ⑤レジでお金を払う(日本円, りんご, 1コ);
+          return りんご;
+      }
+      </h5>
+                  </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>関数の定義</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h4 class="alignjustify">戻り値の型</h4>
+                  <h5>コンピュータから受け取る処理結果の種類（果物）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h4 class="alignjustify">関数名</h4>
+                  <h5>処理内容を表す名前（りんごを買う　※プログラマが名付ける）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>3. </span>
+                  <h4 class="alignjustify">引数の型</h4>
+                  <h5>処理に必要な情報の種類（お金）</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>関数の定義
+
+      ①void ②function(③int ④argument) {
+          ⑤subfunction(arg);
+      }
+      </h5>
+                  </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
+          <h3><strong>関数の定義</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>4. </span>
+                  <h4 class="alignjustify">引数名</h4>
+                  <h5>処理に必要な情報を表す名前（日本円　※プログラマが名付ける）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>5. </span>
+                  <h4 class="alignjustify">処理内容</h4>
+                  <h5 class="alignjustify">すでに別の場所で定義された関数で命令を記述（スーパーへ行く、カゴに入れるなど）</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>関数の定義
+
+      ①void ②function(③int ④argument) {
+          ⑤subfunction(arg);
+      }
+      </h5>
+                  </pre>
           </div>
         </div>
       </section>
