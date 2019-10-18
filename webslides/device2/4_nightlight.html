@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <a href="index.html#slide=2" title="デバイス演習Ⅱ 目次へ戻る">
+        <h3><svg class="fa-arrow-circle-left">
+            <use xlink:href="#fa-arrow-circle-left"></use>
+          </svg>
+          <h3>
+      </a>
+    </nav>
+  </header>
+  <main role="main">
+    <article id="webslides" class="horizontal">
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <h2 class="aligncenter text-landing"><strong>第４回</strong></h2>
+          <h2 class="aligncenter text-landing"><strong>スイッチでライトを点灯させる</strong></h2>
+          <hr>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
+          <h3><strong>関数の定義</strong></h3>
+          <div class="content-left">
+            <h4>コンピュータにりんごを買ってきてもらう関数を定義するなら、こう書ける。</h4>
+          </div>
+          <div class="content-left">
+            <pre><h5>関数の定義
+
+            ①果物 ②りんごを買う(③お金 ④日本円) {
+                ⑤スーパーに行く(自転車);
+                ⑤りんごをカゴに入れる(1コ);
+                ⑤レジでお金を払う(日本円, りんご, 1コ);
+                return りんご;
+            }
+            </h5>
+                        </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
+          <h3><strong>関数の定義</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h4 class="alignjustify">戻り値の型</h4>
+                  <h5>コンピュータから受け取る処理結果の種類（果物）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h4 class="alignjustify">関数名</h4>
+                  <h5>処理内容を表す名前（りんごを買う　※プログラマが名付ける）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>3. </span>
+                  <h4 class="alignjustify">引数の型</h4>
+                  <h5>処理に必要な情報の種類（お金）</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>関数の定義
+
+            ①void ②function(③int ④argument) {
+                ⑤subfunction(arg);
+            }
+            </h5>
+                        </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
+          <h3><strong>関数の定義</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>4. </span>
+                  <h4 class="alignjustify">引数名</h4>
+                  <h5>処理に必要な情報を表す名前（日本円　※プログラマが名付ける）</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>5. </span>
+                  <h4 class="alignjustify">処理内容</h4>
+                  <h5 class="alignjustify">すでに別の場所で定義された関数で命令を記述（スーパーへ行く、カゴに入れるなど）</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>関数の定義
+
+            ①void ②function(③int ④argument) {
+                ⑤subfunction(arg);
+            }
+            </h5>
+                        </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>例題１</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを特定の色で点灯させる関数を定義しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">rPin, gPin, bPinはそれぞれrgbのピン番号（13,12,11）を表す変数。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">ピン番号を変数に入れることで、何のピンか分かりやすくなる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>•</span>
+                  <h5 class="alignjustify">loop()内でlightRed()を呼び出すだけで、赤く光る。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/0e20269a-30bc-4e74-9430-8555716e7726/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習１</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを様々な色で点灯させる関数を定義しよう。</h4>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/0e20269a-30bc-4e74-9430-8555716e7726/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <h3><strong>PWM（擬似アナログ出力）</strong></h3>
+          <div class="grid sm">
+            <div class="column">
+              <figure>
+                <img class="aligncenter" src="https://www.arduino.cc/en/uploads/Tutorial/pwm.gif" alt="pwm">
+                <figcaption>
+                  <p>Timothy Hirzel, "PWM", https://www.arduino.cc/en/Tutorial/PWM</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <span>•</span>
+                    <h5 class="alignjustify">電流（電圧）を変化させることで、LEDの明るさを調整できる。</h5>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>•</span>
+                    <h5 class="alignjustify">Arduinoの各ピンは、0Vか5Vしか出力できない。</h5>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>•</span>
+                    <h5 class="alignjustify">0Vと5Vを高速で切り替え、0Vと5Vの時間比で擬似的に中間の電圧（0-5V）を出力する機能を<b>PWM</b>出力と呼ぶ。</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>例題２</strong></h3>
+            <h4 class="alignjustify">LEDの明るさを変えてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">”〜”が印字されたピンのみPWM出力が可能。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">analogWrite(ピン番号, 0-255の整数値)でPWM出力。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>3. </span>
+                  <h5 class="alignjustify">２番目の引数の値で明るさをコントロールできる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/8180f270-6fcc-48e1-97e3-8e08fc61fb7e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習２</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDの明るさを変えてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">”〜”が印字されたピンを３つ使用する。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">アノードコモンの場合、"0"で点灯、"255"で消灯することに注意。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/FullcolorLEDPWM.png" alt="FullcolorLEDPWM" />
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>繰り返し処理</strong></h3>
+            <h4>もしコンピュータに出席票を集計してもらうなら、こう書ける。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5 class="alignjustify">Arduinoにとって、同じ処理を繰り返し実行するのは得意。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="alignjustify">プログラマにとって、同じ処理を繰り返し書くのは大変。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="alignjustify">繰り返し処理を簡単に書く方法が欲しい。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>
+出席票の束を机に置く();
+7桁の整数 学籍番号 = 一番上の出席票の学籍番号を確認();
+名簿にチェックを入れる(学籍番号);
+一番上の出席票をめくる();
+学籍番号 = 一番上の出席票の学籍番号を確認();
+名簿にチェックを入れる(学籍番号);
+一番上の出席票をめくる();
+
+（以下、繰り返し）
+</h5>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>繰り返し処理</strong></h3>
+            <h4>繰り返し処理は、このように書ける。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5 class="alignjustify">繰り返し処理の構文を<b>for文</b>と呼ぶ。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="alignjustify">ここでは「めくった枚数をカウントし、出席票の枚数になるまで中括弧内の処理を繰り返す」という意味になる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>
+出席票の束を机に置く();
+for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数++) {
+  7桁の整数 学籍番号 = 一番上の出席票の学籍番号を確認();
+  名簿にチェックを入れる(学籍番号);
+  一番上の出席票をめくる();
+}
+</h5>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>例題３</strong></h3>
+            <h4 class="alignjustify">LEDの明るさを自動的にだんだん明るくしてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">analogWrite()を使うことで、LEDを256段階の明るさに調節できる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">0から255に値を変化させながら、繰り返しanalogWrite()を実行。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/37c4ac93-0748-4515-8ba8-a5ee0b7d756a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習３</strong></h3>
+            <h4 class="alignjustify">LEDの明るさを自動的にだんだん暗くしてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">繰り返しのカウンタであるiは0から255へだんだん大きくなる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">analogwrite()の引数を工夫すれば、だんだん暗くすることもできる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/37c4ac93-0748-4515-8ba8-a5ee0b7d756a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習４</strong></h3>
+            <h4 class="alignjustify">LEDをホタルのように光らせてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">for文を2つ並べれば、だんだん明るくしたあとだんだん暗くすることもできる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/37c4ac93-0748-4515-8ba8-a5ee0b7d756a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>例題３</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを赤から緑にだんだん変化させてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">緑の光は、だんだん明るくする。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">赤の光は、だんだん暗くする。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/beee92e3-c0ff-45e9-8019-dd360f13570a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習５</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを緑から青にだんだん変化させてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">青の光は、だんだん明るくする。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span>2. </span>
+                  <h5 class="alignjustify">緑の光は、だんだん暗くする。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/beee92e3-c0ff-45e9-8019-dd360f13570a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第３回 LEDの明るさや色を変化させる</p>
+          <div class="content-left">
+            <h3><strong>練習６</strong></h3>
+            <h4 class="alignjustify">フルカラーLEDを虹色に変化させてみよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <span>1. </span>
+                  <h5 class="alignjustify">赤→緑→青→赤の順に、だんだん変化させる。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/beee92e3-c0ff-45e9-8019-dd360f13570a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+      </section>
+      <!--
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <div class="content-left">
+            <h3><strong>ランプシェードを被せて完成</strong></h3>
+          </div>
+          <div class="content-left">
+            <img src="https://source.unsplash.com/6FXo3ra5RF0/560x350" alt="lampshade">
+          </div>
+        </div>
+      </section>
+-->
+
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- WebSlides Original Templates -->
+
+  <!-- A global footer
+
+<footer role="contentinfo">
+<div class="wrap">
+  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+</div>
+</footer>  -->
+
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
