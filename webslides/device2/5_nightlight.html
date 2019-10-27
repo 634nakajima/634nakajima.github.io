@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <a href="index.html#slide=2" title="デバイス演習Ⅱ 目次へ戻る">
+        <svg class="fa-arrow-circle-left">
+          <use xlink:href="#fa-arrow-circle-left"></use>
+        </svg>目次へ戻る
+      </a>
+    </nav>
+  </header>
+  <main role="main">
+    <article id="webslides" class="horizontal">
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
+          <h2 class="aligncenter text-landing"><strong>第５回</strong></h2>
+          <h2 class="aligncenter text-landing"><strong>暗くなったらライトを点灯させる</strong></h2>
+          <hr>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>Cdsセル</strong></h3>
+          <div class="content-left">
+            <h4>明るさを検出するセンサ</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">明るさが大きいほど、抵抗が<b>小さく</b>なる。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify"><b>分圧の法則</b>を利用し、抵抗値の変化を電圧値としてArduinoに入力する。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img class="aligncenter" src="./pics/CdS.jpg" alt="cds">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>分圧の法則</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">直列に繋がった抵抗の両端にかかる電圧は、<b>抵抗値の比</b>と等しくなる。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <a href="https://www.tinkercad.com/things/8JRsZi3Zopx" target="_blank">
+              <img src="./pics/currdiv.png" alt="current divider rule" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h4><strong>練習１</strong></h4>
+          <div class="content-left">
+            <h4>分圧の法則を確かめよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p>左側の抵抗が<b>1,2,3,4,5kΩ</b>のとき、左右の電圧を調べましょう。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>左側の抵抗にかかる電圧を<b>1.25V</b>にしたいとき、左の抵抗を何Ωにすれば良いでしょう。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <a href="https://www.tinkercad.com/things/8JRsZi3Zopx" target="_blank">
+              <img src="./pics/currdiv.png" alt="current divider rule" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h4><strong>例題１</strong></h4>
+          <div class="content-left">
+            <h4>CdSセルの抵抗値の変化を電圧値としてArduinoに入力しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p>1kΩの抵抗とCdSセルを直列につなぐ。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>CdSセルの抵抗値が変化することで、抵抗にかかる電圧が変化する。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <a href="https://www.tinkercad.com/things/4UhnHC2lnYV" target="_blank">
+              <img src="./pics/cdscircuit.png" alt="cds circuit" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h4><strong>例題２</strong></h4>
+          <div class="content-left">
+            <h4>明るさの変化をモニタリングしよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">電圧の変化を<b>アナログ入力</b>で読み取る。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify">読み取った値を<b>シリアル通信</b>でパソコンのモニタ上に表示する。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify">暗くなったときの値をメモしておく。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/6342acf6-d789-4f94-bab3-84b2625d4302/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>Arduinoへのアナログ入力</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">アナログ入力では<b>0-5V</b>の電圧が<b>0-1023</b>の整数値に変換される。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5 class="alignjustify">読み取った電圧は<b>int</b>型の変数に代入すると良い。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>アナログ入力の値を読み取り、変数に代入
+
+  int val = analogRead(analog_pin);</h5>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>シリアル通信</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">Arduinoとパソコンとの間で文字や数値をやりとりする機能。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify">Arduinoが読み取った値や処理した値などを確認したい時に便利。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify">ウィンドウ右上の<b>虫メガネ</b>マークをクリックするとモニタが開く。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/serialmonitor.jpg" alt="serial monitor" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>シリアル通信</strong></h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p class="alignjustify">今回使うのは、シリアル通信の<b>初期設定</b>と、<b>数値の出力</b>を行う関数。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="alignjustify">シリアル通信を行うための関数群は全て頭に"Serial"という名前がついており、これを<b>クラス</b>と呼ぶ。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><h5>1. シリアル通信の初期設定
+  Serial.begin(9600);
+
+2. 値の出力
+  Serial.println(val);
+</h5>
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>練習２</strong></h3>
+          <div class="content-left">
+            <h4>暗くなったらライトを点灯させる回路を作ろう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5>CdSセルとフルカラーLEDの回路をそれぞれ作成。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/cdsLEDcircuit.png" alt="CdS and LED circuits" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第５回 暗くなったらライトを点灯させる</p>
+          <h3><strong>練習３</strong></h3>
+          <div class="content-left">
+            <h4>一定の明るさを下回ったらライトを点灯させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5><b>if文</b>を使い、センサの値が一定値を下回ったときにLEDを点灯させる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5>条件分岐の基準となる値を<b>しきい値</b>と呼ぶ。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>if文の条件式は、不等号（ < ）を使って書ける。</p> </div> </li> </ul> </div> <div class="content-left">
+                      <img src="./pics/cdsLEDcircuit.png" alt="CdS and LED circuits" />
+                </div>
+          </div>
+      </section>
+
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- WebSlides Original Templates -->
+
+  <!-- A global footer
+
+<footer role="contentinfo">
+<div class="wrap">
+  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+</div>
+</footer>  -->
+
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+
+</html>

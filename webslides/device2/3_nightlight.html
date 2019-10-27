@@ -33,10 +33,9 @@
   <header role="banner">
     <nav role="navigation">
       <a href="index.html#slide=2" title="デバイス演習Ⅱ 目次へ戻る">
-        <h3><svg class="fa-arrow-circle-left">
-            <use xlink:href="#fa-arrow-circle-left"></use>
-          </svg>
-          <h3>
+        <svg class="fa-arrow-circle-left">
+          <use xlink:href="#fa-arrow-circle-left"></use>
+        </svg>目次へ戻る
       </a>
     </nav>
   </header>
@@ -158,17 +157,17 @@
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">rPin, gPin, bPinはそれぞれrgbのピン番号（13,12,11）を表す変数。</h5>
+                  <p class="alignjustify">rPin, gPin, bPinはそれぞれrgbのピン番号（13,12,11）を表す変数。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">ピン番号を変数に入れることで、何のピンか分かりやすくなる。</h5>
+                  <p class="alignjustify">ピン番号を変数に入れることで、何のピンか分かりやすくなる。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">loop()内でlightRed()を呼び出すだけで、赤く光る。</h5>
+                  <p class="alignjustify">loop()内でlightRed()を呼び出すだけで、赤く光る。</p>
                 </div>
               </li>
             </ul>
@@ -209,17 +208,17 @@
               <ul class="flexblock specs">
                 <li>
                   <div>
-                    <h5 class="alignjustify">電流（電圧）を変化させることで、LEDの明るさを調整できる。</h5>
+                    <p class="alignjustify">電流（電圧）を変化させることで、LEDの明るさを調整できる。</p>
                   </div>
                 </li>
                 <li>
                   <div>
-                    <h5 class="alignjustify">Arduinoの各ピンは、0Vか5Vしか出力できない。</h5>
+                    <p class="alignjustify">Arduinoの各ピンは、0Vか5Vしか出力できない。</p>
                   </div>
                 </li>
                 <li>
                   <div>
-                    <h5 class="alignjustify">0Vと5Vを高速で切り替え、0Vと5Vの時間比で擬似的に中間の電圧（0-5V）を出力する機能を<b>PWM</b>出力と呼ぶ。</h5>
+                    <p class="alignjustify">0Vと5Vを高速で切り替え、0Vと5Vの時間比で擬似的に中間の電圧（0-5V）を出力する機能を<b>PWM</b>出力と呼ぶ。</p>
                   </div>
                 </li>
               </ul>
@@ -237,17 +236,17 @@
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">”〜”が印字されたピンのみPWM出力が可能。</h5>
+                  <p class="alignjustify">”〜”が印字されたピンのみPWM出力が可能。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">analogWrite(ピン番号, 0-255の整数値)でPWM出力。</h5>
+                  <p class="alignjustify">analogWrite(ピン番号, 0-255の整数値)でPWM出力。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">２番目の引数の値で明るさをコントロールできる。</h5>
+                  <p class="alignjustify">２番目の引数の値で明るさをコントロールできる。</p>
                 </div>
               </li>
             </ul>
@@ -266,12 +265,12 @@
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">”〜”が印字されたピンを３つ使用する。</h5>
+                  <p class="alignjustify">”〜”が印字されたピンを３つ使用する。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">アノードコモンの場合、"0"で点灯、"255"で消灯することに注意。</h5>
+                  <p class="alignjustify">アノードコモンの場合、"0"で点灯、"255"で消灯することに注意。</p>
                 </div>
               </li>
             </ul>
@@ -290,17 +289,17 @@
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">Arduinoにとって、同じ処理を繰り返し実行するのは<b>得意</b>。</h5>
+                  <p class="alignjustify">Arduinoにとって、同じ処理を繰り返し実行するのは<b>得意</b>。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">プログラマにとって、同じ処理を繰り返し書くのは<b>大変</b>。</h5>
+                  <p class="alignjustify">プログラマにとって、同じ処理を繰り返し書くのは<b>大変</b>。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">繰り返し処理を<b>簡単に</b>書く方法が欲しい。</h5>
+                  <p class="alignjustify">繰り返し処理を<b>簡単に</b>書く方法が欲しい。</p>
                 </div>
               </li>
             </ul>
@@ -331,12 +330,12 @@
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">繰り返し処理の構文を<b>for文</b>と呼ぶ。</h5>
+                  <p class="alignjustify">繰り返し処理の構文を<b>for文</b>と呼ぶ。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">ここでは「めくった枚数をカウントし、出席票の枚数になるまで中括弧内の処理を繰り返す」という意味になる。</h5>
+                  <p class="alignjustify">ここでは「めくった枚数をカウントし、出席票の枚数になるまで中括弧内の処理を繰り返す」という意味になる。</p>
                 </div>
               </li>
             </ul>
@@ -364,12 +363,12 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">analogWrite()を使うことで、LEDを256段階の明るさに調節できる。</h5>
+                  <p class="alignjustify">analogWrite()を使うことで、LEDを256段階の明るさに調節できる。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">0から255に値を変化させながら、繰り返しanalogWrite()を実行。</h5>
+                  <p class="alignjustify">0から255に値を変化させながら、繰り返しanalogWrite()を実行。</p>
                 </div>
               </li>
             </ul>
@@ -388,12 +387,12 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">繰り返しのカウンタであるiは0から255へだんだん大きくなる。</h5>
+                  <p class="alignjustify">繰り返しのカウンタであるiは0から255へだんだん大きくなる。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">analogwrite()の引数を工夫すれば、だんだん暗くすることもできる。</h5>
+                  <p class="alignjustify">analogwrite()の引数を工夫すれば、だんだん暗くすることもできる。</p>
                 </div>
               </li>
             </ul>
@@ -412,7 +411,7 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">for文を2つ並べれば、だんだん明るくしたあとだんだん暗くすることもできる。</h5>
+                  <p class="alignjustify">for文を2つ並べれば、だんだん明るくしたあとだんだん暗くすることもできる。</p>
                 </div>
               </li>
             </ul>
@@ -431,12 +430,12 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">緑の光は、だんだん明るくする。</h5>
+                  <p class="alignjustify">緑の光は、だんだん明るくする。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">赤の光は、だんだん暗くする。</h5>
+                  <p class="alignjustify">赤の光は、だんだん暗くする。</p>
                 </div>
               </li>
             </ul>
@@ -454,12 +453,12 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">青の光は、だんだん明るくする。</h5>
+                  <p class="alignjustify">青の光は、だんだん明るくする。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <h5 class="alignjustify">緑の光は、だんだん暗くする。</h5>
+                  <p class="alignjustify">緑の光は、だんだん暗くする。</p>
                 </div>
               </li>
             </ul>
@@ -477,7 +476,7 @@ for(めくった枚数=0; めくった枚数<出席票の数; めくった枚数
             <ul class="flexblock specs">
               <li>
                 <div>
-                  <h5 class="alignjustify">赤→緑→青→赤の順に、だんだん変化させる。</h5>
+                  <p class="alignjustify">赤→緑→青→赤の順に、だんだん変化させる。</p>
                 </div>
               </li>
             </ul>
