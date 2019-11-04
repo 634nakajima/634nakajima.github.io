@@ -3110,7 +3110,7 @@ a,
 .bg-white a,
 .bg-light a,
 .bg-gradient-white a {
-  color: #08088A; }
+  color: #333; }
 
 a:hover {
   color: #3af; }
