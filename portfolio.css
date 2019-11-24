@@ -1,7 +1,6 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
@@ -16,22 +15,24 @@ body {
   font-family: 'Logo';
   src: url('./assets/digital-7i.ttf');
 }
- 
+
 h1.titleLogo {
   font-size:4em;
   padding-top:50px;
-  color:#103099;
+  color:white;
   text-align:center;
   font-family: Logo;
+  text-shadow: 2px 2px 10px black;
 }
-
 /*Main Visual
 -------------------------------------------------- */
 .top {
   padding-top:50px;
   background-size:contain;
-  background-color:white;
-
+  background-color:#777;
+  background:url(https://source.unsplash.com/voM1Z9cGPCU/);
+  background-size:cover;
+  background-position:center;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -136,25 +137,26 @@ h1.titleLogo {
     margin-top: 0px;
   }
   .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    margin: 0px;
+    width: auto;
   }
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left: 0;
+    height: auto;
   }
-
   /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
   }
 
   h1.titleLogo {
-  font-size:6em;
-  padding-top:0px;
-  color:#103080;
+  font-size:7em;
+  padding-top:10px;
+  color:white;
   text-align:center;
   font-family: Logo;
+  text-shadow: 2px 2px 10px black;
   }
   .top {
     padding-top: 100px;
