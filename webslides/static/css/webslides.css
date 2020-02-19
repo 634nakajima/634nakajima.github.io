@@ -1960,8 +1960,8 @@ About, Philosophy...
   text-align: left;
   width: 100%; }
   .flexblock.reasons li:hover {
-    -webkit-transform: translateY(-0.2rem);
-            transform: translateY(-0.2rem); }
+    -webkit-transform: scale(1.18,1.18);
+            transform: scale(1.18,1.18); }
   .flexblock.reasons li:after {
     bottom: -2.4rem;
     content: '';
@@ -3147,8 +3147,8 @@ ins {
   background-color: rgba(221, 238, 255, 0.8); }
 
 pre {
-  background: #fff;
-  border: 1px solid rgba(0, 20, 80, 0.1);
+  background: #e5eaed;
+  border-radius: 10px;
   -webkit-box-shadow: 0 8px 16px rgba(0, 20, 80, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 8px 16px rgba(0, 20, 80, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08); }
 
