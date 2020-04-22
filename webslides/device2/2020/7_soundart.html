@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <a href="index.html#slide=2" title="目次へ戻る">
+        <svg class="fa-arrow-circle-left">
+          <use xlink:href="#fa-arrow-circle-left"></use>
+        </svg>目次へ戻る
+      </a>
+    </nav>
+  </header>
+  <main role="main">
+    <article id="webslides" class="vertical">
+      <section>
+        <div class="wrap aligncenter">
+          <h2 class="text-landing"><strong>Ⅲ 触れるサウンドアートを作ろう</strong></h2>
+          <hr>
+          <ol class="chapter">
+            <li value=7>
+              <h5><a href="7_soundart.html#slide=8">触れる行為をセンサで検出する</a></h5>
+            </li>
+            <li>
+              <h5><a href="8_soundart.html">mp3音源再生モジュールで音を再生する</a></h5>
+            </li>
+            <li>
+              <h5><a href="9_soundart.html">触れる行為を音に対応付けて完成させる</a></h5>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h3><strong>手で「触れる」行為を音で演出するサウンドアートを制作。</strong></h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/i14h2xyPr18" alt="touch">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h4 class="alignjustify">第７回　触れる行為をセンサで検出する</h4>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4 class="alignjustify">第８回　mp3音源再生モジュールで音を再生する</h4>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4 class="alignjustify">第９回　触れる行為を音に対応づけて完成させる</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h2>触れる行為と音のつながり</h2>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="../imbe/pics/handlight.jpg" alt="web site">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <!-- css 1762行目でフォントサイズ指定可 -->
+                <li>
+                  <h5>人間は<b>触れる</b>行為を通じて世界を探索し、理解している。</h5>
+                </li>
+                <li>
+                  <h5>触れる行為は<b>さする</b>、<b>叩く</b>、<b>押す</b>など様々。</h5>
+                </li>
+                <li>
+                  <h5>触れる行為には<b>音</b>が伴うことが多い。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <script type="text/javascript">
+          function playSound(ele) {
+            if (ele.id == "door") {
+              document.getElementById("doorSound").play();
+            } else if (ele.id == "book") {
+              document.getElementById("bookSound").play();
+            } else if (ele.id == "bath") {
+              document.getElementById("bathSound").play();
+            }
+          }
+        </script>
+        <audio id="doorSound" preload="auto">
+          <source src="https://soundeffect-lab.info/sound/various/mp3/door-wood-knock1.mp3" type="audio/mp3">
+        </audio>
+        <audio id="bookSound" preload="auto">
+          <source src="http://www.kurage-kosho.info/mp3/page01.mp3" type="audio/mp3">
+        </audio>
+        <audio id="bathSound" preload="auto">
+          <source src="https://soundeffect-lab.info/sound/various/mp3/wipe1.mp3" type="audio/mp3">
+        </audio>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h2>触れる行為と音のつながり</h2>
+          <ul class="flexblock gallery">
+            <li>
+              <figure id="door" onclick="playSound(this)">
+                <img alt="Thumbnail" src="../imbe/pics/door86.png">
+                <figcaption>
+                  <p>ドアを<b>叩く</b>と、<br><b>コンコン</b>と音がする。</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure id="book" onclick="playSound(this)">
+                <img alt="Thumbnail " src="../imbe/pics/book86.png">
+                <figcaption>
+                  <p>本を<b>めくる</b>と、<br><b>パラパラ</b>と音がする。</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure id="bath" onclick="playSound(this)">
+                <img alt="Thumbnail" src="../imbe/pics/bath86.png">
+                <figcaption>
+                  <p>浴槽を<b>こする</b>と、<br><b>キュッキュ</b>と音がする。</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h3>触れる行為をモチーフにしたサウンドアートを作ろう。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/i14h2xyPr18/480x360" alt="hand">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <!-- css 1762行目でフォントサイズ指定可 -->
+                <li>
+                  <h5>実世界での音体験を<b>演出・拡張</b>し、作品として表現する。</h5>
+                </li>
+                <li>
+                  <h5>触れる行為をセンサで検出し、あらかじめ用意したmp3音源を再生する。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h3>触れるサウンドアート　過去の作品①</h3>
+          <ul class="flexblock gallery">
+            <li>
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/NoayKuRduG0?rel=0" allowfullscreen></iframe>
+              </div>
+            </li>
+            <li>
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/ZOYfW3GyB0s?rel=0" allowfullscreen></iframe>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h3>触れるサウンドアート　過去の作品②</h3>
+          <ul class="flexblock gallery">
+            <li>
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/sbyJ48Rr_tg?rel=0" allowfullscreen></iframe>
+              </div>
+            </li>
+            <li>
+              <div class="embed">
+                <iframe src="https://www.youtube.com/embed/tyOQhsuznWY?rel=0" allowfullscreen></iframe>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h2 class="aligncenter text-landing"><strong>第７回</strong></h2>
+          <h2 class="aligncenter text-landing"><strong>触れる行為をセンサで検出する</strong></h2>
+          <hr>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h3>触れる行為を検出するセンサ</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="./pics/piezo.jpg" alt="piezo">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <!-- css 1762行目でフォントサイズ指定可 -->
+                <li>
+                  <h5>触れる（叩く、押す、さする）と物体が<b>振動</b>する。</h5>
+                </li>
+                <li>
+                  <h5><b>ピエゾ素子</b>と呼ばれるセンサで，振動を電圧に変換する。</h5>
+                </li>
+                <li>
+                  <h5>ピエゾ素子で発生する電圧をArduinoで読み取る
+                  </h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h4><strong>例題１</strong></h4>
+          <div class="content-left">
+            <h4>振動の強さに応じてLEDを点灯させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p>1MΩの抵抗とピエゾ素子を並列につなぐ。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>1MΩの抵抗とピエゾ素子の一端をGNDに、もう一端をアナログ入力端子につなぐ。</p>
+                </div>
+              </li>
+              次ページへ続く
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/piezocircuit.png" alt="piezo circuit" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h4><strong>例題１</strong></h4>
+          <div class="content-left">
+            <h4>振動の強さに応じてLEDを点灯させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <p>アナログ入力で受け取った数値を用いて、PWM出力をする。</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p>入力値は0-1023、出力値は0-255なので、map()関数で変換する。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/84f03e93-38c2-4f0c-bc7f-ac1ee53466c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h4><strong>練習１</strong></h4>
+          <div class="content-left">
+            <h4>ピエゾ素子をタップしてLEDをON/OFFさせよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <h5><u><a href="4_nightlight.html#slide=21" target="_blank">スイッチの時</a></u>とほぼ同じ方法。</h5>
+              </li>
+              <li>
+                <h5>閾値を超えたらON/OFFの切替を行い、while文で閾値を下回るまで待つ。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/piezocircuit.png" alt="piezo circuit" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h4><strong>発展１</strong></h4>
+          <div class="content-left">
+            <h4>ピエゾ素子をタップしてLEDの明るさを3段階に変化させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <h5>練習１を応用させる。</h5>
+              </li>
+              <li>
+                <h5>LEDを明るめ点灯、暗め点灯、消灯の３段階に切り替える。</h5>
+              </li>
+              <li>
+                <h5 class="alignjustify">LEDの状態が３つ以上なので、bool型ではなくint型の変数に記録しておく。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/piezocircuit.png" alt="piezo circuit" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <div class="content-left">
+            <h4><strong>発展２</strong></h4>
+            <h4 class="alignjustify">ピエゾ素子をタップするごとにフルカラーLEDを自分の好きな色に変化させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5 class="alignjustify"></h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/piezofullcolorled.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!--
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第７回 触れる行為をセンサで検出する</p>
+          <h4><strong>発展２</strong></h4>
+          <div class="content-left">
+            <h4>ピエゾ素子をタップする強さでLEDの明るさを3段階に変化させよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <h5>発展１を応用させる。</h5>
+              </li>
+              <li>
+                <h5>タップが強めだと明るめ点灯、中位だと暗め点灯、弱めだと消灯の３段階に切り替える。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img src="./pics/piezocircuit.png" alt="piezo circuit" />
+          </div>
+        </div>
+      </section>
+      -->
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- WebSlides Original Templates -->
+
+  <!-- A global footer
+
+<footer role="contentinfo">
+<div class="wrap">
+  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+</div>
+</footer>  -->
+
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+
+</html>

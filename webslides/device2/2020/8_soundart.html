@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <a href="index.html#slide=2" title="目次へ戻る">
+        <svg class="fa-arrow-circle-left">
+          <use xlink:href="#fa-arrow-circle-left"></use>
+        </svg>目次へ戻る
+      </a>
+    </nav>
+  </header>
+  <main role="main">
+    <article id="webslides" class="vertical">
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう</p>
+          <h2 class="aligncenter text-landing"><strong>第８回</strong></h2>
+          <h2 class="aligncenter text-landing"><strong>mp3音源再生モジュールで音を再生する</strong></h2>
+          <hr>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第８回 mp3音源再生モジュールで音を再生する</p>
+          <h5>mp3音源を再生するIC</h5>
+          <h3>DFPlayer mini</h3>
+          <div class="grid sm">
+            <div class="column">
+              <a href="https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299" target="_blank">
+                <img class="aligncenter" src="https://raw.githubusercontent.com/DFRobot/DFRobotMediaWikiImage/master/Image/DFR0299-600x600.jpg" alt="dfplayermini">
+              </a>
+              <p>
+                Source: <a href="https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299" target="_blank">DFROBOT</a>
+              </p>
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <!-- css 1762行目でフォントサイズ指定可 -->
+                <li>
+                  <h5>Arduino単体では、mp3音源を再生することができない。</h5>
+                </li>
+                <li>
+                  <h5>mp3音源再生に特化したICでmp3音源を再生する。</h5>
+                </li>
+                <li>
+                  <h5>ArduinoとDFPlayer miniとの間でシリアル通信を行い、<br />Arduino側でDFPlayer miniを操作する。</h5>
+                </li>
+                <li>
+                  <h5>音源はmicroSDカードに記録。
+                  </h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第８回 mp3音源再生モジュールで音を再生する</p>
+          <h4><strong>例題１</strong></h4>
+          <div class="content-left">
+            <h4>DFPlayer miniでmp3音源を再生しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5>右図の配線を参照し、回路を作成。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5><a href="https://soundeffect-lab.info/" target="_blank"><b>ここ</b></a>や<a href="https://taira-komori.jpn.org/freesound.html" target="_blank"><b>ここ</b></a>から効果音を選び、パソコンからmicroSDカードに入れる。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5>"mp3"フォルダ内（なければ作成）に0001.mp3, 0002.mp3, ...というファイル名で保存。</h5>
+                </div>
+              </li>
+            </ul>
+            次ページへ続く
+          </div>
+          <div class="content-left">
+            <img alt="dfplayer" src="./pics/dfplayer.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第８回 mp3音源再生モジュールで音を再生する</p>
+          <h4><strong>例題１</strong></h4>
+          <div class="content-left">
+            <h4>DFPlayer miniでmp3音源を再生しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <h5>
+                  <a href="./misc/DFRobotDFPlayerMini.zip"><b>ここ</b></a>から、ICを制御するためのライブラリをダウンロード・解凍。
+                </h5>
+              </li>
+              <li>
+                <h5>Arduinoを起動し、解凍したフォルダを、書類 > Arduino > libraries 内に入れる。</h5>
+              </li>
+              <li>
+                <div>
+                  <h5>右のソースコードを参考に、プログラムを作成。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <iframe src=https://create.arduino.cc/editor/634nakajima/e34b22b5-85fe-46d1-9887-5ca8d4740bcc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第８回 mp3音源再生モジュールで音を再生する</p>
+          <h4><strong>練習１</strong></h4>
+          <div class="content-left">
+            <h4>ピエゾ素子が反応したらmp3音源を再生しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5>右図を参考に回路を作成。</h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5>例題1と<u><a href="7_soundart.html#slide=11" target="_blank">ピエゾ素子</a></u>のソースコードを参考にプログラムを作成。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img alt="dfplayer" src="./pics/piezodfplayer.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅲ 触れるサウンドアートを作ろう<br />第８回 mp3音源再生モジュールで音を再生する</p>
+          <h4><strong>発展</strong></h4>
+          <div class="content-left">
+            <h4>mp3音源を再生しておき、ピエゾ素子が反応したら違う音源を再生しよう。</h4>
+            <ul class="flexblock specs">
+              <li>
+                <div>
+                  <h5></h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img alt="dfplayer" src="./pics/piezodfplayer.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <!-- WebSlides Original Templates -->
+
+  <!-- A global footer
+
+<footer role="contentinfo">
+<div class="wrap">
+  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+</div>
+</footer>  -->
+
+  <!-- Required -->
+  <script src="../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../static/js/svg-icons.js"></script>
+
+</body>
+
+</html>
