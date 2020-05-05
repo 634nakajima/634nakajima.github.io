@@ -40,7 +40,7 @@
     </nav>
   </header>
   <main role="main">
-    <article id="webslides" class="vertical">
+    <article id="webslides" class="vertical" order="2nd">
       <section>
         <div class="wrap aligncenter">
           <h2 class="text-landing"><strong>Ⅱ LEDアニメーションを作ろう</strong></h2>
@@ -104,16 +104,17 @@
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう</p>
-          <h2 class="aligncenter text-landing"><strong>第２回</strong></h2>
-          <h2 class="aligncenter text-landing"><strong>micro:bitプログラミング入門</strong></h2>
-          <hr>
+          <div class="slideHeader"></div>
+          <div class="wrap aligncenter">
+            <div class="classTitle"></div>
+            <div class="classChapter"></div>
+          </div>
         </div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
           <h3><strong>関数 とは</strong></h3>
           <div class="content-left">
             <ul class="flexblock specs">
@@ -782,7 +783,23 @@ basic.foever(function(){
     <!-- end article -->
   </main>
   <!-- end main -->
+  <template id="slideHeaderTemplate">
+    <p class="text-context"></p>
+  </template>
 
+  <template id=titleTemplate>
+    <h2 class="text-landing"><strong></strong></h2>
+    <h2 class="text-landing"><strong></strong></h2>
+    <hr>
+  </template>
+
+  <template id="listTemplate">
+    <ol>
+      <li>
+        <h5><a></a></h5>
+      </li>
+    </ol>
+  </template>
   <!-- WebSlides Original Templates -->
 
   <!-- A global footer
@@ -802,6 +819,7 @@ basic.foever(function(){
   <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
   <script defer src="../../static/js/svg-icons.js"></script>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="./template.js"></script>
 </body>
 
 </html>

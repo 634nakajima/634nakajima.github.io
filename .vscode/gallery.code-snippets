@@ -1,0 +1,18 @@
+{
+	"gallery": {
+		"prefix": "gallery",
+		"body": [
+			"<ul class=\"flexblock gallery\">",
+			"  <li>",
+			"    <figure>",
+			"      <img src=\"${1:src1}\" alt=\"${2:alt1}\">",
+			"      <figcaption>",
+			"        <p>${3:caption}</p>",
+			"      </figcaption>",
+			"    </figure>",
+			"  </li>",
+			"</ul>"
+		],
+		"description": "gallery"
+	}
+}

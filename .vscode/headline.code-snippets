@@ -1,0 +1,16 @@
+{
+	"section": {
+		"prefix": "section",
+		"body": [
+			"<section>",
+			"  <div class=\"wrap\">",
+			"    <div class=\"slideHeader\"></div>",
+			"    <h4><strong>${3:sub}</strong></h4>",
+			"    <h3>${4:main}</h3>",
+			"    ${5:content}",
+			"  </div>",
+			"</section>"
+		],
+		"description": "section"
+	}
+}

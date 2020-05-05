@@ -1,0 +1,10 @@
+{
+	"code": {
+		"prefix": "code",
+		"body": [
+			"<pre><code class=\"prettyprint lang-js\">${1:code}",
+			"</code></pre>"
+		],
+		"description": "code"
+	}
+}

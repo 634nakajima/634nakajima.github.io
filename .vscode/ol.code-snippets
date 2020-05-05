@@ -1,0 +1,19 @@
+{
+  "ordered list": {
+    "prefix": "ol",
+    "body": [
+      "<ul class=\"flexblock reasons\">",
+      "  <li style=\"counter-reset: list 0;\">",
+      "    <h5>${1:item1}</h5>",
+      "  </li>",
+      "  <li>",
+      "    <h5>${2:item2}</h5>",
+      "  </li>",
+      "  <li>",
+      "    <h5>${3:item3}</h5>",
+      "  </li>",
+      "</ul>"
+    ],
+    "description": "ordered list"
+  }
+}

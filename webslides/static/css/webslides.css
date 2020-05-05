@@ -3448,18 +3448,12 @@ Items: You can use for settings, drag&drop, close/delete...
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 20, 80, 0)), color-stop(50%, rgba(0, 20, 80, 0.2)), to(rgba(0, 20, 80, 0)));
   background: linear-gradient(to right, rgba(0, 20, 80, 0) 0%, rgba(0, 20, 80, 0.2) 50%, rgba(0, 20, 80, 0) 100%); }
 
-.specs li:last-child:after {
-  background: none; }
-
 /*=========================================================
 Why/Steps/Motivation/Reasons -  Decimal/Numbers
 =========================================================== */
 .reasons li:after {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 20, 80, 0)), color-stop(50%, rgba(0, 20, 80, 0.2)), to(rgba(0, 20, 80, 0)));
   background: linear-gradient(to right, rgba(0, 20, 80, 0) 0%, rgba(0, 20, 80, 0.2) 50%, rgba(0, 20, 80, 0) 100%); }
-
-.reasons li:last-child:after {
-  background: none; }
 
 /*=========================================
 Overlays

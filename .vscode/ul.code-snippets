@@ -1,0 +1,19 @@
+{
+  "unordered list": {
+    "prefix": "ul",
+    "body": [
+      "<ul class=\"flexblock specs\">",
+      "  <li>",
+      "    <h5>${1:item1}</h5>",
+      "  </li>",
+      "  <li>",
+      "    <h5>${2:item2}</h5>",
+      "  </li>",
+      "  <li>",
+      "    <h5>${3:item3}</h5>",
+      "  </li>",
+      "</ul>"
+    ],
+    "description": "unordered list"
+  }
+}
