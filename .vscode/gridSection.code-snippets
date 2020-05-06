@@ -1,0 +1,33 @@
+{
+	"gridSection": {
+		"prefix": "gridSection",
+		"body": [
+			"<section>",
+			"  <div class=\"wrap\">",
+			"    <div class=\"slideHeader\"></div>",
+			"    <h4><strong>${1:sub}</strong></h4>",
+			"    <h3>${2:main}</h3>",
+			"    <div class=\"grid sm\">",
+			"      <div class=\"column\">",
+			"        <img class=\"aligncenter\" src=\"https://source.unsplash.com/${3:q10VITrVYUM}/480x360\" alt=\"\">",
+			"      </div>",
+			"      <div class=\"column\">",
+			"        <ul class=\"flexblock specs\">",
+			"          <li>",
+			"            <h5>${4:item1}</h5>",
+			"          </li>",
+			"          <li>",
+			"            <h5>${5:item2}</h5>",
+			"          </li>",
+			"          <li>",
+			"            <h5>${6:item3}</h5>",
+			"          </li>",
+			"        </ul>",
+			"      </div>",
+			"    </div>",
+			"  </div>",
+			"</section>"
+		],
+		"description": "gridSection"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"unsplashSection": {
+		"prefix": "unsplashSection",
+		"body": [
+			"<section>",
+			"  <div class=\"wrap\">",
+			"    <div class=\"slideHeader\"></div>",
+			"    <h4><strong>${1:sub}</strong></h4>",
+			"    <h3>${2:main}</h3>",
+			"    <div class=\"content-left\">",
+			"      <ul class=\"flexblock specs\">",
+			"        <li>",
+			"          <h5>${3:item1}</h5>",
+			"        </li>",
+			"        <li>",
+			"          <h5>${4:item2}</h5>",
+			"        </li>",
+			"        <li>",
+			"          <h5>${5:item3}</h5>",
+			"        </li>",
+			"      </ul>",
+			"    </div>",
+			"    <div class=\"content-left\">",
+			"      <img class=\"aligncenter\" src=\"https://source.unsplash.com/${6:q10VITrVYUM}/480x360\" alt=\"\">",
+			"    </div>",
+			"  </div>",
+			"</section>"
+		],
+		"description": "unsplashSection"
+	}
+}

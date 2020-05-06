@@ -44,16 +44,17 @@ for (let i = 0; i < chapterElements.length; i++) {
   fragment.appendChild(clone.querySelector('ol'));// テンプレート内のol要素
   const ol = fragment.querySelector('ol');//fragment内のol要素
   ol.className = "chapter";
-
+  console.log(sections.length);
   for (part of slideData[thisorder].part) {
     partClone = document.importNode(ol.querySelector('li'), true);
     const partTitle = partClone.querySelector('a');// テンプレート内のa要素
     partTitle.textContent = part.title;//授業内容を代入
 
     //授業パートトップスライドへのリンク
-    var partIndex = sections.findIndex(({ className }) => className === ('part' + (slideData[thisorder].part.indexOf(part) + 1) + ' slide'));
-    partTitle.href = "#slide=" + (partIndex + 1);
-
+    const partIndex = sections.findIndex(({ className }) => (className.split(' ')[0].slice(4) - 1) === (slideData[thisorder].part.indexOf(part)));
+    const titleIndex = sections.indexOf(chapterElements[0].closest("section"));
+    const correctedIndex = (sections.length / 2 + partIndex - titleIndex + 1) % (sections.length / 2);
+    partTitle.href = "#slide=" + correctedIndex;
     ol.appendChild(partClone);// 複製したノードをフラグメントに挿入
   }
   fragment.querySelector('li').remove();//テンプレートのliを削除
@@ -69,36 +70,10 @@ for (let i = 0; i < partTitleElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(partTitleTemplate, true);// テンプレートのノードを複製
   const titles = Array.from(clone.querySelectorAll('strong'));// テンプレート内のh5要素
-  titles[1].innerHTML = slideData[thisorder].part[i].title;// テンプレートの要素に適用する
+  const partNumber = partTitleElements.item(i).closest("section").className.split(' ')[0].slice(4) - 1;
+  titles[1].innerHTML = slideData[thisorder].part[partNumber].title;// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   partTitleElements.item(i).appendChild(fragment);
-}
-/*----------------------------------------------------------------------*/
-
-/*順序なしリスト----------------------------------------------------------*/
-var ulElements = document.getElementsByClassName("myUl");
-
-// それぞれHTMLに挿入
-for (let i = 0; i < ulElements.length; i++) {
-  const fragment = document.createDocumentFragment();// フラグメント
-  const clone = document.importNode(chapterTemplate, true);// テンプレートのノードを複製
-  fragment.appendChild(clone.querySelector('ol'));// テンプレート内のol要素
-  const ol = fragment.querySelector('ol');//fragment内のol要素
-  ol.className = "flexblock specs";
-
-  for (part of slideData[thisorder].part.ul) {
-    partClone = document.importNode(ol.querySelector('li'), true);
-    const partTitle = partClone.querySelector('h5');// テンプレート内のa要素
-    partTitle.textContent = part.title;//授業内容を代入
-
-    //授業パートトップスライドへのリンク
-    var partIndex = sections.findIndex(({ className }) => className === ('part' + (slideData[thisorder].part.indexOf(part) + 1) + ' slide'));
-    partTitle.href = "#slide=" + (partIndex + 1);
-
-    ol.appendChild(partClone);// 複製したノードをフラグメントに挿入
-  }
-  fragment.querySelector('li').remove();//テンプレートのliを削除
-  ulElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
 

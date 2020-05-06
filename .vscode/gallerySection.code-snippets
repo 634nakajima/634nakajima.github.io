@@ -1,0 +1,41 @@
+{
+	"gallerySection": {
+		"prefix": "gallerySection",
+		"body": [
+			"<section>",
+			"  <div class=\"wrap\">",
+			"    <div class=\"slideHeader\"></div>",
+			"    <h4><strong>${1:sub}</strong></h4>",
+			"    <h3>${2:main}</h3>",
+			"    <ul class=\"flexblock gallery\">",
+			"      <li>",
+			"        <figure>",
+			"          <img src=\"https://source.unsplash.com/${3:Zcw8CRysnwU}/480x360\" alt=\"\">",
+			"          <figcaption>",
+			"            <p>${4:caption}</p>",
+			"          </figcaption>",
+			"        </figure>",
+			"      </li>",
+			"      <li>",
+			"        <figure>",
+			"          <img src=\"https://source.unsplash.com/${5:3Wqz8nwLGMA}/480x360\" alt=\"\">",
+			"          <figcaption>",
+			"            <p>${6:caption}</p>",
+			"          </figcaption>",
+			"        </figure>",
+			"      </li>",
+			"      <li>",
+			"        <figure>",
+			"          <img src=\"https://source.unsplash.com/${7:q10VITrVYUM}/480x360\" alt=\"\">",
+			"          <figcaption>",
+			"            <p>${8:caption}</p>",
+			"          </figcaption>",
+			"        </figure>",
+			"      </li>",
+			"    </ul>",
+			"  </div>",
+			"</section>"
+		],
+		"description": "gallerySection"
+	}
+}
