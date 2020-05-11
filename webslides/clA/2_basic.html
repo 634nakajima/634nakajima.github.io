@@ -32,24 +32,14 @@
 </head>
 
 <body>
-  <header role="banner">
-    <nav role="navigation">
-      <a href="index.html#slide=2" title="目次へ戻る">
-        <svg class="fa-arrow-circle-left">
-          <use xlink:href="#fa-arrow-circle-left"></use>
-        </svg>目次へ戻る
-      </a>
-    </nav>
-  </header>
+  <div id="banner"></div>
   <main role="main">
     <article id="webslides" class="vertical" order="2nd">
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <div class="aligncenter">
-            <div class="classTitle"></div>
-            <div class="classChapter"></div>
-          </div>
+          <div class="classTitle"></div>
+          <div class="chapterList"></div>
         </div>
       </section>
 
@@ -59,9 +49,7 @@
           <h3><strong>課題の概要</strong></h3>
           <div class="grid sm">
             <div class="column">
-              <a href="https://microbit.org/" target="_blank">
-                <img class="aligncenter" src="https://source.unsplash.com/npxXWgQ33ZQ/" alt="">
-              </a>
+              <img class="aligncenter" src="https://source.unsplash.com/npxXWgQ33ZQ/" alt="">
             </div>
             <div class="column">
               <ul class="flexblock specs">
@@ -80,10 +68,10 @@
         </div>
       </section>
 
-      <section class="part1">
+      <section class="chapter1">
         <div class="wrap">
           <div class="slideHeader"></div>
-          <div class="partTitle aligncenter"></div>
+          <div class="chapterTitle"></div>
         </div>
       </section>
 
@@ -96,7 +84,8 @@
             <ul class="flexblock reasons">
               <li>
                 <h5>初回ログインを済ませていない人は、<a href="http://www.cc.t-kougei.ac.jp/mail/setup-s/"
-                    target="_blank">こちら</a>を参考にログイン。</h5>
+                    target="_blank">こちら</a>を参考にログイン。
+                </h5>
               </li>
               <li>
                 <h5>右の動画か<a href="https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=ja"
@@ -199,9 +188,7 @@ mail: i2024000@st.t-kougei.ac.jp
           <h3>Gmailアプリから教員宛にメールを送ろう。</h3>
           <div class="grid sm">
             <div class="column">
-              <a href="https://microbit.org/" target="_blank">
-                <img class="aligncenter" src="https://source.unsplash.com/N82naZ0N4TY/" alt="">
-              </a>
+              <img class="aligncenter" src="https://source.unsplash.com/N82naZ0N4TY/" alt="">
             </div>
             <div class="column">
               <ul class="flexblock specs">
@@ -218,10 +205,10 @@ mail: i2024000@st.t-kougei.ac.jp
         </div>
       </section>
 
-      <section class="part2">
+      <section class="chapter2">
         <div class="wrap">
           <div class="slideHeader"></div>
-          <div class="partTitle aligncenter"></div>
+          <div class="chapterTitle"></div>
         </div>
       </section>
 
@@ -351,10 +338,10 @@ mail: i2024000@st.t-kougei.ac.jp
         </div>
       </section>
 
-      <section class="part3">
+      <section class="chapter3">
         <div class="wrap">
           <div class="slideHeader"></div>
-          <div class="partTitle aligncenter"></div>
+          <div class="chapterTitle"></div>
         </div>
       </section>
 
@@ -487,44 +474,13 @@ mail: i2024000@st.t-kougei.ac.jp
     </article>
     <!-- end article -->
   </main>
-  <!-- end main -->
-  <template id="slideHeaderTemplate">
-    <p class="text-context"></p>
-  </template>
-
-  <template id=titleTemplate>
-    <h2 class="text-landing"><strong></strong></h2>
-    <h2 class="text-landing"><strong></strong></h2>
-    <hr>
-  </template>
-
-  <template id="listTemplate">
-    <ol>
-      <li>
-        <h5><a></a></h5>
-      </li>
-    </ol>
-  </template>
-  <!-- WebSlides Original Templates -->
-
-  <!-- A global footer
-
-<footer role="contentinfo">
-<div class="wrap">
-  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
-</div>
-</footer>  -->
-
-  <!-- Required -->
+  <!-- スライドテンプレートの挿入 -->
+  <script src="../template/template.js"></script>
   <script src="../static/js/webslides.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   <script>
     window.ws = new WebSlides();
   </script>
-
-  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
-  <script defer src="../static/js/svg-icons.js"></script>
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <script src="./template.js"></script>
 </body>
 
 </html>

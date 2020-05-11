@@ -2652,31 +2652,50 @@ img.avatar-80 {
 /*=========================================
 13. Tables
 =========================================== */
-table {
-  margin-bottom: 3.2rem;
-  margin-top: 3.2rem; }
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px;
+}
 
-td,
-th,
-thead {
-  border-spacing: 0;
-  padding: .7rem 2.4rem; }
+table tr{
+  border-bottom: solid 2px white;
+}
 
-thead th,
-th {
-  cursor: default;
-  font-weight: 600;
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
   text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap; }
+  width: 30%;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
-thead,
-td.goals {
-  font-weight: 600;
-  text-shadow: none; }
+table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-7px;
+  border-left: 7px solid cornflowerblue;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
 
-tr > td {
-  font-weight: 400; }
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+}
 
 /*=========================================
 14. Forms
@@ -3622,23 +3641,6 @@ Cards
 /*=========================================
 Tables
 =========================================== */
-table td,
-th,
-thead {
-  border: 1px solid rgba(0, 0, 0, 0.5); }
-
-thead {
-  background-color: rgba(0, 0, 0, 0.3); }
-
-tr:nth-child(even) > td {
-  background: rgba(0, 0, 0, 0.1); }
-
-tr > td {
-  border-top: 1px solid rgba(0, 0, 0, 0.5); }
-
-td:hover,
-tr:nth-child(even) > td:hover {
-  background-color: rgba(255, 255, 255, 0.5); }
 
 /*============================
 Browser (Screenshots)

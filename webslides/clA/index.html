@@ -34,15 +34,7 @@
 </head>
 
 <body>
-  <header role="banner">
-    <nav role="navigation">
-      <a href="../index.html" title="授業・講演スライド一覧へ戻る">
-        <svg class="fa-arrow-circle-left">
-          <use xlink:href="#fa-arrow-circle-left"></use>
-        </svg>スライド一覧へ戻る
-      </a>
-    </nav>
-  </header>
+  <div id="banner"></div>
   <main role="main">
     <article id="webslides" class="vertical">
       <!-- 1 表紙 -->
@@ -82,27 +74,13 @@
     </article>
     <!-- end article -->
   </main>
-  <!-- end main -->
-
-  <!-- WebSlides Original Templates -->
-
-  <!-- A global footer
-
-    <footer role="contentinfo">
-      <div class="wrap">
-        An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.
-      </div>
-    </footer>  -->
-
-  <!-- Required -->
+  <!-- スライドテンプレートの挿入 -->
+  <script src="../template/template.js"></script>
   <script src="../static/js/webslides.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   <script>
     window.ws = new WebSlides();
   </script>
-
-  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
-  <script defer src="../static/js/svg-icons.js"></script>
-
 </body>
 
 </html>
