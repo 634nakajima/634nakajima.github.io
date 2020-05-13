@@ -32,46 +32,17 @@
 </head>
 
 <body>
-  <header role="banner">
-    <nav role="navigation">
-      <a href="index.html#slide=2" title=" 目次へ戻る">
-        目次へ戻る
-      </a>
-    </nav>
-  </header>
+  <div id="banner"></div>
   <main role="main">
     <article id="webslides" class="vertical" order="2nd">
-      <section>
-        <div class="wrap aligncenter">
-          <h2 class="text-landing"><strong>Ⅱ LEDアニメーションを作ろう</strong></h2>
-          <hr>
-          <ol class="chapter">
-            <li value=2>
-              <h5><a href="2_ledAnimation.html#slide=3">micro:bitプログラミング入門</a></h5>
-            </li>
-            <li>
-              <h5><a href="underConstruction.html">LEDの表示を自動で変化させる</a></h5>
-            </li>
-            <li>
-              <h5><a href="underConstruction.html">LEDの表示をスイッチ入力で変化させる</a></h5>
-            </li>
-            <li>
-              <h5><a href="underConstruction.html">様々なセンサ入力を利用する</a></h5>
-            </li>
-            <li>
-              <h5><a href="underConstruction.html">サウンドで演出する</a></h5>
-            </li>
-            <li>
-              <h5><a href="underConstruction.html">作品のプレゼンテーション・講評</a></h5>
-            </li>
-          </ol>
-        </div>
+      <section class="part2">
+        <div class="partTitle"></div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう</p>
-          <h3><strong>インタラクティブに変化するLEDアニメーションを制作。</strong></h3>
+          <h4><strong>テーマ概要</strong></h4>
+          <h3>インタラクティブに変化するLEDアニメーションを制作。</h3>
           <div class="grid sm">
             <div class="column">
               <img class="aligncenter" src="../pics/chick.png" alt="">
@@ -111,16 +82,38 @@
           </div>
         </div>
       </section>
-
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h3><strong>関数 とは</strong></h3>
+          <h4><strong>今回の目標</strong></h4>
+          <h3>MakeCodeを使ってプログラミングの基本を掴む。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/ieic5Tq8YMk" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>micro:bitのプログラミング構造について理解する。</h5>
+                </li>
+                <li>
+                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>について理解する。</h5>
+                </li>
+                <li>
+                  <h5>綺麗で分かりやすいソースコードを書く。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>関数 とは</strong></h4>
+          <h3>コンピュータに対する命令。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
-              <li>
-                <h5>コンピュータに対する命令。</h5>
-              </li>
               <li>
                 <h5>コンピュータが命令を処理することを<b>関数の実行</b>と呼ぶ。</h5>
               </li>
@@ -148,10 +141,10 @@ function1(arg: number): number {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
           <h4><strong>例題１</strong></h4>
+          <h3>文字列を一度だけ表示させてみよう。</h3>
           <div class="content-left">
-            <h4 class="alignjustify">文字列を一度だけ表示させてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <h5>「文字列を表示」ブロックは、<b>basic.showString("Hello!")
@@ -174,36 +167,36 @@ function1(arg: number): number {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
           <h4><strong>例題２</strong></h4>
-          <div class="content-left">
-            <h4 class="alignjustify">文字列を繰り返し表示させてみよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>「ずっと」ブロックの中身は、繰り返し実行される。</h5>
-              </li>
-              <li>
-                <h5>「ずっと」ブロックは、<b>basic.forever(function(){処理内容})</b>を表す。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
-                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+          <h3>文字列を繰り返し表示させてみよう。</h5>
+            <div class="content-left">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>「ずっと」ブロックの中身は、繰り返し実行される。</h5>
+                </li>
+                <li>
+                  <h5>「ずっと」ブロックは、<b>basic.forever(function(){処理内容})</b>を表す。</h5>
+                </li>
+              </ul>
             </div>
-          </div>
+            <div class="content-left">
+              <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
+                  sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+              </div>
+            </div>
         </div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <h3><strong>関数の実行と引数</strong></h3>
+          <div class="slideHeader"></div>
+          <h4><strong>関数の実行と引数</strong></h4>
+          <h3>micro:bitに文字列を表示させる。</h3>
           <div class="content-left">
-            <h5>micro:bitに文字列を表示させるとき、このように書く。</h5>
-            <ul class="flexblock reasons">
+            <ul class="flexblock specs">
               <li>
                 <h5>関数の実行に必要な値（ここでは"文字列1"、"文字列2"）を<b>引数</b>と呼ぶ。</h5>
               </li>
@@ -219,10 +212,10 @@ basic.showString("文字列2")</code></pre>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
           <h4><strong>例題３</strong></h4>
+          <h3>数字を順番に表示させてみよう。</h3>
           <div class="content-left">
-            <h4 class="alignjustify">数字を順番に表示させてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <h5>表示する値の入れ物（<b>変数</b>）を用意する。</h5>
@@ -244,10 +237,10 @@ basic.showString("文字列2")</code></pre>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <h3><strong>変数の宣言と代入</strong></h3>
+          <div class="slideHeader"></div>
+          <h4><strong>変数の宣言と代入</strong></h4>
+          <h3>micro:bitで数字を順番に表示させる。</h3>
           <div class="content-left">
-            <h5>micro:bitで数字を順番に表示させる時、このように書く。</h5>
             <ul class="flexblock reasons">
               <li>
                 <h4>変数の宣言</h4>
@@ -272,10 +265,10 @@ basic.forever(function () {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <h3><strong>変数の宣言と代入</strong></h3>
+          <div class="slideHeader"></div>
+          <h4><strong>変数の宣言と代入</strong></h4>
+          <h3>micro:bitで数字を順番に表示させる。</h3>
           <div class="content-left">
-            <h5>micro:bitで数字を順番に表示させる時、このように書く。</h5>
             <ul class="flexblock reasons">
               <li style="counter-reset:list 2;">
                 <h4>値の代入　"<b>=</b>"</h4>
@@ -302,10 +295,10 @@ basic.forever(function () {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
+          <h4><strong>コメント</strong></h4>
+          <h3>ソースコードに注釈をつける。</h3>
           <div class="content-left">
-            <h3><strong>コメント</strong></h3>
-            <h5>ソースコードに注釈をつける。</h5>
             <ul class="flexblock specs">
               <li>
                 <h5><b>//</b>を先頭につけた行は、コンパイル時に無視される。</h5>
@@ -330,10 +323,10 @@ basic.forever(function() {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
+          <h4><strong>例題６</strong></h4>
+          <h3>注釈を入れてみよう。</h3>
           <div class="content-left">
-            <h4><strong>例題６</strong></h4>
-            <h4 class="alignjustify">注釈を入れてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <h5>blink()の上の行に、関数の説明を加えよう。</h5>
@@ -354,10 +347,10 @@ basic.forever(function() {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
+          <h4><strong>例題７</strong></h4>
+          <h3 class="alignjustify">コメントアウトしてみよう。</h3>
           <div class="content-left">
-            <h4><strong>例題７</strong></h4>
-            <h4 class="alignjustify">コメントアウトしてみよう。</h4>
             <ul class="flexblock specs">
               <li>
                 <h5>動作確認のために特定の関数を一時的に無視することを<b>コメントアウト</b>と呼ぶ。</h5>
@@ -380,10 +373,10 @@ basic.forever(function() {
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
+          <h4><strong>インデント</strong></h4>
+          <h3>可読性を向上させるための字下げをする。</h3>
           <div class="content-left">
-            <h3><strong>インデント</strong></h3>
-            <h5>可読性を向上させるための字下げ。</h5>
             <ul class="flexblock specs">
               <li>
                 <h5><b>tab</b>キーを押して、ソースコードの階層を見やすくする。</h5>
@@ -408,9 +401,9 @@ basic.forever(function(){
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
+          <div class="slideHeader"></div>
+          <h4><strong>見にくいコードと見やすいコード</strong></h4>
           <div class="content-left">
-            <h3><strong>見にくいコードと見やすいコード</strong></h3>
             <ul class="flexblock specs">
               <li>
                 <h5>関数や"="の前後のスペースはなくても良いが、可読性の観点からつけるべき。</h5>
@@ -442,10 +435,11 @@ num
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <h3><strong>よくあるエラー</strong></h3>
+          <div class="slideHeader"></div>
+          <h4><strong>よくあるエラー</strong></h4>
+          <h3>ひたすら自分の手でコードを書き写し、エラーと闘うべし。</h3>
+
           <div class="content-left">
-            <h5 class="alignjustify">初学者はひたすら自分の手でコードを<b>書き写し</b>、<br />このようなエラーと闘うべし！</h5>
             <ul class="flexblock specs">
               <li>
                 <h5><b>括弧、中括弧</b>が足りない or 多い。</h5>
@@ -461,321 +455,37 @@ num
           <div class="content-left">
             <pre><code class="prettyprint lang-js">//よくあるエラー
 basic.foever(function(){
-  myFunction(arg1,　arg2)
+  myFunction(arg1, arg2)　　　　
 })
 }</code></pre>
           </div>
         </div>
       </section>
-
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <div class="content-left">
-            <h4><strong>練習１</strong></h4>
-            <h4 class="alignjustify">LEDの点滅周期を変えてみよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>digitalWrite(LED_BUILTIN, HIGH/LOW);は、LEDを点灯 &lt消灯&gt させる関数</h5>
-              </li>
-              <li>
-                <h5>delay()は、引数の値（ミリ秒）だけ何もしないで待つ関数</h5>
-              </li>
-              <li>
-                <h5>引数の値を変えることで、点滅周期を変えることができる</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
-                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+          <div class="slideHeader"></div>
+          <h4><strong>今回のまとめ</strong></h4>
+          <h3>MakeCodeを用いて基本的なコーディングを練習。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/ieic5Tq8YMk" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>micro:bitのプログラミング構造について説明。</h5>
+                </li>
+                <li>
+                  <h5>例題を通じて<b>関数</b>、<b>引数</b>、<b>変数</b>について学習。</h5>
+                </li>
+                <li>
+                  <h5>綺麗で分かりやすいソースコードの書き方を練習。</h5>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <div class="content-left">
-            <h3><strong>電子回路の試作</strong></h3>
-            <h5 class="alignjustify"><b>ブレッドボード</b>を用いて、センサやモータなどの回路を組み立てる。</h5>
-            <ul class="flexblock specs">
-              <li>
-                <h5>ブレッドボードははんだ付けが不要。</h5>
-              </li>
-              <li>
-                <h5>回路を構成する素子を差し込む穴がある。</h5>
-              </li>
-              <li>
-                <h5>右図の線で表された部分が内部で繋がっている。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/breadboard.png" alt="breadboard" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <div class="content-left">
-            <h4><strong>例題８</strong></h4>
-            <h4 class="alignjustify">LEDを点灯する回路を作ろう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>Arduino "5V"ピン > ブレッドボード > 抵抗（330Ω）> LED > Arduino "GND"ピン</h5>
-              </li>
-              <li>
-                <h5>LEDは流せる電流の向きが決まっており、+側を<b>アノード</b>、-側を<b>カソード</b>と呼ぶ。</h5>
-              </li>
-              <li>
-                <h5>LEDの足の長い方が<b>アノード</b>。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/LED.png" alt="LED" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <h3><strong>電子回路でよく登場する用語</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h4><b>電圧</b></h4>
-                <h5>電気を流す力の大きさ。ボルト。</h5>
-              </li>
-              <li>
-                <h4><b>電流</b></h4>
-                <h5>回路に流れている電気の量。アンペア</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h4><b>抵抗</b></h4>
-                <h5>電流の流れにくさ。オーム。または電流を調整する素子。</h5>
-              </li>
-              <li>
-                <h4><b>GND</b>（グラウンド）</h4>
-                <h5>電源の-（マイナス）極のこと。</h5>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ LEDアニメーションを作ろう<br />第２回 micro:bitプログラミング入門</p>
-          <div class="content-left">
-            <h3><strong>電子回路でよく登場する用語</strong></h3>
-            <ul class="flexblock specs">
-              <li>
-                <h5><b>電圧、電流、抵抗、GND</b>はそれぞれ、水道の<br /><b>水圧、水流、蛇口、排水口</b>のように置き換えるとイメージしやすい。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="https://source.unsplash.com/Vve7XkiUq_Y/600x450" alt="faucet">
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <div class="content-left">
-            <h4><strong>練習２</strong></h4>
-            <h4 class="alignjustify">LEDを点滅させる回路を作ろう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>Arduinoの入出力ピンは電圧をHIGH（5V）かLOW（0V）に切り替えられる。</h5>
-              </li>
-              <li>
-                <h5>Arduino 13番ピン > ブレッドボード > 抵抗（330Ω）> LED > Arduino "GND"ピン</h5>
-              </li>
-              <li>
-                <h5>IDEでArduino13番ピンの電圧をHIGH（5V）⇄LOW（0V）に切り替えるプログラムを記述。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/LEDonoff.png" alt="LEDonoff" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <div class="content-left">
-            <h4><strong>例題９</strong></h4>
-            <h4 class="alignjustify">フルカラーLEDを点灯させる回路を作ろう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>フルカラーLED（アノードコモン）は、長い足が<b>アノード</b>。</h5>
-              </li>
-              <li>
-                <h5>Arduino 13,12,11番ピンからそれぞれ抵抗を経由してLEDのカソードに接続。</h5>
-              </li>
-              <li>
-                <h5>Arduino13,12,11番ピンの電圧が<b>LOW</b>のとき電流が流れ、LEDが点灯。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/FullcolorLED.png" alt="FullcolorLED" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <div class="content-left">
-            <h4><strong>練習３</strong></h4>
-            <h4 class="alignjustify">フルカラーLEDの色を変化させよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <h5>13,12,11番ピンのHIGH/LOWの組み合わせで色が決まる。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/FullcolorLED.png" alt="FullcolorLED" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h4><strong>補足</strong></h4>
-          <h4>Arduinoでよく用いられる関数</h4>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h4>void pinMode(ピン番号, 入出力);</h4>
-                <p>引数のピンを入力（INPUT）か出力（OUTPUT）に設定する。</p>
-              </li>
-              <li>
-                <h4>int digitalRead(ピン番号);</h4>
-                <p>ピンに入る電圧をHIGHで返す。</p>
-              </li>
-              <li>
-                <h4>void analogWrite(ピン番号, 状態);</h4>
-                <p>引数で指定したピンから0-255のPWM出力をする。</p>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h4>void digitalWrite(ピン番号, 状態);</h4>
-                <p>引数のピンをHIGH (5v)かLOW (0v)にする。</p>
-              </li>
-              <li>
-                <h4>void analogRead(ピン番号);</h4>
-                <p>ピンに入る電圧を0-255（0-5v）の整数値で返す。</p>
-              </li>
-              <li>
-                <h4>void delay(ミリ秒);</h4>
-                <p>引数の値だけ何もしないで待つ。</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第２回 Arduinoプログラミング基礎</p>
-          <h4><strong>例題・練習の解答コード例へのリンク</strong></h4>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/99c56c20-f50e-4736-a7c9-e49b24dd538a/preview"
-                    target="_blank">例題２　関数を一度だけ実行させてみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/e797ad62-8259-462d-b77a-851dbb9c8105/preview"
-                    target="_blank">例題３　関数を繰り返し実行させてみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/6e6a5a1d-e01c-4a54-830b-732a3f15fb3f/preview"
-                    target="_blank">例題４　関数に引数を入れて実行してみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/f87d2f5c-53cc-424c-a900-1dea2d625a6d/preview"
-                    target="_blank">例題５　関数の戻り値を変数に入れてみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/272745c8-1180-463c-bf6b-8c8fec5461dd/preview"
-                    target="_blank">例題６　注釈を入れてみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/2c4caeca-c10b-4585-b028-0c19e7a626c5/preview"
-                    target="_blank">例題７　コメントアウトしてみよう。
-                  </a>
-                </h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/e797ad62-8259-462d-b77a-851dbb9c8105/preview"
-                    target="_blank">練習１　LEDの点滅周期を変えてみよう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/e797ad62-8259-462d-b77a-851dbb9c8105/preview"
-                    target="_blank">練習２　LEDを点滅させる回路を作ろう。
-                  </a>
-                </h5>
-              </li>
-              <li>
-                <h5>
-                  <a href="https://create.arduino.cc/editor/634nakajima/e797ad62-8259-462d-b77a-851dbb9c8105/preview"
-                    target="_blank">練習３　フルカラーLEDの色を変化させよう。
-                  </a>
-                </h5>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section>
         <hr>
       </section>
@@ -783,33 +493,8 @@ basic.foever(function(){
     <!-- end article -->
   </main>
   <!-- end main -->
-  <template id="slideHeaderTemplate">
-    <p class="text-context"></p>
-  </template>
 
-  <template id=titleTemplate>
-    <h2 class="text-landing"><strong></strong></h2>
-    <h2 class="text-landing"><strong></strong></h2>
-    <hr>
-  </template>
-
-  <template id="listTemplate">
-    <ol>
-      <li>
-        <h5><a></a></h5>
-      </li>
-    </ol>
-  </template>
-  <!-- WebSlides Original Templates -->
-
-  <!-- A global footer
-
-<footer role="contentinfo">
-<div class="wrap">
-  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
-</div>
-</footer>  -->
-
+  <script src="../../template/template.js"></script>
   <!-- Required -->
   <script src="../../static/js/webslides.js"></script>
   <script>
@@ -819,7 +504,6 @@ basic.foever(function(){
   <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
   <script defer src="../../static/js/svg-icons.js"></script>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <script src="./template.js"></script>
 </body>
 
 </html>

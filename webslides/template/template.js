@@ -43,7 +43,7 @@ var thisorder = document.querySelector('article').getAttribute("order");
 /*目次へ戻るバナー---------------------------------------------------------*/
 var bannerTemplate = document.querySelector('#bannerTemplate').content;
 var bannerElement = document.getElementById("banner");
-bannerElement.appendChild(document.importNode(bannerTemplate, true));
+if (bannerElement) bannerElement.appendChild(document.importNode(bannerTemplate, true));
 /*----------------------------------------------------------------------*/
 
 /*スライド上部のヘッダ-----------------------------------------------------*/
@@ -93,7 +93,7 @@ for (let i = 0; i < chapterElements.length; i++) {
     const chapterTitle = chapterClone.querySelector('a');// テンプレート内のa要素
     chapterTitle.textContent = chapter;//授業内容を代入
 
-    //授業パートトップスライドへのリンク
+    //授業チャプタートップスライドへのリンク
     const chapterIndex = 1 + sections.findIndex(({ className }) => (
       className.split(' ')[0].slice(String("chapter").length) - 1)
       === (slideData[thisorder].chaptertitle.indexOf(chapter))

@@ -1,18 +1,16 @@
 {
   "maintitle": "デバイス演習Ⅱ",
+  "parttitle": [
+    "Ⅰ　イントロダクション",
+    "Ⅱ LEDアニメーションを作ろう"
+  ],
   "2nd": {
-    "subtitle": "micro:bitプログラミング入門",
+    "classtitle": "micro:bitプログラミング入門",
     "number": 2,
-    "part": [
-      {
-        "title": "関数とは"
-      },
-      {
-        "title": "関数の実行と引数"
-      },
-      {
-        "title": "変数の宣言と代入"
-      }
+    "chapter": [
+      "関数とは",
+      "関数の実行と引数",
+      "変数の宣言と代入"
     ]
   }
 }
