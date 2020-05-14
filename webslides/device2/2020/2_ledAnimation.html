@@ -121,7 +121,7 @@
                 <h5>あらかじめ<b>定義</b>（用意）された関数と、自分で定義する関数がある。</h5>
               </li>
               <li>
-                <h5>micro:bitには、様々な関数を表す<b>ブロック</b>があらかじめ用意されている。</h5>
+                <h5>MakeCodeには、様々な関数を表す<b>ブロック</b>があらかじめ用意されている。</h5>
               </li>
             </ul>
           </div>
@@ -142,7 +142,7 @@ function1(arg: number): number {
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>例題１</strong></h4>
+          <div class="exercise"></div>
           <h3>文字列を一度だけ表示させてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
@@ -168,7 +168,7 @@ function1(arg: number): number {
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>例題２</strong></h4>
+          <div class="exercise"></div>
           <h3>文字列を繰り返し表示させてみよう。</h5>
             <div class="content-left">
               <ul class="flexblock specs">
@@ -213,7 +213,7 @@ basic.showString("文字列2")</code></pre>
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>例題３</strong></h4>
+          <div class="exercise"></div>
           <h3>数字を順番に表示させてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
@@ -276,8 +276,8 @@ basic.forever(function () {
               </li>
               <li>
                 <div>
-                  <h4>インクリメント　"<b>+=</b>"</h4>
-                  <h5>変数の値を1増やして代入することを表す。</h5>
+                  <h4>足して代入　"<b>+=</b>"</h4>
+                  <h5>変数の値を右の値だけ増やして代入することを表す。</h5>
                 </div>
               </li>
             </ul>
@@ -293,6 +293,56 @@ basic.forever(function () {
         </div>
       </section>
 
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <h3>関数を定義しよう。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>item1</h5>
+              </li>
+              <li>
+                <h5>item2</h5>
+              </li>
+              <li>
+                <h5>item3</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <img class="aligncenter" src="https://source.unsplash.com/q10VITrVYUM/480x360" alt="">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>sub</strong></h4>
+          <h3>main</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>item1</h5>
+              </li>
+              <li>
+                <h5>item2</h5>
+              </li>
+              <li>
+                <h5>item3</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の定義
+function myFunction() {
+    
+}
+</code></pre>
+          </div>
+        </div>
+      </section>
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
@@ -313,7 +363,7 @@ basic.forever(function () {
 let num = 0
 //数字を1から順番に表示し続ける
 basic.forever(function() {
-  /* "num++"は、、引数に代入した後に
+  /* "num++"は、引数に代入した後に
   インクリメントすることを表す */
   basic.showNumber(num++);
 })</code></pre>
@@ -324,31 +374,30 @@ basic.forever(function() {
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>例題６</strong></h4>
+          <div class="exercise"></div>
           <h3>注釈を入れてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
-                <h5>blink()の上の行に、関数の説明を加えよう。</h5>
+                <h5>2行目に、ソースコードの概要を加えよう。</h5>
               </li>
               <li>
-                <h5>blinkInterval()の上の行に、複数行で説明を加えよう。</h5>
+                <h5>4-5行目に、関数内の具体的な処理について説明しよう。</h5>
               </li>
             </ul>
           </div>
           <div class="content-left">
             <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
+                src="https://makecode.microbit.org/#pub:_EbxiTViLx7yj" frameborder="0"
                 sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
             </div>
-          </div>
       </section>
 
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>例題７</strong></h4>
+          <div class="exercise"></div>
           <h3 class="alignjustify">コメントアウトしてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
@@ -356,16 +405,15 @@ basic.forever(function() {
                 <h5>動作確認のために特定の関数を一時的に無視することを<b>コメントアウト</b>と呼ぶ。</h5>
               </li>
               <li>
-                <h5>blink()かblinkInterval()のどちらかをコメントアウトしてみよう。</h5>
+                <h5>9行目をコメントアウトし、動作の違いを確認してみよう。</h5>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;">
-              <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
-                sandbox="allow-popups allow-forms allow-scripts allow-same-origin">
-              </iframe>
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_e1TJTYAJDa1s" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
             </div>
           </div>
         </div>
@@ -382,7 +430,7 @@ basic.forever(function() {
                 <h5><b>tab</b>キーを押して、ソースコードの階層を見やすくする。</h5>
               </li>
               <li>
-                <h5><b>shift+alt+T</b>で、インデントを自動でつけられる。</h5>
+                <h5><b>shift+alt+F</b>で、インデントを自動でつけられる。</h5>
               </li>
             </ul>
           </div>

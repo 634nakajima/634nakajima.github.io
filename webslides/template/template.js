@@ -31,6 +31,10 @@ document.write(
   '</li>',
   '</ol>',
   '</div>',
+  '</template>',
+  //例題
+  '<template id="exerciseTemplate">',
+  '<h4><strong></strong></h4>',
   '</template>'
 );
 /*----------------------------------------------------------------------*/
@@ -134,6 +138,20 @@ for (let i = 0; i < partTitleElements.length; i++) {
   titles[1].innerHTML = slideData.parttitle[partNumber];// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   partTitleElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*例題番号---------------------------------------------------------------*/
+var exerciseTemplate = document.querySelector('#exerciseTemplate').content;
+var exerciseElements = document.getElementsByClassName("exercise");
+
+for (let i = 0; i < exerciseElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(exerciseTemplate, true);// テンプレートのノードを複製
+  const title = clone.querySelector('strong');// テンプレート内のstrong要素
+  title.innerHTML = '例題 ' + (i + 1);// テンプレートの要素に適用する
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  exerciseElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
 
