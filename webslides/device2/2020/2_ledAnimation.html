@@ -86,7 +86,7 @@
         <div class="wrap">
           <div class="slideHeader"></div>
           <h4><strong>今回の目標</strong></h4>
-          <h3>MakeCodeを使ってプログラミングの基本を掴む。</h3>
+          <h3>MakeCodeを使ってプログラミングの基本をつかむ。</h3>
           <div class="grid sm">
             <div class="column">
               <img class="aligncenter" src="https://source.unsplash.com/ieic5Tq8YMk" alt="">
@@ -97,7 +97,7 @@
                   <h5>micro:bitのプログラミング構造について理解する。</h5>
                 </li>
                 <li>
-                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>について理解する。</h5>
+                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>、<b>条件分岐</b>、<b>繰り返し</b>について理解する。</h5>
                 </li>
                 <li>
                   <h5>綺麗で分かりやすいソースコードを書く。</h5>
@@ -297,52 +297,136 @@ basic.forever(function () {
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>関数を定義しよう。</h3>
+          <h3>カウントダウンタイマーを作ろう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
-                <h5>item1</h5>
+                <h5>例題3を数字が減るように改変する。</h5>
               </li>
               <li>
-                <h5>item2</h5>
+                <h5>0になったらアイコンを表示させる。</h5>
               </li>
               <li>
-                <h5>item3</h5>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <img class="aligncenter" src="https://source.unsplash.com/q10VITrVYUM/480x360" alt="">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_68xLwgEyU4LL" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
           </div>
         </div>
       </section>
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>sub</strong></h4>
-          <h3>main</h3>
+          <h4><strong>条件分岐とif文</strong></h4>
+          <h3>もし〜なら〜。という処理は条件分岐と呼ばれる。</h3>
           <div class="content-left">
-            <ul class="flexblock specs">
+            <ul class="flexblock reasons">
               <li>
-                <h5>item1</h5>
+                <h4>条件式</h4>
+                <h5>真か偽のどちらかになる式。</h5>
               </li>
               <li>
-                <h5>item2</h5>
+                <h5>条件式が<b>真</b>の時に実行する処理。</h5>
               </li>
               <li>
-                <h5>item3</h5>
+                <h5>条件式が<b>偽</b>の時に実行する処理。</h5>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">//関数の定義
-function myFunction() {
-    
-}
-</code></pre>
+            <pre><code class="prettyprint lang-js">//条件分岐
+if (count > 0) {//①countが0より大きかったら、
+  basic.showNumber(count, 200)//②countを表示
+  count -= 1//②countを1減らして再代入
+} else {//③そうでなかったら（countが0以下なら）、
+  basic.showIcon(IconNames.Skull)//③ドクロを表示
+}</code></pre>
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <h3>ドキドキ光るハートを作ろう。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>ハートの明るさを脈を打つように変化させる。</h5>
+              </li>
+              <li>
+                <h5>明るさの値を少しずつ変えて繰り返し設定する。</h5>
+              </li>
+              <li>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_eFuJE0AJrKKt" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>繰り返しとfor文</strong></h4>
+          <h3>似たような処理を繰り返す時は、for文を用いる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h4>カウンタ</h4>
+                <h5>繰り返し回数を表すための変数。<br>最初に0にしておく。</h5>
+              </li>
+              <li>
+                <h4>条件式</h4>
+                <h5>繰り返し回数を決める条件式。<br>真の間だけ{ }の中を繰り返す。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//条件分岐
+for (①let index = 0; ②index <= 255; ③index++) {
+  led.setBrightness(255 - index)
+  basic.pause(1)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>繰り返しとfor文</strong></h4>
+          <h3>似たような処理を繰り返す時は、for文を用いる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li style="counter-reset: list 2;">
+                <h5>{ }内の処理を終えた後に実行する処理。<br>普通はカウンタを1増やす処理を書く。<br>(<b>インクリメント</b>）</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//条件分岐
+for (①let index = 0; ②index <= 255; ③index++) {
+  led.setBrightness(255 - index)
+  basic.pause(1)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
@@ -379,10 +463,13 @@ basic.forever(function() {
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
-                <h5>2行目に、ソースコードの概要を加えよう。</h5>
+                <h5>例題3の2行目に、ソースコードの概要を加えよう。</h5>
               </li>
               <li>
                 <h5>4-5行目に、関数内の具体的な処理について説明しよう。</h5>
+              </li>
+              <li>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
               </li>
             </ul>
           </div>
@@ -405,7 +492,7 @@ basic.forever(function() {
                 <h5>動作確認のために特定の関数を一時的に無視することを<b>コメントアウト</b>と呼ぶ。</h5>
               </li>
               <li>
-                <h5>9行目をコメントアウトし、動作の違いを確認してみよう。</h5>
+                <h5>例題3の9行目をコメントアウトし、動作の違いを確認してみよう。</h5>
               </li>
             </ul>
           </div>
@@ -524,7 +611,7 @@ basic.foever(function(){
                   <h5>micro:bitのプログラミング構造について説明。</h5>
                 </li>
                 <li>
-                  <h5>例題を通じて<b>関数</b>、<b>引数</b>、<b>変数</b>について学習。</h5>
+                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>、<b>条件分岐</b>、<b>繰り返し</b>について学習。</h5>
                 </li>
                 <li>
                   <h5>綺麗で分かりやすいソースコードの書き方を練習。</h5>
