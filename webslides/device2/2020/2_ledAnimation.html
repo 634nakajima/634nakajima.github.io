@@ -41,6 +41,7 @@
 
       <section>
         <div class="wrap">
+          <p class="text-context">Ⅱ LEDアニメーションを作ろう</p>
           <h4><strong>テーマ概要</strong></h4>
           <h3>インタラクティブに変化するLEDアニメーションを制作。</h3>
           <div class="grid sm">
@@ -65,7 +66,7 @@
                   <h5>第６回　サウンドで演出する</h5>
                 </li>
                 <li>
-                  <h5>第７回　作品のプレゼンテーション・講評</h5>
+                  <h5>第７回　オリジナルの作品を制作する</h5>
                 </li>
               </ul>
             </div>
@@ -121,7 +122,7 @@
                 <h5>あらかじめ<b>定義</b>（用意）された関数と、自分で定義する関数がある。</h5>
               </li>
               <li>
-                <h5>MakeCodeには、様々な関数を表す<b>ブロック</b>があらかじめ用意されている。</h5>
+                <h5>MakeCodeには、様々な関数を表す<b>ブロック</b>があらかじめ定義されている。</h5>
               </li>
             </ul>
           </div>
@@ -135,6 +136,29 @@
 function1(arg: number): number {
     return subfunction(arg)
 }</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>関数の実行と引数</strong></h4>
+          <h3>引数を渡すことで様々な命令ができる。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>関数の実行に必要な値（ここでは"文字列1"、"文字列2"）を<b>引数</b>と呼ぶ。</h5>
+              </li>
+              <li>
+                <h5>引数のおかげで、<b>任意</b>の文字列を表示することができる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の実行と引数
+basic.showString("文字列1")//文字列1を表示
+basic.showString("文字列2")//文字列2を表示</code></pre>
           </div>
         </div>
       </section>
@@ -193,20 +217,29 @@ function1(arg: number): number {
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>関数の実行と引数</strong></h4>
-          <h3>micro:bitに文字列を表示させる。</h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <h5>関数の実行に必要な値（ここでは"文字列1"、"文字列2"）を<b>引数</b>と呼ぶ。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><code class="prettyprint lang-js">//関数の実行と引数
-basic.showString("文字列1")
-basic.showString("文字列2")</code></pre>
-          </div>
+          <div class="exercise"></div>
+          <h3>ドキドキハートの周期を変えてみよう。</h5>
+            <div class="content-left">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>「アイコンを表示」ブロックは、<b>basic.showIcon(IconNames.Heart)
+                    </b>という関数を表す。</h5>
+                </li>
+                <li>
+                  <h5>この関数は<b>表示時間</b>を表す引数を追加することができる。</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="content-left">
+              <pre><code class="prettyprint lang-js">//ドキドキハートの周期を変えてみよう。
+basic.forever(function() {
+  //IconNames.Heartの横に、
+  //", 200"を加えると、表示時間を指定できる
+  basic.showIcon(IconNames.Heart, 200)
+  basic.showIcon(IconNames.SmallHeart, 200)
+})
+</code></pre>
+            </div>
         </div>
       </section>
 
@@ -214,7 +247,7 @@ basic.showString("文字列2")</code></pre>
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>数字を順番に表示させてみよう。</h3>
+          <h3>数字を0から順番に表示させてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -239,7 +272,7 @@ basic.showString("文字列2")</code></pre>
         <div class="wrap">
           <div class="slideHeader"></div>
           <h4><strong>変数の宣言と代入</strong></h4>
-          <h3>micro:bitで数字を順番に表示させる。</h3>
+          <h3>変数を使うことで、処理を効率的に記述できる。</h3>
           <div class="content-left">
             <ul class="flexblock reasons">
               <li>
@@ -267,7 +300,7 @@ basic.forever(function () {
         <div class="wrap">
           <div class="slideHeader"></div>
           <h4><strong>変数の宣言と代入</strong></h4>
-          <h3>micro:bitで数字を順番に表示させる。</h3>
+          <h3>変数を使うことで、処理を効率的に記述できる。</h3>
           <div class="content-left">
             <ul class="flexblock reasons">
               <li style="counter-reset:list 2;">
@@ -355,11 +388,11 @@ if (count > 0) {//①countが0より大きかったら、
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>ドキドキ光るハートを作ろう。</h3>
+          <h3>明るさがドキドキ変化するハートを作ろう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
-                <h5>ハートの明るさを脈を打つように変化させる。</h5>
+                <h5>ハートの明るさを脈打つように変化させる。</h5>
               </li>
               <li>
                 <h5>明るさの値を少しずつ変えて繰り返し設定する。</h5>
