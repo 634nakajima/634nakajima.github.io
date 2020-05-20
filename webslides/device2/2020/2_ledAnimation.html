@@ -503,7 +503,7 @@ for (①let index = 0; ②index <= 255; ③index++) {
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
-                <h5><b>//</b>を先頭につけた行は、コンパイル時に無視される。</h5>
+                <h5><b>//</b>を先頭につけた行は、実行時に無視される。</h5>
               </li>
               <li>
                 <h5>複数行コメントは、<b>/*</b>と<b>*/</b>で囲む。</h5>
@@ -620,7 +620,7 @@ basic.forever(function(){
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">//コンパイルは通るが、見にくいコード
+            <pre><code class="prettyprint lang-js">//エラーではないが、見にくいコード
 let num=0
 const arg1=
 "arg1"
