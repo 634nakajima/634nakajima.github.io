@@ -32,3 +32,8 @@
 .buttonInFrontOfImage img {
   width: 80%;
   }
+
+.exampleSentence h5 {
+  margin: 10px 0px;
+  text-align: center;
+}

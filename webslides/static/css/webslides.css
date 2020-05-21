@@ -3167,7 +3167,7 @@ ins {
   background-color: rgba(221, 238, 255, 0.8); }
 
 pre {
-  background: #e5eaed;
+  background: rgba(231, 242, 243, 0.6);
   border-radius: 10px;
   -webkit-box-shadow: 0 8px 16px rgba(0, 20, 80, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08);
           box-shadow: 0 8px 16px rgba(0, 20, 80, 0.04), 0 4px 16px rgba(0, 0, 0, 0.08); }
