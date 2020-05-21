@@ -118,8 +118,7 @@
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
-          <h4><strong>関数 とは</strong></h4>
-          <h3>コンピュータに対する命令。</h3>
+          <div class="explanation"></div>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -174,7 +173,6 @@ basic.showString("文字列2")//文字列2を表示</code></pre>
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>文字列を一度だけ表示させてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -200,24 +198,23 @@ basic.showString("文字列2")//文字列2を表示</code></pre>
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>文字列を繰り返し表示させてみよう。</h5>
-            <div class="content-left">
-              <ul class="flexblock specs">
-                <li>
-                  <h5>「ずっと」ブロックの中身は、繰り返し実行される。</h5>
-                </li>
-                <li>
-                  <h5>「ずっと」ブロックは、<b>basic.forever(function(){処理内容})</b>を表す。</h5>
-                </li>
-              </ul>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>「ずっと」ブロックの中身は、繰り返し実行される。</h5>
+              </li>
+              <li>
+                <h5>「ずっと」ブロックは、<b>basic.forever(function(){処理内容})</b>を表す。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
             </div>
-            <div class="content-left">
-              <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                  src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
-                  sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
-              </div>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -225,20 +222,19 @@ basic.showString("文字列2")//文字列2を表示</code></pre>
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>ドキドキハートの周期を変えてみよう。</h5>
-            <div class="content-left">
-              <ul class="flexblock specs">
-                <li>
-                  <h5>「アイコンを表示」ブロックは、<b>basic.showIcon(IconNames.Heart)
-                    </b>という関数を表す。</h5>
-                </li>
-                <li>
-                  <h5>この関数は<b>表示時間</b>を表す引数を追加することができる。</h5>
-                </li>
-              </ul>
-            </div>
-            <div class="content-left">
-              <pre><code class="prettyprint lang-js">//ドキドキハートの周期を変えてみよう。
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>「アイコンを表示」ブロックは、<b>basic.showIcon(IconNames.Heart)
+                  </b>という関数を表す。</h5>
+              </li>
+              <li>
+                <h5>この関数は<b>表示時間</b>を表す引数を追加することができる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//ドキドキハートの周期を変えてみよう。
 basic.forever(function() {
   //IconNames.Heartの横に、
   //", 200"を加えると、表示時間を指定できる
@@ -246,7 +242,7 @@ basic.forever(function() {
   basic.showIcon(IconNames.SmallHeart, 200)
 })
 </code></pre>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -261,7 +257,6 @@ basic.forever(function() {
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>数字を0から順番に表示させてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -351,7 +346,6 @@ basic.forever(function () {
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>カウントダウンタイマーを作ろう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -416,7 +410,6 @@ if (count > 0) {//①countが0より大きかったら、
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>明るさがドキドキ変化するハートを作ろう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -527,7 +520,6 @@ basic.forever(function() {
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3>注釈を入れてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>
@@ -553,7 +545,6 @@ basic.forever(function() {
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="exercise"></div>
-          <h3 class="alignjustify">コメントアウトしてみよう。</h3>
           <div class="content-left">
             <ul class="flexblock specs">
               <li>

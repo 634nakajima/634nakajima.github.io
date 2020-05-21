@@ -2,7 +2,7 @@
 	"unsplash": {
 		"prefix": "unsplash",
 		"body": [
-			"<img class=\"aligncenter\" src=\"https://source.unsplash.com/{$1:q10VITrVYUM}/480x360\" alt=\"\">"
+			"<img class=\"aligncenter\" src=\"https://source.unsplash.com/${1:q10VITrVYUM}/480x360\" alt=\"\">"
 		],
 		"description": "unsplash"
 	}

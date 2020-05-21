@@ -35,6 +35,12 @@ document.write(
   //例題
   '<template id="exerciseTemplate">',
   '<h4><strong></strong></h4>',
+  '<h3></h3>',
+  '</template>',
+  //説明
+  '<template id="explanationTemplate">',
+  '<h4><strong>見出し</strong></h4>',
+  '<h3>説明</h3>',
   '</template>'
 );
 /*----------------------------------------------------------------------*/
@@ -141,7 +147,7 @@ for (let i = 0; i < partTitleElements.length; i++) {
 }
 /*----------------------------------------------------------------------*/
 
-/*例題番号---------------------------------------------------------------*/
+/*例題-------------------------------------------------------------------*/
 var exerciseTemplate = document.querySelector('#exerciseTemplate').content;
 var exerciseElements = document.getElementsByClassName("exercise");
 
@@ -149,9 +155,27 @@ for (let i = 0; i < exerciseElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(exerciseTemplate, true);// テンプレートのノードを複製
   const title = clone.querySelector('strong');// テンプレート内のstrong要素
+  const sentence = clone.querySelector('h3');
   title.innerHTML = '例題 ' + (i + 1);// テンプレートの要素に適用する
+  sentence.innerHTML = slideData[thisorder].exercise[i];// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   exerciseElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*説明-------------------------------------------------------------------*/
+var explanationTemplate = document.querySelector('#explanationTemplate').content;
+var explanationElements = document.getElementsByClassName("explanation");
+
+for (let i = 0; i < explanationElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(explanationTemplate, true);// テンプレートのノードを複製
+  const title = clone.querySelector('strong');// テンプレート内のstrong要素
+  const sentence = clone.querySelector('h3');
+  title.innerHTML = slideData[thisorder].explanation[i][0];// テンプレートの要素に適用する
+  sentence.innerHTML = slideData[thisorder].explanation[i][1];// テンプレートの要素に適用する
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  explanationElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
 
