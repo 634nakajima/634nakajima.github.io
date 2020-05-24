@@ -41,6 +41,12 @@ document.write(
   '<template id="explanationTemplate">',
   '<h4><strong>見出し</strong></h4>',
   '<h3>説明</h3>',
+  '</template>',
+  //YouTube
+  '<template id="youtubeTemplate">',
+  '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0"',
+  'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
+  '</iframe>',
   '</template>'
 );
 /*----------------------------------------------------------------------*/
@@ -48,6 +54,8 @@ document.write(
 /*JSONの読み込みと授業回の取得----------------------------------------------*/
 const slideData = readJSON("./contents.json");
 var thisorder = document.querySelector('article').getAttribute("order");
+const sections = Array.from(document.querySelectorAll('section'));
+const explanations = Array.from(document.getElementsByClassName("explanation"));
 /*----------------------------------------------------------------------*/
 
 /*目次へ戻るバナー---------------------------------------------------------*/
@@ -88,7 +96,6 @@ for (let i = 0; i < classTitleElements.length; i++) {
 /*授業チャプターリスト------------------------------------------------------*/
 var chapterTemplate = document.querySelector('#listTemplate').content;
 var chapterElements = document.getElementsByClassName("chapterList");
-const sections = Array.from(document.querySelectorAll('section'));
 
 // それぞれHTMLに挿入
 for (let i = 0; i < chapterElements.length; i++) {
@@ -176,6 +183,22 @@ for (let i = 0; i < explanationElements.length; i++) {
   sentence.innerHTML = slideData[thisorder].explanation[i][1];// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   explanationElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*YouTube-------------------------------------------------------------------*/
+var youtubeTemplate = document.querySelector('#youtubeTemplate').content;
+var youtubeElements = document.getElementsByClassName("youtube");
+
+for (let i = 0; i < youtubeElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(youtubeTemplate, true);// テンプレートのノードを複製
+  const iframe = clone.querySelector('iframe');// テンプレート内のstrong要素
+  const closestExplanation = youtubeElements.item(i).closest("section").getElementsByClassName("explanation");
+  const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
+  iframe.setAttribute("src", slideData[thisorder].explanation[indexOfClosestExplanation][2].youtube);
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  youtubeElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
 
