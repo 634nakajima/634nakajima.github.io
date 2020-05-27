@@ -47,6 +47,53 @@ document.write(
   '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0"',
   'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>',
   '</iframe>',
+  '</template>',
+  //Unsplash
+  '<template id="unsplashTemplate">',
+  '<img class="aligncenter" src="https://source.unsplash.com/q10VITrVYUM/480x360" alt="image">',
+  '</template>',
+  //list
+  '<template id="listTemplate">',
+  '<li>',
+  '<h5>item</h5>',
+  '</li>',
+  '</template>',
+  //gridSection
+  '<template id="gridSectionTemplate">',
+  '<div class="wrap">',
+  '<div class="slideHeader"></div>',
+  '<div class="explanation"></div>',
+  '<div class="grid sm">',
+  '<div class="column">',
+  '<div class="unsplash"></div>',
+  '</div>',
+  '<div class="column">',
+  '<ul class="flexblock specs">',
+  '</ul>',
+  '</div>',
+  '</div>',
+  '</div>',
+  '</template>',
+  //youtubeSection
+  '<template id="youtubeSectionTemplate">',
+  '  <div class="wrap">',
+  '    <div class="slideHeader"></div>',
+  '    <div class="explanation"></div>',
+  '    <div class="content-left">',
+  '      <ul class="flexblock specs">',
+  '      </ul>',
+  '    </div>',
+  '    <div class="content-left">',
+  '      <div class="youtube"></div>',
+  '    </div>',
+  '  </div>',
+  '</template>',
+  //mySection
+  '<template id="mySectionTemplate">',
+  '  <div class="wrap">',
+  '    <div class="slideHeader"></div>',
+  '    <div class="explanation"></div>',
+  '  </div>',
   '</template>'
 );
 /*----------------------------------------------------------------------*/
@@ -55,13 +102,48 @@ document.write(
 const slideData = readJSON("./contents.json");
 var thisorder = document.querySelector('article').getAttribute("order");
 const sections = Array.from(document.querySelectorAll('section'));
-const explanations = Array.from(document.getElementsByClassName("explanation"));
 /*----------------------------------------------------------------------*/
 
 /*目次へ戻るバナー---------------------------------------------------------*/
 var bannerTemplate = document.querySelector('#bannerTemplate').content;
 var bannerElement = document.getElementById("banner");
 if (bannerElement) bannerElement.appendChild(document.importNode(bannerTemplate, true));
+/*----------------------------------------------------------------------*/
+
+/*グリッドセクション-------------------------------------------------------*/
+var gridSectionTemplate = document.querySelector('#gridSectionTemplate').content;
+var gridSectionElements = document.getElementsByClassName("gridSection");
+
+for (let i = 0; i < gridSectionElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(gridSectionTemplate, true);// テンプレートのノードを複製
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  gridSectionElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*YouTubeセクション-------------------------------------------------------*/
+var youtubeSectionTemplate = document.querySelector('#youtubeSectionTemplate').content;
+var youtubeSectionElements = document.getElementsByClassName("youtubeSection");
+
+for (let i = 0; i < youtubeSectionElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(youtubeSectionTemplate, true);// テンプレートのノードを複製
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  youtubeSectionElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*マイセクション----------------------------------------------------------*/
+var mySectionTemplate = document.querySelector('#mySectionTemplate').content;
+var mySectionElements = document.getElementsByClassName("mySection");
+
+for (let i = 0; i < mySectionElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(mySectionTemplate, true);// テンプレートのノードを複製
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  mySectionElements.item(i).appendChild(fragment);
+}
 /*----------------------------------------------------------------------*/
 
 /*スライド上部のヘッダ-----------------------------------------------------*/
@@ -184,9 +266,10 @@ for (let i = 0; i < explanationElements.length; i++) {
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   explanationElements.item(i).appendChild(fragment);
 }
+const explanations = Array.from(document.getElementsByClassName("explanation"));
 /*----------------------------------------------------------------------*/
 
-/*YouTube-------------------------------------------------------------------*/
+/*YouTube---------------------------------------------------------------*/
 var youtubeTemplate = document.querySelector('#youtubeTemplate').content;
 var youtubeElements = document.getElementsByClassName("youtube");
 
@@ -201,6 +284,76 @@ for (let i = 0; i < youtubeElements.length; i++) {
   youtubeElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
+
+/*Unsplash--------------------------------------------------------------*/
+var unsplashTemplate = document.querySelector('#unsplashTemplate').content;
+var unsplashElements = document.getElementsByClassName("unsplash");
+
+for (let i = 0; i < unsplashElements.length; i++) {
+  const fragment = document.createDocumentFragment();// フラグメント
+  const clone = document.importNode(unsplashTemplate, true);// テンプレートのノードを複製
+  const img = clone.querySelector('img');// テンプレート内のstrong要素
+  const closestExplanation = unsplashElements.item(i).closest("section").getElementsByClassName("explanation");
+  const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
+  img.setAttribute("src", slideData[thisorder].explanation[indexOfClosestExplanation][2].unsplash);
+  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
+  unsplashElements.item(i).appendChild(fragment);
+}
+/*----------------------------------------------------------------------*/
+
+/*list------------------------------------------------------------------*/
+for (let i = 0; i < gridSectionElements.length; i++) {
+  const ul = gridSectionElements.item(i).querySelector('ul')
+  const closestExplanation = gridSectionElements.item(i).closest("section").getElementsByClassName("explanation");
+  const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
+  for (let content of slideData[thisorder].explanation[indexOfClosestExplanation][2].list) {
+    ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')
+  }
+}
+for (let i = 0; i < youtubeSectionElements.length; i++) {
+  const ul = youtubeSectionElements.item(i).querySelector('ul')
+  const closestExplanation = youtubeSectionElements.item(i).closest("section").getElementsByClassName("explanation");
+  const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
+  for (let content of slideData[thisorder].explanation[indexOfClosestExplanation][2].list) {
+    ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')
+  }
+}
+/*----------------------------------------------------------------------*/
+
+/*マイセクション----------------------------------------------------------*/
+const classData = slideData[thisorder].json == undefined ? slideData[thisorder] : readJSON(slideData[thisorder].json)
+for (let i = 0; i < mySectionElements.length; i++) {
+  const wrap = mySectionElements.item(i).getElementsByClassName("explanation")[0]
+  const closestExplanation = mySectionElements.item(i).closest("section").getElementsByClassName("explanation")[0]
+  const indexOfClosestExplanation = explanations.indexOf(closestExplanation)
+  const contents = classData.explanation[indexOfClosestExplanation][2]
+  if (contents == undefined) continue
+  else if ('image' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="grid sm"><div class="column"><img class="aligncenter" src="https://source.unsplash.com/q10VITrVYUM/480x360" alt="image"></div><div class="column"><ul class="flexblock specs"></ul></div></div>')
+    const img = wrap.querySelector('img')
+    img.setAttribute("src", contents.image)
+  } else if ('youtube' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>')
+    const iframe = wrap.querySelector('iframe')
+    iframe.setAttribute("src", contents.youtube)
+  } else if ('embed' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"></div></div></div>')
+    const embed = wrap.getElementsByClassName('embed')[0]
+    embed.insertAdjacentHTML('beforeend', contents.embed)
+  } else {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"></div></div>')
+  }
+  const ul = wrap.querySelector('ul');
+  for (let content of classData.explanation[indexOfClosestExplanation][2].list) {
+    ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')
+  }
+}
+/*----------------------------------------------------------------------*/
+
 
 /*JSONファイルの読み込み---------------------------------------------------*/
 function readJSON(path) {
