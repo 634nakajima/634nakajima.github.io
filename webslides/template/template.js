@@ -258,6 +258,7 @@ const classData = slideData[thisorder].json == undefined ? slideData[thisorder] 
 for (let i = 0; i < explanationElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(explanationTemplate, true);// テンプレートのノードを複製
+  if (classData.explanation.length <= i) break;
   const title = clone.querySelector('strong');// テンプレート内のstrong要素
   const sentence = clone.querySelector('h3');
   title.innerHTML = classData.explanation[i][0];// テンプレートの要素に適用する
@@ -324,6 +325,7 @@ for (let i = 0; i < mySectionElements.length; i++) {
   const wrap = mySectionElements.item(i).getElementsByClassName("explanation")[0]
   const closestExplanation = mySectionElements.item(i).closest("section").getElementsByClassName("explanation")[0]
   const indexOfClosestExplanation = explanations.indexOf(closestExplanation)
+  if (classData.explanation.length <= indexOfClosestExplanation) break
   const contents = classData.explanation[indexOfClosestExplanation][2]
   if (contents == undefined) continue
   else if ('image' in contents) {
