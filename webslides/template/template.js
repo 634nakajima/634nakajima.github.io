@@ -178,6 +178,7 @@ for (let i = 0; i < classTitleElements.length; i++) {
 /*授業チャプターリスト------------------------------------------------------*/
 var chapterTemplate = document.querySelector('#listTemplate').content;
 var chapterElements = document.getElementsByClassName("chapterList");
+var chapterTitleElements = document.getElementsByClassName("chapterTitle");
 
 // それぞれHTMLに挿入
 for (let i = 0; i < chapterElements.length; i++) {
@@ -193,10 +194,9 @@ for (let i = 0; i < chapterElements.length; i++) {
     chapterTitle.textContent = chapter;//授業内容を代入
 
     //授業チャプタートップスライドへのリンク
-    const chapterIndex = 1 + sections.findIndex(({ className }) => (
-      className.split(' ')[0].slice(String("chapter").length) - 1)
-      === (slideData[thisorder].chaptertitle.indexOf(chapter))
-    );
+    const chapterTitleIndex = slideData[thisorder].chaptertitle.indexOf(chapter)
+    const chapterTitleSection = chapterTitleElements.item(chapterTitleIndex).closest("section");
+    const chapterIndex = 1 + sections.indexOf(chapterTitleSection)
     chapterTitle.href = "#slide=" + chapterIndex;
     ol.appendChild(chapterClone);// 複製したノードをフラグメントに挿入
   }
@@ -208,14 +208,12 @@ for (let i = 0; i < chapterElements.length; i++) {
 
 /*授業チャプタータイトル----------------------------------------------------*/
 var chapterTitleTemplate = document.querySelector('#titleTemplate').content;
-var chapterTitleElements = document.getElementsByClassName("chapterTitle");
 
 for (let i = 0; i < chapterTitleElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(chapterTitleTemplate, true);// テンプレートのノードを複製
   const titles = Array.from(clone.querySelectorAll('strong'));// テンプレート内のh5要素
-  const chapterNumber = chapterTitleElements.item(i).closest("section").className.split(' ')[0].slice(String("chapter").length) - 1;
-  titles[1].innerHTML = slideData[thisorder].chaptertitle[chapterNumber];// テンプレートの要素に適用する
+  titles[1].innerHTML = slideData[thisorder].chaptertitle[i];// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   chapterTitleElements.item(i).appendChild(fragment);
 }
@@ -255,14 +253,15 @@ for (let i = 0; i < exerciseElements.length; i++) {
 /*説明-------------------------------------------------------------------*/
 var explanationTemplate = document.querySelector('#explanationTemplate').content;
 var explanationElements = document.getElementsByClassName("explanation");
+const classData = slideData[thisorder].json == undefined ? slideData[thisorder] : readJSON(slideData[thisorder].json)
 
 for (let i = 0; i < explanationElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(explanationTemplate, true);// テンプレートのノードを複製
   const title = clone.querySelector('strong');// テンプレート内のstrong要素
   const sentence = clone.querySelector('h3');
-  title.innerHTML = slideData[thisorder].explanation[i][0];// テンプレートの要素に適用する
-  sentence.innerHTML = slideData[thisorder].explanation[i][1];// テンプレートの要素に適用する
+  title.innerHTML = classData.explanation[i][0];// テンプレートの要素に適用する
+  sentence.innerHTML = classData.explanation[i][1];// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   explanationElements.item(i).appendChild(fragment);
 }
@@ -279,7 +278,7 @@ for (let i = 0; i < youtubeElements.length; i++) {
   const iframe = clone.querySelector('iframe');// テンプレート内のstrong要素
   const closestExplanation = youtubeElements.item(i).closest("section").getElementsByClassName("explanation");
   const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
-  iframe.setAttribute("src", slideData[thisorder].explanation[indexOfClosestExplanation][2].youtube);
+  iframe.setAttribute("src", classData.explanation[indexOfClosestExplanation][2].youtube);
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   youtubeElements.item(i).appendChild(fragment);
 }
@@ -295,7 +294,7 @@ for (let i = 0; i < unsplashElements.length; i++) {
   const img = clone.querySelector('img');// テンプレート内のstrong要素
   const closestExplanation = unsplashElements.item(i).closest("section").getElementsByClassName("explanation");
   const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
-  img.setAttribute("src", slideData[thisorder].explanation[indexOfClosestExplanation][2].unsplash);
+  img.setAttribute("src", classData.explanation[indexOfClosestExplanation][2].unsplash);
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   unsplashElements.item(i).appendChild(fragment);
 }
@@ -306,7 +305,7 @@ for (let i = 0; i < gridSectionElements.length; i++) {
   const ul = gridSectionElements.item(i).querySelector('ul')
   const closestExplanation = gridSectionElements.item(i).closest("section").getElementsByClassName("explanation");
   const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
-  for (let content of slideData[thisorder].explanation[indexOfClosestExplanation][2].list) {
+  for (let content of classData.explanation[indexOfClosestExplanation][2].list) {
     ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')
   }
 }
@@ -314,14 +313,13 @@ for (let i = 0; i < youtubeSectionElements.length; i++) {
   const ul = youtubeSectionElements.item(i).querySelector('ul')
   const closestExplanation = youtubeSectionElements.item(i).closest("section").getElementsByClassName("explanation");
   const indexOfClosestExplanation = explanations.indexOf(closestExplanation[0]);
-  for (let content of slideData[thisorder].explanation[indexOfClosestExplanation][2].list) {
+  for (let content of classData.explanation[indexOfClosestExplanation][2].list) {
     ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')
   }
 }
 /*----------------------------------------------------------------------*/
 
 /*マイセクション----------------------------------------------------------*/
-const classData = slideData[thisorder].json == undefined ? slideData[thisorder] : readJSON(slideData[thisorder].json)
 for (let i = 0; i < mySectionElements.length; i++) {
   const wrap = mySectionElements.item(i).getElementsByClassName("explanation")[0]
   const closestExplanation = mySectionElements.item(i).closest("section").getElementsByClassName("explanation")[0]
@@ -347,6 +345,8 @@ for (let i = 0; i < mySectionElements.length; i++) {
     wrap.insertAdjacentHTML('beforeend',
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"></div></div>')
   }
+
+  if (contents.list == undefined) continue
   const ul = wrap.querySelector('ul');
   for (let content of classData.explanation[indexOfClosestExplanation][2].list) {
     ul.insertAdjacentHTML('beforeend', '<li><h5>' + content + '</h5></li>')

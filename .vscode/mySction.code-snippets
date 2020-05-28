@@ -1,0 +1,11 @@
+{
+	"mySection": {
+		"prefix": "mySection",
+		"body": [
+			"<section>",
+			"  <div class=\"mySection\"></div>",
+			"</section>"
+		],
+		"description": "mySection"
+	}
+}
