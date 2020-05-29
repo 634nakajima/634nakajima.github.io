@@ -195,9 +195,11 @@ for (let i = 0; i < chapterElements.length; i++) {
 
     //授業チャプタートップスライドへのリンク
     const chapterTitleIndex = slideData[thisorder].chaptertitle.indexOf(chapter)
-    const chapterTitleSection = chapterTitleElements.item(chapterTitleIndex).closest("section");
-    const chapterIndex = 1 + sections.indexOf(chapterTitleSection)
-    chapterTitle.href = "#slide=" + chapterIndex;
+    if (chapterTitleElements.item(chapterTitleIndex)) {
+      const chapterTitleSection = chapterTitleElements.item(chapterTitleIndex).closest("section");
+      const chapterIndex = 1 + sections.indexOf(chapterTitleSection)
+      chapterTitle.href = "#slide=" + chapterIndex;
+    }
     ol.appendChild(chapterClone);// 複製したノードをフラグメントに挿入
   }
 

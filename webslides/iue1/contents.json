@@ -1,0 +1,27 @@
+{
+  "maintitle": "情報活用演習Ⅰ",
+  "parttitle": [
+    "Ⅰ イントロダクション",
+    "Ⅱ　文書の作成",
+    "Ⅲ　データの収集・整理・グラフ化",
+    "Ⅳ　プレゼンテーション資料の作成",
+    "Ⅴ　実践"
+  ],
+  "4th": {
+    "classtitle": "検索の活用と著作権",
+    "number": 4,
+    "json": "./4th.json",
+    "chaptertitle": [
+      "インターネットでの検索",
+      "これって著作権侵害？"
+    ]
+  },
+  "report": {
+    "classtitle": "",
+    "number": 0,
+    "json": "./report.json",
+    "chaptertitle": [
+      "レポートの掟"
+    ]
+  }
+}

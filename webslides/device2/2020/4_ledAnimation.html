@@ -13,16 +13,18 @@
   <!-- <link rel="canonical" href="http://your-url.com/"> -->
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+    rel="stylesheet">
 
   <!-- CSS WebSlides -->
-  <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/webslides.css">
 
   <!-- Optional - CSS SVG Icons (Font Awesome) -->
-  <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/svg-icons.css">
 
   <!-- FAVICONS -->
-  <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="16x16" href="../../static/images/favicons/favicon.png">
   <!-- Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#333333">
@@ -40,268 +42,20 @@
     </nav>
   </header>
   <main role="main">
-    <article id="webslides" class="vertical">
+    <article id="webslides" class="vertical" order="4th">
+
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう</p>
-          <h2 class="aligncenter text-landing"><strong>第４回</strong></h2>
-          <h2 class="aligncenter text-landing"><strong>スイッチでライトを点灯させる</strong></h2>
-          <hr>
+          <div class="slideHeader"></div>
+          <div class="classTitle"></div>
+          <div class="chapterList"></div>
         </div>
       </section>
 
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>「高さ」としての電圧</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">電気を水になぞらえると、水位が高いほど水圧も高くなる。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">電気の世界では、これを<b>電位</b>と呼ぶ。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify"><b>GND</b>は、電位の基準点（0V）。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img class="aligncenter" src="https://source.unsplash.com/onIXxjH56AA/600x450" alt="waterfall">
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>「高さ」としての電圧</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">電圧とは、２点間の<b>相対的な電位の差</b>。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">電位は<b>GNDからの電圧</b>とも言える。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img class="aligncenter" src="pics/skytree.png" alt="skytree">
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>抵抗と電圧降下</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>回路が形成されると、電流が流れる。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5>回路に電流が流れているとき、抵抗の前後でGNDからの電圧が<b>下がる</b>。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5>これを<b>電圧降下</b>と呼ぶ。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/voltage.png" alt="voltage">
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>抵抗と電圧降下</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電流が流れないと、電圧降下は<b>起こらない</b>。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5>抵抗値が0の導線でも、電圧降下は<b>起こらない</b>。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <img src="./pics/voltage2.png" alt="voltage2">
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>例題１</strong></h4>
-          <div class="content-left">
-            <h4>回路が形成されていないとき、抵抗の左端の電位は何Vでしょう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電圧計の+極を抵抗の左端に繋ぐと電位を測れる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/eXb5dpQM8Cb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>例題２</strong></h4>
-          <div class="content-left">
-            <h4>回路が形成されたとき、抵抗の左端の電位は何Vでしょう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電圧計の+極を抵抗の左端に繋ぐと電位を測れる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/eXb5dpQM8Cb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>練習１</strong></h4>
-          <div class="content-left">
-            <h4>回路が形成されていないとき、抵抗の右端の電位は何Vでしょう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電圧計の+極を抵抗の右端に繋ぐと電位を測れる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/eXb5dpQM8Cb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>練習２</strong></h4>
-          <div class="content-left">
-            <h4>回路が形成されたとき、抵抗の右端の電位は何Vでしょう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電圧計の+極を抵抗の左端に繋ぐと電位を測れる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/eXb5dpQM8Cb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>例題３</strong></h4>
-          <div class="content-left">
-            <h4>スイッチを<b>ON/OFF</b>すると、電流が流れる回路を作ろう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>タクトスイッチは、クワガタのツノのようなピンが２組ある。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5>それぞれの組は内部で常に繋がっている。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5>スイッチが押されると、片方の組はもう片方の組と繋がる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/cvq9CZPuyNh" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>例題４</strong></h4>
-          <div class="content-left">
-            <h4>スイッチを<b>ON/OFF</b>すると、電位が<b>5V/0V</b>に切り替わる箇所を探そう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電圧計の+極を繋いだ箇所の電位が測れる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/dD7mama1Djz" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h4><strong>練習３</strong></h4>
-          <div class="content-left">
-            <h4>スイッチを<b>ON/OFF</b>すると、電位が<b>0V/5V</b>に切り替わる回路と箇所を探そう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5>電流の向きを変えるのがヒント。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/dD7mama1Djz" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-          </div>
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
         </div>
       </section>
 
@@ -445,7 +199,8 @@
             </ul>
           </div>
           <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/4810b1b0-39b2-420a-a5f5-7d7b5c788b07/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/4810b1b0-39b2-420a-a5f5-7d7b5c788b07/preview?embed
+              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -475,7 +230,8 @@
             </ul>
           </div>
           <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/5b074035-3464-47b5-ae7d-011d5bc7c429/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/5b074035-3464-47b5-ae7d-011d5bc7c429/preview?embed
+              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -495,7 +251,8 @@
             </ul>
           </div>
           <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/2e0b4f68-72ed-4cc5-b23f-7ce923a75e26/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/2e0b4f68-72ed-4cc5-b23f-7ce923a75e26/preview?embed
+              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -528,7 +285,8 @@
             </p>
           </div>
           <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed
+              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -553,7 +311,8 @@
             </ul>
           </div>
           <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed
+              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </div>
         </div>
       </section>
@@ -605,27 +364,17 @@
     </article>
     <!-- end article -->
   </main>
-  <!-- end main -->
 
-  <!-- WebSlides Original Templates -->
-
-  <!-- A global footer
-
-<footer role="contentinfo">
-<div class="wrap">
-  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
-</div>
-</footer>  -->
-
+  <script src="../../template/template.js"></script>
   <!-- Required -->
-  <script src="../static/js/webslides.js"></script>
+  <script src="../../static/js/webslides.js"></script>
   <script>
     window.ws = new WebSlides();
   </script>
 
   <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
-  <script defer src="../static/js/svg-icons.js"></script>
-
+  <script defer src="../../static/js/svg-icons.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 
 </html>

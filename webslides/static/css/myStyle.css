@@ -37,3 +37,10 @@
   margin: 10px 0px;
   text-align: center;
 }
+
+.hide {
+  color:#f7f9fb;
+}
+.hide:hover {
+  color:#333;
+}
