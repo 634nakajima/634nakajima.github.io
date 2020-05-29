@@ -32,9 +32,9 @@
 </head>
 
 <body>
+  <div id="banner"></div>
   <main role="main">
     <article id="webslides" class="vertical" order="4th">
-
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
@@ -42,313 +42,58 @@
           <div class="chapterList"></div>
         </div>
       </section>
-
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h3 class="aligncenter zoomIn">コーディングをはじめよう。</h3>
+          <div style="margin-top: 30px;" class="aligncenter">
+            <a href="https://makecode.microbit.org/" target="_blank" class="button zoomIn ga-track">MakeCode
+              へ移動</a>
+          </div>
+        </div>
+      </section>
       <section>
         <div class="wrap">
           <div class="slideHeader"></div>
           <div class="chapterTitle"></div>
         </div>
       </section>
-
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>Arduinoへの電圧入力</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">Arduinoの各ピンソケットは、<b>GNDからの電圧</b>（電位）を読み取れる。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">読み取り方（入力方法）は、<b>デジタル</b>と<b>アナログ</b>の2種類ある。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><h5>ピンソケットの初期設定（回路に応じて２パターン）
-
-  ① pinMode(analog_pin, INPUT);
-  ② pinMode(analog_pin, INPUT_PULLUP);
-
-  //デジタル入力もアナログ入力も同じ書き方
-  //２番目の引数の詳細については後述</h5>
-            </pre>
-          </div>
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
         </div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>Arduinoへのデジタル入力</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">デジタル入力では、0Vか5Vの<b>どちらかの状態</b>を読み取る。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">読み取った電圧は<b>HIGH</b>か<b>LOW</b>という値で変数に代入できる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><h5>デジタル入力の値を読み取り、変数に代入
-
-  int val = digitalRead(analog_pin);</h5>
-            </pre>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>条件分岐</strong></h3>
-          <div class="content-left">
-            <h5 class="alignjustify">Arduinoに、スイッチが押されときにLEDを点灯させるなら、このように書ける。</h5>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">特定の条件が成り立つときだけ処理を行うことを<b>条件分岐</b>と呼ぶ。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">プログラミング言語で条件分岐を記述する構文を<b>if文</b>と呼ぶ。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><h5>条件分岐
-  int 状態 = スイッチの状態を読み取る();
-  もし（状態）が（ON）なら、
-    LEDを点灯();
-  そうでなければ、
-    LEDを消灯();</h5>
-            </pre>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <h3><strong>if文の書き方</strong></h3>
-          <div class="content-left">
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify"><b>==</b>は<b>等しい</b>という意味。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify"><b>else</b>は<b>そうでなければ</b>という意味。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <pre><h5>条件分岐
-  int state = digitalRead(buttonPin);
-  if(state == LOW) {
-    digitalWrite(LEDPin, HIGH);
-  }else{
-    digitalWrite(LEDPin, HIGH);
-  }</h5>
-            </pre>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>例題５</strong></h4>
-            <h4 class="alignjustify">スイッチの<b>ON/OFF</b>をArduinoで検出しよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify"><b>練習３</b>で見つけた箇所をArduinoのデジタル入力ピンに繋ぐ。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">スイッチのON/OFFを検出したら、ビルトインLEDを連動させよう。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/4810b1b0-39b2-420a-a5f5-7d7b5c788b07/preview?embed
-              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>例題６</strong></h4>
-            <h4 class="alignjustify">Arduinoのプルアップ抵抗を利用しよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">例題５で使われている抵抗は<b>プルアップ抵抗</b>と呼ばれる。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">プルアップ抵抗をつけることで、スイッチが繋がっていないときでも入力電圧が<b>5V</b>に定まる。</h5>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h5 class="alignjustify">Arduino内のプルアップ抵抗を利用すれば、ブレッドボード上の抵抗を取り除くことができる。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/5b074035-3464-47b5-ae7d-011d5bc7c429/preview?embed
-              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>練習４</strong></h4>
-            <h4 class="alignjustify">スイッチの<b>ON/OFF</b>でフルカラーLEDをON/OFFさせよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">スイッチ入力回路とは別に、LED点灯回路を作る。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/2e0b4f68-72ed-4cc5-b23f-7ce923a75e26/preview?embed
-              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>例題７</strong></h4>
-            <h4 class="alignjustify">スイッチを押して離すごとにフルカラーLEDを点灯→消灯→点灯→...と変化させよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <p class="alignjustify">この例題ではスイッチとLEDの状態は<b>連動しない</b>。</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p class="alignjustify">LEDの状態をbool型の（真か偽のどちらかを表す）変数に記録しておく。</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p class="alignjustify">スイッチON時にLEDを点灯/消灯させ、スイッチOFF時は何もしない。</p>
-                </div>
-              </li>
-            </ul>
-            <p class="alignright">
-              次ページへ続く
-            </p>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed
-              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>例題７</strong></h4>
-            <h4 class="alignjustify">スイッチを押して離すごとにフルカラーLEDを点灯→消灯→点灯→...と変化させよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <p class="alignjustify">スイッチON時にLEDを点灯/消灯したあと、<b>スイッチが切れるまで待つ</b>と良い。</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <p class="alignjustify">「〇〇が成り立つ間、ずっと△△する」という処理は、<b>while文</b>を用いる。</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed
-              style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
-      </section>
-
-      <!--
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>例題８</strong></h4>
-            <h4 class="alignjustify">スイッチを押して離すごとにフルカラーLEDを点灯→弱め点灯→消灯→点灯→...と変化させよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify">フルカラーLEDの状態が３つ以上なので、int型の変数に記録しておく。</h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Ⅱ ナイトライトを作ろう<br />第４回 スイッチでライトを点灯させる</p>
-          <div class="content-left">
-            <h4><strong>練習５</strong></h4>
-            <h4 class="alignjustify">スイッチを押して離すごとにフルカラーLEDを自分の好きな色に変化させよう。</h4>
-            <ul class="flexblock specs">
-              <li>
-                <div>
-                  <h5 class="alignjustify"></h5>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <iframe src=https://create.arduino.cc/editor/634nakajima/b407f154-f47e-4406-9f88-9e1fd5440a84/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-          </div>
-        </div>
-      </section>
-      -->
       <section>
         <hr>
       </section>

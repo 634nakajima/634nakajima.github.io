@@ -92,7 +92,7 @@
           </div>
           <div class="exampleSentence content-left">
             <h5>LEDを制御するための関数</h5>
-            <pre><code class="prettyprint lang-js">led.plot(x, y)//1.
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">led.plot(x, y)//1.
 
 led.toggle(x, y)//2.
 
@@ -154,7 +154,7 @@ led.setBrightness(a)//4.</code></pre>
             </ul>
           </div>
           <div class="exampleSentence content-left">
-            <pre><code class="prettyprint lang-js">/*-----ほぼ同じ処理のセット1-------*/
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">/*-----ほぼ同じ処理のセット1-------*/
 led.toggle(0, 3)  //引数以外同じ処理
 basic.pause(100)  //全く同じ処理
 /*-----ほぼ同じ処理のセット2-------*/
@@ -186,7 +186,7 @@ basic.pause(100)  //全く同じ処理
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
   ⑤led.toggle(x, y)
   ⑤basic.pause(100)
 }</code></pre>
@@ -206,7 +206,7 @@ basic.pause(100)  //全く同じ処理
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
   ⑤led.toggle(x, y)
   ⑤basic.pause(100)
 }</code></pre>
@@ -225,7 +225,7 @@ basic.pause(100)  //全く同じ処理
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
   ⑤led.toggle(x, y)
   ⑤basic.pause(100)
 }</code></pre>
@@ -243,7 +243,7 @@ basic.pause(100)  //全く同じ処理
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">toggleAndPause(1,2)
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">toggleAndPause(1,2)
 //↑のように書くと、この関数の内部で、
 led.toggle(1, 2)
 basic.pause(100)
@@ -289,7 +289,7 @@ basic.pause(100)
             </ul>
           </div>
           <div class="content-left">
-            <pre><code class="prettyprint lang-js">function toggleAndPause(x: number, y: number, ms:number = 100 ①) {
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">function toggleAndPause(x: number, y: number, ms:number = 100 ①) {
   led.toggle(x, y)
   basic.pause(ms)②
 }</code></pre>

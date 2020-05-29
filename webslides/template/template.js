@@ -337,7 +337,7 @@ for (let i = 0; i < mySectionElements.length; i++) {
     img.setAttribute("src", contents.image)
   } else if ('youtube' in contents) {
     wrap.insertAdjacentHTML('beforeend',
-      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>')
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>')
     const iframe = wrap.querySelector('iframe')
     iframe.setAttribute("src", contents.youtube)
   } else if ('embed' in contents) {
@@ -345,9 +345,14 @@ for (let i = 0; i < mySectionElements.length; i++) {
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"></div></div></div>')
     const embed = wrap.getElementsByClassName('embed')[0]
     embed.insertAdjacentHTML('beforeend', contents.embed)
+  } else if ('code' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max-height: 400px;white-space: pre;"><code class="prettyprint lang-js"></code></pre></div>')
+    const code = wrap.querySelector('code')
+    code.insertAdjacentHTML('beforeend', contents.code)
   } else {
     wrap.insertAdjacentHTML('beforeend',
-      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"></div></div>')
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"></div>')
   }
 
   if (contents.list == undefined) continue

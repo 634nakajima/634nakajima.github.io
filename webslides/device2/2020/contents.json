@@ -98,13 +98,12 @@
     ]
   },
   "4th": {
-    "classtitle": "LED表示をスイッチで変化させる",
+    "classtitle": "LED表示をボタンで変化させる",
     "json": "./4th.json",
     "number": 4,
     "chaptertitle": [
-      "個々のLEDの点灯/消灯",
-      "関数の定義",
-      "個々のLEDの明るさ制御"
+      "ボタンによるLED表示の切替",
+      "シューティングゲームの制作"
     ]
   }
 }

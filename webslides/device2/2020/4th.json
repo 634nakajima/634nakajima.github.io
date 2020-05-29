@@ -2,11 +2,117 @@
   "explanation": [
     [
       "今回の目標",
-      ""
+      "ボタンを使ったインタラクティブな作品を制作。",
+      {
+        "list": [
+          "ボタンを押すと表示が切り替わるLEDディスプレイを制作。<br><b>6/15（月）締切</b>。",
+          "シンプルな<b>シューティングゲーム</b>を制作。<br><b>6/15（月）締切</b>。"
+        ],
+        "image": "http://source.unsplash.com/q4aGGwqiRGY/"
+      }
+    ],
+    [
+      "例題 1",
+      "ボタンを押している時だけ点灯するLEDアイコンを作ろう。",
+      {
+        "list": [
+          "ボタンを押しているかどうかは、<br><b>input.buttonIsPressed(Button.A)</b><br>という関数で取得できる。",
+          "<b>if文</b>と組み合わせてみよう。"
+        ],
+        "code": "basic.forever(function () {\r\n    if (input.buttonIsPressed(Button.A)) {\r\n        basic.showIcon(IconNames.Heart, 10)\r\n    } else {\r\n        basic.clearScreen()\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 2",
+      "ボタンを押すと点灯するLEDアイコンを作ろう。",
+      {
+        "list": [
+          "ボタンを押（して離）すイベントに応じた処理は、<br><b>input.onButtonPressed(...)</b><br>という<b>イベントハンドラ</b>で記述できる。",
+          "イベントハンドラとは特定のイベントが起こった時にして欲しい処理を<b>登録</b>、管理する関数。",
+          "LEDの状態を変数で管理しておき、イベントが発生する度に状態を切り替える。"
+        ],
+        "code": "let ledState = 0\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if (ledState == 0) {\r\n        basic.showIcon(IconNames.Heart)\r\n        ledState = 1\r\n    } else {\r\n        basic.clearScreen()\r\n        ledState = 0\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 3",
+      "ボタンを押すごとにアイコンを切り替えよう。",
+      {
+        "list": [
+          "複数のLEDの状態を管理し、処理を<b>分岐</b>させる。",
+          "３つ以上の分岐がある場合は<b>switch文</b>を使ってみよう。"
+        ],
+        "code": "\/\/\u73fe\u5728\u306eLED\u306e\u72b6\u614b\u3002\r\n\/\/0:\u6d88\u706f, 1:\u30cf\u30fc\u30c8, 2:\u5c0f\u3055\u3044\u30cf\u30fc\u30c8\u3068\u3057\u3066\u304a\u304f\u3002\r\nlet currentState = 0\r\ninput.onButtonPressed(Button.B, function () {\r\n    switch (currentState) {\r\n        case 0: \/\/currentState\u304c0\u306e\u3068\u304d\u306e\u51e6\u7406\r\n            basic.showIcon(IconNames.Heart)\r\n            currentState = 1 \/\/\u73fe\u5728\u306e\u72b6\u614b\u3092\u8868\u3059\u6570\u5024\u3092\u66f4\u65b0\r\n            break;\/\/switch\u6587\u306e\u51e6\u7406\u3092\u629c\u3051\u308b\u51e6\u7406\u3002\r\n        case 1:\r\n            basic.showIcon(IconNames.SmallHeart)\r\n            currentState = 2\r\n            break;\r\n        case 2:\r\n            basic.clearScreen()\r\n            currentState = 0\r\n            break;\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 4",
+      "状態の管理を分かりやすくコーディングしよう。",
+      {
+        "list": [
+          "LEDの状態を単なる数値で管理していると、その数値が何を意味しているのか<b>分かりにくい</b>。",
+          "<b>enum（列挙型）</b>と呼ばれる変数で数値に名前を割り当て、管理しやすくしよう。",
+          "表示されるアイコンなどをアレンジし、Classroomに<b>提出</b>。"
+        ],
+        "code": "\/\/enum\u578b\u306e\u5909\u6570\"ledState\"\u3092\u5ba3\u8a00\u3002\r\n\/\/\u4e2d\u62ec\u5f27\u306e\u4e2d\u306b\u4e26\u3079\u305f\u6587\u5b57\u5217\u304c\u305d\u308c\u305e\u308c0,1,2,...\u3092\u8868\u3059\u3002\r\nconst enum ledState {\r\n    off, heart, smallHeart\r\n}\r\nlet currentState = ledState.off\r\ninput.onButtonPressed(Button.B, function () {\r\n    switch (currentState) {\r\n        case ledState.off:\/\/\u6570\u5024\u306e\u4ee3\u308f\u308a\u306benum\u578b\u5909\u6570\u540d.\u540d\u524d\u3067\u8868\u3059\r\n            basic.showIcon(IconNames.Heart)\/\/\u5b9f\u306f\u3053\u308c\u3082enum\u578b\r\n            currentState = ledState.heart\r\n            break;\r\n        case ledState.heart:\r\n            basic.showIcon(IconNames.SmallHeart)\r\n            currentState = ledState.smallHeart\r\n            break;\r\n        case ledState.smallHeart:\r\n            basic.clearScreen()\r\n            currentState = ledState.off\r\n            break;\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 5-1",
+      "シューティングゲームの敵を作ろう。",
+      {
+        "list": [
+          "一個のLEDを動かしたり、衝突しているか判定したりできる<b>Game</b>という関数セットを用いる。",
+          "x(), y()（座標）, move()（移動）, turn()（回転）といった関数を利用できる。",
+          "これらを組み合わせて移動する敵を作ろう。"
+        ],
+        "code": "let enemy = game.createSprite(0, 0)\/\/\u6575\u3092\u8868\u3059\u70b9\u3092\u751f\u6210\r\n\r\nbasic.forever(function () {\r\n    enemy.move(1)\/\/\u53f3\uff08\u5de6\uff09\u306b\u79fb\u52d5\r\n    \/\/\u6575\u306ex\u5ea7\u6a19\u304c0 \u307e\u305f\u306f 4\u306b\u306a\u3063\u305f\u3089\r\n    \/\/\uff08\u300c\u307e\u305f\u306f\u300d\u306f||\u3067\u8868\u3059\uff09\r\n    if (enemy.x() == 0 || enemy.x() == 4) {\r\n        enemy.turn(Direction.Right, 180)\/\/180\u5ea6\u65b9\u5411\u8ee2\u63db\r\n    }\r\n    basic.pause(500)\r\n})"
+      }
+    ],
+    [
+      "例題 5-2",
+      "シューティングガンを作ろう。",
+      {
+        "list": [
+          "例題5-1で作成した敵と同様、移動するLEDを作成。",
+          "ボタン入力に応じて左右に移動させよう。"
+        ],
+        "code": "let enemy = game.createSprite(0, 0)\/\/\u6575\u3092\u8868\u3059\u70b9\u3092\u751f\u6210\r\nlet gun = game.createSprite(2, 4)\r\n\r\n\/\/basic.forever(...) \u7701\u7565\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    gun.move(-1)\/\/\u5de6\u306b\u79fb\u52d5\r\n})\r\ninput.onButtonPressed(Button.B, function () {\r\n    gun.move(1)\/\/\u53f3\u306b\u79fb\u52d5\r\n})"
+      }
+    ],
+    [
+      "例題 5-3",
+      "弾を発射させよう。",
+      {
+        "list": [
+          "AB同時押しで、ガンから弾を発射させる。",
+          "弾をmove()で上向きに移動させ、上端に達したらdelete()で消去。"
+        ],
+        "code": "\/\/\u7701\u7565\r\nlet shoot: game.LedSprite = null;\/\/\u5f3e\u306e\u5909\u6570\u3060\u3051\u5ba3\u8a00\u3057\u3066\u4f55\u3082\u4ee3\u5165\u3057\u306a\u3044\uff08null\u306f\u7a7a\u3092\u8868\u3059\u3002\uff09\r\n\/\/\u7701\u7565\r\ninput.onButtonPressed(Button.AB, function () {\r\n    shoot = game.createSprite(gun.x(), gun.y())\/\/\u30ac\u30f3\u306e\u5ea7\u6a19\u3067\u5f3e\u3092\u751f\u6210\r\n    shoot.turn(Direction.Left, 90)\/\/90\u5ea6\u56de\u8ee2\u3057\u3066\u4e0a\u3092\u5411\u304b\u305b\u308b\r\n    while (shoot.y() > 0) {\/\/\u5f3e\u306ey\u5ea7\u6a19\u304c\u6b63\u306e\u9593\u305a\u3063\u3068\r\n        shoot.move(1)\/\/\u4e0a\u306b\u79fb\u52d5\r\n        basic.pause(100)\r\n    }\r\n    shoot.delete()\r\n})"
+      }
+    ],
+    [
+      "例題 5-4",
+      "衝突時の処理を入れて完成させよう。",
+      {
+        "list": [
+          "二つの点が衝突しているかは、<b>isTouching(...)</b>で判定できる。",
+          "<b>if文</b>を使い、衝突していたら<b>クリア</b>画面を表示。",
+          "敵やガン、弾の移動パターン、クリア画面などをアレンジして<b>提出</b>。"
+        ],
+        "code": "\/\/\u7701\u7565\r\ninput.onButtonPressed(Button.AB, function () {\r\n    \/\/\u7701\u7565\r\n    while (shoot.y() > 0) {\r\n        shoot.move(1)\r\n        basic.pause(100)\r\n        if (shoot.isTouching(enemy)) {\/\/\u6575\u3068\u885d\u7a81\u3057\u3066\u3044\u305f\u3089\r\n            enemy.delete()\/\/\u6575\u3092\u6d88\u53bb\uff08\u3059\u3050\u30af\u30ea\u30a2\u753b\u9762\u3092\u8868\u793a\u3059\u308b\u306e\u3067\u306a\u304f\u3066\u3082\u53ef\uff09\r\n            basic.showIcon(IconNames.Happy, 2000)\/\/\u30af\u30ea\u30a2\u753b\u9762\u3092\u8868\u793a\r\n            control.reset()\/\/\u30b2\u30fc\u30e0\u3092\u30ea\u30bb\u30c3\u30c8\r\n        }\r\n    }\r\n    shoot.delete()\r\n})"
+      }
     ],
     [
       "今回のまとめ",
-      ""
+      "ボタンを使った２つのコンテンツを制作。",
+      {
+        "list": [
+          "<b>enum</b>を使ってコンテンツの状態管理を<b>分かりやすく</b>コーディング。",
+          "<b>Game</b>の機能を使ってシューティングゲームを制作。"
+        ],
+        "image": "http://source.unsplash.com/eCktzGjC-iU/"
+      }
     ]
   ]
 }

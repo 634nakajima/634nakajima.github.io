@@ -506,7 +506,9 @@ pre {
   text-align: left;
   white-space: pre-wrap;
   width: 100%;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  -webkit-overflow-scrolling: touch;
+}
   pre + p {
     margin-top: 3.2rem; }
   pre code {
