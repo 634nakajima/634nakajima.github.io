@@ -154,7 +154,10 @@ for (let i = 0; i < slideHeaderElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(slideHeaderTemplate, true);// テンプレートのノードを複製
   const classtitle = clone.querySelector('p');// テンプレート内のp要素
-  classtitle.innerHTML = slideData.maintitle + '</br >' + "第 " + slideData[thisorder].number + " 回 " + slideData[thisorder].classtitle;// テンプレートの要素に適用する
+  let title = slideData.maintitle + '</br >'
+  if ('number' in slideData[thisorder]) title += "第 " + slideData[thisorder].number + " 回 "
+  title += slideData[thisorder].classtitle
+  classtitle.innerHTML = title// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   slideHeaderElements.item(i).appendChild(fragment);
 }
@@ -168,7 +171,7 @@ for (let i = 0; i < classTitleElements.length; i++) {
   const fragment = document.createDocumentFragment();// フラグメント
   const clone = document.importNode(classTitleTemplate, true);// テンプレートのノードを複製
   const titles = Array.from(clone.querySelectorAll('strong'));// テンプレート内のh5要素
-  titles[0].innerHTML = "第" + slideData[thisorder].number + "回";
+  if ('number' in slideData[thisorder]) titles[0].innerHTML = "第" + slideData[thisorder].number + "回";
   titles[1].innerHTML = slideData[thisorder].classtitle;// テンプレートの要素に適用する
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   classTitleElements.item(i).appendChild(fragment);

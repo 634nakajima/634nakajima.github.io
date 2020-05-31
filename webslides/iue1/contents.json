@@ -12,16 +12,16 @@
     "number": 4,
     "json": "./4th.json",
     "chaptertitle": [
+      "自己紹介",
       "インターネットでの検索",
       "これって著作権侵害？"
     ]
   },
   "report": {
-    "classtitle": "",
-    "number": 0,
+    "classtitle": "レポートの掟",
     "json": "./report.json",
     "chaptertitle": [
-      "レポートの掟"
+      ""
     ]
   }
 }
