@@ -48,7 +48,8 @@
           "<b>HTML</b>の記述方法について学ぶ。",
           "<b>CodePen</b>を用いてHTMLの書き方に慣れる。",
           "Webサイトを作るための雛形を作成する。"
-        ]
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
       }
     ],
     [
@@ -61,8 +62,8 @@
           "<b>段落</b>を表す<code>&ltp&gt</code>や<b>章</b>を表す<code>&ltsection&gt</code>など、文書構造に関するタグが多く用意されている。"
         ],
         "codepen": [
-          "634nakajimaMejiro",
-          "YzwKWZo"
+          "musashinakajima",
+          "dyGPYyd"
         ]
       }
     ],
@@ -75,8 +76,8 @@
           "本授業ではHTMLやCSSなどの記述に適した<b>CodePen</b>と呼ばれるサービスを用いてHTMLファイルを作成。"
         ],
         "codepen": [
-          "634nakajimaMejiro",
-          "YzwKWZo"
+          "musashinakajima",
+          "dyGPYyd"
         ]
       }
     ],
@@ -94,14 +95,25 @@
     ],
     [
       "CodePenのアカウント登録",
-      "HTMLファイルをWebブラウザ上で簡単に編集できる。",
+      "氏名、アカウント名、メールアドレス、パスワードを登録。",
       {
         "list": [
           "<a href='https://codepen.io/' target='_blank'>こちら</a>に移動し、右上'Sign Up' を選択。",
           "\"Your Name\", \"Choose a username\"にそれぞれ氏名、アカウント名（任意の文字列）を設定。",
           "\"Email\", \"Choose Password\"にそれぞれ大学メールアドレス、パスワードを設定し、\"Submit\"をクリック。"
         ],
-        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
+        "youtube": "https://www.youtube.com/embed/-AF2Mm1hxlk"
+      }
+    ],
+    [
+      "CodePenのアカウント登録",
+      "アカウントの検証とチュートリアルを進める。",
+      {
+        "list": [
+          "アカウント登録をすると、チュートリアルが始まるので、適当に進める。",
+          "登録メールアドレス宛に確認のメールが届くので、<b>Click to Verify Email</b>をクリック。"
+        ],
+        "youtube": "https://www.youtube.com/embed/tgg8I6H2nME"
       }
     ],
     [
@@ -109,11 +121,11 @@
       "\"EDIT ON CODEPEN\"からアクセスし、指示に従って記述。",
       {
         "list": [
-          "画面左がWebサイトの元となるファイルで、右が実際に表示されるプレビュー画面にすると見やすい。",
           "課題にあるCodePen画面右上からCodePenにアクセスし、課題を画面右下<b>Fork</b>でコピー。",
+          "画面左がWebサイトの元となるファイルで、右が実際に表示されるプレビュー画面にすると見やすい。",
           "指示どおり編集を終えたら、画面上部<b>Save</b>で保存。"
         ],
-        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
+        "youtube": "https://www.youtube.com/embed/Dp37WFy3nuo"
       }
     ],
     [
@@ -124,7 +136,7 @@
           "CodePenではスニペットのことを<b>Pen</b>と呼んでいる。",
           "コピーした各課題はここで管理されている。"
         ],
-        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
+        "youtube": "https://www.youtube.com/embed/0yvX041LAXo"
       }
     ],
     [
@@ -227,7 +239,7 @@
           "アドレスバーの<b>URL</b>（https://codepen.io/{username}/ pen/{id}）を<b>コピー</b>。",
           "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/5締切）。"
         ],
-        "youtube": "https://www.youtube.com/embed/adFa3ytdOtE"
+        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
