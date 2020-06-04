@@ -94,6 +94,20 @@ document.write(
   '    <div class="slideHeader"></div>',
   '    <div class="explanation"></div>',
   '  </div>',
+  '</template>',
+  '<template id="myChapterTitleTemplate">',
+  '<div class="wrap">',
+  '<div class="slideHeader"></div>',
+  '<div class="chapterTitle"></div>',
+  '</div>',
+  '</template>',
+  '</template>',
+  '<template id="myClassTitleTemplate">',
+  '<div class="wrap">',
+  '<div class="slideHeader"></div>',
+  '<div class="classTitle"></div>',
+  '<div class="chapterList"></div>',
+  '</div>',
   '</template>'
 );
 /*----------------------------------------------------------------------*/
@@ -108,6 +122,34 @@ const sections = Array.from(document.querySelectorAll('section'));
 var bannerTemplate = document.querySelector('#bannerTemplate').content;
 var bannerElement = document.getElementById("banner");
 if (bannerElement) bannerElement.appendChild(document.importNode(bannerTemplate, true));
+/*----------------------------------------------------------------------*/
+
+/*マイクラスタイトル   ----------------------------------------------------*/
+var myClassTitleTemplate = document.querySelector('#myClassTitleTemplate').content;
+var myClassTitleElements = document.getElementsByClassName("myClassTitle");
+for (let i = 0; i < myClassTitleElements.length; i++) {
+  const clone = document.importNode(myClassTitleTemplate, true);// テンプレートのノードを複製
+  myClassTitleElements.item(i).appendChild(clone);
+}
+/*----------------------------------------------------------------------*/
+
+/*マイチャプタータイトル----------------------------------------------------*/
+var myChapterTitleTemplate = document.querySelector('#myChapterTitleTemplate').content;
+var myChapterTitleElements = document.getElementsByClassName("myChapterTitle");
+for (let i = 0; i < myChapterTitleElements.length; i++) {
+  const clone = document.importNode(myChapterTitleTemplate, true);// テンプレートのノードを複製
+  myChapterTitleElements.item(i).appendChild(clone);
+}
+/*----------------------------------------------------------------------*/
+
+/*マイセクション----------------------------------------------------------*/
+var mySectionTemplate = document.querySelector('#mySectionTemplate').content;
+var mySectionElements = document.getElementsByClassName("mySection");
+
+for (let i = 0; i < mySectionElements.length; i++) {
+  const clone = document.importNode(mySectionTemplate, true);// テンプレートのノードを複製
+  mySectionElements.item(i).appendChild(clone);
+}
 /*----------------------------------------------------------------------*/
 
 /*グリッドセクション-------------------------------------------------------*/
@@ -131,18 +173,6 @@ for (let i = 0; i < youtubeSectionElements.length; i++) {
   const clone = document.importNode(youtubeSectionTemplate, true);// テンプレートのノードを複製
   fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
   youtubeSectionElements.item(i).appendChild(fragment);
-}
-/*----------------------------------------------------------------------*/
-
-/*マイセクション----------------------------------------------------------*/
-var mySectionTemplate = document.querySelector('#mySectionTemplate').content;
-var mySectionElements = document.getElementsByClassName("mySection");
-
-for (let i = 0; i < mySectionElements.length; i++) {
-  const fragment = document.createDocumentFragment();// フラグメント
-  const clone = document.importNode(mySectionTemplate, true);// テンプレートのノードを複製
-  fragment.appendChild(clone);// 複製したノードをフラグメントに挿入
-  mySectionElements.item(i).appendChild(fragment);
 }
 /*----------------------------------------------------------------------*/
 
@@ -325,6 +355,7 @@ for (let i = 0; i < youtubeSectionElements.length; i++) {
 }
 /*----------------------------------------------------------------------*/
 
+
 /*マイセクション----------------------------------------------------------*/
 for (let i = 0; i < mySectionElements.length; i++) {
   const wrap = mySectionElements.item(i).getElementsByClassName("explanation")[0]
@@ -353,6 +384,11 @@ for (let i = 0; i < mySectionElements.length; i++) {
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max-height: 400px;white-space: pre;"><code class="prettyprint lang-js"></code></pre></div>')
     const code = wrap.querySelector('code')
     code.insertAdjacentHTML('beforeend', contents.code)
+  } else if ('codepen' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><iframe height="360" style="width: 100%;" scrolling="no" title="template" src="https://codepen.io/634nakajimaMejiro/embed/dyGbxgp?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">See the Pen <a href="https://codepen.io/634nakajimaMejiro/pen/dyGbxgp">template</a> by 中島 武三志 (<a href="https://codepen.io/634nakajimaMejiro">@634nakajimaMejiro</a>) on <a href="https://codepen.io">CodePen</a>.</iframe></div>')
+    const codepen = wrap.querySelector('iframe')
+    codepen.setAttribute("src", "https://codepen.io/" + contents.codepen[0] + "/embed/" + contents.codepen[1] + "?height=265&theme-id=dark&default-tab=html,result")
   } else {
     wrap.insertAdjacentHTML('beforeend',
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"></div>')

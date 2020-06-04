@@ -22,7 +22,7 @@
 
   <!-- Optional - CSS SVG Icons (Font Awesome) -->
   <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
-
+  <link rel="stylesheet" type="text/css" media='all' href="../static/css/myStyle.css">
   <!-- FAVICONS -->
   <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
   <!-- Android -->
@@ -32,117 +32,32 @@
 </head>
 
 <body>
-  <header role="banner">
-    <nav role="navigation">
-      <a href="index.html#slide=2" title="目次へ戻る">
-        <svg class="fa-arrow-circle-left">
-          <use xlink:href="#fa-arrow-circle-left"></use>
-        </svg>目次へ戻る
-      </a>
-    </nav>
-  </header>
+  <div id="banner"></div>
   <main role="main">
-    <article id="webslides" class="vertical">
-      <section>
-        <div class="wrap aligncenter">
-          <h2 class="text-landing"><strong>Ⅰ パートタイトル</strong></h2>
-          <hr>
-          <ol class="chapter">
-            <li value=1>
-              <h5><a href="#slide=2">授業タイトル１</a></h5>
-            </li>
-            <li>
-              <h5><a href="#slide=2">授業タイトル２</a></h5>
-            </li>
-          </ol>
+    <article id="webslides" class="vertical" order="4th">
+      <section class="part3">
+        <div class="wrap">
+          <div class="partTitle"></div>
         </div>
       </section>
-
       <section>
         <div class="wrap">
-          <p class="text-context">Ⅰ パートタイトル</p>
-          <h3><strong>インタラクティブに変化するLEDアニメーションを制作。</strong></h3>
+          <p class="text-context">情報活用演習Ⅱ<br>Ⅲ Webサイト制作</p>
+          <div class="explanation"></div>
           <div class="grid sm">
             <div class="column">
-              <img class="aligncenter" src="./pics/chick.png" alt="">
+              <img class="aligncenter" src="https://source.unsplash.com/ir5lIkVFqC4/480x360" alt="web site">
             </div>
             <div class="column">
               <ul class="flexblock specs">
                 <li>
-                  <h5>第１回　授業タイトル１</h5>
+                  <h5>テーマ（自由に決める）に着目した<b>動機</b>や理由についてまとめる。</h5>
                 </li>
                 <li>
-                  <h5>第２回　授業タイトル２</h5>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ</p>
-          <br />
-        </div>
-        <div class="wrap aligncenter">
-          <h2 class="text-landing"><strong>第１回</strong></h2>
-          <h2 class="text-landing"><strong>授業タイトル</strong></h2>
-          <hr>
-          <ol class="chapter">
-            <li>
-              <h5><a href="#slide=3">授業内容１</a></h5>
-            </li>
-            <li>
-              <h5><a href="#slide=3">授業内容２</a></h5>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <br />
-        </div>
-        <div class="wrap aligncenter">
-          <h2 class="text-landing"><strong>授業内容１</strong></h2>
-          <hr>
-          <ol class="chapter">
-            <li>
-              <h5><a href="#slide=4">授業項目１</a></h5>
-            </li>
-            <li>
-              <h5><a href="#slide=5">授業項目２</a></h5>
-            </li>
-            <li>
-              <h5><a href="#slide=8">授業項目３</a></h5>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h4><strong>授業の目標</strong></h4>
-          <h3>インタラクティブな作品制作に必要な<b>電子工作技術</b>の習得</h3>
-          <div class="grid sm">
-            <div class="column">
-              <a href="https://microbit.org/" target="_blank">
-                <img class="aligncenter" src="./pics/microbit.png" alt="">
-                <p class="aligncenter">micro:bit</p>
-              </a>
-            </div>
-            <div class="column">
-              <ul class="flexblock specs">
-                <li>
-                  <h5><b>micro:bit</b>を用いてセンサ類を制御する。</h5>
+                  <h5>調査したデータを<b>グラフ化</b>。</h5>
                 </li>
                 <li>
-                  <h5>各種ツールを組み合わせて<b>インタラクティブ</b>な作品を制作する。</h5>
-                </li>
-                <li>
-                  <h5>制作した作品について<b>プレゼンテーション</b>をする。</h5>
+                  <h5>グラフから読み取れる内容を<b>考察</b>。</h5>
                 </li>
               </ul>
             </div>
@@ -151,185 +66,104 @@
       </section>
       <section>
         <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h3><strong>以下の２項目を考慮し、100点に換算して成績を評価。</strong></h3>
-          <div class="grid sm">
-            <div class="column">
-              <img class="aligncenter" src="https://source.unsplash.com/zFSo6bnZJTw/" alt="classroom">
-            </div>
-            <div class="column">
-              <ul class="flexblock specs">
-                <li>
-                  <h4><b>出席</b>（授業内課題を含む）</h4>
-                  <p>
-                    全て出席で5点
-                  </p>
-                </li>
-                <li>
-                  <h4><b>作品制作</b></h4>
-                  <p>
-                    テーマⅠ：2点、テーマⅡ：3点
-                  </p>
-                </li>
-              </ul>
-            </div>
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div style="margin-top: 30px;" class="aligncenter">
+            <a href="https://000478792.production.codepen.plumbing/" target="_blank"
+              class="button zoomIn ga-track">サンプルページ</a>
           </div>
         </div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h4><strong>演習テーマⅠ</strong></h4>
-          <h3>インタラクティブに変化するLEDアニメーションを制作。</h3>
-          <div class="grid sm">
-            <div class="column">
-              <img class="aligncenter" src="https://source.unsplash.com/jBDTWn4W3bw/800x600" alt="light">
-            </div>
-            <div class="column">
-              <ul class="flexblock reasons">
-                <li>
-                  <h5>LEDの表示を自動で変化させる。</h5>
-                </li>
-                <li>
-                  <h5>LEDの表示をスイッチ入力で変化させる。</h5>
-                </li>
-                <li>
-                  <h5>様々なセンサ入力を利用する</h5>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h4><strong>演習テーマⅠ</strong></h4>
-          <h3>作品例</h3>
-          <ul class="flexblock gallery">
-            <li>
-              <figure>
-                <img alt="egg" src="./pics/egg.png">
-                <figcaption class="aligncenter">
-                  <h5>micro:bitをあたためるとLED画面の卵が、</h5>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <figure>
-                <img alt="chick" src="./pics/chick.png">
-                <figcaption class="aligncenter">
-                  <h5>ひよこに変わる！</h5>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h4><strong>演習テーマⅠ</strong></h4>
-          <h3>過去の作品①</h3>
-          <ul class="flexblock gallery">
-            <li>
-              <div class="embed">
-                <iframe src="https://drive.google.com/file/d/1mUu5E58425suPoB2CZGuhHxG-ctlUa_p/preview" width="640"
-                  height="480"></iframe>
-              </div>
-              <h5 class="aligncenter">「おめめ守るちゃん」</h5>
-            </li>
-            <li>
-              <div class="embed">
-                <p class="codepen" data-height="350" data-theme-id="dark" data-default-tab="css,result"
-                  data-user="634nakajima" data-slug-hash="dyYZjrr"
-                  style="height: 350px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                  data-pen-title="箇条書き（番号なし）">
-                  <span>See the Pen <a href="https://codepen.io/634nakajima/pen/dyYZjrr">
-                      箇条書き（番号なし）</a> by 634nakajima (<a href="https://codepen.io/634nakajima">@634nakajima</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-              </div>
-              <h5 class="aligncenter">「デジタルししおどし」</h5>
-            </li>
-          </ul>
-        </div>
-        </div>
+        <div class="myClassTitle"></div>
       </section>
-
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="myChapterTitle"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="myChapterTitle"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="myChapterTitle"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
+      <section>
+        <div class="mySection"></div>
+      </section>
       <section>
         <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
+          <div class="slideHeader"></div>
           <div class="content-left">
-            <h3><strong>Google Classroom</strong></h3>
-            <h4 class="alignjustify">授業資料や課題の管理ツール</h4>
-            <ul class="flexblock reasons">
+            <div class="explanation"></div>
+            <ul class="flexblock specs">
               <li>
-                <h5>右画像をクリックし、ページ右上<b>＋</b>アイコンから<b>クラスに参加</b>を選択。</h5>
+                <h5>見出しや段落の数と内容は、各自のテーマに応じて<b>変更</b>する。</h5>
               </li>
               <li>
-                <h5>クラスコード<b>zhzegvs</b>を入力し、<b>参加</b>をクリック。</h5>
+                <h5>現時点ではまだ<b>仮</b>の内容にしておく。</h5>
               </li>
             </ul>
           </div>
           <div class="content-left">
-            <p class="codepen" data-height="350" data-theme-id="dark" data-default-tab="html,result"
-              data-user="634nakajima" data-slug-hash="dyYZjrr"
-              style="height: 350px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="箇条書き（番号なし）">
-              <span>See the Pen <a href="https://codepen.io/634nakajima/pen/dyYZjrr">
-                  箇条書き（番号なし）</a> by 634nakajima (<a href="https://codepen.io/634nakajima">@634nakajima</a>)
+            <p class="codepen" data-height="550" data-theme-id="dark" data-default-tab="result" data-user="634nakajima"
+              data-slug-hash="xxZKEwv"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="xxZKEwv">
+              <span>See the Pen <a href="https://codepen.io/634nakajima/pen/xxZKEwv">
+                  xxZKEwv</a> by 634nakajima (<a href="https://codepen.io/634nakajima">@634nakajima</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
           </div>
         </div>
       </section>
-
       <section>
-        <div class="wrap">
-          <p class="text-context">Part Ⅰ<br />第１回　授業タイトル</p>
-          <h3><strong>変数の宣言と代入</strong></h3>
-          <div class="content-left">
-            <h5>micro:bitで数字を順番に表示させる時、このように書く。</h5>
-            <ul class="flexblock reasons">
-              <li>
-                <h4>変数の宣言</h4>
-                <h5>変数を初めて使う際に必要。"let"や"const"などがある。</h5>
-              </li>
-              <li>
-                <h4>変数名</h4>
-                <h5>プログラマが名付けることができる。</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="content-left">
-            <p class="codepen" data-height="350" data-theme-id="dark" data-default-tab="html,result"
-              data-user="634nakajima" data-slug-hash="eYpeLeP"
-              style="height: 350px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="目次">
-              <span>See the Pen <a href="https://codepen.io/634nakajima/pen/eYpeLeP">
-                  目次</a> by 634nakajima (<a href="https://codepen.io/634nakajima">@634nakajima</a>)
-                on <a href="https://codepen.io">CodePen!</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-          </div>
-        </div>
+        <div class="mySection"></div>
       </section>
-
       <section>
-        <span class="background" style="background-image:url('../static/images/kamikouchi.jpg')">
-        </span>
-        </div>
-        </div>
-        <!-- .end .wrap -->
+        <div class="mySection"></div>
       </section>
-
       <section>
         <hr>
       </section>
@@ -338,16 +172,7 @@
   </main>
   <!-- end main -->
 
-  <!-- WebSlides Original Templates -->
-
-  <!-- A global footer
-
-<footer role="contentinfo">
-<div class="wrap">
-  <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
-</div>
-</footer>  -->
-
+  <script src="../template/template.js"></script>
   <!-- Required -->
   <script src="../static/js/webslides.js"></script>
   <script>

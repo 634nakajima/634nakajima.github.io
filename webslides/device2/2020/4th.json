@@ -16,7 +16,7 @@
       "ボタンを押している時だけ点灯するLEDアイコンを作ろう。",
       {
         "list": [
-          "ボタンを押しているかどうかは、<br><b>input.buttonIsPressed(Button.A)</b><br>という関数で取得できる。",
+          "ボタンを押しているかどうかは、<br><b><code>input.buttonIsPressed(Button.A)</code></b><br>という関数で取得できる。",
           "<b>if文</b>と組み合わせてみよう。"
         ],
         "code": "basic.forever(function () {\r\n    if (input.buttonIsPressed(Button.A)) {\r\n        basic.showIcon(IconNames.Heart, 10)\r\n    } else {\r\n        basic.clearScreen()\r\n    }\r\n})"
@@ -27,7 +27,7 @@
       "ボタンを押すと点灯するLEDアイコンを作ろう。",
       {
         "list": [
-          "ボタンを押（して離）すイベントに応じた処理は、<br><b>input.onButtonPressed(...)</b><br>という<b>イベントハンドラ</b>で記述できる。",
+          "ボタンを押（して離）すイベントに応じた処理は、<br><b><code>input.onButtonPressed(...)</code></b><br>という<b>イベントハンドラ</b>で記述できる。",
           "イベントハンドラとは特定のイベントが起こった時にして欲しい処理を<b>登録</b>、管理する関数。",
           "LEDの状態を変数で管理しておき、イベントが発生する度に状態を切り替える。"
         ],
@@ -64,7 +64,7 @@
       {
         "list": [
           "一個のLEDを動かしたり、衝突しているか判定したりできる<b>Game</b>という関数セットを用いる。",
-          "x(), y()（座標）, move()（移動）, turn()（回転）といった関数を利用できる。",
+          "<code>x()</code>, <code>y()</code>（座標）,<code> move()</code>（移動）,<code> turn()</code>（回転）といった関数を利用できる。",
           "これらを組み合わせて移動する敵を作ろう。"
         ],
         "code": "let enemy = game.createSprite(0, 0)\/\/\u6575\u3092\u8868\u3059\u70b9\u3092\u751f\u6210\r\n\r\nbasic.forever(function () {\r\n    enemy.move(1)\/\/\u53f3\uff08\u5de6\uff09\u306b\u79fb\u52d5\r\n    \/\/\u6575\u306ex\u5ea7\u6a19\u304c0 \u307e\u305f\u306f 4\u306b\u306a\u3063\u305f\u3089\r\n    \/\/\uff08\u300c\u307e\u305f\u306f\u300d\u306f||\u3067\u8868\u3059\uff09\r\n    if (enemy.x() == 0 || enemy.x() == 4) {\r\n        enemy.turn(Direction.Right, 180)\/\/180\u5ea6\u65b9\u5411\u8ee2\u63db\r\n    }\r\n    basic.pause(500)\r\n})"
@@ -87,7 +87,7 @@
       {
         "list": [
           "AB同時押しで、ガンから弾を発射させる。",
-          "弾をmove()で上向きに移動させ、上端に達したらdelete()で消去。"
+          "弾を<code>move()</code>で上向きに移動させ、上端に達したら<code>delete()</code>で消去。"
         ],
         "code": "\/\/AB\u304c\u540c\u6642\u306b\u62bc\u3055\u308c\u305f\u3068\u304d\r\ninput.onButtonPressed(Button.AB, function () {\r\n    let bullet = game.createSprite(gun.x(), gun.y())\/\/\u5f3e\u3092\u751f\u6210\r\n    bullet.turn(Direction.Left, 90)\/\/\u7403\u306e\u9032\u884c\u65b9\u5411\u3092\u4e0a\u5411\u304d\u306b\u56de\u8ee2\r\n    while (bullet.y()) {\/\/\u5f3e\u304c0\u3088\u308a\u5927\u304d\u3044\u9593\u305a\u3063\u3068\r\n        bullet.move(1)\/\/\u4e0a\u306b\u79fb\u52d5\r\n        basic.pause(100)\/\/\u4e00\u6642\u505c\u6b62\r\n    }\r\n    bullet.delete()\/\/\u5f3e\u3092\u6d88\u53bb\r\n})"
       }
@@ -97,7 +97,7 @@
       "衝突時の処理を入れて完成させよう。",
       {
         "list": [
-          "二つの点が衝突しているかは、<b>isTouching(...)</b>で判定できる。",
+          "二つの点が衝突しているかは、<b><code>isTouching(...)</code></b>で判定できる。",
           "<b>if文</b>を使い、衝突していたら<b>クリア</b>画面を表示。",
           "敵やガン、弾の移動パターン、クリア画面などをアレンジして<b>提出</b>。"
         ],
@@ -109,7 +109,7 @@
       "ボタンを使った２つのコンテンツを制作。",
       {
         "list": [
-          "<b>enum</b>を使ってコンテンツの状態管理を<b>分かりやすく</b>コーディング。",
+          "<b><code>enum</code></b>を使ってコンテンツの状態管理を<b>分かりやすく</b>コーディング。",
           "<b>Game</b>の機能を使ってシューティングゲームを制作。"
         ],
         "image": "http://source.unsplash.com/eCktzGjC-iU/"

@@ -44,3 +44,39 @@
 .hide:hover {
   color:#333;
 }
+
+.tooltip {
+  position: relative;
+}
+.tooltip::before,
+.tooltip::after {
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+}
+.tooltip::before {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom-color: #555;
+  top: 30px;
+  left: 30px;
+}
+.tooltip::after {
+  font-size: medium;
+  content: attr(data-tooltip);
+  display: block;
+  padding: 0px 10px;
+  background: #555;
+  color: #fff;
+  border-radius: 5px;
+  top: 50px;
+  left: 0;
+}
+.tooltip:hover::before{
+  top: 36px;
+  opacity: 1;
+}
+.tooltip:hover::after{
+  top: 56px;
+  opacity: 1;
+}
