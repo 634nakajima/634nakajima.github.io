@@ -1,0 +1,113 @@
+{
+  "explanation": [
+    [
+      "今回の目標",
+      "様々なセンサを使ったアプリケーションを制作。",
+      {
+        "list": [
+          "各センサの値を<b>グラフ</b>で確認。",
+          "暗くなるとLEDが光る<b>ナイトライト</b>を制作。",
+          "北の方角を指し示す<b>コンパス</b>を制作。",
+          "温度が上がるとLEDの<b>扇風機</b>が回るアニメーションを制作。"
+        ],
+        "image": "../pics/microbit_overview2.png"
+      }
+    ],
+    [
+      "micro:bitのセンサ",
+      "明るさ、温度、方角、加速度など様々なセンサがついている。",
+      {
+        "list": [
+          "<b>Input</b>の中の関数を使い、センサから送られる情報を取得できる。",
+          "センサの値に応じたインタラクティブなアニメーションを作ることができる。"
+        ],
+        "image": "../pics/microbit_overview2.png"
+      }
+    ],
+    [
+      "例題 1",
+      "センサの値をモニタリングしよう。",
+      {
+        "list": [
+          "値に応じた条件分岐を書くために、予めセンサの値をモニタリングする。",
+          "モニタリングには<code><b>led.plotBarGraph</b>({センサ値を取得する関数}, {最大値})</code>と記述。"
+        ],
+        "code": "basic.forever(function () {\r\n    led.plotBarGraph(\r\n        input.lightLevel(),\r\n        255\r\n    )\r\n})\r\n"
+      }
+    ],
+    [
+      "例題 2",
+      "ナイトライトを作ろう。",
+      {
+        "list": [
+          "LEDの部分は明るさセンサにもなっている。",
+          "micro:bitは周囲の明るさを、<code><b>input.lightLevel</b>()</code>で取得（0-255の整数値）できる。",
+          "if文を使って、暗いときにLEDを点灯させよう。"
+        ],
+        "code": "basic.forever(function () {\r\n    if (input.lightLevel() < 50) {\r\n        basic.showLeds(`\r\n            # # # # #\r\n            # # # # #\r\n            # # # # #\r\n            # # # # #\r\n            # # # # #\r\n            `)\r\n    } else {\r\n        basic.clearScreen()\r\n    }\r\n})\r\n"
+      }
+    ],
+    [
+      "例題 3-1",
+      "向いている方角を表示しよう。",
+      {
+        "list": [
+          "micro:bitが、北に対して時計回りに何度回転しているかを0-360°で取得できる。",
+          "つまり、0°が北、90°が東、180°が南、270°が西。"
+        ],
+        "embed": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https:\/\/www.figma.com\/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVVKwDIhqeam3KTL6Ui56Fc%2FCompass%3Fnode-id%3D0%253A1&chrome=DOCUMENTATION\" allowfullscreen><\/iframe>"
+      }
+    ],
+    [
+      "例題 3-1",
+      "向いている方角を表示しよう。",
+      {
+        "list": [
+          "コンパスを使用するときは、<b>キャリブレーション</b>（センサの値が正しくなるような調整）をしておく。",
+          "方角の切り替わる角度に注意しながら、if文で一つづつ記述する。"
+        ],
+        "code": "input.calibrateCompass()\/\/\u30b3\u30f3\u30d1\u30b9\u306e\u6821\u6b63\uff08\u30ad\u30e3\u30ea\u30d6\u30ec\u30fc\u30b7\u30e7\u30f3\uff09\r\nbasic.forever(function () {\r\n    if (input.compassHeading() < 22) {\r\n        basic.showString(\"N\")\r\n    } else if (input.compassHeading() < 67) {\r\n        basic.showString(\"NE\")\r\n    } else if (input.compassHeading() < 112) {\r\n        basic.showString(\"E\")\r\n    } else if (input.compassHeading() < 157) {\r\n        basic.showString(\"SE\")\r\n    } else if (input.compassHeading() < 202) {\r\n        basic.showString(\"S\")\r\n    } else if (input.compassHeading() < 247) {\r\n        basic.showString(\"SW\")\r\n    } else if (input.compassHeading() < 292) {\r\n        basic.showString(\"W\")\r\n    } else if (input.compassHeading() < 337) {\r\n        basic.showString(\"NW\")\r\n    } else {\r\n        basic.showString(\"N\")\r\n    }\r\n})\r\n"
+      }
+    ],
+    [
+      "例題 3-2",
+      "北を差す矢印を表示しよう。",
+      {
+        "list": [
+          "例えば自分が東を向いている時、北は左向き。",
+          "逆に西を向いている時、北は右向き。",
+          "これらの点に注意して、注意深く矢印を表示させよう。"
+        ],
+        "code": "input.calibrateCompass()\r\nbasic.forever(function () {\r\n    if (input.compassHeading() < 22) {\r\n        basic.showArrow(ArrowNames.North)\r\n    } else if (input.compassHeading() < 67) {\r\n        basic.showArrow(ArrowNames.NorthWest)\r\n    } else if (input.compassHeading() < 112) {\r\n        basic.showArrow(ArrowNames.West)\r\n    } else if (input.compassHeading() < 157) {\r\n        basic.showArrow(ArrowNames.SouthWest)\r\n    } else if (input.compassHeading() < 202) {\r\n        basic.showArrow(ArrowNames.South)\r\n    } else if (input.compassHeading() < 247) {\r\n        basic.showArrow(ArrowNames.SouthEast)\r\n    } else if (input.compassHeading() < 292) {\r\n        basic.showArrow(ArrowNames.East)\r\n    } else if (input.compassHeading() < 337) {\r\n        basic.showArrow(ArrowNames.NorthEast)\r\n    } else {\r\n        basic.showArrow(ArrowNames.North)\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 4",
+      "LED扇風機を温度に応じて回そう。",
+      {
+        "list": [
+          "<code><b>led.showLeds</b>()</code>で羽が回る4種類のコマを用意する。",
+          "この関数の第2引数に入れる表示時間を温度に応じて変化させる。",
+          "<code><b>map</b>()</code>で、温度の大小（20-35°C）を表示時間の大小（1000-10 ms）に変換。"
+        ],
+        "code": "basic.forever(function () {\r\n    let speed = Math.map(input.temperature(), 20, 35, 1000, 10)\r\n\r\n    basic.showLeds(`\r\n        # . . . #\r\n        . # . # .\r\n        . . # . .\r\n        . # . # .\r\n        # . . . #\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . # . . .\r\n        . . # . #\r\n        . # # # .\r\n        # . # . .\r\n        . . . # .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . . # . .\r\n        . . # . .\r\n        # # # # #\r\n        . . # . .\r\n        . . # . .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . . . # .\r\n        # . # . .\r\n        . # # # .\r\n        . . # . #\r\n        . # . . .\r\n        `, speed)\r\n})"
+      }
+    ],
+    [
+      "課題の提出",
+      "課題2, 3, 4をClassroomに提出。"
+    ],
+    [
+      "今回のまとめ",
+      "各センサの値を用いたアプリケーションを制作。",
+      {
+        "list": [
+          "明るさセンサの値を<b>グラフ</b>で確認",
+          "コンパスが提供する値と方角の<b>関係</b>を整理。",
+          "温度とLED表示の速さの<b>対応</b>づけについて紹介。"
+        ],
+        "image": "https://source.unsplash.com/6gSyEKq4Pvg/480x360"
+      }
+    ]
+  ]
+}
