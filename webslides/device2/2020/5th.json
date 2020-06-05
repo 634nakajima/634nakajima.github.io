@@ -52,7 +52,7 @@
       "向いている方角を表示しよう。",
       {
         "list": [
-          "micro:bitが、北に対して時計回りに何度回転しているかを0-360°で取得できる。",
+          "<b>input.compassHeading</b>()を使って、北から時計回りに何度回転しているか（0-360°）を取得できる。",
           "つまり、0°が北、90°が東、180°が南、270°が西。"
         ],
         "embed": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https:\/\/www.figma.com\/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVVKwDIhqeam3KTL6Ui56Fc%2FCompass%3Fnode-id%3D0%253A1&chrome=DOCUMENTATION\" allowfullscreen><\/iframe>"
