@@ -17,6 +17,16 @@
       "これって著作権侵害？"
     ]
   },
+  "5th": {
+    "classtitle": "SNSの利便性と危険性",
+    "number": 5,
+    "json": "./5th.json",
+    "chaptertitle": [
+      "SNSに関するアンケート回答",
+      "ネット上の投稿が問題となった事例",
+      "SNSに関するレポート課題"
+    ]
+  },
   "report": {
     "classtitle": "レポートの掟",
     "json": "./report.json",

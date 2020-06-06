@@ -1,0 +1,118 @@
+{
+  "explanation": [
+    [
+      "前回課題の回答",
+      "課題 1",
+      {
+        "list": [
+          "2019目白大学入学者数：1402人（大学院は除くという点に注意）",
+          "おもちゃの名前：くるっぴー",
+          "列車のモデル：坊ちゃん列車"
+        ],
+        "image": "./pics/botchan.png"
+      }
+    ],
+    [
+      "前回課題の回答例",
+      "課題 2"
+    ],
+    [
+      "今回の目標",
+      "SNSに関するアンケートへの回答と、SNSの問題事例を考察。",
+      {
+        "list": [
+          "SNSに関する<b>アンケート</b>を実施。",
+          "ネット投稿の<b>問題事例</b>を読み解く。",
+          "アンケート結果を閲覧し、学生のSNSに対する意識について<b>考察</b>。"
+        ],
+        "image": "https://source.unsplash.com/DfMMzzi3rmg/480x360/"
+      }
+    ],
+    [
+      "SNSに関するアンケート",
+      "授業開始後30分以内に、回答をお願いします。"
+    ],
+    [
+      "事例1 不適切な言動パターン",
+      "バイトテロ。",
+      {
+        "list": [
+          "飲食店やコンビニのアルバイト従業員が、業務用機材や食品に対する<b>不衛生</b>な振る舞いを動画撮影し、SNSに投稿。",
+          "この投稿が批判を浴び、当該授業員が<b>処分</b>、損害賠償請求される事例が多発。"
+        ],
+        "image": "https://source.unsplash.com/SsKf1L6rWJk/480x360/"
+      }
+    ],
+    [
+      "事例 2 根拠のないデマパターン",
+      "トイレットペーパー品薄騒動。",
+      {
+        "list": [
+          "新型コロナウィルスの影響でトイレットペーパーが一時<b>品薄</b>となった。",
+          "SNSでの根拠のない<b>デマ</b>が発端と言われている。",
+          "しかし、在庫は十分という正しい情報が発信されてもなお、しばらくの間品薄状態が続いた。"
+        ],
+        "image": "https://source.unsplash.com/Sss9uGhSiPw/480x360/"
+      }
+    ],
+    [
+      "事例 3 誹謗中傷パターン",
+      "女子プロレスラーの木村花さん。",
+      {
+        "list": [
+          "出演番組での言動に対してネット上で<b>批判</b>があった。",
+          "批判の中には多数の<b>誹謗中傷</b>が含まれていた。",
+          "誹謗中傷が彼女を<b>自殺</b>に追いやったとされており、問題となっている。"
+        ],
+        "image": "./pics/kimura2019.jpg",
+        "license": "<small><a href=\"https:\/\/commons.wikimedia.org\/wiki\/User:Yoccy441\">Yoccy441<\/a>, <a href=\"https:\/\/commons.wikimedia.org\/wiki\/File:\u6728\u6751\u82b12019.jpg\">\u6728\u6751\u82b12019<\/a>, \u4e0a\u534a\u8eab\u306e\u307f by 634nakajima,<br><a href=\"https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/legalcode\" rel=\"license\">CC BY-SA 4.0<\/a></small>"
+      }
+    ],
+    [
+      "課題 1",
+      "ネット投稿が問題となった事例を一つ取り上げ、論じる。",
+      {
+        "list": [
+          "問題事例（先に紹介した事例でも可）について、<b>600</b>字以内で論じる。",
+          "論じる内容は、事例の経緯、なぜ問題となったか、先に紹介した事例のどのパターンに分類できる（ない）か、得られた課題や教訓など。",
+          "参考にした文献がある場合、必ず<b>引用</b>のルールに沿って記述。引用のルールは前回課題の回答例を参照。"
+        ],
+        "image": "https://source.unsplash.com/49LBMXrY5BE/480x360/"
+      }
+    ],
+    [
+      "課題 2",
+      "皆さんのアンケート結果を確認し、考察。",
+      {
+        "list": [
+          "<a href='https://forms.office.com/Pages/DesignPage.aspx#Analysis=true&FormId=qmrjcAUgSUiyiaEW-uXPkzB9hppF_zFEqsvMgan_qnlUOTVUUkQ5V01ZVlM3WElTSjZTSkE3TllNTS4u' target='_blank'>アンケート結果</a>を元に、学生のSNSに対する意識について考察。",
+          "SNSの現状や課題などを結果から読み取り、<b>400</b>字以内で論じる。"
+        ],
+        "image": "../iue1/pics/chart.png"
+      }
+    ],
+    [
+      "課題の提出",
+      "WebComの内容欄に記述して提出。",
+      {
+        "list": [
+          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> 第４回 課題1, 2それぞれの内容欄に記載。",
+          "締切は授業日の<b>１週間後</b>。"
+        ],
+        "image": "../iue2/pics/WebComReport.png"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "SNSの利便性と危険性について考察。",
+      {
+        "list": [
+          "SNSに関する<b>アンケート</b>を実施。",
+          "ネット投稿の<b>問題事例</b>を紹介。",
+          "アンケート結果を閲覧し、学生のSNSに対する意識について<b>考察</b>。"
+        ],
+        "image": "https://source.unsplash.com/DfMMzzi3rmg/480x360/"
+      }
+    ]
+  ]
+}

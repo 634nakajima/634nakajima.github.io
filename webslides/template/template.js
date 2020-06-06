@@ -369,6 +369,9 @@ for (let i = 0; i < mySectionElements.length; i++) {
       '<div class="grid sm"><div class="column"><img class="aligncenter" src="https://source.unsplash.com/q10VITrVYUM/480x360" alt="image"></div><div class="column"><ul class="flexblock specs"></ul></div></div>')
     const img = wrap.querySelector('img')
     img.setAttribute("src", contents.image)
+    if ('license' in contents) {
+      img.insertAdjacentHTML("afterend", contents.license)
+    }
   } else if ('youtube' in contents) {
     wrap.insertAdjacentHTML('beforeend',
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><div class="embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZTXUvYVAnoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>')
