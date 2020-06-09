@@ -85,8 +85,8 @@
       "皆さんのアンケート結果を確認し、考察。",
       {
         "list": [
-          "<a href='https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DqmrjcAUgSUiyiaEW-uXPkzB9hppF_zFEqsvMgan_qnlUOTVUUkQ5V01ZVlM3WElTSjZTSkE3TllNTS4u%26Token%3D008dc1c317014486a8a566a2a0305308' target='_blank'>アンケート結果</a>を元に、学生のSNSに対する意識について考察。",
-          "リンク先はMicrosoft Formsというサービスで、右上からサインイン。その後、画面上側「応答」タブをクリックして回答結果を閲覧。",
+          "<a href='https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DqmrjcAUgSUiyiaEW-uXPkzB9hppF_zFEqsvMgan_qnlUOTVUUkQ5V01ZVlM3WElTSjZTSkE3TllNTS4u%26Token%3D008dc1c317014486a8a566a2a0305308' target='_blank'>アンケート結果</a>を元に、学生のSNSに対する意識について考察。リンク先はMicrosoft Formsというサービス。",
+          "第2回で作成した<b>Office365</b>アカウントでサインイン。その後、画面上側「応答」タブをクリックして回答結果を閲覧。",
           "SNSの現状や課題などを結果から読み取り、<b>400</b>字以内で論じる。"
         ],
         "image": "../iue1/pics/chart.png"
