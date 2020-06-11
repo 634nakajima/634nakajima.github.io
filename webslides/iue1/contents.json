@@ -27,6 +27,15 @@
       "SNSに関するレポート課題"
     ]
   },
+  "6th": {
+    "classtitle": "Excelでのデータ整理",
+    "number": 6,
+    "json": "./6th.json",
+    "chaptertitle": [
+      "データの整理とグラフ化",
+      "気になるデータでグラフの作成"
+    ]
+  },
   "report": {
     "classtitle": "レポートの掟",
     "json": "./report.json",
