@@ -139,7 +139,7 @@
       "図にキャプションをつけよう。",
       {
         "list": [
-          "図のキャプション（図番号、タイトル）は<b><code>&ltfigcaption&gt&lt~/figcaption&gt</code></b>で括る。",
+          "図のキャプション（図番号、タイトル）は<b><code>&ltfigcaption&gt~&lt/figcaption&gt</code></b>で括る。",
           "スライドのテンプレートを<b>Fork</b>して課題2と同様に&ltimg&gtタグと&ltfigcaption&gtタグの中身を変更。"
         ],
         "codepen": [
