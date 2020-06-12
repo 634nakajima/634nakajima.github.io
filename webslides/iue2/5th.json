@@ -185,7 +185,8 @@
         "list": [
           "課題5で編集した<b>雛形</b>を開く。",
           "雛形内の目次の各項目をクリックすると、見出しにジャンプできるようにする。",
-          "各<b><code>&ltsection&gt</code></b>タグのid属性に自分で名前をつけ、<b><code>&lta&gt</code></b>タグのhref属性に\"#名前\"を入力。"
+          "各<b><code>&ltsection&gt</code></b>タグのid属性に自分でそれぞれ<b>違う</b>名前をつける。",
+          "<b><code>&lta&gt</code></b>タグのhref属性に\"#名前\"を入力。"
         ],
         "codepen": [
           "634nakajimaMejiro",
