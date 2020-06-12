@@ -83,7 +83,7 @@
       "Unsplash画像を表示させよう。",
       {
         "list": [
-          "src=の横に以下のように記述。<br><code>\"https://source.unsplash.com/{コピーした写真ID}/{幅x高さ}\"</code>",
+          "src=の横に以下のように記述。<br><code>\"https://source.unsplash.com/{コピーした写真ID}/{表示したい任意の幅x高さ}\"</code>",
           "alt=の横には\"画像の内容\"を書いておく。",
           "スライドのテンプレートを<b>Fork</b>してsrc属性とalt属性を自身が探した画像に書き換えよう。"
         ],
