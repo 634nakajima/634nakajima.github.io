@@ -1181,7 +1181,12 @@ h1 span {
       width: 100%; }
   .text-context.text-uppercase {
     letter-spacing: .1rem; }
-
+@media (max-width: 768px) {
+  .text-context {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+}
 /* -- Separator/Symbols (stars ***...) -- */
 .text-symbols {
   font-weight: 600;

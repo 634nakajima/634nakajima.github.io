@@ -1,6 +1,18 @@
 {
   "explanation": [
     [
+      "今回の目標",
+      "図と目次を追加し、HTMLの雛形を完成。",
+      {
+        "list": [
+          "HTMLにおける<b>図</b>の挿入方法について学ぶ。",
+          "文書を分かりやすくする<b>目次</b>を作成。",
+          "目次から各見出しにジャンプする<b>リンク</b>を作成。"
+        ],
+        "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
+      }
+    ],
+    [
       "CSSファイル",
       "Webサイトの見た目を文字列で表す。",
       {
@@ -12,6 +24,19 @@
           "634nakajimaMejiro",
           "YzwKWZo"
         ]
+      }
+    ],
+    [
+      "今回のまとめ",
+      "図と目次を作成し、雛形に追加。",
+      {
+        "list": [
+          "&ltul&gt, &ltol&gtタグで<b>リスト</b>を作成。",
+          "&ltfigure&gt, &ltimg&gt,  &ltfigcaption&gtタグで<b>図</b>を作成。",
+          "&ltiframe&gtタグで<b>他サイト</b>のコンテンツを挿入。",
+          "&lta&gtタグで<b>リンク</b>を作成。"
+        ],
+        "image": "https://source.unsplash.com/7AIDE8PrvA0/460x480"
       }
     ]
   ]
