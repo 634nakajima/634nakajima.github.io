@@ -27,6 +27,170 @@
       }
     ],
     [
+      "CSSファイル",
+      "Webサイトの見た目を文字列で表す。",
+      {
+        "list": [
+          "見出しの大きさや、文字のサイズ、テキストの配置などの<b>プロパティ</b>を設定。",
+          "HTML内の各要素などに対して、"
+        ],
+        "codepen": [
+          "634nakajimaMejiro",
+          "YzwKWZo"
+        ]
+      }
+    ],
+    [
+      "課題 1",
+      "タイトルの大きさを変えよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/rJGP51FeX3Y"
+      }
+    ],
+    [
+      "課題 2",
+      "タイトルを中央に揃えよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/go5x5of6E3U"
+      }
+    ],
+    [
+      "課題 3",
+      "ヘッダーの背景色を変更しよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/ghjN0EFQVsc"
+      }
+    ],
+    [
+      "課題 4",
+      "ヘッダーの大きさを変えて目立たせよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/c-01BlClKVE"
+      }
+    ],
+    [
+      "課題 5",
+      "ページの文章全体を中央に揃えよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/nTXUUp2Aq74"
+      }
+    ],
+    [
+      "課題 6",
+      "ページ隅の小さな余白を消そう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/GNtTxiRY3iY"
+      }
+    ],
+    [
+      "課題 7",
+      "タイトルの文字色を変えよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/O9HBIUlDSmE"
+      }
+    ],
+    [
+      "課題 8",
+      "メイン部分（文章）の幅を読みやすくしよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/LqnZUzxcUj8"
+      }
+    ],
+    [
+      "課題 9",
+      "メイン部分を中央に揃えよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/4g-7AKQ1k4Y"
+      }
+    ],
+    [
+      "課題 10",
+      "目次の大きさと場所を調整しよう。",
+      {
+        "list": [
+          "はじめに、HTMLの目次部分を<code>&ltnav&gt~&lt/nav&gt</code>タグ（メニュー等を表すタグ）で括る。"
+        ],
+        "youtube": "https://www.youtube.com/embed/xIA-bS1MMTs"
+      }
+    ],
+    [
+      "課題 11",
+      "目次に枠線をつけよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/nEfAH4_E7Es"
+      }
+    ],
+    [
+      "課題 12",
+      "見出しを目立たせよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/A9i_zRB3Sgo"
+      }
+    ],
+    [
+      "課題 13",
+      "目次と段落の見た目を調整しよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/E136VPebQ-c"
+      }
+    ],
+    [
+      "課題 14",
+      "段落の文章を読みやすくしよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/J2yR19gv32E"
+      }
+    ],
+    [
+      "課題 15",
+      "ページ全体を確認しよう。",
+      {
+        "list": [
+          ""
+        ],
+        "youtube": "https://www.youtube.com/embed/830AgWdcVJU"
+      }
+    ],
+    [
       "今回のまとめ",
       "図と目次を作成し、雛形に追加。",
       {
