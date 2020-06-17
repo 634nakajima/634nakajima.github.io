@@ -391,7 +391,11 @@ for (let i = 0; i < mySectionElements.length; i++) {
     wrap.insertAdjacentHTML('beforeend',
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><iframe height="360" style="width: 100%;" scrolling="no" title="template" src="https://codepen.io/634nakajimaMejiro/embed/dyGbxgp?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">See the Pen <a href="https://codepen.io/634nakajimaMejiro/pen/dyGbxgp">template</a> by 中島 武三志 (<a href="https://codepen.io/634nakajimaMejiro">@634nakajimaMejiro</a>) on <a href="https://codepen.io">CodePen</a>.</iframe></div>')
     const codepen = wrap.querySelector('iframe')
-    codepen.setAttribute("src", "https://codepen.io/" + contents.codepen[0] + "/embed/" + contents.codepen[1] + "?height=265&theme-id=dark&default-tab=html,result")
+    if (contents.codepen.indexOf('css') >= 0) {
+      codepen.setAttribute("src", "https://codepen.io/" + contents.codepen[0] + "/embed/" + contents.codepen[1] + "?height=265&theme-id=dark&default-tab=css,result")
+    } else {
+      codepen.setAttribute("src", "https://codepen.io/" + contents.codepen[0] + "/embed/" + contents.codepen[1] + "?height=265&theme-id=dark&default-tab=html,result")
+    }
     if ('caption' in contents) {
       codepen.insertAdjacentHTML("afterend", contents.caption)
     }
