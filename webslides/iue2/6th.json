@@ -2,12 +2,12 @@
   "explanation": [
     [
       "今回の目標",
-      "図と目次を追加し、HTMLの雛形を完成。",
+      "CSSを用いてWebサイトの見た目をデザイン。",
       {
         "list": [
-          "HTMLにおける<b>図</b>の挿入方法について学ぶ。",
-          "文書を分かりやすくする<b>目次</b>を作成。",
-          "目次から各見出しにジャンプする<b>リンク</b>を作成。"
+          "Webサイトの見た目を記述する<b>CSS</b>の基本的な書き方を理解する。",
+          "Webサイトの<b>ヘッダー</b>、<b>メイン</b>、<b>目次</b>部分の見た目をデザイン。",
+          "文字の<b>サイズ</b>や<b>配置</b>、<b>色</b>、<b>枠線</b>などをつけてWebサイトを見やすくする。"
         ],
         "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
       }
@@ -19,7 +19,7 @@
         "list": [
           "見出しの大きさや、文字のサイズ、テキストの配置などの<b>プロパティ</b>を設定。",
           "HTML内の各要素を指定（<b>セレクタ</b>）し、プロパティと変更内容を記述するとページに反映される。",
-          "具体的な記述ルールは、スライド内CodePen画面左側<b>CSSエディタ</b>を参照。"
+          "具体的な記述ルールは、スライド内CodePen画面左側CSSエディタを参照。"
         ],
         "codepen": [
           "634nakajimaMejiro",
@@ -33,9 +33,8 @@
       "CSSを編集しながら、ページの内容をリアルタイムに確認。",
       {
         "list": [
-          "先週作成した<b>雛形</b>を開く。",
-          "レイアウトを変更し、CSSを編集しながらWebメージを確認できるようにする。",
-          "Webページが動画のように表示されていない場合（リンク先に飛ばないなど）は、先に<b>HTML</b>を修正。"
+          "今回は<a href='https://codepen.io/634nakajimaMejiro/pen/JjGbEXa?editors=1100' target='_blank'>こちら</a>のテンプレートを<b>Fork</b>して編集。",
+          "CSSを編集しながらWebメージを確認できるようにレイアウト変更されている。"
         ],
         "youtube": "https://www.youtube.com/embed/HkW-bNGD-Gw"
       }
@@ -45,7 +44,7 @@
       "タイトルの大きさを変えよう。",
       {
         "list": [
-          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。",
+          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。<h6>（動画内の/*と*/で囲まれたメモ書きは書かなくても良い）</h6>",
           "文字サイズは<b>font-size</b>プロパティで変更。<b>:</b>（コロン）と<b>;</b>（セミコロン）に注意。",
           "<b>em</b>は、ブラウザの標準文字サイズを1とした相対的な大きさの単位。"
         ],
@@ -57,7 +56,7 @@
       "タイトルを中央に揃えよう。",
       {
         "list": [
-          "中カッコ<code>{...}</code>内にプロパティと値を追加。",
+          "h1の中カッコ<code>{...}</code>内にプロパティと値を追加。",
           "文字揃えは<b>text-align</b>プロパティで変更。",
           "指定できる値は<code>left, center, right, justify</code>がある。"
         ],
@@ -81,9 +80,9 @@
       "ヘッダーの大きさを変えて目立たせよう。",
       {
         "list": [
-          "中カッコ<code>{...}</code>内にプロパティと値を追加。",
-          "ヘッダー内部の余白は<b>padding</b>プロパティで変更。",
-          "<b>px</b>はピクセル（画素）の単位で、ブラウザに表示される<b>絶対的</b>な大きさを表す。"
+          "headerの中カッコ<code>{...}</code>内にプロパティと値を追加。",
+          "ヘッダー<b>内</b>側の余白は<b>padding</b>プロパティで変更。",
+          "<b>vh</b>はウィンドウの高さを100とする単位で、ブラウザに表示される<b>相対的</b>な大きさを表す。"
         ],
         "youtube": "https://www.youtube.com/embed/c-01BlClKVE"
       }
@@ -106,8 +105,8 @@
       {
         "list": [
           "デフォルト（初期設定）では<code>body</code>の要素の外側に少し余白がついている。",
-          "要素の外側の余白は<b>margin</b>プロパティで変更。",
-          "値を<b>0 px</b>に設定し、ヘッダーの背景色をページ全体に広げる。"
+          "要素の<b>外</b>側の余白は<b>margin</b>プロパティで変更。",
+          "値を<b>0</b>に設定し、ヘッダーの背景色をページ全体に広げる。"
         ],
         "youtube": "https://www.youtube.com/embed/GNtTxiRY3iY"
       }
@@ -129,7 +128,9 @@
       "メイン部分（文章）の幅を読みやすくしよう。",
       {
         "list": [
-          ""
+          "ウィンドウの幅が広い場合に、文章が幅いっぱいに表示されて<b>読みにくい</b>。",
+          "要素の幅の上限をmainセレクタ内<b><code>max-width</code></b>プロパティで指定できる。",
+          "<b>px</b>はピクセル（画素）の単位で、ブラウザに表示される<b>絶対的</b>な大きさを表す。"
         ],
         "youtube": "https://www.youtube.com/embed/LqnZUzxcUj8"
       }
@@ -139,7 +140,8 @@
       "メイン部分を中央に揃えよう。",
       {
         "list": [
-          ""
+          "mainの幅の上限を指定すると、デフォルトでは左寄せになってしまう。",
+          "main外側の左右の余白を均等にし、中央にするには<b><code>margin: auto;</code></b>と指定。"
         ],
         "youtube": "https://www.youtube.com/embed/4g-7AKQ1k4Y"
       }
@@ -149,9 +151,11 @@
       "目次の大きさと場所を調整しよう。",
       {
         "list": [
-          "はじめに、HTMLの目次部分を<code>&ltnav&gt~&lt/nav&gt</code>タグ（メニュー等を表すタグ）で括る。"
+          "テンプレートではHTMLの目次部分を<b><code>&ltnav&gt~&lt/nav&gt</code></b>タグ（メニュー等を表すタグ）で括ってある。",
+          "navセレクタ内<b><code>width</code></b>プロパティに<b><code>150px</code></b>と指定。",
+          "navセレクタ内<b><code>margin</code></b>プロパティに<b><code>auto</code></b>と指定。"
         ],
-        "youtube": "https://www.youtube.com/embed/xIA-bS1MMTs"
+        "youtube": "https://www.youtube.com/embed/RAm2--K8ARQ"
       }
     ],
     [
@@ -159,7 +163,9 @@
       "目次に枠線をつけよう。",
       {
         "list": [
-          ""
+          "枠線は<b><code>border</code></b>プロパティで、線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。",
+          "角の丸みは<b><code>border-radius</code></b>プロパティで、半径をpx単位で指定。",
+          "線の種類は<code>solid（実線）, dotted（点線）, double（二重線）</code>などがある。"
         ],
         "youtube": "https://www.youtube.com/embed/nEfAH4_E7Es"
       }
@@ -169,7 +175,9 @@
       "見出しを目立たせよう。",
       {
         "list": [
-          ""
+          "ここでは、文字<b>サイズ</b>の変更と見出しの<b>装飾線</b>を追加。",
+          "<b><code>border-left</code></b>や<b><code>border-bottom</code></b>プロパティで枠線のうち<b>1辺</b>だけ線をつけられる。",
+          "値には線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。"
         ],
         "youtube": "https://www.youtube.com/embed/A9i_zRB3Sgo"
       }
@@ -179,7 +187,8 @@
       "目次と段落の見た目を調整しよう。",
       {
         "list": [
-          ""
+          "ここでは、目次の装飾線の左右に<b>余白</b>をつけ、節見出しと本文を<b>左揃え</b>にして読みやすくする。",
+          "pセレクタの<code>text-align</code>プロパティに<b><code>justify</code></b>を指定すると、<b>均等揃え</b>（文章の両端が揃う）ができる。"
         ],
         "youtube": "https://www.youtube.com/embed/E136VPebQ-c"
       }
@@ -189,32 +198,48 @@
       "段落の文章を読みやすくしよう。",
       {
         "list": [
-          ""
+          "文字サイズを<b><code>font-size</code></b>プロパティで、em単位で指定。",
+          "行間の大きさを<b><code>line-height</code></b>プロパティで、em単位で指定。"
         ],
         "youtube": "https://www.youtube.com/embed/J2yR19gv32E"
       }
     ],
     [
-      "課題 4-3",
+      "最終チェック",
       "ページ全体を確認しよう。",
       {
         "list": [
-          ""
+          "画面右上 <b><code>Change View &gt Debug mode</code></b>からWebページをプレビューできる。"
         ],
         "youtube": "https://www.youtube.com/embed/830AgWdcVJU"
       }
     ],
     [
-      "今回のまとめ",
-      "図と目次を作成し、雛形に追加。",
+      "Webサイトデザインの完成",
+      "右のプレビュー画面のように表示される。"
+    ],
+    [
+      "リンクの送信",
+      "CSSで見た目を自分なりにアレンジし、URLを提出。",
       {
         "list": [
-          "&ltul&gt, &ltol&gtタグで<b>リスト</b>を作成。",
-          "&ltfigure&gt, &ltimg&gt,  &ltfigcaption&gtタグで<b>図</b>を作成。",
-          "&ltiframe&gtタグで<b>他サイト</b>のコンテンツを挿入。",
-          "&lta&gtタグで<b>リンク</b>を作成。"
+          "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
+          "テンプレートを必ず<b>Fork</b>してから編集すること。",
+          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/26締切）。"
         ],
-        "image": "https://source.unsplash.com/7AIDE8PrvA0/460x480"
+        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "CSSを用いてWebサイトの見た目をデザイン。",
+      {
+        "list": [
+          "CSSの<b>セレクタ</b>、<b>プロパティ</b>、<b>値</b>について紹介。",
+          "様々な種類の<b>プロパティ</b>に値を指定。",
+          "Webサイトの基本レイアウトを紹介。"
+        ],
+        "image": "https://source.unsplash.com/6JVlSdgMacE/480x360"
       }
     ]
   ]
