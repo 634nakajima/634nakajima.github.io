@@ -36,6 +36,24 @@
       "気になるデータでグラフの作成"
     ]
   },
+  "6thF": {
+    "classtitle": "Excelでのデータ整理",
+    "number": 6,
+    "json": "./6thF.json",
+    "chaptertitle": [
+      "データの整理とグラフ化",
+      "気になるデータでグラフの作成"
+    ]
+  },
+  "7th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 7,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
   "report": {
     "classtitle": "レポートの掟",
     "json": "./report.json",
