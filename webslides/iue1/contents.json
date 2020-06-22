@@ -54,6 +54,60 @@
       "調べたデータでスライドの制作"
     ]
   },
+  "8th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 8,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "9th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 9,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "10th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 10,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "11th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 11,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "12th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 12,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "13th": {
+    "classtitle": "PowerPointでのスライド制作",
+    "number": 13,
+    "json": "./7th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン",
+      "調べたデータでスライドの制作"
+    ]
+  },
   "report": {
     "classtitle": "レポートの掟",
     "json": "./report.json",
