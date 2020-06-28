@@ -83,3 +83,15 @@
   top: 56px;
   opacity: 1;
 }
+ol.closing_bracket {
+  list-style-type: none;
+}
+ol.closing_bracket > li {
+  counter-increment: cnt;
+  padding-left:1.0em;
+  text-indent:-2.5em;
+}
+ol.closing_bracket > li:before {
+  content: counter(cnt) ") ";
+  margin-right:1.25em;
+}

@@ -95,18 +95,26 @@ document.write(
   '    <div class="explanation"></div>',
   '  </div>',
   '</template>',
+  //myChapterTitle
   '<template id="myChapterTitleTemplate">',
   '<div class="wrap">',
   '<div class="slideHeader"></div>',
   '<div class="chapterTitle"></div>',
   '</div>',
   '</template>',
+  //myClassTitle
   '</template>',
   '<template id="myClassTitleTemplate">',
   '<div class="wrap">',
   '<div class="slideHeader"></div>',
   '<div class="classTitle"></div>',
   '<div class="chapterList"></div>',
+  '</div>',
+  '</template>',
+  //myPartTitle
+  '<template id="myPartTitleTemplate">',
+  '<div class="wrap">',
+  '<div class="partTitle"></div>',
   '</div>',
   '</template>'
 );
@@ -139,6 +147,15 @@ var myChapterTitleElements = document.getElementsByClassName("myChapterTitle");
 for (let i = 0; i < myChapterTitleElements.length; i++) {
   const clone = document.importNode(myChapterTitleTemplate, true);// テンプレートのノードを複製
   myChapterTitleElements.item(i).appendChild(clone);
+}
+/*----------------------------------------------------------------------*/
+
+/*マイパートタイトル-------------------------------------------------------*/
+var myPartTitleTemplate = document.querySelector('#myPartTitleTemplate').content;
+var myPartTitleElements = document.getElementsByClassName("myPartTitle");
+for (let i = 0; i < myPartTitleElements.length; i++) {
+  const clone = document.importNode(myPartTitleTemplate, true);// テンプレートのノードを複製
+  myPartTitleElements.item(i).appendChild(clone);
 }
 /*----------------------------------------------------------------------*/
 

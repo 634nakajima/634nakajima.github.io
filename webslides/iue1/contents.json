@@ -2,10 +2,10 @@
   "maintitle": "情報活用演習Ⅰ",
   "parttitle": [
     "Ⅰ イントロダクション",
-    "Ⅱ　文書の作成",
+    "Ⅱ　インターネットリテラシー",
     "Ⅲ　データの収集・整理・グラフ化",
     "Ⅳ　プレゼンテーション資料の作成",
-    "Ⅴ　実践"
+    "演習テーマ<br>社会問題に関する調査"
   ],
   "4th": {
     "classtitle": "検索の活用と著作権",
@@ -55,36 +55,35 @@
     ]
   },
   "8th": {
-    "classtitle": "PowerPointでのスライド制作",
+    "classtitle": "レポートの体裁と参考文献",
     "number": 8,
-    "json": "./7th.json",
+    "json": "./8th.json",
     "chaptertitle": [
-      "シンプルなスライドのデザイン",
-      "調べたデータでスライドの制作"
+      "レポート雛形の作成",
+      "参考文献の収集"
     ]
   },
   "9th": {
-    "classtitle": "PowerPointでのスライド制作",
+    "classtitle": "データの整理とグラフ化",
     "number": 9,
-    "json": "./7th.json",
+    "json": "./9th.json",
     "chaptertitle": [
-      "シンプルなスライドのデザイン",
-      "調べたデータでスライドの制作"
+      "社会問題の現状を示すグラフの作成"
     ]
   },
   "10th": {
-    "classtitle": "PowerPointでのスライド制作",
+    "classtitle": "レポートの作成",
     "number": 10,
-    "json": "./7th.json",
+    "json": "./10th.json",
     "chaptertitle": [
-      "シンプルなスライドのデザイン",
-      "調べたデータでスライドの制作"
+      "文章の執筆",
+      "レポートの掟（再掲）"
     ]
   },
   "11th": {
     "classtitle": "PowerPointでのスライド制作",
     "number": 11,
-    "json": "./7th.json",
+    "json": "./11th.json",
     "chaptertitle": [
       "シンプルなスライドのデザイン",
       "調べたデータでスライドの制作"
@@ -93,7 +92,7 @@
   "12th": {
     "classtitle": "PowerPointでのスライド制作",
     "number": 12,
-    "json": "./7th.json",
+    "json": "./12th.json",
     "chaptertitle": [
       "シンプルなスライドのデザイン",
       "調べたデータでスライドの制作"
@@ -102,7 +101,7 @@
   "13th": {
     "classtitle": "PowerPointでのスライド制作",
     "number": 13,
-    "json": "./7th.json",
+    "json": "./13th.json",
     "chaptertitle": [
       "シンプルなスライドのデザイン",
       "調べたデータでスライドの制作"
