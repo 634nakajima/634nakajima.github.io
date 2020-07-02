@@ -53,7 +53,7 @@
       {
         "list": [
           "GoogleスプレッドシートやExcelを用いてデータを整理し、<b>Chartblocks</b>を用いてグラフ化（<a href='./3_chart.html' target='_blank'>第３回授業スライド参照</a>）。",
-          "「結果」などの章にグラフの埋め込みコードを貼り付け、<b>グラフの説明</b>をする。",
+          "<b>結果</b>などの章にグラフの埋め込みコードを貼り付け、本文中にグラフの<b>説明</b>をする。",
           "図番号とタイトルを忘れずにつける。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
@@ -64,7 +64,7 @@
       "グラフから読み取れる点をもとに、考察する。",
       {
         "list": [
-          "「考察」などの章に、<b>なぜ</b>、<b>どのように</b>、<b>どうすべきか</b>といった観点から考察する。"
+          "<b>考察</b>などの章に、<b>なぜ</b>、<b>どのように</b>、<b>どうすべきか</b>といった観点から考察する。"
         ],
         "image": "https://source.unsplash.com/xj8qrWvuOEs/480x360"
       }
@@ -97,8 +97,8 @@
       {
         "list": [
           "編集が終わったら、画面右上 <b><code>Change View</b> &gt <b>Debug mode</code></b>からプレビュー画面に移動。",
-          "プレビュー画面の<b>URL</b>をコピー。",
-          "コピーしたURLをWebComの内容欄に貼り付けて提出（締切は授業の<b>1週間後</b>）。"
+          "プレビュー画面の<b>URL</b>をコピーし、WebComの内容欄に貼り付けて提出。",
+          "締切は授業の<b>1週間後</b>。"
         ],
         "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
