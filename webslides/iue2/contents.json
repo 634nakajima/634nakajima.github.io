@@ -77,5 +77,11 @@
       "目次のテンプレート",
       "セクションのテンプレート"
     ]
+  },
+  "8th": {
+    "json": "./8th.json",
+    "classtitle": "Webサイトを完成させる",
+    "number": 8,
+    "chaptertitle": []
   }
 }
