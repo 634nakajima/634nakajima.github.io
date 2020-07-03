@@ -21,62 +21,117 @@
     ],
     [
       "今回の目標",
-      "これまでを振り返り、オリジナル作品を制作。",
+      "様々なセンサでできることから作品アイディアを検討。",
       {
         "list": [
-          "これまで学んだ内容を<b>振り返る</b>。",
-          "インタラクティブなLEDアニメーションのアイディアを<b>検討</b>する。",
-          "実際に<b>プログラミング</b>する。"
+          "micro:bit搭載センサ以外の様々な<b>電子部品</b>について紹介。",
+          "センサやLED、モーター等を自由に組み合わせてテーマに沿った<b>アイディア</b>をまとめる。"
         ],
-        "image": "https://source.unsplash.com/t0xTi6UcaHk/480x360"
+        "image": "https://source.unsplash.com/KQ0C6WtEGlo/480x360"
       }
     ],
     [
-      "課題概要",
-      "インタラクティブに変化するLEDアニメーションを制作。",
+      "様々な電子部品",
+      "micro:bit搭載センサ以外にも様々な素子がある。",
       {
         "list": [
-          "これまでに紹介した手法を駆使し、シミュレータで実行できる作品を制作。テーマは<b>自由</b>。",
-          "<b>センサ</b>を使うこと、micro:bitおよびセンサを外装で覆うことが条件。",
-          "100字程度の作品説明（コンセプト、工夫したところなど）をコメント欄に添えて提出。締切は<b>6/28（日）</b>（厳守）"
+          "作品アイディアによっては、micro:bitに搭載されていない素子が必要になることもある。",
+          "ここでは一例として、フルカラーLED、人感センサ、圧力センサ、サーボモーター（これはセンサではなくアクチュエータに分類される）を紹介。"
         ],
-        "image": "../pics/chick.png"
+        "image": "https://source.unsplash.com/zP7X_B86xOg"
       }
     ],
     [
-      "距離センサ",
-      "超音波を用いて距離を計測することができる。"
+      "フルカラーLED",
+      "明るさと色を自由にコントロールできるLED。",
+      {
+        "list": [
+          "micro:bitを<b>ボルト</b>で固定。",
+          "電池2本では電圧が足りないため、パソコンと<b>USB</b>接続するか<a href='https://www.switch-science.com/catalog/5265/'>こちら</a>の電池ケースを使用すると良い。"
+        ],
+        "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3484/500x500/4a5842a8-a8bf-4de3-b907-9f559ad95d5b.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3484/'>スイッチサイエンス<br>ZIP Halo - micro:bit用円型フルカラーLED</a>"
+      }
     ],
     [
-      "湿度センサ",
-      "大気中の湿度を計測することができる。"
+      "人感センサ",
+      "人の存在を検出することができる。",
+      {
+        "list": [
+          "検出距離は最大<b>5m</b>。",
+          "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
+        ],
+        "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1548158691183.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5304/'>スイッチサイエンス<br>micro:bit用人感センサーモジュール</a>"
+      }
     ],
     [
       "圧力センサ",
-      "センサ部分にかかる圧力を計測することができる。"
-    ],
-    [
-      "音センサ（マイク）",
-      "音の大きさの変化を計測することができる。"
+      "センサ部分にかかる圧力を計測することができる。",
+      {
+        "list": [
+          "感圧エリアは39.6 mm x 39.6 mm。",
+          "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
+        ],
+        "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1547012514459.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/'>スイッチサイエンス<br>micro:bit用圧力センサー</a>"
+      }
     ],
     [
       "サーボモーター",
-      "任意の回転角で回転・制止できるモーター。"
+      "任意の回転角で回転・制止できるモーター。",
+      {
+        "list": [
+          "サーボモーター単体では動かず、別途<a href='https://www.switch-science.com/catalog/3414/' target='_blank'>制御ボード</a>を用意する必要がある。",
+          "MakeCodeの拡張機能<b>サーボモーター</b>機能を用いて制御する。"
+        ],
+        "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3397/500x500/470e3983-d6fc-4b3d-8572-e68fa7159ef5.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/'>スイッチサイエンスFEETECH FT90R デジタルマイクロサーボ（連続回転仕様）</a>"
+      }
     ],
     [
-      "音センサ（マイク）",
-      "音の大きさの変化を計測することができる。"
+      "課題 1",
+      "作品アイディアをひとつ考えて提案。",
+      {
+        "list": [
+          "日常のモノゴトのうち<b>何</b>に着目するのかを記述。",
+          "そのモノゴトをどのように<b>変化</b>させるのか（簡単にする、楽しくする、改善する、可愛くするなど）を記述。"
+        ],
+        "image": "https://source.unsplash.com/82TpEld0_e4"
+      }
+    ],
+    [
+      "課題 2",
+      "作品アイディアを分かりやすくイラストで説明。",
+      {
+        "list": [
+          "作品の完成予想図や細部がわかる<b>イラスト</b>（手書き、デジタル不問）を作成。",
+          "イラストの補足説明も適宜加える。",
+          "何の<b>センサ類</b>をどこにつけるかも明記。"
+        ],
+        "image": "https://source.unsplash.com/Ox3SuY9QbDU"
+      }
+    ],
+    [
+      "課題の提出",
+      "画像ファイルと文書ファイルをClassroomに提出。",
+      {
+        "list": [
+          "第９回授業内課題に、イラストの画像ファイルと、Googleドキュメントまたは限定コメントに文章を載せて提出。",
+          "締切は授業日の<b>1週間後</b>。"
+        ],
+        "image": "../pics/classroom_top.png"
+      }
     ],
     [
       "今回のまとめ",
-      "これまでを振り返り、オリジナル作品を制作。",
+      "様々なセンサを駆使した作品アイディアを提案。",
       {
         "list": [
-          "これまで学んだ内容を<b>復習</b>。",
-          "インタラクティブなLEDアニメーションのアイディアを<b>検討</b>。",
-          "実際に作品を<b>制作</b>。"
+          "micro:bitに搭載されていない電子部品について紹介。",
+          "センサやLED、モーター等を自由に組み合わせてテーマに沿ったアイディアを検討。"
         ],
-        "image": "https://source.unsplash.com/YCE83q6G86U/480x360"
+        "image": "https://source.unsplash.com/huSZMy_MDkk/480x360"
       }
     ]
   ]
