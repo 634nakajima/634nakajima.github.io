@@ -2,7 +2,8 @@
   "maintitle": "デバイス演習Ⅱ",
   "parttitle": [
     "Ⅰ　イントロダクション",
-    "Ⅱ LEDアニメーションを作ろう"
+    "Ⅱ LEDアニメーションを作ろう",
+    "Ⅲ 日常のモノゴトを〇〇にしよう"
   ],
   "2nd": {
     "classtitle": "micro:bitプログラミング入門",
@@ -131,6 +132,42 @@
     "classtitle": "オリジナルの作品を制作する",
     "json": "./7th.json",
     "number": 7,
+    "chaptertitle": [
+      "これまでのおさらい",
+      "作品アイディアの検討"
+    ]
+  },
+  "9th": {
+    "classtitle": "アイディアの検討とセンサ類の選定",
+    "json": "./9th.json",
+    "number": 9,
+    "chaptertitle": [
+      "これまでのおさらい",
+      "作品アイディアの検討"
+    ]
+  },
+  "10th": {
+    "classtitle": "プログラミング",
+    "json": "./10th.json",
+    "number": 10,
+    "chaptertitle": [
+      "これまでのおさらい",
+      "作品アイディアの検討"
+    ]
+  },
+  "11th": {
+    "classtitle": "ハードウェアと外観の設計",
+    "json": "./11th.json",
+    "number": 11,
+    "chaptertitle": [
+      "これまでのおさらい",
+      "作品アイディアの検討"
+    ]
+  },
+  "12th": {
+    "classtitle": "実機テストと作品の完成",
+    "json": "./12th.json",
+    "number": 12,
     "chaptertitle": [
       "これまでのおさらい",
       "作品アイディアの検討"
