@@ -50,7 +50,7 @@
           "電池2本では電圧が足りないため、パソコンと<b>USB</b>接続するか<a href='https://www.switch-science.com/catalog/5265/'>こちら</a>の電池ケースを使用すると良い。"
         ],
         "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3484/500x500/4a5842a8-a8bf-4de3-b907-9f559ad95d5b.jpg",
-        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3484/'>スイッチサイエンス<br>ZIP Halo - micro:bit用円型フルカラーLED</a>"
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3484/' target='_blank'>スイッチサイエンス<br>ZIP Halo - micro:bit用円型フルカラーLED</a>"
       }
     ],
     [
@@ -62,7 +62,7 @@
           "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
         ],
         "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1548158691183.jpg",
-        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5304/'>スイッチサイエンス<br>micro:bit用人感センサーモジュール</a>"
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5304/' target='_blank'>スイッチサイエンス<br>micro:bit用人感センサーモジュール</a>"
       }
     ],
     [
@@ -74,7 +74,7 @@
           "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
         ],
         "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1547012514459.jpg",
-        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/'>スイッチサイエンス<br>micro:bit用圧力センサー</a>"
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/' target='_blank'>スイッチサイエンス<br>micro:bit用圧力センサー</a>"
       }
     ],
     [
@@ -86,7 +86,7 @@
           "MakeCodeの拡張機能<b>サーボモーター</b>機能を用いて制御する。"
         ],
         "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3397/500x500/470e3983-d6fc-4b3d-8572-e68fa7159ef5.jpg",
-        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/'>スイッチサイエンスFEETECH FT90R デジタルマイクロサーボ（連続回転仕様）</a>"
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3397/' target='_blank'>スイッチサイエンスFEETECH FT90R デジタルマイクロサーボ（連続回転仕様）</a>"
       }
     ],
     [
@@ -106,8 +106,7 @@
       {
         "list": [
           "作品の完成予想図や細部がわかる<b>イラスト</b>（手書き、デジタル不問）を作成。",
-          "イラストの補足説明も適宜加える。",
-          "何の<b>センサ類</b>をどこにつけるかも明記。"
+          "イラストの補足説明も適宜加え、何の<b>センサ類</b>をどこにつけるかも明記。"
         ],
         "image": "https://source.unsplash.com/Ox3SuY9QbDU"
       }
