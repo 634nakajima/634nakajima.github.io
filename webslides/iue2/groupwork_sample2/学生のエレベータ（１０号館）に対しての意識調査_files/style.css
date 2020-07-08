@@ -1,0 +1,97 @@
+﻿/*
+cssの基本書式
+セレクタ｛
+	プロパティ：値；
+｝
+セレクタ：どこの
+プロパティ：何を
+値：どのように
+
+表示するかを指定する。
+*/
+body{
+	text-align:center;
+	/*要素外の余白*/
+	margin:0;
+	
+	
+}
+
+header{
+/*背景色*/
+/*background-color:orange;*/
+	background:url(http://source.unsplash.com/tSDsY-zvg5k);
+	background-size:cover;
+	background-position:center;
+	padding:40px;
+
+}
+
+
+
+nav{
+	background-color:white;
+    width:15em;
+	margin:auto;
+	padding:2px;
+	border-radius:10px;
+	
+}
+nav h2{
+	border-bottom:solod blue;
+	width:5em;
+	margin:auto;
+	padding-top:10px;
+}
+h1{
+	/*文字サイズ（em：ブラウザのデフォルトの文字サイズを１とする単位）*/
+	font-size:3em;
+        /*影付き文字　右にずらす量　左にずらす量　ぼかし量　影の色*/
+     text-shadow:2px 3px 30px white;
+     
+}
+main h2{
+	border-left:solid thin blue;
+	padding-left:30px;
+	width:5em;
+	margin:auto;
+}
+
+main{
+	max-width:798px;
+	margin:auto;
+	text-align:left;
+}
+
+
+p{
+	line-height:1.8em;
+	text-align:left;
+
+}
+
+figure{
+	text-align:center;
+	
+}
+
+.btn {
+	display:block;
+	width:12em;
+	margin: 20px auto;
+	padding:0.5em 1em;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+	background-color:blue;
+	border:solid 2px blue;
+	border-radius: 3px;
+	transition: .2s;
+}
+.btn:hover {
+	background:white;
+	border-color:white;
+	color:blue;
+}
+
+

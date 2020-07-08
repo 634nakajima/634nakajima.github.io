@@ -83,5 +83,11 @@
     "classtitle": "Webサイトを完成させる",
     "number": 8,
     "chaptertitle": []
+  },
+  "9th": {
+    "json": "./9th.json",
+    "classtitle": "テーマ決定・アンケート制作",
+    "number": 9,
+    "chaptertitle": []
   }
 }
