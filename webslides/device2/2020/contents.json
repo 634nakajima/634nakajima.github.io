@@ -150,27 +150,18 @@
     "classtitle": "プログラミング",
     "json": "./10th.json",
     "number": 10,
-    "chaptertitle": [
-      "これまでのおさらい",
-      "作品アイディアの検討"
-    ]
+    "chaptertitle": []
   },
   "11th": {
     "classtitle": "ハードウェアと外観の設計",
     "json": "./11th.json",
     "number": 11,
-    "chaptertitle": [
-      "これまでのおさらい",
-      "作品アイディアの検討"
-    ]
+    "chaptertitle": []
   },
   "12th": {
     "classtitle": "実機テストと作品の完成",
     "json": "./12th.json",
     "number": 12,
-    "chaptertitle": [
-      "これまでのおさらい",
-      "作品アイディアの検討"
-    ]
+    "chaptertitle": []
   }
 }
