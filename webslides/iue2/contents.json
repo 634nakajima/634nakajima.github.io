@@ -89,5 +89,23 @@
     "classtitle": "テーマ決定・アンケート制作",
     "number": 9,
     "chaptertitle": []
+  },
+  "10th": {
+    "json": "./10th.json",
+    "classtitle": "アンケート回答・グラフ制作",
+    "number": 10,
+    "chaptertitle": []
+  },
+  "11th": {
+    "json": "./11th.json",
+    "classtitle": "文章の作成",
+    "number": 11,
+    "chaptertitle": []
+  },
+  "12th": {
+    "json": "./12th.json",
+    "classtitle": "Webサイトの完成",
+    "number": 12,
+    "chaptertitle": []
   }
 }
