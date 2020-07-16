@@ -33,7 +33,7 @@
       "アンケート結果をグラフ化。",
       {
         "list": [
-          "<a href='https://www.chartblocks.com/ja/' target='_blank'><code>Chartblocks</code></a>を用いてアンケート結果を分かりやすくグラフ化。",
+          "<a href='https://www.chartblocks.com/ja/' target='_blank'><code>Chartblocks</code></a>を用いてアンケート結果を<b>分担して</b>グラフ化。",
           "前回配布した記述シートに作成したグラフの<b>埋め込みコード</b>を貼り付ける。"
         ],
         "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
