@@ -31,7 +31,7 @@
           "ファイル名は<strong>情報活用演習Ⅰ 相互評価アンケート</strong>にしておく。",
           "Googleフォームは、編集すると<b>自動</b>で保存される。"
         ],
-        "youtube": "https://www.youtube.com/embed/bucodkgLso4"
+        "youtube": "https://www.youtube.com/embed/pUxbzZ60NX4"
       }
     ],
     [
@@ -43,7 +43,7 @@
           "クラスメンバーに閲覧してもらうスライドをPowerPointで新規作成。",
           "作成した（未編集の状態で良い）スライドの<b>共有リンク</b>を記述。"
         ],
-        "youtube": "https://www.youtube.com/embed/bucodkgLso4"
+        "youtube": "https://www.youtube.com/embed/Veq841zx-tU"
       }
     ],
     [
@@ -54,7 +54,7 @@
           "<b>ラジオボタン</b>（択一式）を用いる。",
           "項目は「とても分かりやすかった」から「とても分かりにくかった」までの<b>5段階</b>。"
         ],
-        "youtube": "https://www.youtube.com/embed/bucodkgLso4"
+        "youtube": "https://www.youtube.com/embed/2HxLG3cn1fU"
       }
     ],
     [
@@ -65,7 +65,7 @@
           "複数行にわたる文章での回答を想定しているので、<b>段落</b>を用いる。",
           "<b>200字</b>以上の字数で記述するよう依頼する。"
         ],
-        "youtube": "https://www.youtube.com/embed/bucodkgLso4"
+        "youtube": "https://www.youtube.com/embed/z3dpc7SqKTE"
       }
     ],
     [
@@ -76,7 +76,19 @@
           "スライドで取り上げたテーマに関して質問したいことを追加。",
           "特にない場合は省略しても良い。"
         ],
-        "youtube": "https://www.youtube.com/embed/bucodkgLso4"
+        "youtube": "https://www.youtube.com/embed/V2ON1Tng-EU"
+      }
+    ],
+    [
+      "内容チェック",
+      "アンケートが正しく表示されるかチェック。",
+      {
+        "list": [
+          "画面右上の<b>プレビュー</b>ボタン（目のアイコン）をクリック。",
+          "PowerPointの<b>リンク</b>先に移動できるか確認。",
+          "設問内容に問題がないか確認し、ウィンドウを閉じる。"
+        ],
+        "youtube": "https://www.youtube.com/embed/4GniRcewyRc"
       }
     ],
     [
@@ -88,7 +100,7 @@
           "送信方法から<b>リンク</b>のアイコンをクリック。",
           "<b>URLを短縮</b>にチェックを入れ、<b>コピー</b>をクリック。"
         ],
-        "youtube": "https://www.youtube.com/embed/shoLjRrdSM4"
+        "youtube": "https://www.youtube.com/embed/S0ntpDbQgbM"
       }
     ],
     [
@@ -96,7 +108,7 @@
       "アンケートへのリンクをWebComに提出。",
       {
         "list": [
-          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> 第11回 課題2の<b>内容欄</b>に、コピーしたアンケートへのリンクを貼り付けて提出。",
+          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> 第11回 課題 1の<b>内容欄</b>に、コピーしたアンケートへのリンクを貼り付けて提出。",
           "締切は授業日<b>当日</b>。"
         ],
         "image": "../iue2/pics/WebComReport.png"
@@ -123,18 +135,18 @@
       {
         "list": [
           "PowerPointの共有リンクをコピーし、<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> 第11回 課題 2の内容欄に貼り付けて<b>提出</b>。",
-          "締切は授業日の<b>6日後</b>。"
+          "締切は次回授業日の<b>前日</b>。次回で相互評価を実施するので<b>締切厳守</b>。"
         ],
         "image": "../iue2/pics/WebComReport.png"
       }
     ],
     [
       "今回のまとめ",
-      "スライドと相互評価用アンケートを作成。",
+      "相互評価用アンケートとスライドを作成。",
       {
         "list": [
-          "レポートの内容を分かりやすく伝える<b>スライド</b>資料を作成。",
-          "自身のスライドをクラスのメンバーに閲覧・評価してもらうための<b>アンケート</b>を作成。"
+          "自身のスライドをクラスのメンバーに閲覧・評価してもらうための<b>アンケート</b>を作成。",
+          "レポートの内容を分かりやすく伝える<b>スライド</b>資料を作成。"
         ],
         "image": "https://cdn.pixabay.com/photo/2017/05/15/23/48/survey-2316468_640.png"
       }
