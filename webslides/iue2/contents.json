@@ -107,5 +107,14 @@
     "classtitle": "Webサイトの完成",
     "number": 12,
     "chaptertitle": []
+  },
+  "13th": {
+    "json": "./13th.json",
+    "classtitle": "相互評価と全体のまとめ",
+    "number": 13,
+    "chaptertitle": [
+      "相互評価アンケートへの回答",
+      "全体のまとめ"
+    ]
   }
 }

@@ -1,0 +1,62 @@
+{
+  "explanation": [
+    [
+      "今回の目標",
+      "Webサイトに掲載する文章を作成。",
+      {
+        "list": [
+          "はじめに、<b>Web担当者</b>を一人決める。",
+          "Web担当者以外のメンバーは、Webサイトの<b>章立て</b>と<b>文章</b>を考える。",
+          "Web担当者は、Webサイト雛形を用いてWebサイトの<b>デザイン</b>を考え、出来上がった文章をHTMLファイルに貼り付け。"
+        ],
+        "image": "https://source.unsplash.com/JKUTrJ4vK00"
+      }
+    ],
+    [
+      "課題 1",
+      "Web担当者以外は分担して文章を執筆。",
+      {
+        "list": [
+          "Web担当者以外は、記述シート該当箇所に<b>章立て</b>と<b>本文</b>を記載する。",
+          "あとでWeb担当者がHTMLファイルにコピペしやすいよう、段落を<b><code>&ltp&gt~&lt/p&gt</code></b>タグで括っておく（ちなみに太字は<code>&ltb&gt~&lt/b&gt</code>）。",
+          "グラフを挿入すべき箇所に前回コピペした埋め込みコードを貼り付ける。"
+        ],
+        "image": "https://source.unsplash.com/s9CC2SKySJM/480x360"
+      }
+    ],
+    [
+      "課題 2",
+      "Web担当者はHTMLとSCSSを編集。",
+      {
+        "list": [
+          "Web担当者は、Codepenを用いて<a href='https://codepen.io/634nakajimaMejiro/pen/QWyJdvm' target='_blank'>こちら</a>のWebサイト雛形をForkしたあと、記述シート該当箇所に<b>URL</b>を貼り付ける。",
+          "Webサイトのデザインの方向性を相談しながら、SCSSを編集。他メンバーは上記URLからデザインを確認。",
+          "他メンバーの文章ができあがり次第、適切な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグの中に文章をコピペ。"
+        ],
+        "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
+      }
+    ],
+    [
+      "課題実施上の注意",
+      "特に提出作業はありません。",
+      {
+        "list": [
+          "今回も記述シート上に入力してもらうため、WebCom上の提出作業は<b>不要</b>。",
+          "授業日の<b>1週間後</b>までにファイルを完成させておくこと。"
+        ],
+        "image": "https://source.unsplash.com/VO5w2Ida70s/480x360"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "Webサイトに掲載する文章を作成。",
+      {
+        "list": [
+          "Web担当者以外は分担して<b>文章</b>を執筆。",
+          "Web担当者は<b>HTML</b>と<b>SCSS</b>を編集。"
+        ],
+        "image": "https://source.unsplash.com/vZJdYl5JVXY"
+      }
+    ]
+  ]
+}
