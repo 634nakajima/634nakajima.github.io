@@ -5,6 +5,15 @@
     "Ⅱ LEDアニメーションを作ろう",
     "Ⅲ 日常のモノゴトを〇〇にしよう"
   ],
+  "1st": {
+    "classtitle": "全体説明とツールの紹介",
+    "json": "./1st.json",
+    "number": 1,
+    "chaptertitle": [
+      "授業の全体説明",
+      "授業で扱うツールの紹介"
+    ]
+  },
   "2nd": {
     "classtitle": "micro:bitプログラミング入門",
     "number": 2,
