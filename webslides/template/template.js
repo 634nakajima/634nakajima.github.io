@@ -401,9 +401,14 @@ for (let i = 0; i < mySectionElements.length; i++) {
     embed.insertAdjacentHTML('beforeend', contents.embed)
   } else if ('code' in contents) {
     wrap.insertAdjacentHTML('beforeend',
-      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max-height: 400px;white-space: pre;"><code class="prettyprint lang-js"></code></pre></div>')
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max - height: 400px; white - space: pre; "><code class="prettyprint lang - js"></code></pre></div>')
     const code = wrap.querySelector('code')
     code.insertAdjacentHTML('beforeend', contents.code)
+  } else if ('html' in contents) {
+    wrap.insertAdjacentHTML('beforeend',
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left html"></div>')
+    const embed = wrap.getElementsByClassName('html')[0]
+    embed.insertAdjacentHTML('beforeend', contents.html)
   } else if ('codepen' in contents) {
     wrap.insertAdjacentHTML('beforeend',
       '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><iframe height="360" style="width: 100%;" scrolling="no" title="template" src="https://codepen.io/634nakajimaMejiro/embed/dyGbxgp?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">See the Pen <a href="https://codepen.io/634nakajimaMejiro/pen/dyGbxgp">template</a> by 中島 武三志 (<a href="https://codepen.io/634nakajimaMejiro">@634nakajimaMejiro</a>) on <a href="https://codepen.io">CodePen</a>.</iframe></div>')

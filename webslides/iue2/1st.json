@@ -42,184 +42,49 @@
       }
     ],
     [
-      "図の挿入",
-      "図の挿入には&ltfigure&gtタグを用いる。",
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
       {
         "list": [
-          "図の構成要素は、<b>画像本体</b>と<b>キャプション</b>（図の番号、タイトル）に分けられ、これらを<b>&ltfigure&gt~&lt/figure&gt</b>で括る。",
-          "今回は、<b>Unsplash</b>と呼ばれるサイトのフリー画像と、<b>Chartblocks</b>のグラフの２種類の画像の載せ方を紹介。"
+          "履修環境の把握と、授業に関して個別に連絡することがあるため。",
+          "右の動画か、<a href='https: //support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=ja' target='_blank'>こちらの資料</a>を参考に自身の身分を示す<b>署名</b>を設定する（未設定の人のみ）。"
         ],
-        "image": "https://source.unsplash.com/bs_PL2f9CM4/250x250",
-        "caption": "<figcaption class='aligncenter'>図1 Unsplashの画像例</figcaption>"
+        "embed": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/zm-BeCjiGPs\" frameborder=\"0\"\r\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n<\/iframe>"
       }
     ],
     [
-      "画像の挿入",
-      "画像の挿入には&ltimg&gtタグを用いる。",
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
       {
         "list": [
-          "&ltimg&gtタグは、終了タグが不要な特殊な要素で、タグの名前の横にある<b>src</b>や<b>alt</b>は属性と呼ばれる。",
-          "src属性には画像の<b>場所</b>（URL）を記述。",
-          "alt属性には画像が挿入できなかった場合に表示する<b>文字列</b>を記述。"
+          "例として右のような署名を設定しておくと、メール末尾に自動で追加される。"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "xxZZqPY"
+        "html": "<pre>****************************************\n目白大学外国語学部\n中国語学科１年\n学籍番号 2000000\n目白　太郎\nmail: trmjr20cl@uni.mejiro.ac.jp\n****************************************</pre>"
+      }
+    ],
+    [
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
+      {
+        "list": [
+          "右の文章は、フォーマルなメールの書き方の一例。",
+          "パソコンの有無やデータ通信環境、その他質問があれば記載してください。",
+          "締切：次回授業日の<b>前日 23:59</b>まで"
+        ],
+        "html": "<pre>件名：課題１（2000000 目白太郎）\n本文：\n中島先生\n\nお世話になっております。\n中国語学科2年の目白太郎です。\n自宅からパソコンで受講していますが、マイク、カメラは使用できません。\n\n何卒よろしくお願い申し上げます。\n（以下、署名）</pre>"
+      }
+    ],
+    [
+      "メール課題（パソコンが使えない人）",
+      "Gmailスマートフォンアプリからメールを送ろう。",
+      {
+        "list": [
+          "ログインしていない人は<a href=\"https: //support.google.com/mail/answer/8494?co=GENIE.Platform%3DiOS&hl=ja\" target=\"_blank\">こちら</a>を参考に、大学のGmailアカウントでログイン。</h5>",
+          "前ページの例文、署名を参考にメールを送信。"
+        ],
+        "html": [
+          "<h4><strong>Google Gmail<\/strong><\/h4><h5>\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u3044\u306a\u3044\u4eba\u306f\u3053\u3061\u3089\u304b\u3089\u3002<\/h5><ul><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/apps.apple.com\/jp\/app\/gmail-e%E3%83%A1%E3%83%BC%E3%83%AB-by-google\/id422689480\" target=\"_blank\" class=\"button zoomIn ga-track\">\u3000App Store\r\n\uff08iPhone\uff09<\/a><\/li><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/play.google.com\/store\/apps\/details?id=com.google.android.gm&hl=ja\" target=\"_blank\" class=\"button zoomIn ga-track\">Google Play\uff08android\uff09<\/a><\/li><\/ul>"
         ]
-      }
-    ],
-    [
-      "課題 2-1",
-      "Unsplashの画像IDを取得しよう。",
-      {
-        "list": [
-          "<a href='https://unsplash.com/' target='_blank'>Unsplash</a>にアクセスし、表示したい画像をキーワードで検索（英語推奨）。",
-          "表示したい画像を選択し、アドレスバー末尾11ケタの<b>写真ID</b>をコピー。"
-        ],
-        "youtube": "https://www.youtube.com/embed/__oYXHWnRTE"
-      }
-    ],
-    [
-      "課題 2-2",
-      "Unsplash画像を表示させよう。",
-      {
-        "list": [
-          "src=の横に以下のように記述。<br><code>\"https://source.unsplash.com/{コピーした写真ID}/{表示したい任意の幅x高さ}\"</code>",
-          "alt=の横には\"画像の内容\"を書いておく。",
-          "スライドのテンプレートを<b>Fork</b>してsrc属性とalt属性を自身が探した画像に書き換えよう。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "xxZZqPY"
-        ]
-      }
-    ],
-    [
-      "埋め込みコード",
-      "Chartblocksの埋め込みコードを取得する。",
-      {
-        "list": [
-          "埋め込みコードとは、他サイトの内容をHTMLファイルにコピペして表示するためのスニペット。",
-          "埋め込みには<code><b>&ltiframe&gt~&ltiframe&gt</b></code>タグが用いられる。",
-          "<a href='https://app.chartblocks.com/' target='_blank'>Chartblocks</a>にアクセスし、自身が作成したグラフのページに移動。"
-        ],
-        "codepen": [
-          "musashinakajima",
-          "dyGPYyd"
-        ],
-        "caption": "<figcaption class='aligncenter'>このCodePenも埋め込みコードのひとつ</figcaption>"
-      }
-    ],
-    [
-      "課題 3-2",
-      "表示用にグラフを編集し、埋め込みコードを取得しよう。",
-      {
-        "list": [
-          "後でキャプションを載せるためグラフタイトルは消去し、サイズを適当な大きさ（400x400程度）に変更。",
-          "変更後、ページを<b>再読み込み</b>しないと埋め込みコードに反映されないので注意。",
-          "共有アイコン &gt <b>Embed Code</b>の内容をコピー。"
-        ],
-        "youtube": "https://www.youtube.com/embed/3jCtv5ViiEI"
-      }
-    ],
-    [
-      "課題 3-3",
-      "Chartblocksグラフを表示させよう。",
-      {
-        "list": [
-          "スライドのテンプレートを<b>Fork</b>して自身が作成したグラフに書き換える。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "wvMMdZP"
-        ]
-      }
-    ],
-    [
-      "課題 4",
-      "図にキャプションをつけよう。",
-      {
-        "list": [
-          "図のキャプション（図番号、タイトル）は<b><code>&ltfigcaption&gt~&lt/figcaption&gt</code></b>で括る。",
-          "スライドのテンプレートを<b>Fork</b>して課題2と同様に&ltimg&gtタグと&ltfigcaption&gtタグの中身を変更。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "KKVVXZZ"
-        ]
-      }
-    ],
-    [
-      "課題 5",
-      "目次と図を雛形に追加しよう。",
-      {
-        "list": [
-          "前回作成した<b>雛形</b>（前回課題6）を開く。",
-          "雛形の<b><code>&ltmain&gt~&lt/main&gt</code></b>タグ内先頭に、<b>課題 1</b>の内容をコピペ。",
-          "雛形の適当な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグ内に、<b>課題 4</b>の内容をコピペ。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "jOWWGjK"
-        ]
-      }
-    ],
-    [
-      "リンク",
-      "クリックでのページ移動は&lta&gtタグを用いる。",
-      {
-        "list": [
-          "あらかじめ、ページ内の飛びたい先の要素の<b><code>id</code></b>属性を用意し、任意の名前をつけておく。",
-          "&lta&gtタグの<b><code>href</code></b>属性に、飛びたい場所の情報（<b>ハッシュタグ</b>と同じ）を記述。",
-          "<b><code>&lta&gt~&lt/a&gt</code></b>タグで括った文字をクリックして飛べるようになる。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "RwrrjKg"
-        ]
-      }
-    ],
-    [
-      "課題 6",
-      "雛形の目次にリンクを追加しよう。",
-      {
-        "list": [
-          "課題5で編集した<b>雛形</b>を開く。",
-          "雛形内の目次の各項目をクリックすると、見出しにジャンプできるようにする。",
-          "各<b><code>&ltsection&gt</code></b>タグのid属性に自分でそれぞれ<b>違う</b>名前をつけ、<b><code>&lta&gt</code></b>タグのhref属性に\"#名前\"を入力。"
-        ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "Rwrrjyj"
-        ]
-      }
-    ],
-    [
-      "Webサイト雛形の完成",
-      "右のプレビュー画面のように表示される。"
-    ],
-    [
-      "リンクの送信",
-      "完成した雛形のURLを提出。",
-      {
-        "list": [
-          "アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>（前回提出したものと同じになるはず）。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/19締切）。"
-        ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
-      }
-    ],
-    [
-      "今回のまとめ",
-      "図と目次を作成し、雛形に追加。",
-      {
-        "list": [
-          "&ltul&gt, &ltol&gtタグで<b>リスト</b>を作成。",
-          "&ltfigure&gt, &ltimg&gt,  &ltfigcaption&gtタグで<b>図</b>を作成。",
-          "&ltiframe&gtタグで<b>他サイト</b>のコンテンツを挿入。",
-          "&lta&gtタグで<b>リンク</b>を作成。"
-        ],
-        "image": "https://source.unsplash.com/7AIDE8PrvA0/460x480"
       }
     ]
   ]
