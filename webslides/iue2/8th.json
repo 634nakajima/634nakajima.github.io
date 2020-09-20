@@ -2,113 +2,123 @@
   "explanation": [
     [
       "今回の目標",
-      "文章と図を作成してWebサイトを完成。",
+      "CSSのテンプレを用いてWebサイトをよりお洒落にする。",
       {
         "list": [
-          "自身の身の回りの気になるデータに関してインターネット等で調査し、<b>Chartblocks</b>でグラフを作成。",
-          "過去に作成したCodePenの<b>雛形</b>を編集し、着目したテーマに関する<b>文章</b>を執筆。",
-          "CSSのテンプレをカスタマイズして<b>見た目</b>をデザイン。"
+          "CSSの基本を身につけても、デザイナーが作るようなWebサイトのデザインはとても<b>大変</b>。",
+          "インターネットには<b>お洒落</b>なデザインのテンプレが提供されている。",
+          "今回は予め用意されたCSSテンプレをコピペし、<b>カスタマイズ</b>する方法を紹介。"
         ],
         "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
       }
     ],
     [
-      "課題の概要",
-      "自身の身の回りのデータに着目し、グラフを通して論じる。",
+      "SCSS",
+      "アレンジしやすいよう工夫した特殊なCSSをご用意。",
       {
         "list": [
-          "取り上げたテーマに関して、<b>社会的背景</b>や<b>前提知識</b>等を整理する。",
-          "現状や推移などを示すグラフを最低<b>2つ</b>作成し、グラフから読み取れる点をもとに<b>考察</b>する。",
-          "<b>参考文献</b>情報を正しく掲載する。"
+          "CSSのプロパティを一箇所変更すると、それに合わせて他の場所も微調整するのが<b>大変</b>。",
+          "カスタマイズしたい内容に応じてプロパティを<b>一括変更</b>できるファイルを授業用にご用意。",
+          "CSSの拡張版である<b>SCSS</b>を用いている。"
         ],
-        "image": "https://source.unsplash.com/jrh5lAq-mIs/480x360"
+        "codepen": [
+          "634nakajimaMejiro",
+          "YzwQVqX",
+          "css"
+        ]
+      }
+    ],
+    [
+      "SCSSの使い方",
+      "CodePen側で設定をしてSCSSを読み込めるようにする。",
+      {
+        "list": [
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/BajZRpR?editors=1100' target='_blank'>こちら</a>の編集用テンプレートを<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
+          "次ページ以降に紹介するリンク先のSCSSをコピペして<b>カスタマイズ</b>。",
+          "カスタマイズした編集用テンプレートの<b>URL</b>を最後に提出。"
+        ],
+        "youtube": "https://www.youtube.com/embed/k40n5jeTB9U"
       }
     ],
     [
       "課題 1",
-      "テーマに関する社会的背景や論じる意義について述べる。",
+      "ページ背景をカスタマイズしよう。",
       {
         "list": [
-          "<b>はじめに</b>では、何について調査し考察するのかを述べ、そのテーマに着目した社会的背景を記述する。",
-          "個人的な理由（好きだから、興味を持ったから等）は<b>不要</b>で、社会的、客観的に注目に値するトピックであることをアピールするのが良い。"
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/LYGZeBz?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレートに貼り付け（Forkは<b>不要</b>）。",
+          "<a href='./5_web.html#slide=9' target='_blank'>第５回の授業資料</a>を参考に、ページ背景となる画像を探し、<b>URL</b>を変更。",
+          "画像の<b>透明度</b>や<b>背景色</b>なども変更できる。画像が不要なら、URL部分を消去し<code><b>\"\"</b></code>のみ記述。"
         ],
-        "image": "https://source.unsplash.com/PgeSIqSJXus/480x360"
+        "youtube": "https://www.youtube.com/embed/80Xi_cnVBLk"
       }
     ],
     [
       "課題 2",
-      "読者と共有しておくべき前提知識や調査方法を整理する。",
+      "ヘッダーをカスタマイズしよう。",
       {
         "list": [
-          "次の章では、着目したテーマを論じる上で前提となる知識や用語を調べて記述する。",
-          "調べるテーマについて、どのように（何の機関がいつ提供した何に関するデータを元に）調査するのかを記述する。",
-          "適宜<b>画像</b>を挿入しても良い。"
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/qBbNpMX?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
+          "課題1と同様、ヘッダー背景となる画像を探し、<b>URL</b>を変更。画像が不要なら<code><b>\"\"</b></code>のみ記述。",
+          "タイトルの<b>影</b>は、背景とのコントラストが低い時に用いると読みやすくなる。"
         ],
-        "image": "https://source.unsplash.com/zjV8ptYgcEo/480x360"
+        "youtube": "https://www.youtube.com/embed/66ht-3NgNvs"
       }
     ],
     [
       "課題 3",
-      "現状や推移などを示すグラフを提示し、グラフについて説明する。",
+      "目次をカスタマイズしよう。",
       {
         "list": [
-          "GoogleスプレッドシートやExcelを用いてデータを整理し、<b>Chartblocks</b>を用いてグラフ化（<a href='./3_chart.html' target='_blank'>第３回授業スライド参照</a>）。",
-          "<b>結果</b>などの章にグラフの埋め込みコードを貼り付け、本文中にグラフの<b>説明</b>をする。",
-          "図番号とタイトルを忘れずにつける。"
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/OJMXzor?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
+          "目次の<b>色</b>や<b>枠線</b>などを変更できる。"
         ],
-        "image": "https://source.unsplash.com/JKUTrJ4vK00"
+        "youtube": "https://www.youtube.com/embed/5aojxk9-gxI"
       }
     ],
     [
       "課題 4",
-      "グラフから読み取れる点をもとに、考察する。",
+      "セクションをカスタマイズしよう。",
       {
         "list": [
-          "<b>考察</b>などの章に、<b>なぜ</b>、<b>どのように</b>、<b>どうすべきか</b>といった観点から考察する。"
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/ZEQOvqQ?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
+          "セクションの<b>見出し</b>や<b>装飾線</b>などを変更できる。"
         ],
-        "image": "https://source.unsplash.com/xj8qrWvuOEs/480x360"
+        "youtube": "https://www.youtube.com/embed/pIDHfQH4cWA"
       }
     ],
     [
-      "課題 5",
-      "文章全体の要約を記述する。",
+      "最終チェック",
+      "ページ全体を確認しよう。",
       {
         "list": [
-          "<b>おわりに</b>では、何に着目し、グラフから何が読み取れたのか、その原因や理由、背景は何だったのかと言った文章全体について<b>要約</b>する。",
-          "「おわりに」が考察の延長になってしまいがちなので<b>注意</b>。"
+          "画面右上 <b><code>Change View &gt Debug mode</code></b>からWebページをプレビューできる。"
         ],
-        "image": "https://cdn.pixabay.com/photo/2018/06/11/11/11/business-3468267_640.jpg"
+        "youtube": "https://www.youtube.com/embed/ZQ9UXgfev40"
       }
     ],
     [
-      "課題 6",
-      "参考文献の情報を正しく掲載する。",
-      {
-        "list": [
-          "データの収集などに参考にした<b>文献情報</b>を正しく記述する。",
-          "書籍の場合は「著者名、タイトル、出版社、発行年」、Webサイトの場合は「サイトタイトル、URL、閲覧日」が必要。"
-        ],
-        "image": "https://source.unsplash.com/tzsUJD0TGkk/480x360"
-      }
+      "デザインの完成",
+      "デザインの一例はこちら。"
     ],
     [
-      "課題の提出",
-      "プレビュー画面のURLを提出。",
+      "リンクの送信",
+      "Webサイトデザインをカスタマイズし、URLを提出。",
       {
         "list": [
-          "編集が終わったら、いつもどおりアドレスバーの<b>URL</b>をコピーし、WebComの内容欄に貼り付けて提出。",
-          "締切は授業の<b>1週間後</b>。"
+          "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
+          "編集用テンプレートを<b>Fork</b>し忘れていないか確認。",
+          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（締切は授業の<b>1週間後</b>）。"
         ],
         "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
       "今回のまとめ",
-      "文章と図を作成してWebサイトを完成。",
+      "CSSのテンプレを用いてWebサイトをカスタマイズ。",
       {
         "list": [
-          "自身の身の回りの気になるデータに関して<b>Chartblocks</b>でグラフを作成。",
-          "文章と見た目を編集してWebサイトを完成。"
+          "カスタマイズしやすいように工夫した<b>SCSS</b>をご用意。",
+          "SCSSをカスタマイズし、Webサイトをより見やすく<b>デザイン</b>。"
         ],
         "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
       }

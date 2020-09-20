@@ -2,90 +2,36 @@
   "explanation": [
     [
       "今回の目標",
-      "Webサイトを完成し、相互評価アンケートを作成。",
+      "Webサイトに掲載する文章を作成。",
       {
         "list": [
-          "次回授業で行う<b>相互評価</b>アンケートをグループで１つ作成。",
-          "著作権表記の他、もし載せるべき画像や参考文献等があれば追加し、デザインを<b>最終確認</b>。"
+          "はじめに、<b>Web担当者</b>を一人決める。",
+          "Web担当者以外のメンバーは、Webサイトの<b>章立て</b>と<b>文章</b>を考える。",
+          "Web担当者は、Webサイト雛形を用いてWebサイトの<b>デザイン</b>を考え、出来上がった文章をHTMLファイルに貼り付け。"
         ],
-        "image": "https://source.unsplash.com/zNRITe8NPqY"
+        "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
     ],
     [
       "課題 1",
-      "相互評価アンケートを作成。",
+      "Web担当者以外は分担して文章を執筆。",
       {
         "list": [
-          "相互評価の（他グループのメンバーにWebサイトを閲覧して感想を入力してもらう）ためのアンケートを作成。",
-          "記述シート内の該当リンクから<b>Googleフォーム</b>にアクセスして編集。"
+          "Web担当者以外は、記述シート該当箇所に<b>章立て</b>と<b>本文</b>を記載する。",
+          "あとでWeb担当者がHTMLファイルにコピペしやすいよう、段落を<b><code>&ltp&gt~&lt/p&gt</code></b>タグで括っておく（ちなみに太字は<code>&ltb&gt~&lt/b&gt</code>）。",
+          "グラフを挿入すべき箇所に前回コピペした埋め込みコードを貼り付ける。"
         ],
-        "image": "https://cdn.pixabay.com/photo/2017/05/15/23/48/survey-2316468_640.png"
-      }
-    ],
-    [
-      "課題 1-1",
-      "アンケートの概要とWebサイトのリンクを記述。",
-      {
-        "list": [
-          "フォームの説明欄にアンケートの<b>概要</b>を記述。",
-          "Web担当者はCodePenの<code>Change View &gt Full Page View</code>をクリックし、アドレスバーの<b>URL</b>をコピー。",
-          "このURLをフォームの説明欄に貼り付け、次回の授業でクラスメンバーに閲覧・評価してもらう。"
-        ],
-        "youtube": "https://www.youtube.com/embed/d4nAC-59yf8"
-      }
-    ],
-    [
-      "課題 1-2",
-      "Webサイトの分かりやすさについて質問する。",
-      {
-        "list": [
-          "<b>ラジオボタン</b>（択一式）を用いる。",
-          "項目は「とても分かりやすかった」から「とても分かりにくかった」までの<b>5段階</b>。"
-        ],
-        "youtube": "https://www.youtube.com/embed/gUdDBKcl0A8"
-      }
-    ],
-    [
-      "課題 1-3",
-      "調査内容の感想について質問する。",
-      {
-        "list": [
-          "複数行にわたる文章での回答を想定しているので、<b>段落</b>を用いる。",
-          "<b>200字</b>以上の字数で記述するよう依頼する。"
-        ],
-        "youtube": "https://www.youtube.com/embed/qlD9orAwCMs"
-      }
-    ],
-    [
-      "課題 1-4",
-      "その他自由に質問する。",
-      {
-        "list": [
-          "取り上げたテーマに関して質問したいことがあれば追加する。",
-          "特にない場合は省略しても良い。"
-        ],
-        "youtube": "https://www.youtube.com/embed/ljTEQQDJY9k"
-      }
-    ],
-    [
-      "内容チェック",
-      "アンケートが正しく表示されるかチェック。",
-      {
-        "list": [
-          "画面右上の<b>プレビュー</b>ボタン（目のアイコン）をクリック。",
-          "Webサイトのリンクをクリックし、正しく移動できるか確認。",
-          "設問内容に問題がないか確認し、ウィンドウを閉じる。"
-        ],
-        "youtube": "https://www.youtube.com/embed/Xc9vcipjseA"
+        "image": "https://source.unsplash.com/s9CC2SKySJM/480x360"
       }
     ],
     [
       "課題 2",
-      "Webサイトを最終調整。",
+      "Web担当者はHTMLとSCSSを編集。",
       {
         "list": [
-          "著作権表記の他、もし載せるべき画像や参考文献等があれば追加。",
-          "全体のデザインを見ながら、適宜CSSを調整。"
+          "Web担当者は、Codepenを用いて<a href='https://codepen.io/634nakajimaMejiro/pen/QWyJdvm' target='_blank'>こちら</a>のWebサイト雛形をForkしたあと、記述シート該当箇所に<b>URL</b>を貼り付ける。",
+          "Webサイトのデザインの方向性を相談しながら、SCSSを編集。他メンバーは上記URLからデザインを確認。",
+          "他メンバーの文章ができあがり次第、適切な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグの中に文章をコピペ。"
         ],
         "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
       }
@@ -95,21 +41,21 @@
       "特に提出作業はありません。",
       {
         "list": [
-          "今回も、WebCom上の提出作業は<b>不要</b>。",
-          "授業日の<b>6日後</b>までに完成させておくこと。"
+          "今回も記述シート上に入力してもらうため、WebCom上の提出作業は<b>不要</b>。",
+          "授業日の<b>1週間後</b>までにファイルを完成させておくこと。"
         ],
         "image": "https://source.unsplash.com/VO5w2Ida70s/480x360"
       }
     ],
     [
       "今回のまとめ",
-      "Webサイトを完成し、相互評価アンケートを作成。",
+      "Webサイトに掲載する文章を作成。",
       {
         "list": [
-          "次回授業で行う<b>相互評価</b>アンケートをグループで１つ作成。",
-          "著作権表記の他、もし載せるべき画像や参考文献等があれば追加し、デザインを<b>最終確認</b>。"
+          "Web担当者以外は分担して<b>文章</b>を執筆。",
+          "Web担当者は<b>HTML</b>と<b>SCSS</b>を編集。"
         ],
-        "image": "https://source.unsplash.com/zNRITe8NPqY"
+        "image": "https://source.unsplash.com/vZJdYl5JVXY"
       }
     ]
   ]

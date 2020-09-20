@@ -2,88 +2,206 @@
   "explanation": [
     [
       "今回の目標",
-      "CSSのテンプレを用いてWebサイトをよりお洒落にする。",
+      "CSSを用いてWebサイトの見た目をデザイン。",
       {
         "list": [
-          "CSSの基本を身につけても、デザイナーが作るようなWebサイトのデザインはとても<b>大変</b>。",
-          "インターネットには<b>お洒落</b>なデザインのテンプレが提供されている。",
-          "今回は予め用意されたCSSテンプレをコピペし、<b>カスタマイズ</b>する方法を紹介。"
+          "Webサイトの見た目を記述する<b>CSS</b>の基本的な書き方を理解する。",
+          "Webサイトの<b>ヘッダー</b>、<b>メイン</b>、<b>目次</b>部分の見た目をデザイン。",
+          "文字の<b>サイズ</b>や<b>配置</b>、<b>色</b>、<b>枠線</b>などをつけてWebサイトを見やすくする。"
         ],
-        "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
+        "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
       }
     ],
     [
-      "SCSS",
-      "アレンジしやすいよう工夫した特殊なCSSをご用意。",
+      "CSSファイル",
+      "Webサイトの見た目を文字列で表す。",
       {
         "list": [
-          "CSSのプロパティを一箇所変更すると、それに合わせて他の場所も微調整するのが<b>大変</b>。",
-          "カスタマイズしたい内容に応じてプロパティを<b>一括変更</b>できるファイルを授業用にご用意。",
-          "CSSの拡張版である<b>SCSS</b>を用いている。"
+          "見出しの大きさや、文字のサイズ、テキストの配置などの<b>プロパティ</b>を設定。",
+          "HTML内の各要素を指定（<b>セレクタ</b>）し、プロパティと変更内容を記述するとページに反映される。",
+          "具体的な記述ルールは、スライド内CodePen画面左側CSSエディタを参照。"
         ],
         "codepen": [
           "634nakajimaMejiro",
-          "YzwQVqX",
+          "OJMbNMa",
           "css"
         ]
       }
     ],
     [
-      "SCSSの使い方",
-      "CodePen側で設定をしてSCSSを読み込めるようにする。",
+      "CodePen編集画面のセットアップ",
+      "CSSを編集しながら、ページの内容をリアルタイムに確認。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/BajZRpR?editors=1100' target='_blank'>こちら</a>の編集用テンプレートを<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
-          "次ページ以降に紹介するリンク先のSCSSをコピペして<b>カスタマイズ</b>。",
-          "カスタマイズした編集用テンプレートの<b>URL</b>を最後に提出。"
+          "今回は<a href='https://codepen.io/634nakajimaMejiro/pen/JjGbEXa?editors=1100' target='_blank'>こちら</a>のテンプレートを<b>Fork</b>して編集。",
+          "CSSを編集しながらWebメージを確認できるようにレイアウト変更されている。"
         ],
-        "youtube": "https://www.youtube.com/embed/k40n5jeTB9U"
+        "youtube": "https://www.youtube.com/embed/HkW-bNGD-Gw"
       }
     ],
     [
-      "課題 1",
-      "ページ背景をカスタマイズしよう。",
+      "課題 1-1",
+      "タイトルの大きさを変えよう。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/LYGZeBz?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレートに貼り付け（Forkは<b>不要</b>）。",
-          "<a href='./5_web.html#slide=9' target='_blank'>第５回の授業資料</a>を参考に、ページ背景となる画像を探し、<b>URL</b>を変更。",
-          "画像の<b>透明度</b>や<b>背景色</b>なども変更できる。画像が不要なら、URL部分を消去し<code><b>\"\"</b></code>のみ記述。"
+          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。<h6>（動画内の/*と*/で囲まれたメモ書きは書かなくても良い）</h6>",
+          "文字サイズは<b>font-size</b>プロパティで変更。<b>:</b>（コロン）と<b>;</b>（セミコロン）に注意。",
+          "<b>em</b>は、ブラウザの標準文字サイズを1とした相対的な大きさの単位。"
         ],
-        "youtube": "https://www.youtube.com/embed/80Xi_cnVBLk"
+        "youtube": "https://www.youtube.com/embed/rJGP51FeX3Y"
       }
     ],
     [
-      "課題 2",
-      "ヘッダーをカスタマイズしよう。",
+      "課題 1-2",
+      "タイトルを中央に揃えよう。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/qBbNpMX?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
-          "課題1と同様、ヘッダー背景となる画像を探し、<b>URL</b>を変更。画像が不要なら<code><b>\"\"</b></code>のみ記述。",
-          "タイトルの<b>影</b>は、背景とのコントラストが低い時に用いると読みやすくなる。"
+          "h1の中カッコ<code>{...}</code>内にプロパティと値を追加。",
+          "文字揃えは<b>text-align</b>プロパティで変更。",
+          "指定できる値は<code>left, center, right, justify</code>がある。"
         ],
-        "youtube": "https://www.youtube.com/embed/66ht-3NgNvs"
+        "youtube": "https://www.youtube.com/embed/go5x5of6E3U"
       }
     ],
     [
-      "課題 3",
-      "目次をカスタマイズしよう。",
+      "課題 1-3",
+      "ヘッダーの背景色を変更しよう。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/OJMXzor?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
-          "目次の<b>色</b>や<b>枠線</b>などを変更できる。"
+          "セレクタにheader（ヘッダー部分）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。",
+          "背景色は<b>background-color</b>プロパティで変更。",
+          "様々な色の名称を指定できる。具体的な名称リストは<a href='http://www.htmq.com/color/colorname.shtml' target='_blank'>こちら</a>を参照。"
         ],
-        "youtube": "https://www.youtube.com/embed/5aojxk9-gxI"
+        "youtube": "https://www.youtube.com/embed/ghjN0EFQVsc"
       }
     ],
     [
-      "課題 4",
-      "セクションをカスタマイズしよう。",
+      "課題 1-4",
+      "ヘッダーの大きさを変えて目立たせよう。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/ZEQOvqQ?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレート末尾に追加。",
-          "セクションの<b>見出し</b>や<b>装飾線</b>などを変更できる。"
+          "headerの中カッコ<code>{...}</code>内にプロパティと値を追加。",
+          "ヘッダー<b>内</b>側の余白は<b>padding</b>プロパティで変更。",
+          "<b>vh</b>はウィンドウの高さを100とする単位で、ブラウザに表示される<b>相対的</b>な大きさを表す。"
         ],
-        "youtube": "https://www.youtube.com/embed/pIDHfQH4cWA"
+        "youtube": "https://www.youtube.com/embed/c-01BlClKVE"
+      }
+    ],
+    [
+      "課題 1-5",
+      "ページの文章全体を中央に揃えよう。",
+      {
+        "list": [
+          "CodePenでは省略されているが、実はHTMLの表示部分は全て<b><code>&ltbody&gt~&lt/body&gt</code></b>で括られている。",
+          "したがって、文書全体に対する見た目の変更は<code>body</code>をセレクタにする。",
+          "文字揃えは<b>text-align</b>プロパティで変更。"
+        ],
+        "youtube": "https://www.youtube.com/embed/nTXUUp2Aq74"
+      }
+    ],
+    [
+      "課題 1-6",
+      "ページ隅の小さな余白を消そう。",
+      {
+        "list": [
+          "デフォルト（初期設定）では<code>body</code>の要素の外側に少し余白がついている。",
+          "要素の<b>外</b>側の余白は<b>margin</b>プロパティで変更。",
+          "値を<b>0</b>に設定し、ヘッダーの背景色をページ全体に広げる。"
+        ],
+        "youtube": "https://www.youtube.com/embed/GNtTxiRY3iY"
+      }
+    ],
+    [
+      "課題 1-7",
+      "タイトルの文字色を変えよう。",
+      {
+        "list": [
+          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を追加。",
+          "文字色は<b>color</b>プロパティで変更。",
+          "色の名称リストは<a href='http://www.htmq.com/color/colorname.shtml' target='_blank'>こちら</a>を参照。"
+        ],
+        "youtube": "https://www.youtube.com/embed/O9HBIUlDSmE"
+      }
+    ],
+    [
+      "課題 2-1",
+      "メイン部分（文章）の幅を読みやすくしよう。",
+      {
+        "list": [
+          "ウィンドウの幅が広い場合に、文章が幅いっぱいに表示されて<b>読みにくい</b>。",
+          "要素の幅の上限をmainセレクタ内<b><code>max-width</code></b>プロパティで指定できる。",
+          "<b>px</b>はピクセル（画素）の単位で、ブラウザに表示される<b>絶対的</b>な大きさを表す。"
+        ],
+        "youtube": "https://www.youtube.com/embed/LqnZUzxcUj8"
+      }
+    ],
+    [
+      "課題 2-2",
+      "メイン部分を中央に揃えよう。",
+      {
+        "list": [
+          "mainの幅の上限を指定すると、デフォルトでは左寄せになってしまう。",
+          "main外側の左右の余白を均等にし、中央にするには<b><code>margin: auto;</code></b>と指定。"
+        ],
+        "youtube": "https://www.youtube.com/embed/4g-7AKQ1k4Y"
+      }
+    ],
+    [
+      "課題 3-1",
+      "目次の大きさと場所を調整しよう。",
+      {
+        "list": [
+          "テンプレートではHTMLの目次部分を<b><code>&ltnav&gt~&lt/nav&gt</code></b>タグ（メニュー等を表すタグ）で括ってある。",
+          "navセレクタ内<b><code>width</code></b>プロパティに<b><code>150px</code></b>と指定。",
+          "navセレクタ内<b><code>margin</code></b>プロパティに<b><code>auto</code></b>と指定。"
+        ],
+        "youtube": "https://www.youtube.com/embed/RAm2--K8ARQ"
+      }
+    ],
+    [
+      "課題 3-2",
+      "目次に枠線をつけよう。",
+      {
+        "list": [
+          "枠線は<b><code>border</code></b>プロパティで、線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。",
+          "角の丸みは<b><code>border-radius</code></b>プロパティで、半径をpx単位で指定。",
+          "線の種類は<code>solid（実線）, dotted（点線）, double（二重線）</code>などがある。"
+        ],
+        "youtube": "https://www.youtube.com/embed/nEfAH4_E7Es"
+      }
+    ],
+    [
+      "課題 3-3",
+      "見出しを目立たせよう。",
+      {
+        "list": [
+          "ここでは、文字<b>サイズ</b>の変更と見出しの<b>装飾線</b>を追加。",
+          "<b><code>border-left</code></b>や<b><code>border-bottom</code></b>プロパティで枠線のうち<b>1辺</b>だけ線をつけられる。",
+          "値には線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。"
+        ],
+        "youtube": "https://www.youtube.com/embed/A9i_zRB3Sgo"
+      }
+    ],
+    [
+      "課題 4-1",
+      "目次と段落の見た目を調整しよう。",
+      {
+        "list": [
+          "ここでは、目次の装飾線の左右に<b>余白</b>をつけ、節見出しと本文を<b>左揃え</b>にして読みやすくする。",
+          "pセレクタの<code>text-align</code>プロパティに<b><code>justify</code></b>を指定すると、<b>均等揃え</b>（文章の両端が揃う）ができる。"
+        ],
+        "youtube": "https://www.youtube.com/embed/E136VPebQ-c"
+      }
+    ],
+    [
+      "課題 4-2",
+      "段落の文章を読みやすくしよう。",
+      {
+        "list": [
+          "文字サイズを<b><code>font-size</code></b>プロパティで、em単位で指定。",
+          "行間の大きさを<b><code>line-height</code></b>プロパティで、em単位で指定。"
+        ],
+        "youtube": "https://www.youtube.com/embed/J2yR19gv32E"
       }
     ],
     [
@@ -93,34 +211,35 @@
         "list": [
           "画面右上 <b><code>Change View &gt Debug mode</code></b>からWebページをプレビューできる。"
         ],
-        "youtube": "https://www.youtube.com/embed/ZQ9UXgfev40"
+        "youtube": "https://www.youtube.com/embed/830AgWdcVJU"
       }
     ],
     [
-      "デザインの完成",
-      "デザインの一例はこちら。"
+      "Webサイトデザインの完成",
+      "右のプレビュー画面のように表示される。"
     ],
     [
       "リンクの送信",
-      "Webサイトデザインをカスタマイズし、URLを提出。",
+      "CSSで見た目を自分なりにアレンジし、URLを提出。",
       {
         "list": [
           "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
-          "編集用テンプレートを<b>Fork</b>し忘れていないか確認。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（締切は授業の<b>1週間後</b>）。"
+          "テンプレートを<b>Fork</b>し忘れていないか確認。",
+          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/26締切）。"
         ],
         "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
       "今回のまとめ",
-      "CSSのテンプレを用いてWebサイトをカスタマイズ。",
+      "CSSを用いてWebサイトの見た目をデザイン。",
       {
         "list": [
-          "カスタマイズしやすいように工夫した<b>SCSS</b>をご用意。",
-          "SCSSをカスタマイズし、Webサイトをより見やすく<b>デザイン</b>。"
+          "CSSの<b>セレクタ</b>、<b>プロパティ</b>、<b>値</b>について紹介。",
+          "様々な種類の<b>プロパティ</b>に値を指定。",
+          "Webサイトの基本レイアウトを紹介。"
         ],
-        "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
+        "image": "https://source.unsplash.com/6JVlSdgMacE/480x360"
       }
     ]
   ]

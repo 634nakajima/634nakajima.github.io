@@ -1,256 +1,232 @@
 {
+  "classtitle": "グラフの制作",
+  "number": 3,
+  "chaptertitle": [
+    "アンケート結果の集計",
+    "Chartblocksでのグラフ化",
+    "リンクの送信"
+  ],
   "explanation": [
     [
-      "パートⅢの概要",
-      "身近なデータを調査し、Webサイトにまとめる。",
-      {
-        "list": [
-          "テーマ（自由）に着目した動機、理由について記述。",
-          "調査したデータをグラフ化。",
-          "グラフから読み取れる内容を考察。"
-        ],
-        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
-      }
-    ],
-    [
-      "Webサイトのサンプル",
-      "最終的に制作するWebサイトのサンプルはこちら。"
-    ],
-    [
-      "Webページの仕組み",
-      "<span class='tooltip' data-tooltip='インターネットを閲覧するソフト。'>Webブラウザが特殊なファイルを解読して表示する。</span>",
-      {
-        "list": [
-          "ファイルには<b>HTML</b>、<b>CSS</b>、<b>javascript</b>に加え、画像、動画ファイルなどがある。",
-          "<b>HTML</b>は、文書の構造と内容が記述されたファイル。",
-          "<b>CSS</b>は、Webサイトの見た目に関する内容が記述されたファイル。"
-        ],
-        "image": "https://source.unsplash.com/4hbJ-eymZ1o/480x360"
-      }
-    ],
-    [
-      "授業の流れ",
-      "HTMLとCSSの基本を学び、シンプルなWebサイトを作成。",
-      {
-        "list": [
-          "第4-5回　<b>HTML</b>ファイルの作成",
-          "第6-7回　<b>CSS</b>ファイルの作成",
-          "第8回　Webサイトの<b>完成</b>"
-        ],
-        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
-      }
-    ],
-    [
       "今回の目標",
-      "HTMLファイルを編集し、Web文書の基本構造を作成。",
+      "Webサービスを使ってグラフを作成。",
       {
         "list": [
-          "<b>HTML</b>の記述方法について学ぶ。",
-          "<b>CodePen</b>を用いてHTMLの書き方に慣れる。",
-          "Webサイトを作るための雛形を作成する。"
+          "<b>Googleスプレッドシート</b>を用いて、架空のアンケート結果を集計。",
+          "<b>ChartBlocks</b>を用いて、作成したデータをグラフ化。",
+          "共有リンクを取得して配布（<b>5/29締切</b>）。"
         ],
-        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+        "image": "https://source.unsplash.com/pypeCEaJeZY"
       }
     ],
     [
-      "HTMLファイル",
-      "Webサイト構造をタグと呼ばれる印で括って表す。",
+      "アンケートデータのコピー",
+      "予め用意されたスプレッドシートをコピーして編集。",
       {
         "list": [
-          "画面に表示すべき内容が<code>&ltp&gt</code>などの<b>タグ</b>で括って記述（<b>マークアップ</b>）されている。",
-          "タグでマークアップされた部分を<b>要素</b>と呼ぶ。",
-          "<b>段落</b>を表す<code>&ltp&gt</code>や<b>章</b>を表す<code>&ltsection&gt</code>など、文書構造に関するタグが多く用意されている。"
+          "<a href='https://docs.google.com/spreadsheets/d/1LK79iMWkHzQtnUhi9nFSb7o0-HOBqlDe_91dzlYpPxE/edit?usp=sharing' target='_blank'>こちら</a>から配布データにアクセス（要ログイン）。",
+          "画面左上の'ファイル' > 'コピーを作成' を選択。",
+          "名前を「{学籍番号}集計表」としてOK。"
         ],
-        "codepen": [
-          "musashinakajima",
-          "dyGPYyd"
-        ]
+        "embed": "<img class='aligncenter' src='./pics/spreadsheet.png' alt='spreadsheet'>"
       }
     ],
     [
-      "HTMLファイル",
-      "専用のエディタを使うと比較的簡単に記述できる。",
+      "アンケートデータ",
+      "スマホ、SNS、パソコン操作の自信度に関する架空のデータ。",
       {
         "list": [
-          "メモ帳といった一般的なテキストエディタでも作成することは可能だが、<b>使いにくい</b>。",
-          "本授業ではHTMLやCSSなどの記述に適した<b>CodePen</b>と呼ばれるサービスを用いてHTMLファイルを作成。"
+          "このデータを<b>集計</b>し、グラフ化の準備をする。",
+          "課題を通して、<b>黄色セル</b>部分に集計した値を入力。"
         ],
-        "codepen": [
-          "musashinakajima",
-          "dyGPYyd"
-        ]
-      }
-    ],
-    [
-      "CodePen",
-      "Webサイトのファイルを簡単に作成できるWebサービス。",
-      {
-        "list": [
-          "Webサイトを構成するファイルの一部（<b>スニペット</b>）をメモのように記述できる。",
-          "細かい設定をせずにすぐ書き始められるのが特徴。",
-          "本授業では、スライド内で提示されたCodePenスニペットをコピーし、指示に沿って編集。"
-        ],
-        "image": "./pics/codepen.png"
-      }
-    ],
-    [
-      "CodePenのアカウント登録",
-      "氏名、アカウント名、メールアドレス、パスワードを登録。",
-      {
-        "list": [
-          "<a href='https://codepen.io/' target='_blank'>こちら</a>に移動し、右上'Sign Up' を選択。",
-          "\"Your Name\", \"Choose a username\"にそれぞれ氏名、アカウント名（任意の文字列）を設定。",
-          "\"Email\", \"Choose Password\"にそれぞれ大学メールアドレス、パスワードを設定し、\"Submit\"をクリック。"
-        ],
-        "youtube": "https://www.youtube.com/embed/-AF2Mm1hxlk"
-      }
-    ],
-    [
-      "CodePenのアカウント登録",
-      "アカウントの検証とチュートリアルを進める。",
-      {
-        "list": [
-          "アカウント登録をすると、チュートリアルが始まるので、適当に進める。",
-          "登録メールアドレス宛に確認のメールが届くので、<b>Click to Verify Email</b>をクリック。"
-        ],
-        "youtube": "https://www.youtube.com/embed/tgg8I6H2nME"
-      }
-    ],
-    [
-      "CodePenでの課題の進め方",
-      "\"EDIT ON CODEPEN\"からアクセスし、指示に従って記述。",
-      {
-        "list": [
-          "課題にあるCodePen画面右上からCodePenにアクセスし、課題を画面右下<b>Fork</b>でコピー。",
-          "画面左がWebサイトの元となるファイルで、右が実際に表示されるプレビュー画面にすると見やすい。",
-          "指示どおり編集を終えたら、画面上部<b>Save</b>で保存。"
-        ],
-        "youtube": "https://www.youtube.com/embed/Dp37WFy3nuo"
-      }
-    ],
-    [
-      "CodePenでの課題の管理",
-      "Dashboardで自分の作成したスニペットを確認できる。",
-      {
-        "list": [
-          "CodePenではスニペットのことを<b>Pen</b>と呼んでいる。",
-          "コピーした各課題はここで管理されている。"
-        ],
-        "youtube": "https://www.youtube.com/embed/0yvX041LAXo"
+        "embed": "<img class='aligncenter' src='./pics/spreadsheet2.png' alt='spreadsheet'>"
       }
     ],
     [
       "課題 1",
-      "段落を作ろう。",
+      "スマホ利用者数を集計しよう。",
       {
         "list": [
-          "<code>&ltp&gt</code>と<code>&lt/p&gt</code>で文章を括る。終わりのタグには<b>\"/\"</b>（スラッシュ）が入ることに注意。",
-          "タグは<b>半角</b>で入力することに注意。"
+          "iPhone, androidの利用者数をカウントする<b>関数</b>を用いる。",
+          "関数とは、与えられたデータに対し特定の処理をしてくれるもの。",
+          "所定のセルに以下を入力。<br>=COUNTIF(対象のセル範囲, \"カウントするワード\")"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "YzwKWZo"
-        ]
+        "youtube": "https://www.youtube.com/embed/tX-ZF-Z2Y3E"
       }
     ],
     [
       "課題 2",
-      "見出しを作ろう。",
+      "SNS利用者数を集計しよう。",
       {
         "list": [
-          "見出しは<b><code>&lth1~6&gt~&lt/h1~6&gt</code></b>のタグを用いる。数字が小さいほど大きく目立つ見出しになる。",
-          "Webサイトのタイトルは<code>&lth1&gt~&lt/h1&gt</code>、章見出しは<code>&lth2&gt~&lt/h2&gt</code>、節見出しは<code>&lth3&gt~&lt/h3&gt</code>を用いる。"
+          "セル内は複数のSNS名が列挙されているため、課題1の方法ではうまくいかない。",
+          "文字列が部分的に一致しているかどうかは以下を用いる。<br>=COUNTIF(対象のセル範囲, \"<b>*</b>カウントするワード<b>*</b>\")"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "pogzqaQ"
-        ]
+        "youtube": "https://www.youtube.com/embed/9WIKL11NGgI"
       }
     ],
     [
       "課題 3",
-      "章を作ろう。",
+      "学科ごとのパソコン操作の自信度平均値を算出。",
       {
         "list": [
-          "見出しと段落を一つの章としてマークアップ。",
-          "複数のタグをまとめて括る際は、<b>上下</b>で挟むように括ると良い。",
-          "中の要素はTabキーで<b>インデント</b>（字下げ）し、入れ子構造を見やすくする。"
+          "<b>平均値</b>を用いて、学科間のパソコン操作の自信度の違いを比較する。",
+          "平均値の算出には以下の関数を用いる。<br>=AVERAGE(対象のセル範囲)"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "VweZqBm"
-        ]
+        "youtube": "https://www.youtube.com/embed/sSCoUAOVPg0"
       }
     ],
     [
-      "課題 4",
-      "ヘッダーを作ろう。",
+      "ChartBlocks とは",
+      "データを元にグラフを生成するWebサービス。",
       {
         "list": [
-          "ヘッダーとは、Webサイト<b>上部</b>に表示される部分。",
-          "タイトルやメニューバーなど、Webサイトの中で最も<b>重要</b>な要素で構成されている。",
-          "<b><code>&ltheader&gt~&lt/header&gt</code></b>タグでヘッダーの中身（今回はタイトル）の上下を挟むように括る。"
+          "マウスポインタで<b>詳細</b>を見ることができる。",
+          "Webサイト等に<b>埋め込んで</b>利用しやすい。",
+          "今回はWebサイト制作を見据え、このサービスを利用。"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "pogzYmp"
-        ]
+        "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
       }
     ],
     [
-      "課題 5",
-      "フッターを作ろう。",
+      "ChartBlocksへのサインアップ",
+      "大学のGoogleアカウントでサインアップ（登録）可能。",
       {
         "list": [
-          "フッターとは、Webサイト下部に表示される部分で、主に<b>著作権</b>表記やリンク等が記載される。",
-          "内容を<b><code>&ltfooter&gt~&lt/footer&gt</code></b>で括る。",
-          "ちなみに、<code>&ltsmall&gt</code>タグは、小さい文字を表すタグ。"
+          "<a href='https://app.chartblocks.com/register' target='_blank'>こちら</a>に移動し、'Sign up with Google' を選択。'",
+          "Googleのアカウントを選択し、パスワードを入力。",
+          "<b>Personal</b>プランを選択し、'Create a chart'をクリック。"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "oNbNvaE"
-        ]
+        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
       }
     ],
     [
-      "課題 6",
-      "スニペットをつなぎ合わせよう。",
+      "課題 4-1",
+      "スマホ利用者を円グラフで表そう。",
       {
         "list": [
-          "Webサイトはヘッダー、メイン、フッターからなる。",
-          "課題 3の内容を<b><code>&ltmain&gt~&lt/main&gt</code></b>タグで括る。",
-          "その上下に課題4, 5で作成したヘッダー、フッターをコピペ。"
+          "<b>Type in my data</b>を選択。",
+          "スプレッドシートのF2:G3の範囲を選択し、コピー<br>（<b>Controlキーを押しながらcを押す</b>）。",
+          "ChartBlockのセル左上に貼り付け<br>（<b>Controlキーを押しながらvを押す</b>）。"
         ],
-        "codepen": [
-          "634nakajimaMejiro",
-          "dyGbxgp"
-        ]
+        "youtube": "https://www.youtube.com/embed/11AVk_97UFM"
       }
     ],
     [
-      "Webサイト雛形の完成",
-      "右のプレビュー画面のように表示される。"
+      "課題 4-2",
+      "スマホ利用者を円グラフで表そう。",
+      {
+        "list": [
+          "画面右'Dataset Name' に<b>スマホの利用者数</b>と入力し、画面右上 next をクリック。",
+          "<b>円グラフ</b>を選択。"
+        ],
+        "youtube": "https://www.youtube.com/embed/fQTjBHaipCk"
+      }
+    ],
+    [
+      "課題 4-3",
+      "スマホ利用者を円グラフで表そう。",
+      {
+        "list": [
+          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
+          "好きなデザインを選択し、next をクリック。",
+          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
+        ],
+        "youtube": "https://www.youtube.com/embed/hosXOmOpSUM"
+      }
+    ],
+    [
+      "課題 5-1",
+      "SNS利用者を横棒グラフで表そう。",
+      {
+        "list": [
+          "<b>Type in my data</b>を選択。",
+          "スプレッドシートのF6:G10の範囲を選択し、コピー。",
+          "ChartBlockのセル左上に貼り付け。"
+        ],
+        "youtube": "https://www.youtube.com/embed/_Y8D83V7jMs"
+      }
+    ],
+    [
+      "課題 5-2",
+      "SNS利用者を横棒グラフで表そう。",
+      {
+        "list": [
+          "画面右'Dataset Name' に<b>SNSの利用者数</b>と入力し、画面右上 next をクリック。",
+          "<b>棒グラフ</b>を選択。"
+        ],
+        "youtube": "https://www.youtube.com/embed/ZRMVpK6gdRg"
+      }
+    ],
+    [
+      "課題 5-3",
+      "SNS利用者を横棒グラフで表そう。",
+      {
+        "list": [
+          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
+          "好きなデザインを選択し、next をクリック。",
+          "Customize をクリックし、Typeタブで<b>横棒</b>グラフに変更。"
+        ],
+        "youtube": "https://www.youtube.com/embed/pgd_p6Lrpns"
+      }
+    ],
+    [
+      "課題 6-1",
+      "学科間のパソコン操作の自信度の差を縦棒グラフで表そう。",
+      {
+        "list": [
+          "<b>Type in my data</b>を選択。",
+          "スプレッドシートのF13:G14の範囲を選択し、コピー。",
+          "ChartBlockのセル左上に貼り付け。"
+        ],
+        "youtube": "https://www.youtube.com/embed/QU5ZKK56JPQ"
+      }
+    ],
+    [
+      "課題 6-2",
+      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
+      {
+        "list": [
+          "画面右'Dataset Name' に<b>パソコン操作の自信度</b>と入力し、画面右上 next をクリック。",
+          "<b>棒グラフ</b>を選択。"
+        ],
+        "youtube": "https://www.youtube.com/embed/KOwB732ee08"
+      }
+    ],
+    [
+      "課題 6-3",
+      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
+      {
+        "list": [
+          "画面右'Series 1:' に<b>平均値</b>と入力し、画面右上 next をクリック。",
+          "好きなデザインを選択し、next をクリック。",
+          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
+        ],
+        "youtube": "https://www.youtube.com/embed/L-Nqv7chwzY"
+      }
     ],
     [
       "リンクの送信",
-      "課題6のURLを提出。",
+      "スプレッドシートと３つのグラフの共有リンクを提出。",
       {
         "list": [
-          "アドレスバーの<b>URL</b>（https://codepen.io/{username}/ pen/{id}）を<b>コピー</b>。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/5締切）。"
+          "スプレッドシートは、画面右上<b>共有</b>をクリックし、'共有可能なリンクを取得' をクリック。",
+          "ChartBlocks は、画面右上<b>Share</b>アイコンをクリックし、'Publick link' 下のリンクを選択してコピー。",
+          "スプレッドシートと３つのグラフの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（5/29締切）。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "youtube": "https://www.youtube.com/embed/adFa3ytdOtE"
       }
     ],
     [
       "今回のまとめ",
-      "Web文書を構成する主要な要素について紹介。",
+      "2つのWebサービスでデータ集計とグラフ作成。",
       {
         "list": [
-          "<b>タグ</b>で文章を括り、文章に段落や章などの意味を持たせる<b>マークアップ</b>を練習。",
-          "ヘッダー、メイン、フッターからなるWebサイトの雛形を作成。"
+          "Googleスプレッドシートの<b>関数</b>で回答者数を集計。",
+          "ChartBlockで棒グラフ、円グラフを作成。",
+          "共有リンクをWebComに提出。"
         ],
-        "image": "./pics/codepen.png"
+        "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
     ]
   ]

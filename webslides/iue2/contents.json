@@ -38,28 +38,36 @@
   },
   "4th": {
     "json": "./4th.json",
-    "classtitle": "文書内の各要素を記述する",
+    "classtitle": "気になるデータでグラフ制作",
     "number": 4,
+    "chaptertitle": [
+      ""
+    ]
+  },
+  "5th": {
+    "json": "./4th.json",
+    "classtitle": "文書内の各要素を記述する",
+    "number": 5,
     "chaptertitle": [
       "HTML とは",
       "CodePenでの編集",
       "HTML文書の雛形作成"
     ]
   },
-  "5th": {
-    "json": "./5th.json",
+  "6th": {
+    "json": "./6th.json",
     "classtitle": "HTML文書を完成させる",
-    "number": 5,
+    "number": 6,
     "chaptertitle": [
       "目次の作成",
       "図の挿入",
       "リンクの作成"
     ]
   },
-  "6th": {
-    "json": "./6th.json",
+  "7th": {
+    "json": "./7th.json",
     "classtitle": "文書の色や配置をデザインする",
-    "number": 6,
+    "number": 7,
     "chaptertitle": [
       "CSS とは",
       "ヘッダーのデザイン",
@@ -68,10 +76,10 @@
       "デザインの最終調整"
     ]
   },
-  "7th": {
-    "json": "./7th.json",
+  "8th": {
+    "json": "./8th.json",
     "classtitle": "デザインテンプレートを利用する",
-    "number": 7,
+    "number": 8,
     "chaptertitle": [
       "ページ背景のテンプレート",
       "ヘッダーのテンプレート",
@@ -79,42 +87,50 @@
       "セクションのテンプレート"
     ]
   },
-  "8th": {
-    "json": "./8th.json",
-    "classtitle": "Webサイトを完成させる",
-    "number": 8,
-    "chaptertitle": []
-  },
   "9th": {
     "json": "./9th.json",
-    "classtitle": "テーマ決定・アンケート制作",
+    "classtitle": "Webサイトを完成させる",
     "number": 9,
     "chaptertitle": []
   },
   "10th": {
     "json": "./10th.json",
-    "classtitle": "アンケート回答・グラフ制作",
+    "classtitle": "テーマ決定・アンケート制作",
     "number": 10,
     "chaptertitle": []
   },
   "11th": {
     "json": "./11th.json",
-    "classtitle": "文章の作成",
+    "classtitle": "アンケート回答・グラフ制作",
     "number": 11,
     "chaptertitle": []
   },
   "12th": {
     "json": "./12th.json",
-    "classtitle": "Webサイトの完成",
+    "classtitle": "文章の作成",
     "number": 12,
     "chaptertitle": []
   },
   "13th": {
     "json": "./13th.json",
-    "classtitle": "相互評価と全体のまとめ",
+    "classtitle": "Webサイトの完成",
     "number": 13,
+    "chaptertitle": []
+  },
+  "14th": {
+    "json": "./14th.json",
+    "classtitle": "相互評価",
+    "number": 14,
     "chaptertitle": [
-      "相互評価アンケートへの回答",
+      "相互評価アンケートへの回答"
+    ]
+  },
+  "15th": {
+    "json": "./15th.json",
+    "classtitle": "全体のまとめ",
+    "number": 15,
+    "chaptertitle": [
+      "回答結果の確認",
       "全体のまとめ"
     ]
   }

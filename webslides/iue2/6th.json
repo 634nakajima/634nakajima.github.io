@@ -2,244 +2,223 @@
   "explanation": [
     [
       "今回の目標",
-      "CSSを用いてWebサイトの見た目をデザイン。",
+      "図と目次を追加し、HTMLの雛形を完成。",
       {
         "list": [
-          "Webサイトの見た目を記述する<b>CSS</b>の基本的な書き方を理解する。",
-          "Webサイトの<b>ヘッダー</b>、<b>メイン</b>、<b>目次</b>部分の見た目をデザイン。",
-          "文字の<b>サイズ</b>や<b>配置</b>、<b>色</b>、<b>枠線</b>などをつけてWebサイトを見やすくする。"
+          "HTMLにおける<b>図</b>の挿入方法について学ぶ。",
+          "文書を分かりやすくする<b>目次</b>を作成。",
+          "目次から各見出しにジャンプする<b>リンク</b>を作成。"
         ],
         "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
       }
     ],
     [
-      "CSSファイル",
-      "Webサイトの見た目を文字列で表す。",
+      "リスト",
+      "項目の列挙には&ltul&gt, &ltol&gtタグを用いる。",
       {
         "list": [
-          "見出しの大きさや、文字のサイズ、テキストの配置などの<b>プロパティ</b>を設定。",
-          "HTML内の各要素を指定（<b>セレクタ</b>）し、プロパティと変更内容を記述するとページに反映される。",
-          "具体的な記述ルールは、スライド内CodePen画面左側CSSエディタを参照。"
+          "&ltul&gtタグは<b>番号なし</b>リストで、&ltol&gtタグは<b>番号付き</b>リスト。",
+          "リスト内の各項目は<b><code>&ltli&gt~&lt/li&gt</code></b>タグで括る。"
         ],
         "codepen": [
           "634nakajimaMejiro",
-          "OJMbNMa",
-          "css"
+          "yLeeMoa"
         ]
       }
     ],
     [
-      "CodePen編集画面のセットアップ",
-      "CSSを編集しながら、ページの内容をリアルタイムに確認。",
+      "課題 1",
+      "目次を作ろう。",
       {
         "list": [
-          "今回は<a href='https://codepen.io/634nakajimaMejiro/pen/JjGbEXa?editors=1100' target='_blank'>こちら</a>のテンプレートを<b>Fork</b>して編集。",
-          "CSSを編集しながらWebメージを確認できるようにレイアウト変更されている。"
+          "<b><code>&ltol&gt~&lt/ol&gt</code></b>タグで目次を作成。",
+          "スライドのテンプレートを<b>Fork</b>してWebサイトの各見出しをリストにする。"
         ],
-        "youtube": "https://www.youtube.com/embed/HkW-bNGD-Gw"
+        "codepen": [
+          "634nakajimaMejiro",
+          "ZEQQeXL"
+        ]
       }
     ],
     [
-      "課題 1-1",
-      "タイトルの大きさを変えよう。",
+      "図の挿入",
+      "図の挿入には&ltfigure&gtタグを用いる。",
       {
         "list": [
-          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。<h6>（動画内の/*と*/で囲まれたメモ書きは書かなくても良い）</h6>",
-          "文字サイズは<b>font-size</b>プロパティで変更。<b>:</b>（コロン）と<b>;</b>（セミコロン）に注意。",
-          "<b>em</b>は、ブラウザの標準文字サイズを1とした相対的な大きさの単位。"
+          "図の構成要素は、<b>画像本体</b>と<b>キャプション</b>（図の番号、タイトル）に分けられ、これらを<b>&ltfigure&gt~&lt/figure&gt</b>で括る。",
+          "今回は、<b>Unsplash</b>と呼ばれるサイトのフリー画像と、<b>Chartblocks</b>のグラフの２種類の画像の載せ方を紹介。"
         ],
-        "youtube": "https://www.youtube.com/embed/rJGP51FeX3Y"
+        "image": "https://source.unsplash.com/bs_PL2f9CM4/250x250",
+        "caption": "<figcaption class='aligncenter'>図1 Unsplashの画像例</figcaption>"
       }
     ],
     [
-      "課題 1-2",
-      "タイトルを中央に揃えよう。",
+      "画像の挿入",
+      "画像の挿入には&ltimg&gtタグを用いる。",
       {
         "list": [
-          "h1の中カッコ<code>{...}</code>内にプロパティと値を追加。",
-          "文字揃えは<b>text-align</b>プロパティで変更。",
-          "指定できる値は<code>left, center, right, justify</code>がある。"
+          "&ltimg&gtタグは、終了タグが不要な特殊な要素で、タグの名前の横にある<b>src</b>や<b>alt</b>は属性と呼ばれる。",
+          "src属性には画像の<b>場所</b>（URL）を記述。",
+          "alt属性には画像が挿入できなかった場合に表示する<b>文字列</b>を記述。"
         ],
-        "youtube": "https://www.youtube.com/embed/go5x5of6E3U"
-      }
-    ],
-    [
-      "課題 1-3",
-      "ヘッダーの背景色を変更しよう。",
-      {
-        "list": [
-          "セレクタにheader（ヘッダー部分）を記述し、中カッコ<code>{...}</code>内にプロパティと値を記述。",
-          "背景色は<b>background-color</b>プロパティで変更。",
-          "様々な色の名称を指定できる。具体的な名称リストは<a href='http://www.htmq.com/color/colorname.shtml' target='_blank'>こちら</a>を参照。"
-        ],
-        "youtube": "https://www.youtube.com/embed/ghjN0EFQVsc"
-      }
-    ],
-    [
-      "課題 1-4",
-      "ヘッダーの大きさを変えて目立たせよう。",
-      {
-        "list": [
-          "headerの中カッコ<code>{...}</code>内にプロパティと値を追加。",
-          "ヘッダー<b>内</b>側の余白は<b>padding</b>プロパティで変更。",
-          "<b>vh</b>はウィンドウの高さを100とする単位で、ブラウザに表示される<b>相対的</b>な大きさを表す。"
-        ],
-        "youtube": "https://www.youtube.com/embed/c-01BlClKVE"
-      }
-    ],
-    [
-      "課題 1-5",
-      "ページの文章全体を中央に揃えよう。",
-      {
-        "list": [
-          "CodePenでは省略されているが、実はHTMLの表示部分は全て<b><code>&ltbody&gt~&lt/body&gt</code></b>で括られている。",
-          "したがって、文書全体に対する見た目の変更は<code>body</code>をセレクタにする。",
-          "文字揃えは<b>text-align</b>プロパティで変更。"
-        ],
-        "youtube": "https://www.youtube.com/embed/nTXUUp2Aq74"
-      }
-    ],
-    [
-      "課題 1-6",
-      "ページ隅の小さな余白を消そう。",
-      {
-        "list": [
-          "デフォルト（初期設定）では<code>body</code>の要素の外側に少し余白がついている。",
-          "要素の<b>外</b>側の余白は<b>margin</b>プロパティで変更。",
-          "値を<b>0</b>に設定し、ヘッダーの背景色をページ全体に広げる。"
-        ],
-        "youtube": "https://www.youtube.com/embed/GNtTxiRY3iY"
-      }
-    ],
-    [
-      "課題 1-7",
-      "タイトルの文字色を変えよう。",
-      {
-        "list": [
-          "セレクタにh1（タイトル）を記述し、中カッコ<code>{...}</code>内にプロパティと値を追加。",
-          "文字色は<b>color</b>プロパティで変更。",
-          "色の名称リストは<a href='http://www.htmq.com/color/colorname.shtml' target='_blank'>こちら</a>を参照。"
-        ],
-        "youtube": "https://www.youtube.com/embed/O9HBIUlDSmE"
+        "codepen": [
+          "634nakajimaMejiro",
+          "xxZZqPY"
+        ]
       }
     ],
     [
       "課題 2-1",
-      "メイン部分（文章）の幅を読みやすくしよう。",
+      "Unsplashの画像IDを取得しよう。",
       {
         "list": [
-          "ウィンドウの幅が広い場合に、文章が幅いっぱいに表示されて<b>読みにくい</b>。",
-          "要素の幅の上限をmainセレクタ内<b><code>max-width</code></b>プロパティで指定できる。",
-          "<b>px</b>はピクセル（画素）の単位で、ブラウザに表示される<b>絶対的</b>な大きさを表す。"
+          "<a href='https://unsplash.com/' target='_blank'>Unsplash</a>にアクセスし、表示したい画像をキーワードで検索（英語推奨）。",
+          "表示したい画像を選択し、アドレスバー末尾11ケタの<b>写真ID</b>をコピー。"
         ],
-        "youtube": "https://www.youtube.com/embed/LqnZUzxcUj8"
+        "youtube": "https://www.youtube.com/embed/__oYXHWnRTE"
       }
     ],
     [
       "課題 2-2",
-      "メイン部分を中央に揃えよう。",
+      "Unsplash画像を表示させよう。",
       {
         "list": [
-          "mainの幅の上限を指定すると、デフォルトでは左寄せになってしまう。",
-          "main外側の左右の余白を均等にし、中央にするには<b><code>margin: auto;</code></b>と指定。"
+          "src=の横に以下のように記述。<br><code>\"https://source.unsplash.com/{コピーした写真ID}/{表示したい任意の幅x高さ}\"</code>",
+          "alt=の横には\"画像の内容\"を書いておく。",
+          "スライドのテンプレートを<b>Fork</b>してsrc属性とalt属性を自身が探した画像に書き換えよう。"
         ],
-        "youtube": "https://www.youtube.com/embed/4g-7AKQ1k4Y"
+        "codepen": [
+          "634nakajimaMejiro",
+          "xxZZqPY"
+        ]
       }
     ],
     [
-      "課題 3-1",
-      "目次の大きさと場所を調整しよう。",
+      "埋め込みコード",
+      "Chartblocksの埋め込みコードを取得する。",
       {
         "list": [
-          "テンプレートではHTMLの目次部分を<b><code>&ltnav&gt~&lt/nav&gt</code></b>タグ（メニュー等を表すタグ）で括ってある。",
-          "navセレクタ内<b><code>width</code></b>プロパティに<b><code>150px</code></b>と指定。",
-          "navセレクタ内<b><code>margin</code></b>プロパティに<b><code>auto</code></b>と指定。"
+          "埋め込みコードとは、他サイトの内容をHTMLファイルにコピペして表示するためのスニペット。",
+          "埋め込みには<code><b>&ltiframe&gt~&ltiframe&gt</b></code>タグが用いられる。",
+          "<a href='https://app.chartblocks.com/' target='_blank'>Chartblocks</a>にアクセスし、自身が作成したグラフのページに移動。"
         ],
-        "youtube": "https://www.youtube.com/embed/RAm2--K8ARQ"
+        "codepen": [
+          "musashinakajima",
+          "dyGPYyd"
+        ],
+        "caption": "<figcaption class='aligncenter'>このCodePenも埋め込みコードのひとつ</figcaption>"
       }
     ],
     [
       "課題 3-2",
-      "目次に枠線をつけよう。",
+      "表示用にグラフを編集し、埋め込みコードを取得しよう。",
       {
         "list": [
-          "枠線は<b><code>border</code></b>プロパティで、線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。",
-          "角の丸みは<b><code>border-radius</code></b>プロパティで、半径をpx単位で指定。",
-          "線の種類は<code>solid（実線）, dotted（点線）, double（二重線）</code>などがある。"
+          "後でキャプションを載せるためグラフタイトルは消去し、サイズを適当な大きさ（400x400程度）に変更。",
+          "変更後、ページを<b>再読み込み</b>しないと埋め込みコードに反映されないので注意。",
+          "共有アイコン &gt <b>Embed Code</b>の内容をコピー。"
         ],
-        "youtube": "https://www.youtube.com/embed/nEfAH4_E7Es"
+        "youtube": "https://www.youtube.com/embed/3jCtv5ViiEI"
       }
     ],
     [
       "課題 3-3",
-      "見出しを目立たせよう。",
+      "Chartblocksグラフを表示させよう。",
       {
         "list": [
-          "ここでは、文字<b>サイズ</b>の変更と見出しの<b>装飾線</b>を追加。",
-          "<b><code>border-left</code></b>や<b><code>border-bottom</code></b>プロパティで枠線のうち<b>1辺</b>だけ線をつけられる。",
-          "値には線の<b>種類</b>、<b>太さ</b>、<b>色</b>をスペースで区切って指定。"
+          "スライドのテンプレートを<b>Fork</b>して自身が作成したグラフに書き換える。"
         ],
-        "youtube": "https://www.youtube.com/embed/A9i_zRB3Sgo"
+        "codepen": [
+          "634nakajimaMejiro",
+          "wvMMdZP"
+        ]
       }
     ],
     [
-      "課題 4-1",
-      "目次と段落の見た目を調整しよう。",
+      "課題 4",
+      "図にキャプションをつけよう。",
       {
         "list": [
-          "ここでは、目次の装飾線の左右に<b>余白</b>をつけ、節見出しと本文を<b>左揃え</b>にして読みやすくする。",
-          "pセレクタの<code>text-align</code>プロパティに<b><code>justify</code></b>を指定すると、<b>均等揃え</b>（文章の両端が揃う）ができる。"
+          "図のキャプション（図番号、タイトル）は<b><code>&ltfigcaption&gt~&lt/figcaption&gt</code></b>で括る。",
+          "スライドのテンプレートを<b>Fork</b>して課題2と同様に&ltimg&gtタグと&ltfigcaption&gtタグの中身を変更。"
         ],
-        "youtube": "https://www.youtube.com/embed/E136VPebQ-c"
+        "codepen": [
+          "634nakajimaMejiro",
+          "KKVVXZZ"
+        ]
       }
     ],
     [
-      "課題 4-2",
-      "段落の文章を読みやすくしよう。",
+      "課題 5",
+      "目次と図を雛形に追加しよう。",
       {
         "list": [
-          "文字サイズを<b><code>font-size</code></b>プロパティで、em単位で指定。",
-          "行間の大きさを<b><code>line-height</code></b>プロパティで、em単位で指定。"
+          "前回作成した<b>雛形</b>（前回課題6）を開く。",
+          "雛形の<b><code>&ltmain&gt~&lt/main&gt</code></b>タグ内先頭に、<b>課題 1</b>の内容をコピペ。",
+          "雛形の適当な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグ内に、<b>課題 4</b>の内容をコピペ。"
         ],
-        "youtube": "https://www.youtube.com/embed/J2yR19gv32E"
+        "codepen": [
+          "634nakajimaMejiro",
+          "jOWWGjK"
+        ]
       }
     ],
     [
-      "最終チェック",
-      "ページ全体を確認しよう。",
+      "リンク",
+      "クリックでのページ移動は&lta&gtタグを用いる。",
       {
         "list": [
-          "画面右上 <b><code>Change View &gt Debug mode</code></b>からWebページをプレビューできる。"
+          "あらかじめ、ページ内の飛びたい先の要素の<b><code>id</code></b>属性を用意し、任意の名前をつけておく。",
+          "&lta&gtタグの<b><code>href</code></b>属性に、飛びたい場所の情報（<b>ハッシュタグ</b>と同じ）を記述。",
+          "<b><code>&lta&gt~&lt/a&gt</code></b>タグで括った文字をクリックして飛べるようになる。"
         ],
-        "youtube": "https://www.youtube.com/embed/830AgWdcVJU"
+        "codepen": [
+          "634nakajimaMejiro",
+          "RwrrjKg"
+        ]
       }
     ],
     [
-      "Webサイトデザインの完成",
+      "課題 6",
+      "雛形の目次にリンクを追加しよう。",
+      {
+        "list": [
+          "課題5で編集した<b>雛形</b>を開く。",
+          "雛形内の目次の各項目をクリックすると、見出しにジャンプできるようにする。",
+          "各<b><code>&ltsection&gt</code></b>タグのid属性に自分でそれぞれ<b>違う</b>名前をつけ、<b><code>&lta&gt</code></b>タグのhref属性に\"#名前\"を入力。"
+        ],
+        "codepen": [
+          "634nakajimaMejiro",
+          "Rwrrjyj"
+        ]
+      }
+    ],
+    [
+      "Webサイト雛形の完成",
       "右のプレビュー画面のように表示される。"
     ],
     [
       "リンクの送信",
-      "CSSで見た目を自分なりにアレンジし、URLを提出。",
+      "完成した雛形のURLを提出。",
       {
         "list": [
-          "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
-          "テンプレートを<b>Fork</b>し忘れていないか確認。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/26締切）。"
+          "アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>（前回提出したものと同じになるはず）。",
+          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/19締切）。"
         ],
         "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
       "今回のまとめ",
-      "CSSを用いてWebサイトの見た目をデザイン。",
+      "図と目次を作成し、雛形に追加。",
       {
         "list": [
-          "CSSの<b>セレクタ</b>、<b>プロパティ</b>、<b>値</b>について紹介。",
-          "様々な種類の<b>プロパティ</b>に値を指定。",
-          "Webサイトの基本レイアウトを紹介。"
+          "&ltul&gt, &ltol&gtタグで<b>リスト</b>を作成。",
+          "&ltfigure&gt, &ltimg&gt,  &ltfigcaption&gtタグで<b>図</b>を作成。",
+          "&ltiframe&gtタグで<b>他サイト</b>のコンテンツを挿入。",
+          "&lta&gtタグで<b>リンク</b>を作成。"
         ],
-        "image": "https://source.unsplash.com/6JVlSdgMacE/480x360"
+        "image": "https://source.unsplash.com/7AIDE8PrvA0/460x480"
       }
     ]
   ]
