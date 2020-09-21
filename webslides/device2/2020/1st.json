@@ -139,7 +139,7 @@
       "MakeCodeを使ってみよう。",
       {
         "list": [
-          "<a href='https: //makecode.microbit.org/' target='_blank'>MakeCode</a>にアクセスし、アイコンを表示するプログラムを作成。",
+          "<a href='https://makecode.microbit.org/' target='_blank'>MakeCode</a>にアクセスし、アイコンを表示するプログラムを作成。",
           "プログラムの<b>共有リンク</b>を提出。"
         ],
         "embed": "<iframe\r\nstyle=\"position:absolute;top:0;left:0;width:100%;height:100%;\"\r\nsrc=\"https:\/\/makecode.microbit.org\/#pub:_fap4HFi3KcpC\" frameborder=\"0\"\r\nsandbox=\"allow-popups allow-forms allow-scripts allow-same-origin\"><\/iframe>"
