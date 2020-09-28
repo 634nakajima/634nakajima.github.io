@@ -1,0 +1,103 @@
+{
+  "explanation": [
+    [
+      "今回の目標",
+      "少しずつ授業に慣れましょう。",
+      {
+        "list": [
+          "授業内容や実施方法について把握する。",
+          "<b>Gmail</b>から教員宛にメールを送る。"
+        ],
+        "image": "https://source.unsplash.com/npxXWgQ33ZQ/"
+      }
+    ],
+    [
+      "プロフィール",
+      "はじめまして、担当教員の中島です。"
+    ],
+    [
+      "略歴",
+      "デジタルメディアを使ったアート表現を研究してきました。",
+      {
+        "list": [
+          "2013年　早稲田大学　基幹理工学部表現工学科　助手",
+          "2017年　東京工芸大学　芸術学部インタラクティブメディア学科　助教",
+          "2018年　学位取得　博士（工学、早稲田大学）",
+          "2019年　目白大学　外国語学部中国語学科　非常勤講師"
+        ],
+        "image": "../static/images/musashi_s.jpg"
+      }
+    ],
+    [
+      "授業の実施方法（第1〜9回）",
+      "スライド資料やZoomでの解説を参考に、課題を提出。",
+      {
+        "list": [
+          "毎週<b>WebCom</b>から配信されるスライド資料を閲覧する。",
+          "授業開始時刻になったら<b>Zoom</b>にアクセスし、解説に沿って作業を行う。",
+          "資料内で提示された<b>課題</b>を期日までに提出（課題提出をもって出席とする）。",
+          "提出期限は授業日中〜２週間程度を予定。"
+        ],
+        "image": "https://source.unsplash.com/ePu9rM_ud7g/480x360"
+      }
+    ],
+    [
+      "授業の実施方法（第10〜最終回）",
+      "グループチャットで課題をこなす。",
+      {
+        "list": [
+          "毎週事前にWebCom上でスライド資料を掲示。",
+          "決められたグループで<b>グループワーク</b>を実施。",
+          "チャット（<b>Google Chat</b>）への参加をもって出席とする。"
+        ],
+        "image": "https://source.unsplash.com/ePu9rM_ud7g/480x360"
+      }
+    ],
+    [
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
+      {
+        "list": [
+          "履修環境の把握と、授業に関して個別に連絡することがあるため。",
+          "右の動画か、<a href='https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=ja' target='_blank'>こちらの資料</a>を参考に自身の身分を示す<b>署名</b>を設定する（未設定の人のみ）。"
+        ],
+        "embed": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/zm-BeCjiGPs\" frameborder=\"0\"\r\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n<\/iframe>"
+      }
+    ],
+    [
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
+      {
+        "list": [
+          "例として右のような署名を設定しておくと、メール末尾に自動で追加される。"
+        ],
+        "html": "<pre>****************************************\n目白大学外国語学部\n中国語学科１年\n学籍番号 2000000\n目白　太郎\nmail: trmjr20cl@uni.mejiro.ac.jp\n****************************************</pre>"
+      }
+    ],
+    [
+      "メール課題（パソコン利用者）",
+      "大学のGmailから教員宛にメールを送ろう。",
+      {
+        "list": [
+          "右の文章は、フォーマルなメールの書き方の一例。",
+          "パソコンの有無やデータ通信環境、その他質問があれば記載してください。",
+          "宛先：m.nakajima@uni.mejiro.ac.jp<br>締切：次回授業日の<b>前日 23:59</b>まで"
+        ],
+        "html": "<pre>件名：課題１（2000000 目白太郎）\n本文：\n中島先生\n\nお世話になっております。\n中国語学科2年の目白太郎です。\n自宅からパソコンで受講していますが、マイク、カメラは使用できません。\n\n何卒よろしくお願い申し上げます。\n（以下、署名）</pre>"
+      }
+    ],
+    [
+      "メール課題（パソコンが使えない人）",
+      "Gmailスマートフォンアプリからメールを送ろう。",
+      {
+        "list": [
+          "ログインしていない人は<a href=\"https://support.google.com/mail/answer/8494?co=GENIE.Platform%3DiOS&hl=ja\" target=\"_blank\">こちら</a>を参考に、大学のGmailアカウントでログイン。</h5>",
+          "前ページの例文、署名を参考にメールを送信。"
+        ],
+        "html": [
+          "<h4><strong>Google Gmail<\/strong><\/h4><h5>\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u3044\u306a\u3044\u4eba\u306f\u3053\u3061\u3089\u304b\u3089\u3002<\/h5><ul><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/apps.apple.com\/jp\/app\/gmail-e%E3%83%A1%E3%83%BC%E3%83%AB-by-google\/id422689480\" target=\"_blank\" class=\"button zoomIn ga-track\">\u3000App Store\r\n\uff08iPhone\uff09<\/a><\/li><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/play.google.com\/store\/apps\/details?id=com.google.android.gm&hl=ja\" target=\"_blank\" class=\"button zoomIn ga-track\">Google Play\uff08android\uff09<\/a><\/li><\/ul>"
+        ]
+      }
+    ]
+  ]
+}
