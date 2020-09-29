@@ -1,230 +1,62 @@
 {
-  "classtitle": "グラフの制作",
-  "number": 3,
-  "chaptertitle": [
-    "アンケート結果の集計",
-    "Chartblocksでのグラフ化",
-    "リンクの送信"
-  ],
   "explanation": [
     [
       "今回の目標",
-      "Webサービスを使ってグラフを作成。",
+      "興味のあるデータを収集してグラフ化。",
       {
         "list": [
-          "<b>Googleスプレッドシート</b>を用いて、架空のアンケート結果を集計。",
-          "<b>ChartBlocks</b>を用いて、作成したデータをグラフ化。",
-          "共有リンクを取得して配布（<b>5/29締切</b>）。"
+          "次回以降のWebサイト制作のテーマとして、自身が興味のあるデータに着目。",
+          "Webサイトに載せるためのデータを収集、整理、グラフ化。",
+          "最低<b>2</b>つ以上のグラフを作成し、共有リンクを提出（締切: 次回授業<b>前日</b>）。"
         ],
         "image": "https://source.unsplash.com/pypeCEaJeZY"
       }
     ],
     [
-      "アンケートデータのコピー",
-      "予め用意されたスプレッドシートをコピーして編集。",
+      "データの収集・整理・グラフ化",
+      "気になるテーマを決めたら、グラフにまとめる。",
       {
         "list": [
-          "<a href='https://docs.google.com/spreadsheets/d/1LK79iMWkHzQtnUhi9nFSb7o0-HOBqlDe_91dzlYpPxE/edit?usp=sharing' target='_blank'>こちら</a>から配布データにアクセス（要ログイン）。",
-          "画面左上の'ファイル' > 'コピーを作成' を選択。",
-          "名前を「{学籍番号}集計表」としてOK。"
+          "インターネットや書籍等を利用してデータを収集。",
+          "文献から<b>数値のみ</b>を引用し、自分で<b>2</b>種類以上の表とグラフを作成。"
         ],
-        "embed": "<img class='aligncenter' src='./pics/spreadsheet.png' alt='spreadsheet'>"
+        "image": "https://source.unsplash.com/FMrZLPdDyx4"
       }
     ],
     [
-      "アンケートデータ",
-      "スマホ、SNS、パソコン操作の自信度に関する架空のデータ。",
+      "参考文献に関する注意",
+      "文献情報が明らかでないものは、信憑性が不十分。",
       {
         "list": [
-          "このデータを<b>集計</b>し、グラフ化の準備をする。",
-          "課題を通して、<b>黄色セル</b>部分に集計した値を入力。"
+          "文献情報は「著者（または発表機関）名. \"タイトル\", 出版社名（論文の場合は誌名, 巻数, 号数）, 発行年.」の順で記載が必要。",
+          "Webサイトの場合は「発表機関（会社）名. \"Webサイトタイトル\". URL, （閲覧日）」の順で記載が必要。",
+          "出所不明の文書やWikipedia、ブログなどは著者が匿名であったり所属が不明確なため<b>不適切</b>。"
         ],
-        "embed": "<img class='aligncenter' src='./pics/spreadsheet2.png' alt='spreadsheet'>"
+        "image": "https://source.unsplash.com/tzsUJD0TGkk/480x360"
       }
     ],
     [
-      "課題 1",
-      "スマホ利用者数を集計しよう。",
-      {
-        "list": [
-          "iPhone, androidの利用者数をカウントする<b>関数</b>を用いる。",
-          "関数とは、与えられたデータに対し特定の処理をしてくれるもの。",
-          "所定のセルに以下を入力。<br>=COUNTIF(対象のセル範囲, \"カウントするワード\")"
-        ],
-        "youtube": "https://www.youtube.com/embed/tX-ZF-Z2Y3E"
-      }
+      "参考文献に関する注意",
+      ""
     ],
     [
-      "課題 2",
-      "SNS利用者数を集計しよう。",
+      "共有リンクと参考文献情報",
+      "グラフを作成したら共有リンクと参考文献を提出。",
       {
         "list": [
-          "セル内は複数のSNS名が列挙されているため、課題1の方法ではうまくいかない。",
-          "文字列が部分的に一致しているかどうかは以下を用いる。<br>=COUNTIF(対象のセル範囲, \"<b>*</b>カウントするワード<b>*</b>\")"
-        ],
-        "youtube": "https://www.youtube.com/embed/9WIKL11NGgI"
-      }
-    ],
-    [
-      "課題 3",
-      "学科ごとのパソコン操作の自信度平均値を算出。",
-      {
-        "list": [
-          "<b>平均値</b>を用いて、学科間のパソコン操作の自信度の違いを比較する。",
-          "平均値の算出には以下の関数を用いる。<br>=AVERAGE(対象のセル範囲)"
-        ],
-        "youtube": "https://www.youtube.com/embed/sSCoUAOVPg0"
-      }
-    ],
-    [
-      "ChartBlocks とは",
-      "データを元にグラフを生成するWebサービス。",
-      {
-        "list": [
-          "マウスポインタで<b>詳細</b>を見ることができる。",
-          "Webサイト等に<b>埋め込んで</b>利用しやすい。",
-          "今回はWebサイト制作を見据え、このサービスを利用。"
-        ],
-        "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
-      }
-    ],
-    [
-      "ChartBlocksへのサインアップ",
-      "大学のGoogleアカウントでサインアップ（登録）可能。",
-      {
-        "list": [
-          "<a href='https://app.chartblocks.com/register' target='_blank'>こちら</a>に移動し、'Sign up with Google' を選択。'",
-          "Googleのアカウントを選択し、パスワードを入力。",
-          "<b>Personal</b>プランを選択し、'Create a chart'をクリック。"
-        ],
-        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
-      }
-    ],
-    [
-      "課題 4-1",
-      "スマホ利用者を円グラフで表そう。",
-      {
-        "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF2:G3の範囲を選択し、コピー<br>（<b>Controlキーを押しながらcを押す</b>）。",
-          "ChartBlockのセル左上に貼り付け<br>（<b>Controlキーを押しながらvを押す</b>）。"
-        ],
-        "youtube": "https://www.youtube.com/embed/11AVk_97UFM"
-      }
-    ],
-    [
-      "課題 4-2",
-      "スマホ利用者を円グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>スマホの利用者数</b>と入力し、画面右上 next をクリック。",
-          "<b>円グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/fQTjBHaipCk"
-      }
-    ],
-    [
-      "課題 4-3",
-      "スマホ利用者を円グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
-        ],
-        "youtube": "https://www.youtube.com/embed/hosXOmOpSUM"
-      }
-    ],
-    [
-      "課題 5-1",
-      "SNS利用者を横棒グラフで表そう。",
-      {
-        "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF6:G10の範囲を選択し、コピー。",
-          "ChartBlockのセル左上に貼り付け。"
-        ],
-        "youtube": "https://www.youtube.com/embed/_Y8D83V7jMs"
-      }
-    ],
-    [
-      "課題 5-2",
-      "SNS利用者を横棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>SNSの利用者数</b>と入力し、画面右上 next をクリック。",
-          "<b>棒グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/ZRMVpK6gdRg"
-      }
-    ],
-    [
-      "課題 5-3",
-      "SNS利用者を横棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、Typeタブで<b>横棒</b>グラフに変更。"
-        ],
-        "youtube": "https://www.youtube.com/embed/pgd_p6Lrpns"
-      }
-    ],
-    [
-      "課題 6-1",
-      "学科間のパソコン操作の自信度の差を縦棒グラフで表そう。",
-      {
-        "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF13:G14の範囲を選択し、コピー。",
-          "ChartBlockのセル左上に貼り付け。"
-        ],
-        "youtube": "https://www.youtube.com/embed/QU5ZKK56JPQ"
-      }
-    ],
-    [
-      "課題 6-2",
-      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>パソコン操作の自信度</b>と入力し、画面右上 next をクリック。",
-          "<b>棒グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/KOwB732ee08"
-      }
-    ],
-    [
-      "課題 6-3",
-      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>平均値</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
-        ],
-        "youtube": "https://www.youtube.com/embed/L-Nqv7chwzY"
-      }
-    ],
-    [
-      "リンクの送信",
-      "スプレッドシートと３つのグラフの共有リンクを提出。",
-      {
-        "list": [
-          "スプレッドシートは、画面右上<b>共有</b>をクリックし、'共有可能なリンクを取得' をクリック。",
-          "ChartBlocks は、画面右上<b>Share</b>アイコンをクリックし、'Publick link' 下のリンクを選択してコピー。",
-          "スプレッドシートと３つのグラフの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（5/29締切）。"
+          "第3回授業内の課題と同様に共有リンクを取得（動画参照）。",
+          "グラフの共有リンクと、参照した文献・Webサイト情報を<b>WebCom</b>の内容欄に貼り付けて提出（締切: 次回授業前日）。"
         ],
         "youtube": "https://www.youtube.com/embed/adFa3ytdOtE"
       }
     ],
     [
       "今回のまとめ",
-      "2つのWebサービスでデータ集計とグラフ作成。",
+      "自身の気になるデータを集計しグラフ作成。",
       {
         "list": [
-          "Googleスプレッドシートの<b>関数</b>で回答者数を集計。",
-          "ChartBlockで棒グラフ、円グラフを作成。",
-          "共有リンクをWebComに提出。"
+          "Webサイトに載せるためのデータを収集、整理、グラフ化。",
+          "共有リンクと参考文献情報をWebComに提出。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }

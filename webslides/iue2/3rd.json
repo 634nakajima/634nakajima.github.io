@@ -1,11 +1,4 @@
 {
-  "classtitle": "グラフの制作",
-  "number": 3,
-  "chaptertitle": [
-    "アンケート結果の集計",
-    "Chartblocksでのグラフ化",
-    "リンクの送信"
-  ],
   "explanation": [
     [
       "今回の目標",
@@ -14,7 +7,7 @@
         "list": [
           "<b>Googleスプレッドシート</b>を用いて、架空のアンケート結果を集計。",
           "<b>ChartBlocks</b>を用いて、作成したデータをグラフ化。",
-          "共有リンクを取得して配布（<b>5/29締切</b>）。"
+          "共有リンクを取得して配布（締切: 次回授業<b>前日</b>）。"
         ],
         "image": "https://source.unsplash.com/pypeCEaJeZY"
       }
@@ -212,7 +205,7 @@
         "list": [
           "スプレッドシートは、画面右上<b>共有</b>をクリックし、'共有可能なリンクを取得' をクリック。",
           "ChartBlocks は、画面右上<b>Share</b>アイコンをクリックし、'Publick link' 下のリンクを選択してコピー。",
-          "スプレッドシートと３つのグラフの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（5/29締切）。"
+          "スプレッドシートと３つのグラフの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（次回授業前日締切）。"
         ],
         "youtube": "https://www.youtube.com/embed/adFa3ytdOtE"
       }
