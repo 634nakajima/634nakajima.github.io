@@ -47,7 +47,7 @@
     ]
   },
   "5th": {
-    "json": "./4th.json",
+    "json": "./5th.json",
     "classtitle": "文書内の各要素を記述する",
     "number": 5,
     "chaptertitle": [
