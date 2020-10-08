@@ -17,7 +17,7 @@
       "予め用意されたスプレッドシートをコピーして編集。",
       {
         "list": [
-          "<a href='https://docs.google.com/spreadsheets/d/1LK79iMWkHzQtnUhi9nFSb7o0-HOBqlDe_91dzlYpPxE/edit?usp=sharing' target='_blank'>こちら</a>から配布データにアクセス（要ログイン）。",
+          "<a href='https://docs.google.com/spreadsheets/d/1LK79iMWkHzQtnUhi9nFSb7o0-HOBqlDe_91dzlYpPxE/edit?usp=sharing' target='_blank'>こちら</a>から配布データにアクセス（<b>大学アカウント</b>でログイン）。",
           "画面左上の'ファイル' > 'コピーを作成' を選択。",
           "名前を「{学籍番号}集計表」としてOK。"
         ],
