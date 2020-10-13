@@ -217,7 +217,7 @@
         "list": [
           "合計４つの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（締切：次回授業<b>前日</b>）。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
