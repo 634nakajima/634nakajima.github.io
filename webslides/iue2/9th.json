@@ -5,7 +5,6 @@
       "文章と図を作成してWebサイトを完成。",
       {
         "list": [
-          "自身の身の回りの気になるデータに関してインターネット等で調査し、<b>Chartblocks</b>でグラフを作成。",
           "過去に作成したCodePenの<b>雛形</b>を編集し、着目したテーマに関する<b>文章</b>を執筆。",
           "CSSのテンプレをカスタマイズして<b>見た目</b>をデザイン。"
         ],
@@ -41,7 +40,7 @@
       {
         "list": [
           "次の章では、着目したテーマを論じる上で前提となる知識や用語を調べて記述する。",
-          "調べるテーマについて、どのように（何の機関がいつ提供した何に関するデータを元に）調査するのかを記述する。",
+          "調べるテーマについて、どのように（第4回で行った、何の機関がいつ提供した何に関するデータを元に）調査するのかを記述する。",
           "適宜<b>画像</b>を挿入しても良い。"
         ],
         "image": "https://source.unsplash.com/zjV8ptYgcEo/480x360"
@@ -52,8 +51,8 @@
       "現状や推移などを示すグラフを提示し、グラフについて説明する。",
       {
         "list": [
-          "GoogleスプレッドシートやExcelを用いてデータを整理し、<b>Chartblocks</b>を用いてグラフ化（<a href='./3_chart.html' target='_blank'>第３回授業スライド参照</a>）。",
-          "<b>結果</b>などの章にグラフの埋め込みコードを貼り付け、本文中にグラフの<b>説明</b>をする。",
+          "<b>結果</b>などの章に第4回授業で作成したグラフの埋め込みコードを貼り付け、本文中にグラフの<b>説明</b>をする。",
+          "Chartblocksへの移動と埋め込みコードの取得については<a href='./6_web.html#slide=11' target='_blank'>第6回の授業資料</a>を参照。",
           "図番号とタイトルを忘れずにつける。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
@@ -85,7 +84,7 @@
       "参考文献の情報を正しく掲載する。",
       {
         "list": [
-          "データの収集などに参考にした<b>文献情報</b>を正しく記述する。",
+          "データの収集などに参考にした<b>文献情報</b>を正しく記述する（<a href='./4_chart.html#slide=5' target='_blank'>第4回の授業資料</a>参照）。",
           "書籍の場合は「著者名、タイトル、出版社、発行年」、Webサイトの場合は「サイトタイトル、URL、閲覧日」が必要。"
         ],
         "image": "https://source.unsplash.com/tzsUJD0TGkk/480x360"
@@ -97,9 +96,9 @@
       {
         "list": [
           "編集が終わったら、いつもどおりアドレスバーの<b>URL</b>をコピーし、WebComの内容欄に貼り付けて提出。",
-          "締切は授業の<b>1週間後</b>。"
+          "締切は次回授業の<b>前日</b>。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
@@ -107,7 +106,6 @@
       "文章と図を作成してWebサイトを完成。",
       {
         "list": [
-          "自身の身の回りの気になるデータに関して<b>Chartblocks</b>でグラフを作成。",
           "文章と見た目を編集してWebサイトを完成。"
         ],
         "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
