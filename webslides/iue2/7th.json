@@ -225,9 +225,9 @@
         "list": [
           "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
           "テンプレートを<b>Fork</b>し忘れていないか確認。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（6/26締切）。"
+          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（次回授業前日締切）。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
