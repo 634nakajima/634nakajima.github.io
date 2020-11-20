@@ -46,7 +46,7 @@
       {
         "list": [
           "<a href='https://codepen.io/634nakajimaMejiro/pen/LYGZeBz?editors=1100' target='_blank'>こちら</a>を開き、SCSSの中身を<b>コピー</b>して先のテンプレートに貼り付け（Forkは<b>不要</b>）。",
-          "<a href='./5_web.html#slide=9' target='_blank'>第５回の授業資料</a>を参考に、ページ背景となる画像を探し、<b>URL</b>を変更。",
+          "<a href='./6_web.html#slide=9' target='_blank'>第6回の授業資料</a>を参考に、ページ背景となる画像を探し、<b>URL</b>を変更。",
           "画像の<b>透明度</b>や<b>背景色</b>なども変更できる。画像が不要なら、URL部分を消去し<code><b>\"\"</b></code>のみ記述。"
         ],
         "youtube": "https://www.youtube.com/embed/80Xi_cnVBLk"
