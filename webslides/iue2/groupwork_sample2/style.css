@@ -1,0 +1,128 @@
+﻿@charset "UTF-8";
+/*ページ背景の基本プロパティ-*/
+/*----------------------*/
+body {
+  font-family: "Arial", YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin: 0;
+  position: relative;
+  background-color: rgba(165, 42, 42, 0.1);
+}
+body::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background: url("https://source.unsplash.com/nF8xhLMmg0c/");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+body figure, body footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/*--ヘッダーの基本プロパティ--*/
+/*----------------------*/
+header {
+  background: url("https://source.unsplash.com/KdeqA3aTnBY/1600x900");
+  /* 背景画像指定 */
+  background-size: cover;
+  background-position: 0px 60vh;
+  background-attachment: fixed;
+  height: 60vh;
+  position: relative;
+}
+header h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3.3em;
+  color: white;
+  text-shadow: 2px 4px 6px black;
+  line-height: 1.2em;
+}
+
+/*---目次の基本プロパティ---*/
+/*----------------------*/
+/*----------------------*/
+/*----------------------*/
+nav {
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px brown;
+  border-radius: 30px;
+  width: 20em;
+  margin: 30px auto;
+}
+nav h2 {
+  color: black;
+  border-bottom: solid 5px brown;
+  width: 5em;
+  margin: 10px auto;
+  padding-bottom: 5px;
+}
+nav li {
+  margin-left: 10px;
+  padding: 3px;
+  text-align: left;
+}
+nav li a {
+  color: brown;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+nav li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/*-セクションの基本プロパティ-*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+section {
+  max-width: 768px;
+  margin: 0px auto;
+  padding: 20px;
+  color: brown;
+  counter-increment: section;
+}
+section h2 {
+  color: brown;
+  text-align: left;
+  font-size: 2em;
+  padding-left: 10px;
+  border-left: orange solid 4px;
+}
+section h2:before {
+  content: counter(section) ". ";
+}
+section p {
+  color: black;
+  font-size: 1.3em;
+  text-align: justify;
+  line-height: 1.8;
+  padding-bottom: 2px;
+}
+section li {
+  color: black;
+  font-size: 0.9em;
+  text-align: justify;
+  line-height: 1.6;
+  padding-bottom: 2px;
+}
+section figcaption {
+  color: black;
+}
