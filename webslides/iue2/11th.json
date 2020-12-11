@@ -46,7 +46,8 @@
       {
         "list": [
           "<a href='https://www.chartblocks.com/ja/' target='_blank'><code>Chartblocks</code></a>を用いてアンケート結果を<b>分担</b>してグラフ化。",
-          "ワークシートに作成したグラフの<b>埋め込みコード</b>を貼り付ける。"
+          "ワークシートに作成したグラフの<b>埋め込みコード</b>（<iframe から始まるHTMLスニペット）を貼り付ける。",
+          "必ずしもアンケート結果を全てグラフ化する必要はなく、重要なものだけにしたり、複数の質問を一つのグラフにすることもある。"
         ],
         "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
       }
