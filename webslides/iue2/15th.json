@@ -16,8 +16,9 @@
       "Webサイトの良かった点と改善点をまとめる。",
       {
         "list": [
-          "記述シート内該当リンクから<b>Googleフォーム</b>にアクセスして回答を確認。",
-          "他グループメンバーからの感想を元に、Webサイトの良かった点、および改善点について考察し、<b>400字</b>以上でまとめる。"
+          "ワークシート内該当リンクから<b>Googleフォーム</b>にアクセスして回答を確認。",
+          "他グループメンバーからの感想を元に、Webサイトの良かった点、および改善点についてメンバーと話し合う。",
+          "話し合った内容をもとに<b>各自</b>で文章にまとめる（<b>400字</b>以上）。"
         ],
         "image": "https://source.unsplash.com/u2Ru4QBXA5Q/480x360"
       }
@@ -29,7 +30,7 @@
         "list": [
           "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
@@ -71,8 +72,8 @@
       "自身の気になるデータでグラフを作成。",
       {
         "list": [
-          "",
-          ""
+          "自身の興味のあるテーマに着目し、データを<b>収集</b>。",
+          "調べたデータを整理し、Chartblocksで<b>分かりやすく</b>グラフ化。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
@@ -117,7 +118,8 @@
       "アンケートをまとめたWebサイトを完成させ、相互評価。",
       {
         "list": [
-          "調査結果をWebサイトに分かりやすくまとめ、<b>相互評価</b>アンケートを作成し、他グループの作品を評価。"
+          "調査結果をWebサイトに分かりやすくまとめ、<b>相互評価</b>アンケートを作成",
+          "他グループの作品を閲覧し、分かりやすさを評価。"
         ],
         "image": "https://source.unsplash.com/JVSgcV8_vb4"
       }
@@ -139,15 +141,14 @@
         "list": [
           "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
       "今回のまとめ",
-      "他グループのWebサイトを評価しあい、授業全体を振り返る。",
+      "Webサイトの評価を確認し、授業全体を振り返る。",
       {
         "list": [
-          "各グループのアンケートページに移動して相互評価。",
           "Webサイトの評価を確認し、良かった点と改善点について考察。",
           "授業全体を振り返り、できるようになったこと等を整理。"
         ],
@@ -159,8 +160,8 @@
       "半期の授業お疲れ様でした！",
       {
         "list": [
-          "<h6>全ての授業が遠隔という慣れない状況の中でとても大変だったと思います。カリキュラムの変更を最低限に抑え、遠隔でも円滑に授業を実施できるよう最大限の努力をしてきましたが、至らない点も多かったかもしれません。</h6>",
-          "<h6>WebComの「お知らせ」で掲示したとおり、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。</h6>"
+          "<h5>全ての授業が遠隔という慣れない状況の中でとても大変だったと思います。カリキュラムの変更を最低限に抑え、遠隔でも円滑に授業を実施できるよう最大限の努力をしてきました。</h5>",
+          "<h5>一方で、至らない点も多かったかもしれません。今後の授業運営の参考にすため、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。</h5>"
         ],
         "image": "https://source.unsplash.com/Xaanw0s0pMk"
       }
