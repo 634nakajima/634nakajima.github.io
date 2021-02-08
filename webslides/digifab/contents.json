@@ -1,0 +1,91 @@
+{
+  "maintitle": "デジタルファブリケーション演習",
+  "parttitle": [
+    "Ⅰ　デジタルファブリケーション技術の紹介",
+    "Ⅲ Tinkercadを用いた3Dプリンティング",
+    "Ⅳ センサを用いた動くアート制作"
+  ],
+  "1st": {
+    "classtitle": "ガイダンス",
+    "json": "./1st.json",
+    "number": 1,
+    "chaptertitle": [
+      "授業の概要説明",
+      "2D加工いろいろ",
+      "3Dプリンティング技術",
+      "動きをモチーフとした作品紹介"
+    ]
+  },
+  "2nd": {
+    "classtitle": "モノづくり素材学 その1",
+    "json": "./2nd.json",
+    "number": 2,
+    "chaptertitle": [
+      "レーザーカッターで用いられる素材",
+      "3Dプリンタで用いられる素材"
+    ]
+  },
+  "3rd": {
+    "classtitle": "モノづくり素材学 その2",
+    "json": "./3rd.json",
+    "number": 3,
+    "chaptertitle": [
+      "DIYでよく用いられる素材",
+      "特殊な機能を持つ素材"
+    ]
+  },
+  "8th": {
+    "classtitle": "Tinkercad入門",
+    "json": "./8th.json",
+    "number": 8,
+    "chaptertitle": [
+      "ボタンによるLED表示の切替",
+      "シューティングゲームの制作"
+    ]
+  },
+  "9th": {
+    "classtitle": "モノづくり機構学 その1",
+    "json": "./9th.json",
+    "number": 9,
+    "chaptertitle": [
+      "様々な電子部品の紹介",
+      "作品アイディアの検討"
+    ]
+  },
+  "10th": {
+    "classtitle": "モノづくり機構学 その2",
+    "json": "./10th.json",
+    "number": 10,
+    "chaptertitle": []
+  },
+  "11th": {
+    "classtitle": "アクチュエーション技術の紹介",
+    "json": "./11th.json",
+    "number": 11,
+    "chaptertitle": []
+  },
+  "12th": {
+    "classtitle": "micro:bit内蔵センサを利用する",
+    "json": "./12th.json",
+    "number": 12,
+    "chaptertitle": []
+  },
+  "13th": {
+    "classtitle": "作品アイディアの検討・制作",
+    "json": "./13th.json",
+    "number": 13,
+    "chaptertitle": []
+  },
+  "14th": {
+    "classtitle": "作品の完成",
+    "json": "./14th.json",
+    "number": 14,
+    "chaptertitle": []
+  },
+  "15th": {
+    "classtitle": "作品講評・全体のまとめ",
+    "json": "./15th.json",
+    "number": 15,
+    "chaptertitle": []
+  }
+}

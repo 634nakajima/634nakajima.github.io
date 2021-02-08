@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+    rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/svg-icons.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <div id="banner"></div>
+  <main role="main">
+    <article id="webslides" class="vertical" order="2nd">
+      <section class="part2">
+        <div class="wrap">
+          <div class="partTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="text-context">Ⅱ LEDアニメーションを作ろう</p>
+          <h4><strong>テーマ概要</strong></h4>
+          <h3>インタラクティブに変化するLEDアニメーションを制作。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="../pics/chick.png" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>第２回　micro:bitプログラミング入門</h5>
+                </li>
+                <li>
+                  <h5>第３回　LEDの表示を自動で変化させる</h5>
+                </li>
+                <li>
+                  <h5>第４回　LEDの表示をスイッチ入力で変化させる</h5>
+                </li>
+                <li>
+                  <h5>第５回　様々なセンサ入力を利用する</h5>
+                </li>
+                <li>
+                  <h5>第６回　サウンドで演出する</h5>
+                </li>
+                <li>
+                  <h5>第７回　オリジナルの作品を制作する</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="classTitle"></div>
+          <div class="chapterList"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>今回の目標</strong></h4>
+          <h3>MakeCodeを使ってプログラミングの基本をつかむ。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/ieic5Tq8YMk" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>micro:bitのプログラミング構造について理解する。</h5>
+                </li>
+                <li>
+                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>、<b>条件分岐</b>、<b>繰り返し</b>について理解する。</h5>
+                </li>
+                <li>
+                  <h5>綺麗で分かりやすいソースコードを書く。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="chapter1">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>コンピュータが命令を処理することを<b>関数の実行</b>と呼ぶ。</h5>
+              </li>
+              <li>
+                <h5>あらかじめ<b>定義</b>（用意）された関数と、自分で定義する関数がある。</h5>
+              </li>
+              <li>
+                <h5>MakeCodeには、様々な関数を表す<b>ブロック</b>があらかじめ定義されている。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の実行
+//記述順に実行される。
+  function1(arg)
+  function2()
+
+//関数の定義
+function1(arg: number): number {
+    return subfunction(arg)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>関数の実行と引数</strong></h4>
+          <h3>引数を渡すことで様々な命令ができる。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>関数の実行に必要な値（ここでは"文字列1"、"文字列2"）を<b>引数</b>と呼ぶ。</h5>
+              </li>
+              <li>
+                <h5>引数のおかげで、<b>任意</b>の文字列を表示することができる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の実行と引数
+basic.showString("文字列1")//文字列1を表示
+basic.showString("文字列2")//文字列2を表示</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>「文字列を表示」ブロックは、<b>basic.showString("Hello!")
+                  </b>という関数を表す。</h5>
+              </li>
+              <li>
+                <h5>好きな文字列を表示させよう。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_8xv3TsYCf4jx" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>「ずっと」ブロックの中身は、繰り返し実行される。</h5>
+              </li>
+              <li>
+                <h5>「ずっと」ブロックは、<b>basic.forever(function(){処理内容})</b>を表す。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_4y8AdDgRcRyq" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>「アイコンを表示」ブロックは、<b>basic.showIcon(IconNames.Heart)
+                  </b>という関数を表す。</h5>
+              </li>
+              <li>
+                <h5>この関数は<b>表示時間</b>を表す引数を追加することができる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//ドキドキハートの周期を変えてみよう。
+basic.forever(function() {
+  //IconNames.Heartの横に、
+  //", 200"を加えると、表示時間を指定できる
+  basic.showIcon(IconNames.Heart, 200)
+  basic.showIcon(IconNames.SmallHeart, 200)
+})
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter2">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>表示する値の入れ物（<b>変数</b>）を用意する。</h5>
+              </li>
+              <li>
+                <h5>数字を表示する関数に変数を代入し、変数の中身を1ずつ増やす。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_3mR7VyD4iVf2" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>変数の宣言と代入</strong></h4>
+          <h3>変数を使うことで、処理を効率的に記述できる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h4>変数の宣言</h4>
+                <h5>変数を初めて使う際に必要。"let"や"const"などがある。</h5>
+              </li>
+              <li>
+                <h4>変数名</h4>
+                <h5>プログラマが名付けることができる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の実行と変数
+①let ②num ③= 0 
+basic.forever(function () {
+  basic.showNumber(num)
+  num ④+= 1
+})</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>変数の宣言と代入</strong></h4>
+          <h3>変数を使うことで、処理を効率的に記述できる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li style="counter-reset:list 2;">
+                <h4>値の代入　"<b>=</b>"</h4>
+                <h5>右の値を左に入れることを表す。</h5>
+              </li>
+              <li>
+                <div>
+                  <h4>足して代入　"<b>+=</b>"</h4>
+                  <h5>変数の値を右の値だけ増やして代入することを表す。</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//関数の実行と変数
+①let ②num ③= 0 
+basic.forever(function () {
+  basic.showNumber(num)
+  num ④+= 1
+})</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter3">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>例題3を数字が減るように改変する。</h5>
+              </li>
+              <li>
+                <h5>0になったらアイコンを表示させる。</h5>
+              </li>
+              <li>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_68xLwgEyU4LL" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>条件分岐とif文</strong></h4>
+          <h3>もし〜なら〜。という処理は条件分岐と呼ばれる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h4>条件式</h4>
+                <h5>真か偽のどちらかになる式。</h5>
+              </li>
+              <li>
+                <h5>条件式が<b>真</b>の時に実行する処理。</h5>
+              </li>
+              <li>
+                <h5>条件式が<b>偽</b>の時に実行する処理。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//条件分岐
+if (count > 0) {//①countが0より大きかったら、
+  basic.showNumber(count, 200)//②countを表示
+  count -= 1//②countを1減らして再代入
+} else {//③そうでなかったら（countが0以下なら）、
+  basic.showIcon(IconNames.Skull)//③ドクロを表示
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter4">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>ハートの明るさを脈打つように変化させる。</h5>
+              </li>
+              <li>
+                <h5>明るさの値を少しずつ変えて繰り返し設定する。</h5>
+              </li>
+              <li>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_eFuJE0AJrKKt" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>繰り返しとfor文</strong></h4>
+          <h3>似たような処理を繰り返す時は、for文を用いる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h4>カウンタ</h4>
+                <h5>繰り返し回数を表すための変数。<br>最初に0にしておく。</h5>
+              </li>
+              <li>
+                <h4>条件式</h4>
+                <h5>繰り返し回数を決める条件式。<br>真の間だけ{ }の中を繰り返す。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//条件分岐
+for (①let index = 0; ②index &lt= 255; ③index++) {
+  led.setBrightness(255 - index)
+  basic.pause(1)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>繰り返しとfor文</strong></h4>
+          <h3>似たような処理を繰り返す時は、for文を用いる。</h3>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li style="counter-reset: list 2;">
+                <h5>{ }内の処理を終えた後に実行する処理。<br>普通はカウンタを1増やす処理を書く。<br>(<b>インクリメント</b>）</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//条件分岐
+for (①let index = 0; ②index &lt= 255; ③index++) {
+  led.setBrightness(255 - index)
+  basic.pause(1)
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter5">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>コメント</strong></h4>
+          <h3>ソースコードに注釈をつける。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5><b>//</b>を先頭につけた行は、実行時に無視される。</h5>
+              </li>
+              <li>
+                <h5>複数行コメントは、<b>/*</b>と<b>*/</b>で囲む。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//数値表示用変数の宣言
+let num = 0
+//数字を1から順番に表示し続ける
+basic.forever(function() {
+  /* "num++"は、引数に代入した後に
+  インクリメントすることを表す */
+  basic.showNumber(num++);
+})</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>例題3の2行目に、ソースコードの概要を加えよう。</h5>
+              </li>
+              <li>
+                <h5>4-5行目に、関数内の具体的な処理について説明しよう。</h5>
+              </li>
+              <li>
+                <h5>作成したプログラムをClassroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_EbxiTViLx7yj" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>動作確認のために特定の関数を一時的に無視することを<b>コメントアウト</b>と呼ぶ。</h5>
+              </li>
+              <li>
+                <h5>例題3の9行目をコメントアウトし、動作の違いを確認してみよう。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_e1TJTYAJDa1s" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>インデント</strong></h4>
+          <h3>可読性を向上させるための字下げをする。</h3>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5><b>tab</b>キーを押して、ソースコードの階層を見やすくする。</h5>
+              </li>
+              <li>
+                <h5><b>shift+alt+F</b>で、インデントを自動でつけられる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//×インデントなし
+basic.forever(function(){
+subFunction()
+})
+//○インデントあり
+basic.forever(function(){
+  subFunction()
+})</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>見にくいコードと見やすいコード</strong></h4>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>関数や"="の前後のスペースはなくても良いが、可読性の観点からつけるべき。</h5>
+              </li>
+              <li>
+                <h5>変数宣言キーワードと変数名の間にはスペースが必要。</h5>
+              </li>
+              <li>
+                <h5>引数が多い時は改行することもあるが、そうでない場合は可読性が悪くなる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//エラーではないが、見にくいコード
+let num=0
+const arg1=
+"arg1"
+const arg2="arg2"
+basic.
+forever(function(){
+subFunction(arg1,
+arg2,    num)
+num
++=1}
+)</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>よくあるエラー</strong></h4>
+          <h3>ひたすら自分の手でコードを書き写し、エラーと闘うべし。</h3>
+
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5><b>括弧、中括弧</b>が足りない or 多い。</h5>
+              </li>
+              <li>
+                <h5><b>全角</b>が混ざっている。特に全角スペースは気づきにくい。</h5>
+              </li>
+              <li>
+                <h5>スペルミス。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre><code class="prettyprint lang-js">//よくあるエラー
+basic.foever(function(){
+  myFunction(arg1, arg2)　　　　
+})
+}</code></pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <h4><strong>今回のまとめ</strong></h4>
+          <h3>MakeCodeを用いて基本的なコーディングを練習。</h3>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/ieic5Tq8YMk" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>micro:bitのプログラミング構造について説明。</h5>
+                </li>
+                <li>
+                  <h5><b>関数</b>、<b>引数</b>、<b>変数</b>、<b>条件分岐</b>、<b>繰り返し</b>について学習。</h5>
+                </li>
+                <li>
+                  <h5>綺麗で分かりやすいソースコードの書き方を練習。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <script src="../../template/template.js"></script>
+  <!-- Required -->
+  <script src="../../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../../static/js/svg-icons.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

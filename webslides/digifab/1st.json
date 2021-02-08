@@ -1,0 +1,326 @@
+{
+  "explanation": [
+    [
+      "今回の目標",
+      "授業の基本的な進め方を把握する。",
+      {
+        "list": [
+          "<b>出席</b>（授業内課題を含む）<br>全て出席で50点。",
+          "<b>作品制作</b><br>テーマⅠ：20点、テーマⅡ：30点。"
+        ],
+        "image": "https://source.unsplash.com/zFSo6bnZJTw/"
+      }
+    ],
+    [
+      "授業の目標",
+      "電子工作技術の習得と、新たな表現や課題解決手段の提案。",
+      {
+        "list": [
+          "<b>micro:bit</b>を用いてセンサ類を制御する。",
+          "外装で覆い<b>インタラクティブ</b>な作品を制作する。",
+          "制作した作品について<b>プレゼンテーション</b>する。"
+        ],
+        "image": "../pics/microbit.png"
+      }
+    ],
+    [
+      "授業の流れ（中島担当分）",
+      "授業での解説をもとに、毎回課題を提出。",
+      {
+        "list": [
+          "授業開始時刻までにClassroom上に掲載したZoomのURLと授業用資料（スライドURL）にアクセス。",
+          "授業内の指示に従って<b>プログラム</b>を作成。",
+          "該当回の授業内課題にプログラムのURLを<b>提出</b>。"
+        ],
+        "image": "../pics/classroom_task.png"
+      }
+    ],
+    [
+      "成績評価（中島担当分）",
+      "以下の２項目を総合的に考慮して成績を評価。",
+      {
+        "list": [
+          "<b>出席</b>（授業内課題を含む）<br>全て出席で50点。",
+          "<b>作品制作</b><br>テーマⅠ：20点、テーマⅡ：30点。"
+        ],
+        "image": "https://source.unsplash.com/zFSo6bnZJTw/"
+      }
+    ],
+    [
+      "",
+      "作品の評価項目は、①完成度、②技術性、③コンセプト。",
+      {
+        "list": [
+          "① 外観、見た目など。",
+          "② 高度なセンサ制御、プログラミングの工夫。",
+          "③ 作品を通して何を伝えようとしているのか（アート的思考）。<br>　 または何を解決しようとしているのか（デザイン的思考）。"
+        ],
+        "image": "https://source.unsplash.com/MamWbmmaylY/"
+      }
+    ],
+    [
+      "パートⅠの概要",
+      "今現在のデジタルファブリケーション技術を知る。",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "レーザー彫刻",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "2Dインナーマーキング",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "サンドブラスト",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "ウォータージェット",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "UVプリント",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "昇華転写プリント",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "FDM（熱溶解積層法）",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "SLA（光造形法）",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "粉末焼結積層造形法",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "フルカラー3Dプリンタ",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "金属素材3Dプリンタ",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "CNCミリングマシン",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "射出成型",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "真空成型",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "PocoPoco",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "Luminescent tentacles",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "ZeroN",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "TRANSFORM",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "Daniel Rozinの作品",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "strandbeest",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "Marble Machine",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "Kinetic sculpture",
+      "",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "ボタンを使った２つのコンテンツを制作。",
+      {
+        "list": [
+          "<b><code>enum</code></b>を使ってコンテンツの状態管理を<b>分かりやすく</b>コーディング。",
+          "<b>Game</b>の機能を使ってシューティングゲームを制作。"
+        ],
+        "image": "http://source.unsplash.com/eCktzGjC-iU/"
+      }
+    ]
+  ]
+}

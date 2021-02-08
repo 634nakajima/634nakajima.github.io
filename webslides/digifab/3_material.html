@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>デバイス演習Ⅱ</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="デバイス演習Ⅱの授業スライドです。">
+  <!-- URL CANONICAL -->
+  <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+    rel="stylesheet">
+
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/webslides.css">
+
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="../../static/css/svg-icons.css">
+  <link rel="stylesheet" type="text/css" media='all' href="../../static/css/myStyle.css">
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="../../static/images/favicons/favicon.png">
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <div id="banner"></div>
+  <main role="main">
+    <article id="webslides" class="vertical" order="3rd">
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="classTitle"></div>
+          <div class="chapterList"></div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/lwwM_dotpcs" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>オリジナルの関数を<b>定義</b>してコードを簡潔にする。</h5>
+                </li>
+                <li>
+                  <h5>LEDの明るさを個別に<b>コントロール</b>し、より豊かな表現につなげる。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="chapter1">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h5>座標(x, y)のLEDをON。(0,0)が左上で(4,4)が右下。</h5>
+              </li>
+              <li>
+                <h5>座標(x, y)のLEDのON/OFF切替。</h5>
+              </li>
+              <li>
+                <h5>座標(x, y)のLEDの明るさをa（0-255）に設定。</h5>
+              </li>
+              <li>
+                <h5>全てのLEDの明るさをa（0-255）に設定。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="exampleSentence content-left">
+            <h5>LEDを制御するための関数</h5>
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">led.plot(x, y)//1.
+
+led.toggle(x, y)//2.
+
+led.plotBrightness(x, y, a)//3.
+
+led.setBrightness(a)//4.</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>アイコンの各座標を<b>led.toggle(x, y)</b>でON/OFF。</h5>
+              </li>
+              <li>
+                <h5>次のLEDを表示する前に<b>basic.pause(ミリ秒)</b>で一時停止。</h5>
+              </li>
+              <li>
+                <h5>一時停止の時間を変えてアニメーション速度を変えてみよう。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_JTaVriMW4DKh" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter2">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5><b>例題1</b>では、led.toggle(x, y)とbasic.pause(100)を何度も記述しており<b>非効率</b>。</h5>
+              </li>
+              <li>
+                <h5>basic.pause(ミリ秒)の引数を変えるのにも一苦労。</h5>
+              </li>
+              <li>
+                <h5>ほぼ同じ処理を一つの関数として<b>定義</b>することで、何度も<b>再利用</b>できる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="exampleSentence content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">/*-----ほぼ同じ処理のセット1-------*/
+led.toggle(0, 3)  //引数以外同じ処理
+basic.pause(100)  //全く同じ処理
+/*-----ほぼ同じ処理のセット2-------*/
+led.toggle(1, 4)  //引数以外同じ処理
+basic.pause(100)  //全く同じ処理
+/*-----ほぼ同じ処理のセット3-------*/
+led.toggle(2, 3)  //引数以外同じ処理
+basic.pause(100)  //全く同じ処理
+...</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h5>関数を定義するときに<b>冒頭</b>に必ずつけるキーワード。</h5>
+              </li>
+              <li>
+                <h5>ここではON/OFF切替と一時停止をするので<b>toggleAndPause</b>と命名。</h5>
+              </li>
+              <li>
+                <h5>関数の内部でLEDの座標が必要なので、それぞれ<b>x</b>, <b>y</b>と命名。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+  ⑤led.toggle(x, y)
+  ⑤basic.pause(100)
+}</code></pre>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li style="counter-reset: list 3;">
+                <h5>型には、number（数値）、string（文字列）、any（なんでも可）などがある。</h5>
+                <h5>今回は<b>座標</b>を引数として受け取りたいため、<b>number</b>を指定。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+  ⑤led.toggle(x, y)
+  ⑤basic.pause(100)
+}</code></pre>
+          </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li style="counter-reset: list 4;">
+                <h5>led.toggle()の引数に、自分が命名した引数(x,y)を代入。</h5>
+                <h5>次に、一時停止の処理を加える。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">①function ②toggleAndPause(③x: ④number, y: number) {
+  ⑤led.toggle(x, y)
+  ⑤basic.pause(100)
+}</code></pre>
+          </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>これにより、<b>任意</b>の座標に対してON/OFF切替と一時停止の処理を<b>1行</b>で実行できる。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">toggleAndPause(1,2)
+//↑のように書くと、この関数の内部で、
+led.toggle(1, 2)
+basic.pause(100)
+//が実行される。
+</code></pre>
+          </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>先ほどの<b>toggleAndPause()</b>を実装。</h5>
+              </li>
+              <li>
+                <h5>basic.forever()の内部をtogleAndPause()に書き換える。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_MDeeFiMUvHM5" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="content-left">
+            <ul class="flexblock reasons">
+              <li>
+                <h5>一時停止時間を、オプション引数として<b>ms</b>と命名。</h5>
+                <h5>引数の型の横にデフォルト値（ここでは100）を<b>代入</b>すれば、オプション引数にできる。</h5>
+              </li>
+              <li>
+                <h5>msをbasic.pause()の引数に渡す。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <pre style="white-space: pre;"><code class="prettyprint lang-js">function toggleAndPause(x: number, y: number, ms:number = 100 ①) {
+  led.toggle(x, y)
+  basic.pause(ms)②
+}</code></pre>
+          </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>アイコンをアニメーション表示する関数を定義。</h5>
+              </li>
+              <li>
+                <h5>オプション引数でアニメーション速度を変更可能。</h5>
+              </li>
+              <li>
+                <h5>オリジナルの一筆書きアニメーション関数をつくり、classroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_KMaattCAF0Hd" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+          </div>
+      </section>
+
+      <section class="chapter3">
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="chapterTitle"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5><b>led.plotBrightness(x,y,a)</b>でLEDの明るさを個別に指定できる。</h5>
+              </li>
+              <li>
+                <h5>for文を使って個々のLEDが<b>フェードイン</b>する関数を作成。</h5>
+              </li>
+              <li>
+                <h5>作成した関数を組み合わせてフェードイン一筆書きをする。</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_YLfdyfW59c9p" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/MM-TbvsHYkM/" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>for文は繰り返しが全て終了するまで次の処理に移れない。</h5>
+                </li>
+                <li>
+                  <h5>そのため、例題4では同時に複数のLEDをフェードインさせることが<b>できない</b>。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/MM-TbvsHYkM/" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>LEDの明るさを変化させる処理をバックグラウンドに<b>登録</b>。</h5>
+                </li>
+                <li>
+                  <h5>登録された個々のLEDの処理をバックグラウンドで<b>同時</b>に実行。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/MM-TbvsHYkM/" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>しかし、バックグラウンドに処理を登録し実行するアルゴリズム（プログラミングの手順）は<b>複雑</b>すぎてまだ教えられません！</h5>
+                </li>
+                <li>
+                  <h5>そのため、今回は予め作成しておいた関数を用いた<b>アニメーション制作</b>に重点をおく。
+                  </h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="exercise"></div>
+          <div class="content-left">
+            <ul class="flexblock specs">
+              <li>
+                <h5>fadeInOut()（8行目以下で定義）でホタルに見立てたLEDを明滅させ、ランダムに表示させる。</h5>
+              </li>
+              <li>
+                <h5>ランダムな値を取得するには、<br>Math.randomRange(最小値, 最大値)を用いる。</h5>
+              </li>
+              <li>
+                <h5>fadeIn()、fadeOut()、fadeInOut()を用いたオリジナル作品を作成し、classroomに<b>提出</b>。</h5>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-left">
+            <div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                src="https://makecode.microbit.org/#pub:_TWHCHbarEWAf" frameborder="0"
+                sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="slideHeader"></div>
+          <div class="explanation"></div>
+          <div class="grid sm">
+            <div class="column">
+              <img class="aligncenter" src="https://source.unsplash.com/re_640IIZeE" alt="">
+            </div>
+            <div class="column">
+              <ul class="flexblock specs">
+                <li>
+                  <h5>関数の<b>定義</b>の書き方を練習。</h5>
+                </li>
+                <li>
+                  <h5>LEDの様々な光らせ方を、作品へ応用。</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <hr>
+      </section>
+    </article>
+    <!-- end article -->
+  </main>
+  <!-- end main -->
+
+  <script src="../../template/template.js"></script>
+  <!-- Required -->
+  <script src="../../static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
+
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="../../static/js/svg-icons.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

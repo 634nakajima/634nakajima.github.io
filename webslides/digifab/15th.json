@@ -1,0 +1,101 @@
+{
+  "explanation": [
+    [
+      "今回の目標",
+      "音が出るアプリケーションを制作。",
+      {
+        "list": [
+          "シューティングゲームに<b>効果音</b>をつける。",
+          "メロディを自作して<b>再生</b>する。",
+          "加速度センサと組み合わせてメロディを<b>変化</b>させる。"
+        ],
+        "image": "https://source.unsplash.com/UA76cH4JBHM/480x360"
+      }
+    ],
+    [
+      "music",
+      "音やメロディを鳴らすための様々な関数セット。",
+      {
+        "list": [
+          "<b>music</b>の中の関数を使い、<b>単音</b>を鳴らすことができる。",
+          "実機ではミノムシクリップとスピーカが別途必要。",
+          "鳴らせる音色は<b>矩形波</b>（四角い形の音波）のみ。"
+        ],
+        "image": "https://source.unsplash.com/X3EnHhFa4vQ/480x360"
+      }
+    ],
+    [
+      "例題 1-1",
+      "ボタンを押した時の効果音をつけよう。",
+      {
+        "list": [
+          "第４回の<b>例題 5</b>にサウンドをつける。",
+          "<b>music.playTone(音の高さ, 鳴らす時間)</b>で音を出せる。"
+        ],
+        "code": "input.onButtonPressed(Button.A, function () {\r\n    gun.move(-1)\r\n    music.playTone(1000, 20)\r\n})\r\ninput.onButtonPressed(Button.B, function () {\r\n    gun.move(1)\r\n    music.playTone(1000, 20)\r\n})\r\n\/\/\u4ee5\u4e0b\u7701\u7565"
+      }
+    ],
+    [
+      "例題 1-2",
+      "弾の発射音をつけよう。",
+      {
+        "list": [
+          "<code>music.playTone()</code>だと、鳴り終わってからでないと弾のアニメーション処理に移れない（<b>フォアグラウンド</b>処理）。",
+          "代わりにバックグラウンド処理を行える<code><b>music.beginMelody(音の配列)</b></code>を用いる。"
+        ],
+        "code": "input.onButtonPressed(Button.AB, function () {\r\n    music.setTempo(700)\r\n    music.beginMelody(\r\n        [\r\n            \"G2:1\", \"G3:1\", \"D4:1\", \"G4:1\",\r\n            \"B4:1\", \"D5:1\", \"F5:1\", \"G5:1\"\r\n        ]\r\n    )\r\n\/\/\u4ee5\u4e0b\u7701\u7565\r\n{)"
+      }
+    ],
+    [
+      "配列 とは",
+      "複数の変数（定数）をまとめたリストのこと。",
+      {
+        "list": [
+          "配列内の変数（定数）はカンマで区切り、全体を[ ]で括る。",
+          "ここでは<b>\"A4:1\"</b>のように、英音名+オクターブ（数字）: 拍数（1は16分音符）で表される文字列の配列を用意。"
+        ],
+        "code": "\/\/\u914d\u5217\u306e\u5ba3\u8a00\r\nlet melodies = [\r\n  \"C4:1\",\r\n  \"D4:1\",\r\n  \"E4:1\"\r\n]"
+      }
+    ],
+    [
+      "例題 2",
+      "簡単なメロディを再生しよう。",
+      {
+        "list": [
+          "例として<b>カエルの歌</b>を再生する。",
+          "最初にカエルの歌のメロディを配列で用意。",
+          "<code>music.beginMelody()</code>で再生。"
+        ],
+        "code": "let melodies = [\r\n    \"c4:4\",\"d4:4\",\"e4:4\",\"f4:4\",\"e4:4\",\"d4:4\",\"c4:4\",\"rest:4\",\r\n    \"e4:4\",\"f4:4\",\"g4:4\",\"a4:4\",\"g4:4\",\"f4:4\",\"e4:4\",\"rest:4\",\r\n    \"c4:4\",\"rest:4\",\"c4:4\",\"rest:4\",\"c4:4\",\"rest:4\",\"c4:4\",\"rest:4\",\r\n    \"c4:1\",\"rest:1\",\"c4:1\",\"rest:1\",\"d4:1\",\"rest:1\",\"d4:1\",\"rest:1\",\r\n    \"e4:1\",\"rest:1\",\"e4:1\",\"rest:1\",\"f4:1\",\"rest:1\",\"f4:1\",\"rest:1\",\r\n    \"e4:4\", \"d4:4\",\"c4:4\",\"rest:4\"\r\n]\r\nmusic.beginMelody(melodies, MelodyOptions.Forever)\r\n"
+      }
+    ],
+    [
+      "例題 3",
+      "ジョギングを応援してくれる音楽を流そう。",
+      {
+        "list": [
+          "揺さぶった動きに応じて音楽の<b>テンポ</b>を変化させて、ユーザを鼓舞する。",
+          "<code><b>input.isGesture(Gesture.Shake)</b></code>で揺さぶっているかどうかを取得できる。",
+          "if文を使い、テンポを<code><b>music.changeTempoBy(変化量)</b></code>で変更。"
+        ],
+        "code": "let melodies = [\r\n    \"a3:2\", \"e4:2\", \"e4:2\", \"f#4:2\",\r\n    \"e4:2\", \"d4:2\", \"d4:2\", \"f#4:2\",\r\n    \"g4:2\", \"b4:2\", \"d5:2\", \"b4:2\",\r\n    \"b4:2\", \"a4:2\", \"a4:2\", \"rest:2\",\r\n    \"b4:2\", \"c#4:2\", \"c#4:2\", \"b4:2\",\r\n    \"a4:2\", \"d4:2\", \"d4:2\", \"f#4:2\",\r\n    \"f#4:2\", \"e4:2\", \"f#4:2\", \"e4:2\",\r\n    \"f#4:2\", \"e4:2\", \"f#4:2\", \"e4:2\"\r\n]\r\nmusic.beginMelody(melodies, MelodyOptions.ForeverInBackground)\r\nbasic.forever(function () {\r\n    \/\/BPM60-200\u306e\u9593\u3067\u3001\u63fa\u3055\u3076\u308b\u307b\u3069\u30c6\u30f3\u30dd\u304c\u901f\u304f\u306a\u308b\u3088\u3046\u306b\u3059\u308b\u3002\r\n    \/\/\u63fa\u3055\u3076\u3089\u308c\u3066\u3044\u3066\u3001\u304b\u3064BPM\u304c200\u3088\u308a\u5c0f\u3055\u304b\u3063\u305f\u3089\r\n    if (input.isGesture(Gesture.Shake) && music.tempo() < 200) {\r\n        music.changeTempoBy(1)\/\/BPM\u30921\u4e0a\u3052\u308b\r\n    } else if (music.tempo() > 60) {\/\/\u305d\u3046\u3067\u306f\u306a\u304f\u3066\u3001BPM\u304c60\u4ee5\u4e0a\u3060\u3063\u305f\u3089\r\n        music.changeTempoBy(-1)\/\/BPM\u30921\u4e0b\u3052\u308b\r\n    }\r\n    led.plotBarGraph(music.tempo() - 60, 140)\r\n})\r\n"
+      }
+    ],
+    [
+      "例題の提出",
+      "例題1, 2, 3をClassroomに提出。"
+    ],
+    [
+      "今回のまとめ",
+      "音が出るアプリケーションを制作。",
+      {
+        "list": [
+          "シューティングゲームに<b>効果音</b>を追加。",
+          "カエルの歌を<b>再生</b>。",
+          "ジョギングをメロディで鼓舞してくれるプログラムを作成。"
+        ],
+        "image": "https://source.unsplash.com/MlJ4TeespJU/540x360"
+      }
+    ]
+  ]
+}
