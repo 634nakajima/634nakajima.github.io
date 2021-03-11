@@ -1,0 +1,38 @@
+{
+  "maintitle": "生活空間の文化",
+  "6th": {
+    "classtitle": "生活空間におけるモノが伝える表現",
+    "json": "./6th.json",
+    "number": 6,
+    "chaptertitle": [
+      "行為を促すデザイン",
+      "日常を彩るデザイン",
+      "表現手段と表現内容",
+      "表現と再現"
+    ]
+  },
+  "7th": {
+    "classtitle": "生活空間における音が与える印象",
+    "json": "./7th.json",
+    "number": 7,
+    "chaptertitle": []
+  },
+  "8th": {
+    "classtitle": "音・人・空間・技術が織りなす音楽",
+    "json": "./8th.json",
+    "number": 8,
+    "chaptertitle": []
+  },
+  "9th": {
+    "classtitle": "メディア技術と表現",
+    "json": "./9th.json",
+    "number": 9,
+    "chaptertitle": []
+  },
+  "10th": {
+    "classtitle": "形や動きを生み出す技術と表現",
+    "json": "./10th.json",
+    "number": 10,
+    "chaptertitle": []
+  }
+}
