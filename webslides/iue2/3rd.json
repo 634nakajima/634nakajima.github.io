@@ -6,7 +6,7 @@
       {
         "list": [
           "<b>Googleスプレッドシート</b>を用いて、架空のアンケート結果を集計。",
-          "<b>ChartBlocks</b>を用いて、作成したデータをグラフ化。",
+          "集計したデータを<b>グラフ化</b>。",
           "共有リンクを取得して配布（締切: 次回授業<b>前日</b>）。"
         ],
         "image": "https://source.unsplash.com/pypeCEaJeZY"
