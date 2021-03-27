@@ -7,6 +7,15 @@
     "Ⅳ　プレゼンテーション資料の作成",
     "演習テーマ<br>社会問題に関する調査"
   ],
+  "1st": {
+    "classtitle": "Google Classroomの操作",
+    "number": 1,
+    "json": "./1st.json",
+    "chaptertitle": [
+      "Classroomへのアクセス",
+      "ストリームへの投稿"
+    ]
+  },
   "4th": {
     "classtitle": "検索の活用と著作権",
     "number": 4,
