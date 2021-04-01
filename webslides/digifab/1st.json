@@ -128,40 +128,6 @@
       }
     ],
     [
-      "2D加工ミニクイズ 1",
-      "",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hhq1Lxtuwd8/"
-      }
-    ],
-    [
-      "2D加工ミニクイズ 2",
-      "ウォータージェットの水流の速さはどれくらい？",
-      {
-        "list": [
-          "A. およそ時速 <b>300</b> km",
-          "B. およそ時速 <b>1000</b> km",
-          "C. およそ時速 <b>3000</b> km"
-        ],
-        "image": "https://source.unsplash.com/hhq1Lxtuwd8/"
-      }
-    ],
-    [
-      "2D加工ミニクイズ 3",
-      "",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hhq1Lxtuwd8/"
-      }
-    ],
-    [
       "FDM（熱溶解積層法）",
       "熱で溶かした樹脂を下から積み上げて造形する方式。",
       {
@@ -260,50 +226,6 @@
           "シリコン製パーツやチョコレート、石鹸などの<b>型</b>も制作できる。"
         ],
         "youtube": "https://www.youtube.com/embed/MTZ5FunrcDY"
-      }
-    ],
-    [
-      "3D加工ミニクイズ 1",
-      "ガイドがないと3Dプリンタで造形できない形はどれでしょう？",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
-      }
-    ],
-    [
-      "3D加工ミニクイズ 2",
-      "PLAの溶ける温度は何度でしょう？",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hpjSkU2UYSU/480x360"
-      }
-    ],
-    [
-      "3D加工ミニクイズ 3",
-      "TPUはなんの略でしょう？",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hhq1Lxtuwd8/"
-      }
-    ],
-    [
-      "3D加工ミニクイズ 4",
-      "FDM法の元となった特許が切れたのはいつでしょう？",
-      {
-        "list": [
-          "",
-          ""
-        ],
-        "image": "https://source.unsplash.com/hhq1Lxtuwd8/"
       }
     ],
     [
