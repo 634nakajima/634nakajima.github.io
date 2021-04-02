@@ -54,6 +54,17 @@
       }
     ],
     [
+      "今回の目標",
+      "Google Classroomにアクセスし、課題を提出する。",
+      {
+        "list": [
+          "<b>Webブラウザ</b>を用いてGoogle Classroomにアクセスする方法を学ぶ。",
+          "<b>Google Classroom</b>の使い方を学ぶ。"
+        ],
+        "image": "./pics/classroom.png"
+      }
+    ],
+    [
       "Google Classroom とは",
       "授業資料や課題の管理ツール。",
       {
@@ -61,7 +72,19 @@
           "<b>Webブラウザ</b>を用いて<a href='https://classroom.google.com/' target='_blank'>Google Classroom</a>にアクセス。",
           "スマホやタブレットは<b>専用アプリ</b>からアクセス。"
         ],
-        "image": "../iue1/pics/classroom.png"
+        "image": "./pics/classroom.png"
+      }
+    ],
+    [
+      "インターネット とは",
+      "世界中のWebサイトを閲覧できる仕組み。",
+      {
+        "list": [
+          "Webサイトを閲覧するソフトを<b>Webブラウザ</b>と呼ぶ。",
+          "WebブラウザにはMicrosoft Edge, Google Chrome, Apple Safari, Mozilla firefoxなどたくさんある。",
+          "<b>URL</b>と呼ばれる文字列（Webサイトの住所のようなもの）を使ってアクセスする。"
+        ],
+        "image": "https://source.unsplash.com/z6M2R2Jrd4U/480x360"
       }
     ],
     [
@@ -73,7 +96,7 @@
           "受講している場所と端末（例「自宅からスマートフォンを使って受講しています」）をコメント。",
           "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業日当日</b>締切）。"
         ],
-        "image": "../iue1/pics/task1-1.png"
+        "image": "./pics/task1-1.png"
       }
     ],
     [
@@ -85,7 +108,7 @@
           "他の履修生に簡単な自己紹介文を書いてみよう。",
           "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業当日</b>締切）。"
         ],
-        "image": "../iue1/pics/task1-2.png"
+        "image": "./pics/task1-2.png"
       }
     ],
     [
@@ -94,10 +117,10 @@
       {
         "list": [
           "自己紹介の投稿が出そろってきたら、メッセージ下の<b>クラスのコメントを追加</b>というところにコメントを残そう。",
-          "最低<b>4人</b>以上、まだコメントのついていない人を優先。",
+          "最低<b>5人</b>以上、まだコメントのついていない人を優先。",
           "必ず課題の<b>完了としてマーク</b>をクリック（<b>次回授業前日</b>締切）。"
         ],
-        "image": "../iue1/pics/task1-3.png"
+        "image": "./pics/task1-3.png"
       }
     ],
     [
