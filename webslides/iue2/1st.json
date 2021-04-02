@@ -54,49 +54,84 @@
       }
     ],
     [
-      "メール課題（パソコン利用者）",
-      "大学のGmailから教員宛にメールを送ろう。",
+      "今回の目標",
+      "Google Classroomにアクセスし、課題を提出する。",
       {
         "list": [
-          "履修環境の把握と、授業に関して個別に連絡することがあるため。",
-          "右の動画か、<a href='https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=ja' target='_blank'>こちらの資料</a>を参考に自身の身分を示す<b>署名</b>を設定する（未設定の人のみ）。"
+          "<b>Webブラウザ</b>を用いてGoogle Classroomにアクセスする方法を学ぶ。",
+          "<b>Google Classroom</b>の使い方を学ぶ。"
         ],
-        "embed": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/zm-BeCjiGPs\" frameborder=\"0\"\r\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n<\/iframe>"
+        "image": "./pics/classroom.png"
       }
     ],
     [
-      "メール課題（パソコン利用者）",
-      "大学のGmailから教員宛にメールを送ろう。",
+      "Google Classroom とは",
+      "授業資料や課題の管理ツール。",
       {
         "list": [
-          "例として右のような署名を設定しておくと、メール末尾に自動で追加される。"
+          "<b>Webブラウザ</b>を用いて<a href='https://classroom.google.com/' target='_blank'>Google Classroom</a>にアクセス。",
+          "スマホやタブレットは<b>専用アプリ</b>からアクセス。"
         ],
-        "html": "<pre>****************************************\n目白大学外国語学部\n中国語学科１年\n学籍番号 2000000\n目白　太郎\nmail: trmjr20cl@uni.mejiro.ac.jp\n****************************************</pre>"
+        "image": "./pics/classroom.png"
       }
     ],
     [
-      "メール課題（パソコン利用者）",
-      "大学のGmailから教員宛にメールを送ろう。",
+      "インターネット とは",
+      "世界中のWebサイトを閲覧できる仕組み。",
       {
         "list": [
-          "右の文章は、フォーマルなメールの書き方の一例。",
-          "パソコンの有無やデータ通信環境、その他質問があれば記載してください。",
-          "宛先：m.nakajima@uni.mejiro.ac.jp<br>締切：次回授業日の<b>前日 23:59</b>まで"
+          "Webサイトを閲覧するソフトを<b>Webブラウザ</b>と呼ぶ。",
+          "WebブラウザにはMicrosoft Edge, Google Chrome, Apple Safari, Mozilla firefoxなどたくさんある。",
+          "<b>URL</b>と呼ばれる文字列（Webサイトの住所のようなもの）を使ってアクセスする。"
         ],
-        "html": "<pre>件名：課題１（2000000 目白太郎）\n本文：\n中島先生\n\nお世話になっております。\n中国語学科2年の目白太郎です。\n自宅からパソコンで受講していますが、マイク、カメラは使用できません。\n\n何卒よろしくお願い申し上げます。\n（以下、署名）</pre>"
+        "image": "https://source.unsplash.com/z6M2R2Jrd4U/480x360"
       }
     ],
     [
-      "メール課題（パソコンが使えない人）",
-      "Gmailスマートフォンアプリからメールを送ろう。",
+      "課題 1",
+      "限定公開コメント欄にコメントを書こう。",
       {
         "list": [
-          "ログインしていない人は<a href=\"https://support.google.com/mail/answer/8494?co=GENIE.Platform%3DiOS&hl=ja\" target=\"_blank\">こちら</a>を参考に、大学のGmailアカウントでログイン。</h5>",
-          "前ページの例文、署名を参考にメールを送信。"
+          "課題を提出する際に、<b>教員だけ</b>が見れるコメントを残すことができる。",
+          "受講している場所と端末（例「自宅からスマートフォンを使って受講しています」）をコメント。",
+          "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業日当日</b>締切）。"
         ],
-        "html": [
-          "<h4><strong>Google Gmail<\/strong><\/h4><h5>\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u3044\u306a\u3044\u4eba\u306f\u3053\u3061\u3089\u304b\u3089\u3002<\/h5><ul><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/apps.apple.com\/jp\/app\/gmail-e%E3%83%A1%E3%83%BC%E3%83%AB-by-google\/id422689480\" target=\"_blank\" class=\"button zoomIn ga-track\">\u3000App Store\r\n\uff08iPhone\uff09<\/a><\/li><li style=\"display: inline-block;margin: 10px;\"><a href=\"https:\/\/play.google.com\/store\/apps\/details?id=com.google.android.gm&hl=ja\" target=\"_blank\" class=\"button zoomIn ga-track\">Google Play\uff08android\uff09<\/a><\/li><\/ul>"
-        ]
+        "image": "./pics/task1-1.png"
+      }
+    ],
+    [
+      "課題 2",
+      "ストリームに自己紹介をしよう。",
+      {
+        "list": [
+          "ストリームは、クラス全体に向けてメッセージが投稿される。",
+          "他の履修生に簡単な自己紹介文を書いてみよう。",
+          "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業当日</b>締切）。"
+        ],
+        "image": "./pics/task1-2.png"
+      }
+    ],
+    [
+      "課題 3",
+      "他の人の自己紹介に返信しよう。",
+      {
+        "list": [
+          "自己紹介の投稿が出そろってきたら、メッセージ下の<b>クラスのコメントを追加</b>というところにコメントを残そう。",
+          "最低<b>5人</b>以上、まだコメントのついていない人を優先。",
+          "必ず課題の<b>完了としてマーク</b>をクリック（<b>次回授業前日</b>締切）。"
+        ],
+        "image": "./pics/task1-3.png"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "Google Classroomを通じて他の履修生と交流。",
+      {
+        "list": [
+          "<b>Google Classroom</b>の基本操作を練習。",
+          "困ったときは、各課題の<b>限定公開コメント</b>（教員にのみ表示）か、ストリームや各課題の<b>クラスのコメント</b>（クラス全体に表示）に投稿。"
+        ],
+        "image": "https://source.unsplash.com/z6M2R2Jrd4U/480x360"
       }
     ]
   ]
