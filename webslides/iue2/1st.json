@@ -1,17 +1,6 @@
 {
   "explanation": [
     [
-      "今回の目標",
-      "少しずつ授業に慣れましょう。",
-      {
-        "list": [
-          "授業内容や実施方法について把握する。",
-          "<b>Classroom</b>を通じて簡単に自己紹介。"
-        ],
-        "image": "https://source.unsplash.com/npxXWgQ33ZQ/"
-      }
-    ],
-    [
       "プロフィール",
       "はじめまして、担当教員の中島です。"
     ],
@@ -61,7 +50,7 @@
           "<b>Webブラウザ</b>を用いてGoogle Classroomにアクセスする方法を学ぶ。",
           "<b>Google Classroom</b>の使い方を学ぶ。"
         ],
-        "image": "./pics/classroom.png"
+        "image": "../iue1/pics/classroom.png"
       }
     ],
     [
@@ -72,7 +61,7 @@
           "<b>Webブラウザ</b>を用いて<a href='https://classroom.google.com/' target='_blank'>Google Classroom</a>にアクセス。",
           "スマホやタブレットは<b>専用アプリ</b>からアクセス。"
         ],
-        "image": "./pics/classroom.png"
+        "image": "../iue1/pics/classroom.png"
       }
     ],
     [
@@ -96,7 +85,7 @@
           "受講している場所と端末（例「自宅からスマートフォンを使って受講しています」）をコメント。",
           "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業日当日</b>締切）。"
         ],
-        "image": "./pics/task1-1.png"
+        "image": "../iue1/pics/task1-1.png"
       }
     ],
     [
@@ -108,7 +97,7 @@
           "他の履修生に簡単な自己紹介文を書いてみよう。",
           "投稿後、必ず課題の<b>完了としてマーク</b>をクリック（<b>授業当日</b>締切）。"
         ],
-        "image": "./pics/task1-2.png"
+        "image": "../iue1/pics/task1-2.png"
       }
     ],
     [
@@ -120,7 +109,7 @@
           "最低<b>5人</b>以上、まだコメントのついていない人を優先。",
           "必ず課題の<b>完了としてマーク</b>をクリック（<b>次回授業前日</b>締切）。"
         ],
-        "image": "./pics/task1-3.png"
+        "image": "../iue1/pics/task1-3.png"
       }
     ],
     [
