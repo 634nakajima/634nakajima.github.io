@@ -47,17 +47,17 @@
     ],
     [
       "粘土",
-      "",
+      "モデリングによく用いられる加工しやすい素材。",
       {
         "list": [
-          ""
+          "今でもクレイモデルをもとに自動車が生産されている。"
         ],
         "youtube": "https://www.youtube.com/embed/bbOND2gxNq8"
       }
     ],
     [
       "ケミカルウッド",
-      "",
+      "切削加工によく用いられる人工木材。",
       {
         "list": [
           ""
@@ -67,7 +67,7 @@
     ],
     [
       "UVレジン",
-      "",
+      "透明でUVを当てると硬化する素材。",
       {
         "list": [
           ""
@@ -77,7 +77,7 @@
     ],
     [
       "軟質ウレタン",
-      "",
+      "柔らかい質感が特徴の素材。",
       {
         "list": [
           ""
@@ -87,7 +87,7 @@
     ],
     [
       "発泡スチロール",
-      "",
+      "軽量で切削、成型などの加工がしやすい素材。",
       {
         "list": [
           ""
@@ -96,23 +96,23 @@
       }
     ],
     [
-      "Thingiverse",
-      "",
+      "3axis.co",
+      "レーザーカッター等で加工可能なデータを共有するサイト",
       {
         "list": [
-          ""
+          "木工品やパズル、コースターなど様々なモノを作るための2Dカットデータが共有されている。アクセスは<a href='https://www.thingiverse.com/' target=''_blank>こちら</a>。"
         ],
-        "youtube": "https://www.youtube.com/embed/IvUU8joBb1Q"
+        "image": "pics/3axis.png"
       }
     ],
     [
-      "3axis.co",
-      "",
+      "Thingiverse",
+      "3Dプリンタで出力できる様々なデータを共有するサイト。",
       {
         "list": [
-          ""
+          "造形したいモノをキーワード検索して好きなデータをダウンロード可能。アクセスは<a href='https://www.thingiverse.com/' target=''_blank>こちら</a>。"
         ],
-        "youtube": "https://www.youtube.com/embed/ROP45rjvOHg"
+        "image": "pics/thingiverse.png"
       }
     ],
     [
@@ -137,10 +137,10 @@
     ],
     [
       "課題の提出",
-      "文書ファイル参考資料をClassroomに提出。",
+      "リンクをClassroomに提出。",
       {
         "list": [
-          "Googleドキュメントに文章と参考にしたWebサイトのURL、閲覧日を載せて提出。",
+          "データ閲覧先へのリンクを提出。",
           "締切は次回授業<b>前日</b>。"
         ],
         "image": "http://source.unsplash.com/aQfhbxailCs/"
@@ -151,8 +151,8 @@
       "動きのある作品を紹介。",
       {
         "list": [
-          "<b>形</b>（3次元）だけでなく、<b>動き</b>も含めた（4次元）作品を紹介。",
-          "動きが特徴的な作品を探索。"
+          "<b>形</b>を作る（<b>造形</b>する）ための様々な素材を紹介。",
+          "レーザーカッターや3Dプリンタで出力できる様々なデータ共有サイトを紹介。"
         ],
         "image": "http://source.unsplash.com/Fo-HQUlRGkU/"
       }
