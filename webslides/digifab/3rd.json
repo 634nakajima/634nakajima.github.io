@@ -22,27 +22,30 @@
           "その他、パーティクルボードやスギ、ヒノキといった木材全般、ゴムや皮革、コルクなども加工可能。",
           "PVC（ポリ塩化ビニル）、鏡、金属等は<b>加工NG</b>。"
         ],
-        "youtube": "https://www.youtube.com/embed/x3cj2t1qii0"
+        "image": "https://source.unsplash.com/k3CN3UUrCxE/"
       }
     ],
     [
       "アクリル板の種類と特徴",
-      "",
+      "キャストの方が高価で彫刻向き。",
       {
         "list": [
-          ""
+          "押し出しとは、溶かしたアクリル樹脂をローラーに流し込んで押し出す製造方法。硬度が低く反りやすい。",
+          "キャストとは、2枚のガラス板の間にアクリルの原料を流し込む製造方法。高価だが硬度が高い。"
         ],
         "youtube": "https://www.youtube.com/embed/x3cj2t1qii0"
       }
     ],
     [
       "3Dプリンタフィラメント",
-      "",
+      "ABS、PLAがよく用いられる。",
       {
         "list": [
-          ""
+          "ABSは融点（溶ける温度）が比較的高く、PLAに比べて柔らかめの素材。表面のやすりがけなどが楽。",
+          "PLAは融点が比較的低く、ABSに比べて硬め。表面のやすりがけは大変。",
+          "消しゴムのように柔らかい<b>TPU</b>という素材もある。"
         ],
-        "youtube": "https://www.youtube.com/embed/x3cj2t1qii0"
+        "image": "https://source.unsplash.com/EFbGBLuyiK4/"
       }
     ],
     [
