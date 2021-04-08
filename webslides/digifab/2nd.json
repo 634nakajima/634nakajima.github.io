@@ -2,170 +2,127 @@
   "explanation": [
     [
       "今回の目標",
-      "電子工作技術の習得と、新たな表現や課題解決手段の提案。",
+      "形だけでなく、動きを創る作品を知る。",
       {
         "list": [
-          "<b>micro:bit</b>を用いてセンサ類を制御する。",
-          "外装で覆い<b>インタラクティブ</b>な作品を制作する。",
-          "制作した作品について<b>プレゼンテーション</b>する。"
+          "動きを生み出す様々な手法と作品を紹介。",
+          "動きが特徴的な作品を自身で探してみる。"
         ],
-        "image": "../pics/microbit.png"
+        "image": "https://source.unsplash.com/KYxXMTpTzek/"
       }
     ],
     [
-      "遠隔授業の流れ",
-      "Zoomとスライドの解説をもとに、毎回の課題を提出。",
+      "PocoPoco",
+      "押して掴んで捻るMIDIシーケンサー。",
       {
         "list": [
-          "授業開始時刻までにClassroom上に掲載したZoomのURLと授業用資料（スライドURL）にアクセス。",
-          "授業内の指示に従って<b>プログラム</b>を作成。",
-          "該当回の授業内課題にプログラムのURLを<b>提出</b>。"
+          ""
         ],
-        "image": "../pics/classroom_task.png"
+        "youtube": "https://www.youtube.com/embed/ALmsa_h8ho8"
       }
     ],
     [
-      "成績評価",
-      "以下の２項目を考慮し、100点満点で成績を評価。",
+      "Luminescent tentacles",
+      "柔らかく曲がるキネティックサーフェースシステム。",
       {
         "list": [
-          "<b>出席</b>（授業内課題を含む）<br>全て出席で50点。",
-          "<b>作品制作</b><br>テーマⅠ：20点、テーマⅡ：30点。"
+          ""
         ],
-        "image": "https://source.unsplash.com/zFSo6bnZJTw/"
+        "youtube": "https://www.youtube.com/embed/x4RHWHJtwZY"
       }
     ],
     [
-      "",
-      "作品の評価項目は、①完成度、②技術性、③コンセプト。",
+      "ZeroN",
+      "浮遊する金属球の動きを自由に記録・再生できる装置。",
       {
         "list": [
-          "① 外観、見た目など。",
-          "② 高度なセンサ制御、プログラミングの工夫。",
-          "③ 作品を通して何を伝えようとしているのか（アート的思考）。<br>　 または何を解決しようとしているのか（デザイン的思考）。"
+          ""
         ],
-        "image": "https://source.unsplash.com/MamWbmmaylY/"
+        "youtube": "https://www.youtube.com/embed/-i2kJMJz7Wg"
       }
     ],
     [
-      "演習テーマ Ⅰ",
-      "インタラクティブに変化するLEDアニメーションを制作。",
+      "TRANSFORM",
+      "表面の凹凸が自由自在に変化するテーブル。",
       {
         "list": [
-          "LEDの表示を自動で変化させ、LEDの表示をスイッチ入力で変化させる。",
-          "様々なセンサ入力を利用し、サウンドで演出する。",
-          "最後に、オリジナルの作品を制作する。"
+          ""
         ],
-        "image": "https://source.unsplash.com/jBDTWn4W3bw/800x600"
+        "youtube": "https://www.youtube.com/embed/lCARHatJQJA"
       }
     ],
     [
-      "作品例",
-      ""
-    ],
-    [
-      "過去の作品",
-      "",
+      "Daniel Rozinの作品",
+      "タイル状に並べた素材の向きで映し出す鏡。",
       {
         "list": [
-          "<a href='https://makecode.microbit.org/_c8X8d8D1ia5y' target='_blank'>敵機をよけるゲーム</a><br>敵機をよけるごとに加点され、接触するとゲームオーバー。",
-          "<a href='https://makecode.microbit.org/_bqm8EpDgL5CM' target='_blank'>ダウジングマシン</a><br>ボタンを使って移動し、お宝の座標でデバイスを振るとゲット。",
-          "<a href='https://makecode.microbit.org/_5K5YtyCFmiv2' target='_blank'>北風と太陽</a><br>温度に応じて北風と太陽のアニメーションが再生される。"
+          ""
         ],
-        "image": "../pics/chick.png"
+        "youtube": "https://www.youtube.com/embed/kV8v2GKC8WA"
       }
     ],
     [
-      "演習テーマ Ⅱ",
-      "身の回りのモノゴトをテクノロジーで〇〇に変える。",
+      "Strandbeest",
+      "複雑な機構と風の力で動物の歩行を再現。",
       {
         "list": [
-          "日常生活のあるモノゴトに着目し、〇〇な体験に変化させる。",
-          "〇〇には「分かりやすい」「便利」「楽しい」「気持ちいい」「怖い」「癒される」「ドキドキする」など、何を入れても良い。"
+          ""
         ],
-        "image": "https://source.unsplash.com/GC1syEKyWDI/800x600"
+        "youtube": "https://www.youtube.com/embed/LewVEF2B_pM"
       }
     ],
     [
-      "過去の作品①",
-      ""
-    ],
-    [
-      "過去の作品②",
-      ""
-    ],
-    [
-      "過去の作品③",
-      ""
-    ],
-    [
-      "",
-      "はじめから素晴らしい作品が作れる人なんていません。",
+      "Marble Machine",
+      "複雑な機構と金属球で奏でる楽器と音楽。",
       {
         "list": [
-          "アイデアは途中で変わったりします。",
-          "初めからあれこれ考えすぎずに、とりあえず作ってみましょう。",
-          "作ってみることで次の作品アイデアがどんどん浮かんできます。"
+          ""
         ],
-        "image": "https://source.unsplash.com/cn9KWcTseH0/"
+        "youtube": "https://www.youtube.com/embed/IvUU8joBb1Q"
       }
     ],
     [
-      "micro:bit",
-      "プログラミングや電子工作の教育に特化したマイコン。",
+      "キネティックスカルプチャー",
+      "様々な機構を駆使した動く彫刻。",
       {
         "list": [
-          "マイコンとは様々な電子機器に内蔵されている小さなコンピュータのこと。",
-          "micro:bitはボタンやLED、主要なセンサが揃っているのが特徴。",
-          "特別なソフトが不要で<b>ブラウザ</b>さえあれば開発ができる。"
+          ""
         ],
-        "image": "../pics/microbit.png",
-        "caption": "<a href='https://archive.microbit.org/ja/' target='_blank'>micro:bit 公式ページ</a>"
+        "youtube": "https://www.youtube.com/embed/ROP45rjvOHg"
       }
     ],
     [
-      "Microsoft MakeCode",
-      "micro:bitにプログラミングする専用開発環境（IDE）。",
+      "課題",
+      "動きが特徴的な作品を探してみよう。",
       {
         "list": [
-          "様々な処理を表す<b>ブロック</b>を並べることで、簡単にプログラミングできる。",
-          "<b>Javascript</b>を用いて、より複雑なプログラムも作成可能。"
+          "車や洗濯機といった実用的な製品ではなくアートやエンタテインメント作品、玩具、工芸品などが対象。",
+          "インターネットや書籍等で作品を探し、最低<b>3つ</b>挙げてください。",
+          "その作品の背景や仕組み、いつ、どこで、誰が制作したのかなど、それぞれ<b>200</b>字以上で具体的に記述してください。"
         ],
-        "image": "../pics/makecode.png"
+        "image": "../../crossmodal/static/images/Ubiquitels.png"
       }
     ],
     [
-      "例題 1",
-      "MakeCodeを使ってみよう。",
+      "課題の提出",
+      "文書ファイル参考資料をClassroomに提出。",
       {
         "list": [
-          "<a href='https://makecode.microbit.org/' target='_blank'>MakeCode</a>にアクセスし、アイコンを表示するプログラムを作成。",
-          "プログラムの<b>共有リンク</b>を提出。"
+          "Googleドキュメントに文章と参考にしたWebサイトのURL、閲覧日を載せて提出。",
+          "締切は次回授業<b>前日</b>。"
         ],
-        "embed": "<iframe\r\nstyle=\"position:absolute;top:0;left:0;width:100%;height:100%;\"\r\nsrc=\"https:\/\/makecode.microbit.org\/#pub:_fap4HFi3KcpC\" frameborder=\"0\"\r\nsandbox=\"allow-popups allow-forms allow-scripts allow-same-origin\"><\/iframe>"
-      }
-    ],
-    [
-      "例題 5-4",
-      "衝突時の処理を入れて完成させよう。",
-      {
-        "list": [
-          "二つの点が衝突しているかは、<b><code>isTouching(...)</code></b>で判定できる。",
-          "<b>if文</b>を使い、衝突していたら<b>クリア</b>画面を表示。",
-          "敵やガン、弾の移動パターン、クリア画面などをアレンジして<b>提出</b>。"
-        ],
-        "code": "\/\/AB\u304c\u540c\u6642\u306b\u62bc\u3055\u308c\u305f\u3068\u304d\r\ninput.onButtonPressed(Button.AB, function () {\r\n    let bullet = game.createSprite(gun.x(), gun.y())\/\/\u5f3e\u3092\u751f\u6210\r\n    bullet.turn(Direction.Left, 90)\/\/\u7403\u306e\u9032\u884c\u65b9\u5411\u3092\u4e0a\u5411\u304d\u306b\u56de\u8ee2\r\n    while (bullet.y()) {\/\/\u5f3e\u304c0\u3088\u308a\u5927\u304d\u3044\u9593\u305a\u3063\u3068\r\n        bullet.move(1)\/\/\u4e0a\u306b\u79fb\u52d5\r\n        basic.pause(100)\/\/\u4e00\u6642\u505c\u6b62\r\n    }\r\n    if (bullet.isTouching(enemy)) {\/\/\u5f3e\u304c\u6575\u306b\u63a5\u3057\u3066\u3044\u305f\u3089\r\n        enemy.delete()\/\/\u6575\u3092\u6d88\u53bb\r\n        basic.pause(100)\r\n        basic.showIcon(IconNames.Happy, 2000)\/\/\u30af\u30ea\u30a2\u753b\u9762\r\n        control.reset()\r\n    }\r\n    bullet.delete()\/\/\u5f3e\u3092\u6d88\u53bb\r\n})"
+        "image": "http://source.unsplash.com/aQfhbxailCs/"
       }
     ],
     [
       "今回のまとめ",
-      "ボタンを使った２つのコンテンツを制作。",
+      "動きのある作品を紹介。",
       {
         "list": [
-          "<b><code>enum</code></b>を使ってコンテンツの状態管理を<b>分かりやすく</b>コーディング。",
-          "<b>Game</b>の機能を使ってシューティングゲームを制作。"
+          "<b>形</b>（3次元）だけでなく、<b>動き</b>も含めた（4次元）作品を紹介。",
+          "動きが特徴的な作品を探索。"
         ],
-        "image": "http://source.unsplash.com/eCktzGjC-iU/"
+        "image": "http://source.unsplash.com/Fo-HQUlRGkU/"
       }
     ]
   ]
