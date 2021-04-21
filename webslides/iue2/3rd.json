@@ -70,154 +70,53 @@
       }
     ],
     [
-      "ChartBlocks とは",
-      "データを元にグラフを生成するWebサービス。",
-      {
-        "list": [
-          "マウスポインタで<b>詳細</b>を見ることができる。",
-          "Webサイト等に<b>埋め込んで</b>利用しやすい。",
-          "今回はWebサイト制作を見据え、このサービスを利用。"
-        ],
-        "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
-      }
-    ],
-    [
-      "ChartBlocksへのサインアップ",
-      "大学のGoogleアカウントでサインアップ（登録）可能。",
-      {
-        "list": [
-          "<a href='https://app.chartblocks.com/register' target='_blank'>こちら</a>に移動し、'Sign up with Google' を選択。'",
-          "Googleのアカウントを選択し、パスワードを入力。",
-          "<b>Personal</b>プランを選択し、'Create a chart'をクリック。"
-        ],
-        "youtube": "https://www.youtube.com/embed/bQ8s_r0Ca3w"
-      }
-    ],
-    [
-      "課題 4-1",
+      "課題 4",
       "スマホ利用者を円グラフで表そう。",
       {
         "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF2:G3の範囲を選択し、コピー<br>（<b>Controlキーを押しながらcを押す</b>）。",
-          "ChartBlockのセル左上に貼り付け<br>（<b>Controlキーを押しながらvを押す</b>）。"
+          "スプレッドシートのF2:G3の範囲を選択し、画面左上メニューの<b>挿入</b> > <b>グラフ</b>を選択。",
+          "画面右側「グラフの種類」が<b>円グラフ</b>になっていることを確認。"
         ],
-        "youtube": "https://www.youtube.com/embed/11AVk_97UFM"
+        "youtube": "https://www.youtube.com/embed/2FCIZS9ktbY"
       }
     ],
     [
-      "課題 4-2",
-      "スマホ利用者を円グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>スマホの利用者数</b>と入力し、画面右上 next をクリック。",
-          "<b>円グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/fQTjBHaipCk"
-      }
-    ],
-    [
-      "課題 4-3",
-      "スマホ利用者を円グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
-        ],
-        "youtube": "https://www.youtube.com/embed/hosXOmOpSUM"
-      }
-    ],
-    [
-      "課題 5-1",
+      "課題 5",
       "SNS利用者を横棒グラフで表そう。",
       {
         "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF6:G10の範囲を選択し、コピー。",
-          "ChartBlockのセル左上に貼り付け。"
+          "スプレッドシートのF6:G10の範囲を選択し、画面左上メニューの<b>挿入</b> > <b>グラフ</b>を選択。",
+          "画面右側「グラフの種類」を<b>横棒グラフ</b>に変更。",
+          "レポート等では図の下にタイトルをつけるため、タイトルは<b>削除</b>。",
+          "<b>横軸</b>をつけておく。"
         ],
-        "youtube": "https://www.youtube.com/embed/_Y8D83V7jMs"
+        "youtube": "https://www.youtube.com/embed/5tbZviyLxZ8"
       }
     ],
     [
-      "課題 5-2",
-      "SNS利用者を横棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>SNSの利用者数</b>と入力し、画面右上 next をクリック。",
-          "<b>棒グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/ZRMVpK6gdRg"
-      }
-    ],
-    [
-      "課題 5-3",
-      "SNS利用者を横棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>回答者数</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、Typeタブで<b>横棒</b>グラフに変更。"
-        ],
-        "youtube": "https://www.youtube.com/embed/pgd_p6Lrpns"
-      }
-    ],
-    [
-      "課題 6-1",
+      "課題 6",
       "学科間のパソコン操作の自信度の差を縦棒グラフで表そう。",
       {
         "list": [
-          "<b>Type in my data</b>を選択。",
-          "スプレッドシートのF13:G14の範囲を選択し、コピー。",
-          "ChartBlockのセル左上に貼り付け。"
+          "スプレッドシートのF13:G14の範囲を選択し、画面左上メニューの<b>挿入</b> > <b>グラフ</b>を選択。",
+          "画面右側「グラフの種類」を<b>縦棒グラフ</b>に変更。",
+          "レポート等では図の下にタイトルをつけるため、タイトルは<b>削除</b>。",
+          "<b>縦軸</b>をつけておく。"
         ],
-        "youtube": "https://www.youtube.com/embed/QU5ZKK56JPQ"
-      }
-    ],
-    [
-      "課題 6-2",
-      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Dataset Name' に<b>パソコン操作の自信度</b>と入力し、画面右上 next をクリック。",
-          "<b>棒グラフ</b>を選択。"
-        ],
-        "youtube": "https://www.youtube.com/embed/KOwB732ee08"
-      }
-    ],
-    [
-      "課題 6-3",
-      "学科間のパソコン自信度の差を縦棒グラフで表そう。",
-      {
-        "list": [
-          "画面右'Series 1:' に<b>平均値</b>と入力し、画面右上 next をクリック。",
-          "好きなデザインを選択し、next をクリック。",
-          "Customize をクリックし、画面左タブで適宜グラフを微調整。"
-        ],
-        "youtube": "https://www.youtube.com/embed/L-Nqv7chwzY"
+        "youtube": "https://www.youtube.com/embed/55uJ3_jW5pg"
       }
     ],
     [
       "リンクの取得・提出",
-      "スプレッドシートと３つのグラフの共有リンクを取得。",
+      "スプレッドシートの共有リンクを取得。",
       {
         "list": [
-          "スプレッドシートは、画面右上<b>共有</b>をクリックし、リンク権限を変更して'リンクをコピー' をクリック。",
-          "ChartBlocksは、画面右上<b>Share</b>アイコンをクリックし、'Publick link' 下のリンクを選択してコピー。",
-          "Chartblocksのリンク横アイコンは<b>使えない</b>ので注意。"
+          "はじめに、画面右上<b>共有</b>をクリック。",
+          "リンク権限を変更して<b>リンクをコピー</b>をクリック。",
+          "コピーしたリンクはClassroomに貼り付けて提出。",
+          "貼り付けは右クリックで表示されるメニュー、またはCtrl+V（Windows）、command+V（Mac）を用いる。"
         ],
-        "youtube": "https://www.youtube.com/embed/SkcK_x9hgKM"
-      }
-    ],
-    [
-      "リンクの取得・送信",
-      "WebComに共有リンクを提出。",
-      {
-        "list": [
-          "合計４つの共有リンクを<b>WebCom</b>の内容欄に貼り付けて提出（締切：次回授業<b>前日</b>）。"
-        ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "youtube": "https://www.youtube.com/embed/uE3_CUccdYU"
       }
     ],
     [
@@ -226,8 +125,8 @@
       {
         "list": [
           "Googleスプレッドシートの<b>関数</b>で回答者数を集計。",
-          "ChartBlockで棒グラフ、円グラフを作成。",
-          "共有リンクをWebComに提出。"
+          "Googleスプレッドシートのグラフ機能で棒グラフ、円グラフを作成。",
+          "共有リンクをClassroomに提出。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
