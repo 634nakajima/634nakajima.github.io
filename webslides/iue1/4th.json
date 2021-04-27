@@ -1,14 +1,6 @@
 {
   "explanation": [
     [
-      "プロフィール",
-      "改めまして、担当教員の中島です。"
-    ],
-    [
-      "略歴",
-      "デジタルメディアを使ったアート表現を研究してきました。"
-    ],
-    [
       "今回の目標",
       "インターネットで様々な情報を検索し、著作権について調べる。",
       {
@@ -33,7 +25,7 @@
     ],
     [
       "課題 1-1",
-      "2019年度の目白大学（大学院、短大は除く）の入学者数を調べよう。",
+      "2020年度の目白大学（大学院、短大は除く）の入学者数を調べよう。",
       {
         "list": [
           "<b>ヒント</b>　目白大学の公式Webサイト上のどこかに記載あり。"
@@ -47,20 +39,20 @@
       {
         "list": [
           "検索を駆使して調べましょう。<b>ヒント</b>はこの下にカーソルを移動↓（ノーヒントだと難しいかも）",
-          "<div class='hide'>これは愛媛に住む私の母が息子（2才）にくれたお土産。台の端でくるっと回って落ちないのが特徴。</div>"
+          "<div class='hide'>これは愛媛に住む私の母が息子（当時2才）にくれたお土産。<br>台の端でくるっと回って落ちないのが特徴。</div>"
         ],
         "youtube": "https://www.youtube.com/embed/sc-2bo4Kx-Q"
       }
     ],
     [
       "課題 1 の提出",
-      "調べた内容をWebComに提出。",
+      "調べた内容をClassroomに提出。",
       {
         "list": [
-          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> のレポート > 提出をクリックし、第３回 検索課題 1の内容欄に記載。",
-          "締切は<b>授業日の１週間後</b>。"
+          "Classroom の授業 > 第4回 課題 > 課題1 ネット検索 の<b>限定公開コメント</b>欄に記載。",
+          "締切は<b>次回授業日の前日</b>。"
         ],
-        "image": "../iue2/pics/WebComReport.png"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -111,13 +103,13 @@
     ],
     [
       "課題 2 の提出",
-      "調べた内容をWebComに提出。",
+      "調べた内容をClassroomに提出。",
       {
         "list": [
-          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> のレポート > 提出をクリックし、第３回 検索課題 2の内容欄に記載。",
-          "締切は<b>授業日の１週間後</b>。"
+          "Classroom の授業 > 第4回 課題 > 課題1 ネット検索 に<b>Word</b>または<b>Googleドキュメント</b>のファイルを添付して提出。",
+          "締切は<b>次回授業日の前日</b>。"
         ],
-        "image": "../iue2/pics/WebComReport.png"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
