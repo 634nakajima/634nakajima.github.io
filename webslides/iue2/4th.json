@@ -40,18 +40,15 @@
       ""
     ],
     [
-      "",
-      "調査したデータを表にまとめてグラフ化。"
-    ],
-    [
       "データの整理とグラフ化",
-      "表とグラフを作成したら、リンクと参考文献を提出。",
+      "文献情報・表・グラフを作成し、共有リンクを提出。",
       {
         "list": [
-          "第3回授業内の課題と同様にChartblocksの共有リンクを取得（動画参照）。",
-          "共有リンクと参考文献・Webサイト情報を<b>WebCom</b>の内容欄に貼り付けて提出（締切: 次回授業前日）。"
+          "文献情報はスプレッドシート下部のセルに記載する。",
+          "第4回授業内の課題と同様にスプレッドシートの共有リンクを取得（前回資料参照）。",
+          "共有リンクを<b>Classroom</b>に添付して提出（締切: 次回授業前日）。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -60,7 +57,7 @@
       {
         "list": [
           "Webサイトに載せるためのデータを収集、整理、グラフ化。",
-          "共有リンクと参考文献情報をWebComに提出。"
+          "スプレッドシートの共有リンクをClassroomに提出。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
