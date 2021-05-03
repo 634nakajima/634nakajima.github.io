@@ -238,7 +238,7 @@
           "アドレスバーの<b>URL</b>（https://codepen.io/{username}/ pen/{id}）を<b>コピー</b>。",
           "コピーしたURLを<b>Classroom</b>に添付して提出（締切: 次回授業日前日）。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
