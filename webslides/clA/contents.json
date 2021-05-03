@@ -5,7 +5,7 @@
   ],
   "2nd": {
     "classtitle": "コンピュータの基礎演習",
-    "number": 2,
+    "number": 3,
     "chaptertitle": [
       "Gmail",
       "Office 365",
@@ -14,7 +14,7 @@
   },
   "3rd": {
     "classtitle": "ワードプロセッシング演習",
-    "number": 3,
+    "number": 4,
     "chaptertitle": [
       "レポート雛形の作成",
       "レポートの掟",
@@ -185,7 +185,7 @@
     ]
   },
   "4th": {
-    "number": 4,
+    "number": 5,
     "json": "./4th.json",
     "classtitle": "スプレッドシート演習",
     "chaptertitle": [
@@ -195,7 +195,7 @@
     ]
   },
   "5th": {
-    "number": 5,
+    "number": 6,
     "json": "./5th.json",
     "classtitle": "ワープロとスプレッドシート応用演習",
     "chaptertitle": [
