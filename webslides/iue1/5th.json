@@ -30,7 +30,7 @@
     ],
     [
       "SNSに関するアンケート",
-      "授業開始後30分以内に、回答をお願いします。"
+      "授業日中に、回答をお願いします。"
     ],
     [
       "事例1 不適切な言動パターン",
@@ -85,7 +85,7 @@
       "皆さんのアンケート結果を確認し、考察。",
       {
         "list": [
-          "<a href='https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DqmrjcAUgSUiyiaEW-uXPkzB9hppF_zFEqsvMgan_qnlUOTVUUkQ5V01ZVlM3WElTSjZTSkE3TllNTS4u%26Token%3D008dc1c317014486a8a566a2a0305308' target='_blank'>こちら</a>のアンケート結果を元に、学生のSNSに対する意識について考察。リンク先はMicrosoft Formsというサービス。",
+          "<a href='https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DqmrjcAUgSUiyiaEW-uXPkzB9hppF_zFEqsvMgan_qnlUMElCUEZLNkMwWk00WDRZUFgzNE1DNk1BQi4u%26Token%3Dbc4d49b4ba7c468b9d157a7c10de95b4' target='_blank'>こちら</a>のアンケート結果を元に、学生のSNSに対する意識について考察。リンク先はMicrosoft Formsというサービス。",
           "第2回で作成した<b>Office365</b>アカウントでサインイン。その後、画面上側「応答」タブをクリックして回答結果を閲覧。",
           "SNSの現状や課題などを結果から読み取り、<b>400</b>字以内で論じる。"
         ],
@@ -94,11 +94,11 @@
     ],
     [
       "課題の提出",
-      "WebComの内容欄に記述して提出。",
+      "ClassroomにGoogleドキュメントを提出。",
       {
         "list": [
-          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>WebCom</a> 第５回 課題1, 2それぞれの<b>内容欄</b>に記載。",
-          "締切は授業日の<b>１週間後</b>。"
+          "<a href='https://webup.mju.jp/Reg/reg.php' target='_blank'>Classroom</a> > 第５回 課題1, 2それぞれ<b>Googleドキュメント</b>に記載。",
+          "締切は次回授業日の<b>前日</b>。"
         ],
         "image": "../iue2/pics/WebComReport.png"
       }
