@@ -43,69 +43,84 @@
       "気になるデータでグラフの作成"
     ]
   },
-  "6thF": {
-    "classtitle": "Excelでのデータ整理",
+  "6th": {
+    "classtitle": "Excelでのデータ整理 1",
     "number": 6,
-    "json": "./6thF.json",
+    "json": "./6th.json",
     "chaptertitle": [
-      "データの整理とグラフ化",
-      "気になるデータでグラフの作成"
+      "データの整理と表の作成",
+      "見やすいグラフの作成"
     ]
   },
   "7th": {
-    "classtitle": "PowerPointでのスライド制作",
+    "classtitle": "Excelでのデータ整理 2",
     "number": 7,
     "json": "./7th.json",
     "chaptertitle": [
-      "シンプルなスライドのデザイン",
-      "調べたデータでスライドの制作"
+      "気になるデータでグラフの作成"
     ]
   },
   "8th": {
-    "classtitle": "レポートの体裁と参考文献",
+    "classtitle": "PowerPointでのスライド制作 1",
     "number": 8,
     "json": "./8th.json",
+    "chaptertitle": [
+      "シンプルなスライドのデザイン"
+    ]
+  },
+  "9th": {
+    "classtitle": "PowerPointでのスライド制作 2",
+    "number": 9,
+    "json": "./9th.json",
+    "chaptertitle": [
+      "調べたデータでスライドの制作"
+    ]
+  },
+  "10th": {
+    "classtitle": "レポートの体裁と参考文献",
+    "number": 10,
+    "json": "./10th.json",
     "chaptertitle": [
       "レポート雛形の作成",
       "参考文献の収集"
     ]
   },
-  "9th": {
+  "11th": {
     "classtitle": "データの整理とグラフ化",
-    "number": 9,
-    "json": "./9th.json",
+    "number": 11,
+    "json": "./11th.json",
     "chaptertitle": [
       "社会問題の現状を示すグラフの作成"
     ]
   },
-  "10th": {
+  "12th": {
     "classtitle": "レポートの完成",
-    "number": 10,
-    "json": "./10th.json",
+    "number": 12,
+    "json": "./12th.json",
     "chaptertitle": [
       "文章の執筆",
       "レポートの掟（再掲）"
     ]
   },
-  "11th": {
+  "13th": {
     "classtitle": "相互評価アンケートとスライドの作成",
-    "number": 11,
-    "json": "./11th.json",
+    "number": 13,
+    "json": "./13th.json",
     "chaptertitle": [
       "相互評価アンケートの作成",
       "スライドの作成"
     ]
   },
-  "12th": {
+  "14th": {
     "classtitle": "相互評価",
-    "number": 12,
-    "json": "./12th.json",
+    "number": 14,
+    "json": "./14th.json",
     "chaptertitle": []
   },
-  "13th": {
+  "15th": {
     "classtitle": "全体のまとめ",
-    "number": 13,
-    "json": "./13th.json",
+    "number": 15,
+    "json": "./15th.json",
     "chaptertitle": [
       "スライド評価の確認",
       "全体のまとめ"
