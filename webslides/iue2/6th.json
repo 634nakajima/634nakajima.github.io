@@ -110,23 +110,23 @@
       }
     ],
     [
-      "課題 3-2",
+      "課題 3-1",
       "表示用にグラフを編集し、埋め込みコードを取得しよう。",
       {
         "list": [
           "後でキャプションを載せるためグラフタイトルは消去し、サイズを適当な大きさに変更。",
-          "変更後、ページを<b>再読み込み</b>しないと埋め込みコードに反映されないので注意。",
-          "共有アイコン &gt <b>Embed Code</b>の内容をコピー。"
+          "グラフ右上の3点アイコン &gt グラフを公開 &gt 埋め込む を選択して埋め込みコードをコピー。",
+          "コピー&ペーストのショートカットキーは<code>ctrl+c & ctrl+v</code>（Windows）、<code>command+c & command+v</code>（MacOS, iOS）。"
         ],
-        "youtube": "https://www.youtube.com/embed/3jCtv5ViiEI"
+        "youtube": "https://www.youtube.com/embed/zq6_uVPqRtI"
       }
     ],
     [
-      "課題 3-3",
+      "課題 3-2",
       "グラフを表示させよう。",
       {
         "list": [
-          "スライドのテンプレートを<b>Fork</b>して自身が作成したグラフに書き換える。"
+          "右のテンプレートを<b>Fork</b>して自身が作成したグラフに書き換える。"
         ],
         "codepen": [
           "634nakajimaMejiro",
@@ -140,7 +140,8 @@
       {
         "list": [
           "図のキャプション（図番号、タイトル）は<b><code>&ltfigcaption&gt~&lt/figcaption&gt</code></b>で括る。",
-          "スライドのテンプレートを<b>Fork</b>して課題2と同様に&ltimg&gtタグと&ltfigcaption&gtタグの中身を変更。"
+          "課題2の画像（<code>&ltimg&gt</code>タグ）の下に<code>&ltfigcaption&gt</code>タグでキャプションを追加。",
+          "課題3のグラフ（<code>&ltfigcaption&gt~&lt/figcaption&gt</code>の下）にも同じくキャプションを追加。"
         ],
         "codepen": [
           "634nakajimaMejiro",
@@ -155,7 +156,8 @@
         "list": [
           "前回作成した<b>雛形</b>（前回課題6）を開く。",
           "雛形の<b><code>&ltmain&gt~&lt/main&gt</code></b>タグ内先頭に、<b>課題 1</b>の内容をコピペ。",
-          "雛形の適当な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグ内に、<b>課題 4</b>の内容をコピペ。"
+          "雛形の適当な<b><code>&ltsection&gt~&lt/section&gt</code></b>タグ内に、<b>課題 2, 3</b>の内容をコピペ。",
+          "インデントがおかしくならないよう注意。"
         ],
         "codepen": [
           "634nakajimaMejiro",
@@ -194,6 +196,35 @@
       }
     ],
     [
+      "ナビゲーション",
+      "他のページやページ内リンクのメニューには&ltnav&gtタグを用いる。",
+      {
+        "list": [
+          "ナビゲーションとは、Webサイトのリンクを載せた<b>メニュー</b>のこと。",
+          "目次のリストに<b>リンク</b>をつけて各章に移動できるようにする。"
+        ],
+        "codepen": [
+          "634nakajimaMejiro",
+          "VwpvPEq"
+        ]
+      }
+    ],
+    [
+      "課題 7",
+      "雛形の目次を&ltnav&gtタグで括ろう。",
+      {
+        "list": [
+          "課題6で編集した<b>雛形</b>を開く。",
+          "雛形内の目次の<code>&lth2&gt</code>タグの上から<code>&lt/ol&gt</code>の下までを<b><code>&ltnav&gt~&lt/nav&gt</code></b>で括る。",
+          "インデントがおかしくならないよう注意。"
+        ],
+        "codepen": [
+          "634nakajimaMejiro",
+          "KKWdWPm"
+        ]
+      }
+    ],
+    [
       "Webサイト雛形の完成",
       "右のプレビュー画面のように表示される。"
     ],
@@ -203,9 +234,9 @@
       {
         "list": [
           "アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>（前回提出したものと同じになるはず）。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（次回授業前日締切）。"
+          "コピーしたURLをClassroom上に提出（次回授業前日締切）。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -216,7 +247,7 @@
           "&ltul&gt, &ltol&gtタグで<b>リスト</b>を作成。",
           "&ltfigure&gt, &ltimg&gt,  &ltfigcaption&gtタグで<b>図</b>を作成。",
           "&ltiframe&gtタグで<b>他サイト</b>のコンテンツを挿入。",
-          "&lta&gtタグで<b>リンク</b>を作成。"
+          "&lta&gt, &ltnav&gtタグで<b>リンク</b>と<b>ナビゲーション</b>を作成。"
         ],
         "image": "https://source.unsplash.com/7AIDE8PrvA0/460x480"
       }
