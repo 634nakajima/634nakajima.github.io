@@ -46,7 +46,7 @@
       {
         "list": [
           "図の構成要素は、<b>画像本体</b>と<b>キャプション</b>（図の番号、タイトル）に分けられ、これらを<b>&ltfigure&gt~&lt/figure&gt</b>で括る。",
-          "今回は、<b>Unsplash</b>と呼ばれるサイトのフリー画像と、<b>Chartblocks</b>のグラフの２種類の画像の載せ方を紹介。"
+          "今回は、<b>Unsplash</b>と呼ばれるサイトのフリー画像と、<b>スプレッドシート</b>のグラフの２種類の画像の載せ方を紹介。"
         ],
         "image": "https://source.unsplash.com/bs_PL2f9CM4/250x250",
         "caption": "<figcaption class='aligncenter'>図1 Unsplashの画像例</figcaption>"
