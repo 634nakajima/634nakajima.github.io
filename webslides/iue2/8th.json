@@ -33,8 +33,8 @@
       "CodePen側で設定をしてSCSSを読み込めるようにする。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/BajZRpR?editors=1100' target='_blank'>こちら</a>の編集用テンプレートを<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
-          "次ページ以降に紹介するリンク先のSCSSをコピペして<b>カスタマイズ</b>。",
+          "<a href='https://codepen.io/634nakajimaMejiro/pen/BajZRpR?editors=1100' target='_blank'>CodePen</a>に移動して前回作成したWebサイトの雛形を<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
+          "前回入力したCSSの内容を<b>全て消去</b>し、次ページ以降に紹介するリンク先のSCSSをコピペして<b>カスタマイズ</b>。",
           "カスタマイズした編集用テンプレートの<b>URL</b>を最後に提出。"
         ],
         "youtube": "https://www.youtube.com/embed/k40n5jeTB9U"
@@ -106,10 +106,9 @@
       {
         "list": [
           "編集が終わったら、アドレスバーの<b>URL</b>（https://codepen.io/{username}/pen/{id}の形式）を<b>コピー</b>。",
-          "編集用テンプレートを<b>Fork</b>し忘れていないか確認。",
-          "コピーしたURLを<b>WebCom</b>の内容欄に貼り付けて提出（締切は次回授業前日）。"
+          "コピーしたURLをClassroom上に提出（次回授業前日締切）。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [

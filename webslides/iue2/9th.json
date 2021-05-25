@@ -5,7 +5,7 @@
       "文章と図を作成してWebサイトを完成。",
       {
         "list": [
-          "過去に作成したCodePenの<b>雛形</b>を編集し、着目したテーマに関する<b>文章</b>を執筆。",
+          "前回までに作成したCodePenの<b>雛形</b>を編集し、着目したテーマに関する<b>文章</b>を執筆。",
           "CSSのテンプレをカスタマイズして<b>見た目</b>をデザイン。"
         ],
         "image": "https://source.unsplash.com/zNRITe8NPqY/480x360"
@@ -56,8 +56,7 @@
       {
         "list": [
           "<b>結果</b>などの章に第4回授業で作成したグラフの埋め込みコードを貼り付け、本文中にグラフの<b>説明</b>をする。",
-          "Chartblocksへの移動と埋め込みコードの取得については<a href='./6_web.html#slide=11' target='_blank'>第6回の授業資料</a>を参照。",
-          "図番号とタイトルを忘れずにつける。"
+          "図番号とタイトル（<code>&ltfigcaption&gt</code>タグ）を忘れずにつける。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
@@ -91,7 +90,11 @@
           "データの収集などに参考にした<b>文献情報</b>を正しく記述する（<a href='./4_chart.html#slide=5' target='_blank'>第4回の授業資料</a>参照）。",
           "書籍の場合は「著者名、タイトル、出版社、発行年」、Webサイトの場合は「サイトタイトル、URL、閲覧日」が必要。"
         ],
-        "image": "https://source.unsplash.com/tzsUJD0TGkk/480x360"
+        "codepen": [
+          "634nakajimaMejiro",
+          "QWpveKM",
+          "html"
+        ]
       }
     ],
     [
@@ -99,10 +102,10 @@
       "CodePen編集画面のURLを提出。",
       {
         "list": [
-          "編集が終わったら、いつもどおりアドレスバーの<b>URL</b>をコピーし、WebComの内容欄に貼り付けて提出。",
+          "編集が終わったら、いつもどおりアドレスバーの<b>URL</b>をコピーし、Classroom上に添付して提出。",
           "締切は次回授業の<b>前日</b>。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
