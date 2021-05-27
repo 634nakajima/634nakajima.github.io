@@ -33,7 +33,7 @@
       "CodePen側で設定をしてSCSSを読み込めるようにする。",
       {
         "list": [
-          "<a href='https://codepen.io/634nakajimaMejiro/pen/BajZRpR?editors=1100' target='_blank'>CodePen</a>に移動して前回作成したWebサイトの雛形を<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
+          "<a href='https://codepen.io/' target='_blank'>CodePen</a>に移動して前回作成したWebサイトの雛形（Classroomに提出したリンクからも移動できます）を<b>Fork</b>し、CSSの設定画面内 \"CSS PreProcessor\" から、<b>SCSS</b>を選択。",
           "前回入力したCSSの内容を<b>全て消去</b>し、次ページ以降に紹介するリンク先のSCSSをコピペして<b>カスタマイズ</b>。",
           "カスタマイズした編集用テンプレートの<b>URL</b>を最後に提出。"
         ],
