@@ -147,30 +147,40 @@
     ]
   },
   "9th": {
-    "classtitle": "アイディアの検討とセンサ類の選定",
+    "classtitle": "外部LEDモジュールの制御",
     "json": "./9th.json",
     "number": 9,
+    "chaptertitle": [
+      "様々な外部パーツの紹介",
+      "NeoPixelで光の制御",
+      "LEDルーレットの制作"
+    ]
+  },
+  "11th": {
+    "classtitle": "アイディアの検討とセンサ類の選定",
+    "json": "./11th.json",
+    "number": 11,
     "chaptertitle": [
       "様々な電子部品の紹介",
       "作品アイディアの検討"
     ]
   },
-  "10th": {
-    "classtitle": "プログラミング",
-    "json": "./10th.json",
-    "number": 10,
-    "chaptertitle": []
-  },
-  "11th": {
-    "classtitle": "ハードウェアと外観の設計",
-    "json": "./11th.json",
-    "number": 11,
-    "chaptertitle": []
-  },
   "12th": {
-    "classtitle": "実機テストと作品の完成",
+    "classtitle": "プログラミング",
     "json": "./12th.json",
     "number": 12,
+    "chaptertitle": []
+  },
+  "13th": {
+    "classtitle": "ハードウェアと外観の設計",
+    "json": "./13th.json",
+    "number": 13,
+    "chaptertitle": []
+  },
+  "14th": {
+    "classtitle": "実機テストと作品の完成",
+    "json": "./14th.json",
+    "number": 14,
     "chaptertitle": []
   }
 }

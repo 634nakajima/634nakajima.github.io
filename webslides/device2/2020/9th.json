@@ -25,11 +25,11 @@
     ],
     [
       "今回の目標",
-      "様々なセンサでできることから作品アイディアを検討。",
+      "様々な外部パーツを学び、外部LEDモジュールを使いこなす。",
       {
         "list": [
           "micro:bit搭載センサ以外の様々な<b>電子部品</b>について紹介。",
-          "センサやLED、モーター等を自由に組み合わせてテーマに沿った<b>アイディア</b>をまとめる。"
+          "<b>NeoPixel</b>と呼ばれる外部LEDモジュールを制御。"
         ],
         "image": "https://source.unsplash.com/KQ0C6WtEGlo/480x360"
       }
@@ -94,25 +94,148 @@
       }
     ],
     [
-      "課題 1",
-      "作品アイディアをひとつ考えて提案。",
+      "NeoPixel",
+      "micro:bitで色や明るさを簡単に制御できるフルカラーLED。",
       {
         "list": [
-          "日常のモノゴトのうち<b>何</b>に着目するのかを記述。",
-          "そのモノゴトをどのように<b>変化</b>させるのか（簡単にする、楽しくする、改善する、可愛くするなど）を記述。"
+          "Adafruit社が提供する様々な種類・数のフルカラーLEDモジュール。",
+          "この授業ではKitronik社のサーボモータ制御ボード<b>Servo Lite</b>に搭載されたNeoPixel互換LED（<b>ZIP LEDs</b>）を使用。"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0254/1191/1743/products/5623_large_servo_lite_board_move_mini_bbc_microbit_top_9fd43c40-debb-41ff-98fa-7564370f8d35_800x.jpg?v=1582131373",
+        "caption": "<small class='aligncenter'><a href='https://kitronik.co.uk/products/5623-servolite-board-for-move-mini?_pos=1&_sid=e7926f6a5&_ss=r' target='_blank'>Kitronik Servo:Lite board for :MOVE mini</a>"
+      }
+    ],
+    [
+      "例題 1",
+      "全てのLEDを白色に点灯させよう。",
+      {
+        "list": [
+          "高度なブロック > 拡張機能 > <b>neopixel</b> を選択。",
+          "<code>neopixel.create(ピン番号, LEDの数, モード)</code>でneopixelを制御する<b>オブジェクト</b>を生成。",
+          "<b>オブジェクト</b>とは、特定の変数や関数がセットになったもので、特にオブジェクトが持っている関数のことを<b>メソッド</b>と呼ぶ。"
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nstrip.showColor(neopixel.colors(NeoPixelColors.White))"
+      }
+    ],
+    [
+      "例題 1",
+      "全てのLEDを白色に点灯させよう。",
+      {
+        "list": [
+          "オブジェクト名.メソッド名()の形式でオブジェクトの状態を変化させる。",
+          "今回は5つのLEDを表すneopixelオブジェクトを'strip'という変数に代入して制御。",
+          "strip.showColor(neopixel.colors(NeoPixelColors.(色名)))で特定の色で全てのLEDを点灯。"
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nstrip.showColor(neopixel.colors(NeoPixelColors.White))"
+      }
+    ],
+    [
+      "例題 2",
+      "LEDの色をHSL形式で指定しよう。",
+      {
+        "list": [
+          "HSL色空間とは、色相（Hue）、彩度（Saturation）、輝度（Lightness）の成分で表される色のこと。",
+          "strip.showColor()の引数にneopixel.hsl(hue, saturation, lightness)を代入。"
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nstrip.showColor(neopixel.hsl(0, 99, 50))"
+      }
+    ],
+    [
+      "例題 3",
+      "LEDを一つだけ点灯させよう。",
+      {
+        "list": [
+          "strip.setPixelColor(LED番号（0-4）, 色を表す値)で色をセットする。",
+          "上記メソッドだけでは点灯しないので、strip.show()で点灯。",
+          "一度点灯したら、strip.clear()でリセットしない限り点灯し続ける。"
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\n\r\nbasic.forever(function () {\r\n    strip.clear()\r\n    strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(4, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n})"
+      }
+    ],
+    [
+      "例題 4",
+      "5つのLEDを順番に点灯させよう。",
+      {
+        "list": [
+          "例題 3をもとにLED番号を変えて順番に点灯。",
+          "毎回strip.clear()をしないと直前に点灯させたLEDが点灯しっぱなしになるので注意。"
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\n\r\nbasic.forever(function () {\r\n    strip.clear()\r\n    strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n    strip.clear()\r\n    strip.setPixelColor(4, neopixel.colors(NeoPixelColors.White))\r\n    strip.show()\r\n    basic.pause(500)\r\n})"
+      }
+    ],
+    [
+      "練習 1",
+      "例題 2をアレンジして虹色に変化させよう。",
+      {
+        "list": [
+          "Hueを表す変数を用意し、forever()の中でインクリメントさせる。",
+          "Hueが360になったら0にする。"
         ],
         "image": "https://source.unsplash.com/82TpEld0_e4"
       }
     ],
     [
-      "課題 2",
-      "作品アイディアを分かりやすくイラストで説明。",
+      "練習 2",
+      "例題 3をそれぞれ別の色で点灯させよう。",
       {
         "list": [
-          "作品の完成予想図や細部がわかる<b>イラスト</b>（手書き、デジタル不問）を作成。",
-          "イラストの補足説明も適宜加え、何の<b>センサ類</b>をどこにつけるかも明記。"
+          "neopixels.colors()の引数にそれぞれ別の色を指定。"
         ],
-        "image": "https://source.unsplash.com/Ox3SuY9QbDU"
+        "image": "https://source.unsplash.com/82TpEld0_e4"
+      }
+    ],
+    [
+      "練習3",
+      "関数を用いて練習 2をシンプルに記述しよう。",
+      {
+        "list": [
+          "LED番号と色を引数に入れるとその場所で点灯（して一時停止）してくれる関数を用意しよう。"
+        ],
+        "image": "https://source.unsplash.com/82TpEld0_e4"
+      }
+    ],
+    [
+      "例題 3-1",
+      "ルーレットが動いているところを作ろう。",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nlet num = 0\r\n\r\nbasic.forever(function () {\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        num++\r\n        if(num == 5) num = 0\r\n        basic.pause(50)\r\n})"
+      }
+    ],
+    [
+      "例題 3-2",
+      "ボタンを押すと動いて、もう一度押すと止めよう。",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nenum roulette {Stopped, Rotating}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopped\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        num++\r\n        if(num == 5) num = 0\r\n        basic.pause(10)\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Green))\r\n        strip.show()\r\n        break\r\n    }\r\n})"
+      }
+    ],
+    [
+      "例題 3-3",
+      "だんだん遅くなって止まる演出を加えよう。",
+      {
+        "list": [
+          "",
+          ""
+        ],
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nenum roulette {Stopped, Rotating, Stopping}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\nlet pauseTime = 20\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopping\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        if(++num == 5) num = 0\r\n        pauseTime = 20\r\n        basic.pause(pauseTime)\r\n        break\r\n\r\n        case roulette.Stopping:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        if(++num == 5) num = 0\r\n        pauseTime += 10\r\n        basic.pause(pauseTime)\r\n        if(pauseTime > 200) {\r\n            state = roulette.Stopped\r\n        }\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Green))\r\n        strip.show()\r\n        break\r\n    }\r\n})"
+      }
+    ],
+    [
+      "練習 4",
+      "色と音を加えて完成させよう。",
+      {
+        "list": [
+          "ルーレットが移動する時に短い音を鳴らそう。",
+          "ルーレットが止まったら簡単なメロディを流そう。"
+        ],
+        "image": "https://source.unsplash.com/82TpEld0_e4"
       }
     ],
     [
@@ -120,10 +243,10 @@
       "画像ファイルと文書ファイルをClassroomに提出。",
       {
         "list": [
-          "第９回授業内課題に、イラストの画像ファイルと、Googleドキュメントまたは限定コメントに文章を載せて提出。",
+          "第９回 課題に練習1, 練習3, 練習4を載せて提出。",
           "締切は次回授業<b>前日</b>。"
         ],
-        "image": "../pics/classroom_top.png"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -132,7 +255,7 @@
       {
         "list": [
           "micro:bitに搭載されていない電子部品について紹介。",
-          "センサやLED、モーター等を自由に組み合わせてテーマに沿ったアイディアを検討。"
+          "<b>NeoPixel</b>の基本的な制御方法について紹介。"
         ],
         "image": "https://source.unsplash.com/huSZMy_MDkk/480x360"
       }

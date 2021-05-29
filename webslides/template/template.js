@@ -402,7 +402,7 @@ for (let i = 0; i < mySectionElements.length; i++) {
     embed.insertAdjacentHTML('beforeend', contents.embed)
   } else if ('code' in contents) {
     wrap.insertAdjacentHTML('beforeend',
-      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max - height: 400px; white - space: pre; "><code class="prettyprint lang - js"></code></pre></div>')
+      '<div class="content-left"><ul class="flexblock specs"></ul></div><div class="content-left"><pre style="max-height: 450px; white - space: pre; overflow: scroll;"><code class="prettyprint lang - js"></code></pre></div>')
     const code = wrap.querySelector('code')
     code.insertAdjacentHTML('beforeend', contents.code)
   } else if ('html' in contents) {

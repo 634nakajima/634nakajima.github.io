@@ -2,26 +2,116 @@
   "explanation": [
     [
       "今回の目標",
-      "ソースコードを完成させ、外装制作に取り掛かる。",
+      "様々なセンサでできることから作品アイディアを検討。",
       {
         "list": [
-          "進捗状況に関する教員からのコメントを参考に、作業を進める。",
-          "外部センサ等が必要な人は、取り付け、動作確認、プログラミング。",
-          "プログラムがうまく動作した人は、外装や機構などを制作。"
+          "micro:bit搭載センサ以外の様々な<b>電子部品</b>について紹介。",
+          "センサやLED、モーター等を自由に組み合わせてテーマに沿った<b>アイディア</b>をまとめる。"
         ],
-        "image": "https://source.unsplash.com/9OKGEVJiTKk/480x360"
+        "image": "https://source.unsplash.com/KQ0C6WtEGlo/480x360"
+      }
+    ],
+    [
+      "様々な電子部品",
+      "micro:bit搭載センサ以外にも様々な素子がある。",
+      {
+        "list": [
+          "作品アイディアによっては、micro:bitに搭載されていない素子が必要になることもある。",
+          "ここでは一例として、フルカラーLED、人感センサ、圧力センサ、サーボモーター（これはセンサではなくアクチュエータに分類される）を紹介。"
+        ],
+        "image": "https://source.unsplash.com/zP7X_B86xOg"
+      }
+    ],
+    [
+      "フルカラーLED",
+      "明るさと色を自由にコントロールできるLED。",
+      {
+        "list": [
+          "micro:bitを<b>ボルト</b>で固定。",
+          "電池2本では電圧が足りないため、パソコンと<b>USB</b>接続するか<a href='https://www.switch-science.com/catalog/5265/'>こちら</a>の電池ケースを使用すると良い。"
+        ],
+        "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3484/500x500/4a5842a8-a8bf-4de3-b907-9f559ad95d5b.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3484/' target='_blank'>スイッチサイエンス<br>ZIP Halo - micro:bit用円型フルカラーLED</a>"
+      }
+    ],
+    [
+      "人感センサ",
+      "人の存在を検出することができる。",
+      {
+        "list": [
+          "検出距離は最大<b>5m</b>。",
+          "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
+        ],
+        "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1548158691183.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5304/' target='_blank'>スイッチサイエンス<br>micro:bit用人感センサーモジュール</a>"
+      }
+    ],
+    [
+      "圧力センサ",
+      "センサ部分にかかる圧力を計測することができる。",
+      {
+        "list": [
+          "感圧エリアは39.6 mm x 39.6 mm。",
+          "MakeCodeの<b>入出力端子</b>機能を用いてセンサ値を読み取る。"
+        ],
+        "image": "https://docid81hrs3j1.cloudfront.net/imagecontent/image-1547012514459.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/5298/' target='_blank'>スイッチサイエンス<br>micro:bit用圧力センサー</a>"
+      }
+    ],
+    [
+      "サーボモーター",
+      "任意の回転角で回転・制止できるモーター。",
+      {
+        "list": [
+          "サーボモーター単体では動かず、別途<a href='https://www.switch-science.com/catalog/3414/' target='_blank'>制御ボード</a>を用意する必要がある。",
+          "MakeCodeの拡張機能<b>サーボモーター</b>機能を用いて制御する。"
+        ],
+        "image": "https://d2air1d4eqhwg2.cloudfront.net/images/3397/500x500/470e3983-d6fc-4b3d-8572-e68fa7159ef5.jpg",
+        "caption": "<small class='aligncenter'><a href='https://www.switch-science.com/catalog/3397/' target='_blank'>スイッチサイエンスFEETECH FT90R デジタルマイクロサーボ（連続回転仕様）</a>"
+      }
+    ],
+    [
+      "課題 1",
+      "作品アイディアをひとつ考えて提案。",
+      {
+        "list": [
+          "日常のモノゴトのうち<b>何</b>に着目するのかを記述。",
+          "そのモノゴトをどのように<b>変化</b>させるのか（簡単にする、楽しくする、改善する、可愛くするなど）を記述。"
+        ],
+        "image": "https://source.unsplash.com/82TpEld0_e4"
+      }
+    ],
+    [
+      "課題 2",
+      "作品アイディアを分かりやすくイラストで説明。",
+      {
+        "list": [
+          "作品の完成予想図や細部がわかる<b>イラスト</b>（手書き、デジタル不問）を作成。",
+          "イラストの補足説明も適宜加え、何の<b>センサ類</b>をどこにつけるかも明記。"
+        ],
+        "image": "https://source.unsplash.com/Ox3SuY9QbDU"
       }
     ],
     [
       "課題の提出",
-      "進捗状況と今後の課題を文章にまとめ、Classroomに提出。",
+      "画像ファイルと文書ファイルをClassroomに提出。",
       {
         "list": [
-          "限定コメントに文章を載せて提出。",
-          "ソースコードの共有リンクや外観を撮った写真など、<b>成果</b>が分かるものを添付。",
+          "第９回授業内課題に、イラストの画像ファイルと、Googleドキュメントまたは限定コメントに文章を載せて提出。",
           "締切は次回授業<b>前日</b>。"
         ],
         "image": "../pics/classroom_top.png"
+      }
+    ],
+    [
+      "今回のまとめ",
+      "様々なセンサを駆使した作品アイディアを提案。",
+      {
+        "list": [
+          "micro:bitに搭載されていない電子部品について紹介。",
+          "センサやLED、モーター等を自由に組み合わせてテーマに沿ったアイディアを検討。"
+        ],
+        "image": "https://source.unsplash.com/huSZMy_MDkk/480x360"
       }
     ]
   ]
