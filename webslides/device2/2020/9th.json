@@ -195,36 +195,35 @@
       }
     ],
     [
-      "例題 3-1",
+      "例題 5-1",
       "ルーレットが動いているところを作ろう。",
       {
         "list": [
-          "",
-          ""
+          "練習 3を元に、basic.pause()の時間を調整してルーレットの動きを速くする。"
         ],
-        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nlet num = 0\r\n\r\nbasic.forever(function () {\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        num++\r\n        if(num == 5) num = 0\r\n        basic.pause(50)\r\n})"
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nlet num = 0\r\n\r\nbasic.forever(function () {\r\n    turnOnLED(num, neopixel.colors(NeoPixelColors.Red))\r\n    num++\r\n    if(num == 5) num = 0\r\n})\r\n\r\nfunction turnOnLED(led:number, color:number) {\r\n    strip.clear()\r\n    strip.setPixelColor(led, color)\r\n    strip.show()\r\n    basic.pause(50)\r\n}"
       }
     ],
     [
-      "例題 3-2",
+      "例題 5-2",
       "ボタンを押すと動いて、もう一度押すと止めよう。",
       {
         "list": [
-          "",
-          ""
+          "<a href='./4_ledAnimation.html#slide=8' target='_black'>第4回 例題 4</a>を参考にinput.onButtonPressed()で状態を変える。"
         ],
-        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nenum roulette {Stopped, Rotating}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopped\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        num++\r\n        if(num == 5) num = 0\r\n        basic.pause(10)\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Green))\r\n        strip.show()\r\n        break\r\n    }\r\n})"
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nconst enum roulette {Stopped, Rotating}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopped\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        turnOnLED(num, neopixel.colors(NeoPixelColors.Red))\r\n        num++\r\n        if(num == 5) num = 0\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        turnOnLED(num, neopixel.colors(NeoPixelColors.Green))\r\n        break\r\n    }\r\n})\r\n\r\nfunction turnOnLED(led:number, color:number) {\r\n    strip.clear()\r\n    strip.setPixelColor(led, color)\r\n    strip.show()\r\n    basic.pause(50)\r\n}"
       }
     ],
     [
-      "例題 3-3",
+      "例題 5-3",
       "だんだん遅くなって止まる演出を加えよう。",
       {
         "list": [
-          "",
-          ""
+          "enumに<b>Stopping</b>という状態を追加。",
+          "<b>Stopping</b>の時にbasic.pause()を用いてLEDが消灯している時間をだんだん長くする。",
+          "待ち時間を表す変数を用意してbasic.pause()に代入し、値を大きくして再代入。"
         ],
-        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nenum roulette {Stopped, Rotating, Stopping}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\nlet pauseTime = 20\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopping\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        if(++num == 5) num = 0\r\n        pauseTime = 20\r\n        basic.pause(pauseTime)\r\n        break\r\n\r\n        case roulette.Stopping:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Red))\r\n        strip.show()\r\n        if(++num == 5) num = 0\r\n        pauseTime += 10\r\n        basic.pause(pauseTime)\r\n        if(pauseTime > 200) {\r\n            state = roulette.Stopped\r\n        }\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        strip.clear()\r\n        strip.setPixelColor(num, neopixel.colors(NeoPixelColors.Green))\r\n        strip.show()\r\n        break\r\n    }\r\n})"
+        "code": "let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)\r\nenum roulette {Stopped, Rotating, Stopping}\r\nlet state = roulette.Stopped\r\nlet num = 0\r\nlet pauseTime = 20\r\n\r\ninput.onButtonPressed(Button.A, function () {\r\n    if(state == roulette.Stopped) {\r\n        state = roulette.Rotating\r\n    }else if(state == roulette.Rotating) {\r\n        state = roulette.Stopping\r\n        pauseTime = 20\r\n    }\r\n})\r\n\r\nbasic.forever(function () {\r\n    switch(state) {\r\n        case roulette.Rotating:\r\n        turnOnLED(num, neopixel.colors(NeoPixelColors.Red))\r\n        if(++num == 5) num = 0\r\n        break\r\n\r\n        case roulette.Stopping:\r\n        turnOnLED(num, neopixel.colors(NeoPixelColors.Red))\r\n        if(++num == 5) num = 0\r\n        pauseTime += 20\r\n        basic.pause(pauseTime)\r\n        if(pauseTime > 200) {\r\n            state = roulette.Stopped\r\n        }\r\n        break\r\n\r\n        case roulette.Stopped:\r\n        turnOnLED(num, neopixel.colors(NeoPixelColors.Green))\r\n        break\r\n    }\r\n})\r\n\r\nfunction turnOnLED(led:number, color:number) {\r\n    strip.clear()\r\n    strip.setPixelColor(led, color)\r\n    strip.show()\r\n    basic.pause(50)\r\n}"
       }
     ],
     [
