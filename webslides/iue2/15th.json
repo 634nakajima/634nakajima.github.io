@@ -24,16 +24,6 @@
       }
     ],
     [
-      "課題 1の提出",
-      "WebCom上に入力し、提出してください。",
-      {
-        "list": [
-          "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
-        ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
-      }
-    ],
-    [
       "全体のまとめ",
       "これまでの授業内容を振り返る。",
       {
@@ -58,11 +48,11 @@
     ],
     [
       "第 3 回",
-      "Chartblocksを用いてグラフを作成。",
+      "スプレッドシートを用いてグラフを作成。",
       {
         "list": [
           "Googleスプレッドシートの<b>関数</b>で回答者数を集計。",
-          "ChartBlocksで棒グラフ、円グラフを作成。"
+          "スプレッドシートで棒グラフ、円グラフを作成。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
@@ -73,7 +63,7 @@
       {
         "list": [
           "自身の興味のあるテーマに着目し、データを<b>収集</b>。",
-          "調べたデータを整理し、Chartblocksで<b>分かりやすく</b>グラフ化。"
+          "調べたデータを整理し、スプレッドシートで<b>分かりやすく</b>グラフ化。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
@@ -97,7 +87,7 @@
         "list": [
           "Webサイトの基本レイアウトとCSSの<b>セレクタ</b>、<b>プロパティ</b>、<b>値</b>について紹介。",
           "SCSSテンプレートを用いてWebサイトをより見やすく<b>デザイン</b>。",
-          "自身の身の回りの気になるデータに関して<b>Chartblocks</b>でグラフを作成し、Webサイトを完成。"
+          "自身の身の回りの気になるデータに関して<b>スプレッドシート</b>でグラフを作成し、Webサイトを完成。"
         ],
         "image": "https://source.unsplash.com/6JVlSdgMacE/480x360"
       }
@@ -108,7 +98,7 @@
       {
         "list": [
           "<b>学生の意識調査</b>というテーマで、調査目的、内容、メリットを議論し、調査のための<b>アンケート</b>を作成。",
-          "アンケート結果についてディスカッションし、Chartblocksで<b>グラフ化</b>。"
+          "アンケート結果についてディスカッションし、スプレッドシートで<b>グラフ化</b>。"
         ],
         "image": "https://source.unsplash.com/-uHVRvDr7pg/480x360"
       }
@@ -135,13 +125,14 @@
       }
     ],
     [
-      "課題 2の提出",
-      "WebCom上に入力し、提出してください。",
+      "課題 1, 2の提出",
+      "Googleドキュメント上にそれぞれ入力し、提出してください。",
       {
         "list": [
-          "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
+          "第15回 課題 > 全体のまとめ > あなたの課題 > 追加または作成 > 新規作成 ドキュメント を選択し入力。",
+          "締切は授業日の<b>1週間後</b>。"
         ],
-        "html": "<div class=\"aligncenter buttonInFrontOfImage\"><img src=\".\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -149,7 +140,7 @@
       "Webサイトの評価を確認し、授業全体を振り返る。",
       {
         "list": [
-          "Webサイトの評価を確認し、良かった点と改善点について考察。",
+          "Webサイトの評価を確認し、<b>良かった点</b>と<b>改善点</b>について考察。",
           "授業全体を振り返り、できるようになったこと等を整理。"
         ],
         "image": "https://source.unsplash.com/zNRITe8NPqY"
@@ -161,7 +152,7 @@
       {
         "list": [
           "<h5>全ての授業が遠隔という慣れない状況の中でとても大変だったと思います。カリキュラムの変更を最低限に抑え、遠隔でも円滑に授業を実施できるよう最大限の努力をしてきました。</h5>",
-          "<h5>一方で、至らない点も多かったかもしれません。今後の授業運営の参考にすため、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。</h5>"
+          "<h5>一方で、至らない点も多かったかもしれません。今後の授業運営の参考にするため、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。</h5>"
         ],
         "image": "https://source.unsplash.com/Xaanw0s0pMk"
       }

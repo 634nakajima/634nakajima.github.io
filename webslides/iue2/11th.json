@@ -7,25 +7,13 @@
         "list": [
           "はじめに、お互いのアンケートに回答する（自グループ<b>以外</b>）。",
           "回答後、自グループのアンケート結果を閲覧し、結果についてディスカッション。",
-          "アンケート結果をChartblocksで<b>グラフ化</b>。"
+          "アンケート結果をスプレッドシートで<b>グラフ化</b>。"
         ],
         "image": "https://source.unsplash.com/JKUTrJ4vK00"
       }
     ],
     [
-      "課題 1",
-      "自分の所属するクラスのアンケート一覧へ移動。"
-    ],
-    [
-      "課題 1（火曜3限 児日）",
-      "他グループのアンケートに回答。"
-    ],
-    [
-      "課題 1（金曜1限 子ども）",
-      "他グループのアンケートに回答。"
-    ],
-    [
-      "課題 1（金曜2限 福）",
+      "課題 1（金曜2限 英米）",
       "他グループのアンケートに回答。"
     ],
     [
@@ -45,11 +33,11 @@
       "アンケート結果をグラフ化。",
       {
         "list": [
-          "<a href='https://www.chartblocks.com/ja/' target='_blank'><code>Chartblocks</code></a>を用いてアンケート結果を<b>分担</b>してグラフ化。",
-          "ワークシートに作成したグラフの<b>埋め込みコード</b>（&ltiframe から始まるHTMLスニペット）を貼り付ける。",
-          "必ずしもアンケート結果を全てグラフ化する必要はなく、重要なものだけにしたり、複数の質問結果を一つのグラフにすることもある。"
+          "<a href='https://docs.google.com/spreadsheets' target='_blank'><code>スプレッドシート</code></a>を用いてアンケート結果を<b>分担</b>してグラフ化。",
+          "ワークシートに作成したグラフの<b>埋め込みコード</b>（&ltiframe&gt から始まるHTMLスニペット）を貼り付ける。",
+          "必ずしもアンケート結果を全てグラフ化する必要はなく、<b>重要</b>なものだけにしたり、複数の質問結果を<b>ひとつ</b>のグラフにすることもある。"
         ],
-        "embed": "<iframe width=\"480\" height=\"360\" src=\"//embed.chartblocks.com/1.0/?c=5eafea463ba0f6c514e9f509&t=46c12160f95ef94\" frameborder=\"0\"></iframe>"
+        "embed": "<iframe width=\"527\" height=\"326\" seamless frameborder=\"0\" scrolling=\"no\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQRLCWjEFlkFuMvJDkJnJ3XOUmsgtULj53emqSV0ef2c12at6NzOD0kO5iHEAmMUHUqamdohiISgJrm/pubchart?oid=376649649&amp;format=interactive\"></iframe>"
       }
     ],
     [
@@ -69,7 +57,7 @@
       {
         "list": [
           "自グループのアンケート結果を閲覧し、結果についてディスカッション。",
-          "アンケート結果をChartblocksで<b>グラフ化</b>。"
+          "アンケート結果をスプレッドシートで<b>グラフ化</b>。"
         ],
         "image": "https://source.unsplash.com/6EnTPvPPL6I"
       }
