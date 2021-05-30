@@ -17,7 +17,7 @@
     ],
     [
       "Googleフォーム（スマホ）",
-      "以前作成したフォームを開き「回答」タブを確認。<br><h6>※　スマホの場合は新規フォームが生成されてしまうため、以下の手順でアクセスしてください。<br>①　画面左上紫のGoogelフォームアイコンをクリック。<br>②　Googleドライブ内から以前作成したフォームをタップ。<br>③　画面右上三点アイコンから「新しいウィンドウで開く」をタップ。</h6>"
+      "以前作成したフォームを開き「回答」タブを確認。<br><h6>※　スマホの場合は新規フォームが生成されてしまうため、以下の手順でアクセスしてください。<br>①　画面左上紫のGoogleフォームアイコンをクリック。<br>②　Googleドライブ内から以前作成したフォームをタップ。<br>③　画面右上三点アイコンから「新しいウィンドウで開く」をタップ。</h6>"
     ],
     [
       "課題 1",
@@ -27,16 +27,6 @@
           "クラスメートからの感想を元に、Webサイトの良かった点、および改善点について考察し、<b>400字</b>以上でまとめる。"
         ],
         "image": "https://source.unsplash.com/bzdhc5b3Bxs/"
-      }
-    ],
-    [
-      "課題 1の提出",
-      "WebCom上に入力し、提出してください。",
-      {
-        "list": [
-          "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
-        ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\"..\/iue2\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
       }
     ],
     [
@@ -57,7 +47,7 @@
       "フォーマルな文章の書き方を練習。",
       {
         "list": [
-          "一般的な<b>レポート</b>の書き方を紹介し、実践。",
+          "<b>Office 365</b>を使えるようにし、Wordの操作方法を紹介。",
           "教職員に送信する<b>メール</b>のルール、マナーを紹介。"
         ],
         "image": "https://source.unsplash.com/s9CC2SKySJM/480x360"
@@ -75,7 +65,7 @@
       }
     ],
     [
-      "第 6-7 回",
+      "第 6-9 回",
       "データを整理し、わかりやすく伝えるコツを紹介。",
       {
         "list": [
@@ -86,7 +76,7 @@
       }
     ],
     [
-      "第 8-12 回",
+      "第 10-14 回",
       "社会問題に関するレポートとスライドを作成し、相互評価。",
       {
         "list": [
@@ -108,13 +98,14 @@
       }
     ],
     [
-      "課題 2の提出",
-      "WebCom上に入力し、提出してください。",
+      "課題 1, 2の提出",
+      "Googleドキュメントに入力し、提出してください。",
       {
         "list": [
-          "WebComの該当課題の内容欄に記述。締切は授業日の<b>1週間後</b>。"
+          "第15回 課題 > 全体のまとめ からGoogleドキュメントを作成して提出。",
+          "締切は授業日の<b>1週間後</b>。"
         ],
-        "embed": "<div class=\"buttonInFrontOfImage\"><img src=\"..\/iue2\/pics\/WebComReport.png\" alt=\"\"><a href=\"https:\/\/webup.mju.jp\/Reg\/reg.php\" target=\"_blank\" class=\"ga-track\">WebCom\u3078\u79fb\u52d5<\/a>"
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
       }
     ],
     [
@@ -134,20 +125,9 @@
       {
         "list": [
           "<h6>全ての授業が遠隔となり、慣れない状況の中でとても大変だったと思います。私としては、カリキュラムの変更を最低限に抑え、遠隔でも円滑に授業を実施できるよう最大限の努力をしてきましたが、至らない点も多かったかもしれません。</h6>",
-          "<h6>WebComの「お知らせ」で掲示したとおり、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。それとは別に、この授業に関して良かった点や改善して欲しい点があれば、<a href='https://forms.gle/a5BB9tZ3zjtEwuu37' target='_blank'>こちら</a>からも回答をお願いします。なお、このアンケートは任意で匿名であり、成績評価とは無関係ですので、安心して回答してください。</h6>"
+          "<h6>授業に関する良かった点や改善すべき点を教えて欲しいので、Classroomの「お知らせ」で掲示したとおり、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1RMnSx4j_8x3bawlXB1s1y1AEJ95l-CV9/view?usp=sharing' target='_blank'>回答マニュアル</a>）。"
         ],
         "image": "https://source.unsplash.com/Xaanw0s0pMk"
-      }
-    ],
-    [
-      "今回のまとめ",
-      "クラスメートのスライドを閲覧、評価。",
-      {
-        "list": [
-          "事前に割り振られたグループ内のメンバー同士でスライドを<b>閲覧</b>。",
-          "スライドの<b>感想</b>を200字以上で記述。"
-        ],
-        "image": "https://cdn.pixabay.com/photo/2017/05/15/23/48/survey-2316468_640.png"
       }
     ]
   ]
