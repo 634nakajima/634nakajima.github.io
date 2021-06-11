@@ -2,7 +2,7 @@
   "explanation": [
     [
       "今回の目標",
-      "これまでを振り返り、オリジナル作品を制作。",
+      "mp3音源を再生し、作品を演出する。",
       {
         "list": [
           "これまで学んだ内容を<b>振り返る</b>。",
@@ -13,34 +13,35 @@
       }
     ],
     [
-      "第1−2回",
-      "MakeCodeを用いて基本的なコーディングを練習。",
+      "DFPlayer mini",
+      "mp3音源を再生するIC。",
       {
         "list": [
-          "カウントダウンタイマー、ドキドキハートを制作。",
-          "<b>関数</b>、<b>引数</b>、<b>変数</b>、<b>条件分岐</b>、<b>繰り返し</b>について学習。",
-          "綺麗で分かりやすいソースコードの書き方を練習。"
+          "micro:bit単体では、シンプルな音しか再生することができない。",
+          "micro:bitとDFPlayer miniとの間で<b>シリアル通信</b>を行うことで、DFPlayer miniを操作する。",
+          "音源はmicroSDカードに記録。"
         ],
-        "image": "https://source.unsplash.com/Y9mWkERHYCU/480x360"
+        "image": "https://raw.githubusercontent.com/DFRobot/DFRobotMediaWikiImage/master/Image/DFR0299-600x600.jpg",
+        "caption": "<a href=\"https:\/\/wiki.dfrobot.com\/DFPlayer_Mini_SKU_DFR0299\" target=\"_blank\">DFROBOT<\/a>"
       }
     ],
     [
-      "第3回",
-      "LEDの明るさと場所を細かくコントロール。",
+      "例題 1-1",
+      "DFPlayer miniを配線しよう。",
       {
         "list": [
-          "一筆書きアニメーション、ホタルの群れを制作。",
+          "右図の配線を参照し、回路を作成。",
           "関数の<b>定義</b>の書き方を練習。"
         ],
         "image": "https://source.unsplash.com/re_640IIZeE/480x360"
       }
     ],
     [
-      "第4回",
-      "アプリの状態管理とボタンによる状態変化。",
+      "例題 1-2",
+      "好きな効果音を探そう。",
       {
         "list": [
-          "ボタンでのLED表示切替と、シューティングゲームを制作。",
+          "<a href='https://soundeffect-lab.info/' target='_blank'>ここ</a>や<a href='https://taira-komori.jpn.org/freesound.html' target='_blank'>ここ</a>から効果音を選び、パソコンからmicroSDカードに入れる。",
           "<b>enum</b>を用いたわかりやすい状態管理をコーディング。",
           "<b>Game</b>の様々な機能を紹介。"
         ],
