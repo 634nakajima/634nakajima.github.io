@@ -5,11 +5,11 @@
       "mp3音源を再生し、作品を演出する。",
       {
         "list": [
-          "これまで学んだ内容を<b>振り返る</b>。",
-          "インタラクティブなLEDアニメーションのアイディアを<b>検討</b>する。",
-          "実際に<b>プログラミング</b>する。"
+          "<b>DFPlayer mini</b>と呼ばれるmp3音源再生モジュールとの連携方法を紹介。",
+          "DFPlayer miniの様々な機能を実装。",
+          "センサやLEDと組み合わせた作品を制作。"
         ],
-        "image": "https://source.unsplash.com/t0xTi6UcaHk/480x360"
+        "image": "https://source.unsplash.com/VHf4jqrUu7g/480x360"
       }
     ],
     [
@@ -26,77 +26,83 @@
       }
     ],
     [
-      "例題 1-1",
+      "準備 1",
       "DFPlayer miniを配線しよう。",
       {
         "list": [
-          "右図の配線を参照し、回路を作成。",
-          "関数の<b>定義</b>の書き方を練習。"
+          "左図の配線を参照し、回路を作成。",
+          "<b>ブレッドボード</b>（穴の開いた白いボード）1列5つの穴は中でつながっており、どこに差しても良い。"
         ],
-        "image": "https://source.unsplash.com/re_640IIZeE/480x360"
+        "image": "../pics/microbit_dfplayer.png"
       }
     ],
     [
-      "例題 1-2",
+      "準備 2",
       "好きな効果音を探そう。",
       {
         "list": [
           "<a href='https://soundeffect-lab.info/' target='_blank'>ここ</a>や<a href='https://taira-komori.jpn.org/freesound.html' target='_blank'>ここ</a>から効果音を選び、パソコンからmicroSDカードに入れる。",
-          "<b>enum</b>を用いたわかりやすい状態管理をコーディング。",
-          "<b>Game</b>の様々な機能を紹介。"
+          "<b>00</b>というフォルダを作成し、その中に<b>001.mp3</b>, <b>002.mp3</b>, ...というファイル名で保存。"
         ],
-        "image": "https://source.unsplash.com/eCktzGjC-iU/480x360"
+        "image": "../pics/sdcard.png"
       }
     ],
     [
-      "第5回",
-      "様々なセンサを利用したアプリを制作。",
+      "例題 1",
+      "mp3音源を再生するコードを書こう。",
       {
         "list": [
-          "ナイトライト、コンパス、LED扇風機を制作。",
-          "センサ値のグラフ表示や、値に応じた条件分岐処理を実装。",
-          "温度センサの値とLED表示時間を<b>マッピング</b>（対応づけ）。"
+          "<a href='https://makecode.microbit.org/' target='_blank'>MakeCode</a>を起動し、新規プロジェクトを作成。",
+          "拡張機能から<b>dfPlayermini</b>を検索し、選択。",
+          "dfplayermini.connect(SerialPin.P0, SerialPin.P1)でDFPlayer Miniと接続。",
+          "dfplayermini.playFileInFolder(0, ファイル名（0は省略）, dfplayermini.isRepeat.No)で再生。"
         ],
-        "image": "https://source.unsplash.com/6gSyEKq4Pvg/480x360"
+        "code": "dfplayermini.connect(SerialPin.P0,SerialPin.P1)\r\ndfplayermini.setVolume(30)\r\ndfplayermini.playFileInFolder(0, 1, dfplayermini.isRepeat.No)"
       }
     ],
     [
-      "第6回",
-      "アプリをサウンドで演出。",
+      "例題 2",
+      "ボタンにいろんな機能を持たせよう。",
       {
         "list": [
-          "ゲームの効果音、カエルの歌、ジョギング応援アプリを制作。",
-          "メロディを<b>配列</b>で用意。"
+          "<code>dfplayermini.press(dfplayermini.playType.\"機能名\")</code>で再生や停止などの機能が利用可能。",
+          "再生を表す<b><code>Play</code></b>や、次曲再生を表す<b><code>PlayNext</code></b>、停止を表す<b><code>Stop</code></b>等がある。"
         ],
-        "image": "https://source.unsplash.com/X3EnHhFa4vQ/480x360"
+        "code": "input.onButtonPressed(Button.A, function () {\r\n    dfplayermini.playFileInFolder(0, 1, dfplayermini.isRepeat.No)\r\n})\r\n\r\ninput.onButtonPressed(Button.B, function () {\r\n    dfplayermini.press(dfplayermini.playType.PlayNext)\r\n})\r\n\r\ninput.onButtonPressed(Button.AB, function () {\r\n    dfplayermini.press(dfplayermini.playType.Stop)\r\n})"
       }
     ],
     [
-      "課題概要",
-      "インタラクティブに変化するLEDアニメーションを制作。",
+      "練習 1",
+      "センサやLEDと組み合わせて効果音を用いた作品を作ろう。",
       {
         "list": [
-          "これまでに紹介した手法を駆使し、シミュレータで実行できる作品を制作。テーマは<b>自由</b>。",
-          "<b>センサ</b>（含ボタン）を使うこと、LED表示が<b>変化</b>することが条件。",
-          "100字程度の作品説明（コンセプト、工夫したところなど）をコメント欄に添えて提出。締切は<b>次回授業前日</b>（厳守）"
+          "micro:bitではシンプルなメロディしか再生できなかったが、mp3を使えばリアルな効果音をつけたり、セリフを再生することも可能。",
+          "複数の音源再生やループ再生、音量のコントロールなども可能。"
         ],
-        "image": "../pics/chick.png"
+        "image": "https://source.unsplash.com/82TpEld0_e4"
       }
     ],
     [
       "課題の提出",
-      "作品と説明をClassroomに提出。"
+      "練習 1をClassroomに提出。",
+      {
+        "list": [
+          "第10回 課題に練習 1を載せて提出。",
+          "締切は次回授業<b>前日</b>。"
+        ],
+        "image": "https://img.icons8.com/ios-glyphs/480/000000/google-classroom.png"
+      }
     ],
     [
       "今回のまとめ",
-      "これまでを振り返り、オリジナル作品を制作。",
+      "DFPlayer miniを用いたmp3音源の再生方法を紹介。",
       {
         "list": [
-          "これまで学んだ内容を<b>復習</b>。",
-          "インタラクティブなLEDアニメーションのアイディアを<b>検討</b>。",
-          "実際に作品を<b>制作</b>。"
+          "micro:bitとDFPlayer miniを配線。",
+          "フリーの効果音サイトから好きな音源を再生。",
+          "センサやLEDを用いて作品制作。"
         ],
-        "image": "https://source.unsplash.com/YCE83q6G86U/480x360"
+        "image": "https://source.unsplash.com/ASKeuOZqhYU/480x360"
       }
     ]
   ]
