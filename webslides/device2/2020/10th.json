@@ -54,8 +54,8 @@
         "list": [
           "<a href='https://makecode.microbit.org/' target='_blank'>MakeCode</a>を起動し、新規プロジェクトを作成。",
           "拡張機能から<b>dfPlayermini</b>を検索し、選択。",
-          "dfplayermini.connect(SerialPin.P0, SerialPin.P1)でDFPlayer Miniと接続。",
-          "dfplayermini.playFileInFolder(0, ファイル名（0は省略）, dfplayermini.isRepeat.No)で再生。"
+          "<code>dfplayermini.connect(SerialPin.P0, SerialPin.P1)</code>でDFPlayer Miniと接続。",
+          "<code>dfplayermini.playFileInFolder(0, ファイル名（0は省略）, dfplayermini.isRepeat.No)</code>で再生。"
         ],
         "code": "dfplayermini.connect(SerialPin.P0,SerialPin.P1)\r\ndfplayermini.setVolume(30)\r\ndfplayermini.playFileInFolder(0, 1, dfplayermini.isRepeat.No)"
       }
