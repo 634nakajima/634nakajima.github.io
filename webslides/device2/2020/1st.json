@@ -13,11 +13,10 @@
       }
     ],
     [
-      "遠隔授業の流れ",
-      "Zoomとスライドの解説をもとに、毎回の課題を提出。",
+      "授業の流れ",
+      "スライドと授業内での解説をもとに、毎回の課題を提出。",
       {
         "list": [
-          "授業開始時刻までにClassroom上に掲載したZoomのURLと授業用資料（スライドURL）にアクセス。",
           "授業内の指示に従って<b>プログラム</b>を作成。",
           "該当回の授業内課題にプログラムのURLを<b>提出</b>。"
         ],
@@ -69,7 +68,7 @@
       {
         "list": [
           "<a href='https://makecode.microbit.org/_c8X8d8D1ia5y' target='_blank'>敵機をよけるゲーム</a><br>敵機をよけるごとに加点され、接触するとゲームオーバー。",
-          "<a href='https://makecode.microbit.org/_bqm8EpDgL5CM' target='_blank'>ダウジングマシン</a><br>ボタンを使って移動し、お宝の座標でデバイスを振るとゲット。",
+          "<a href='https://makecode.microbit.org/_D9bXcvJvF6LC' target='_blank'>ブロック崩し</a><br>ボタンを使って移動し、弾をはじいてブロックを崩す。",
           "<a href='https://makecode.microbit.org/_5K5YtyCFmiv2' target='_blank'>北風と太陽</a><br>温度に応じて北風と太陽のアニメーションが再生される。"
         ],
         "image": "../pics/chick.png"
@@ -93,22 +92,6 @@
     [
       "過去の作品②",
       ""
-    ],
-    [
-      "過去の作品③",
-      ""
-    ],
-    [
-      "",
-      "はじめから素晴らしい作品が作れる人なんていません。",
-      {
-        "list": [
-          "アイデアは途中で変わったりします。",
-          "初めからあれこれ考えすぎずに、とりあえず作ってみましょう。",
-          "作ってみることで次の作品アイデアがどんどん浮かんできます。"
-        ],
-        "image": "https://source.unsplash.com/cn9KWcTseH0/"
-      }
     ],
     [
       "micro:bit",
