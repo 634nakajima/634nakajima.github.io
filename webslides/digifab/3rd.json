@@ -103,7 +103,7 @@
       "レーザーカッター等で加工可能なデータを共有するサイト",
       {
         "list": [
-          "木工品やパズル、コースターなど様々なモノを作るための2Dカットデータが共有されている。アクセスは<a href='https://www.thingiverse.com/' target=''_blank>こちら</a>。"
+          "木工品やパズル、コースターなど様々なモノを作るための2Dカットデータが共有されている。アクセスは<a href='https://3axis.co' target='_blank'>こちら</a>。"
         ],
         "image": "pics/3axis.png"
       }
@@ -113,7 +113,7 @@
       "3Dプリンタで出力できる様々なデータを共有するサイト。",
       {
         "list": [
-          "造形したいモノをキーワード検索して好きなデータをダウンロード可能。アクセスは<a href='https://www.thingiverse.com/' target=''_blank>こちら</a>。"
+          "造形したいモノをキーワード検索して好きなデータをダウンロード可能。アクセスは<a href='https://www.thingiverse.com/' target='_blank'>こちら</a>。"
         ],
         "image": "pics/thingiverse.png"
       }
