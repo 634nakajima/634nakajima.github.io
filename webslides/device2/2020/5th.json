@@ -63,10 +63,9 @@
       "向いている方角を表示しよう。",
       {
         "list": [
-          "コンパスを使用するときは、<b>キャリブレーション</b>（センサの値が正しくなるような調整）をしておく。",
-          "方角の切り替わる角度に注意しながら、if文で一つづつ記述する。"
+          "方角の切り替わる角度に注意しながら、if else文で一つづつ記述する。"
         ],
-        "code": "input.calibrateCompass()\/\/\u30b3\u30f3\u30d1\u30b9\u306e\u6821\u6b63\uff08\u30ad\u30e3\u30ea\u30d6\u30ec\u30fc\u30b7\u30e7\u30f3\uff09\r\nbasic.forever(function () {\r\n    if (input.compassHeading() < 22) {\r\n        basic.showString(\"N\")\r\n    } else if (input.compassHeading() < 67) {\r\n        basic.showString(\"NE\")\r\n    } else if (input.compassHeading() < 112) {\r\n        basic.showString(\"E\")\r\n    } else if (input.compassHeading() < 157) {\r\n        basic.showString(\"SE\")\r\n    } else if (input.compassHeading() < 202) {\r\n        basic.showString(\"S\")\r\n    } else if (input.compassHeading() < 247) {\r\n        basic.showString(\"SW\")\r\n    } else if (input.compassHeading() < 292) {\r\n        basic.showString(\"W\")\r\n    } else if (input.compassHeading() < 337) {\r\n        basic.showString(\"NW\")\r\n    } else {\r\n        basic.showString(\"N\")\r\n    }\r\n})\r\n"
+        "code": "basic.forever(function () {\r\n    if (input.compassHeading() < 22) {\r\n        basic.showString(\"N\")\r\n    } else if (input.compassHeading() < 67) {\r\n        basic.showString(\"NE\")\r\n    } else if (input.compassHeading() < 112) {\r\n        basic.showString(\"E\")\r\n    } else if (input.compassHeading() < 157) {\r\n        basic.showString(\"SE\")\r\n    } else if (input.compassHeading() < 202) {\r\n        basic.showString(\"S\")\r\n    } else if (input.compassHeading() < 247) {\r\n        basic.showString(\"SW\")\r\n    } else if (input.compassHeading() < 292) {\r\n        basic.showString(\"W\")\r\n    } else if (input.compassHeading() < 337) {\r\n        basic.showString(\"NW\")\r\n    } else {\r\n        basic.showString(\"N\")\r\n    }\r\n})\r\n"
       }
     ],
     [
