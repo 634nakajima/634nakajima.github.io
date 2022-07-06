@@ -7,7 +7,7 @@ body {
 }
 
 .back {
-  font-size:14px;
+  font-size: 14px;
   line-height: 5;
 }
 
@@ -17,22 +17,23 @@ body {
 }
 
 h1.titleLogo {
-  font-size:4em;
-  padding-top:50px;
-  color:white;
-  text-align:center;
+  font-size: 5em;
+  padding-top: 50px;
+  color: white;
+  text-align: center;
   font-family: Logo;
   text-shadow: 2px 2px 10px black;
 }
+
 /*Main Visual
 -------------------------------------------------- */
 .top {
-  padding-top:50px;
-  background-size:contain;
-  background-color:#777;
-  background:url(https://source.unsplash.com/voM1Z9cGPCU/);
-  background-size:cover;
-  background-position:center;
+  padding-top: 50px;
+  background-size: contain;
+  background-color: #777;
+  background: url(https://source.unsplash.com/qyhLjwn6Gpc/);
+  background-size: cover;
+  background-position: center;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -48,14 +49,16 @@ h1.titleLogo {
 }
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
+.navbar-wrapper>.container {
   padding-right: 0;
   padding-left: 0;
 }
+
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 .navbar-wrapper .navbar .container {
   width: auto;
 }
@@ -69,9 +72,11 @@ h1.titleLogo {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .marketing h2 {
   font-weight: normal;
 }
+
 .marketing .col-lg-6 p {
   margin-right: 50px;
   margin-left: 50px;
@@ -82,8 +87,9 @@ h1.titleLogo {
 ------------------------- */
 
 .featurette-divider {
-  margin: 50px 0; /* Space out the Bootstrap <hr> more */
-  margin-bottom:50px;
+  margin: 50px 0;
+  /* Space out the Bootstrap <hr> more */
+  margin-bottom: 50px;
 }
 
 /* Thin out the marketing headings */
@@ -94,98 +100,113 @@ h1.titleLogo {
 }
 
 .mytext {
-  line-height:1.55;
-  font-size:14px;
+  line-height: 1.55;
+  font-size: 14px;
 }
 
 .about {
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .bottom {
-  padding-bottom:50px;
+  padding-bottom: 50px;
 }
 
 #page-top {
-    position: fixed;
-    bottom: 30px;
-    right: 10px;
-    font-size: 75%;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  font-size: 75%;
 }
+
 #page-top a {
-    background: #333;
-    text-decoration: none;
-    color: #fff;
-    width: 80px;
-    height:30px;
-    padding: 6px 0;
-    text-align: center;
-    display: block;
-    border-radius: 5px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  padding: 6px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
 }
+
 #page-top a:hover {
-    text-decoration: none;
-    background: #333;
+  text-decoration: none;
+  background: #333;
 }
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (min-width: 768px) {
+
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 0px;
   }
+
   .navbar-wrapper .container {
     margin: 0px;
     width: auto;
   }
+
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left: 0;
     height: auto;
   }
+
   /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
     border-radius: 0px;
   }
 
   h1.titleLogo {
-  font-size:7em;
-  padding-top:10px;
-  color:white;
-  text-align:center;
-  font-family: Logo;
-  text-shadow: 2px 2px 10px black;
+    font-size: 8.5em;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    font-family: Logo;
+    text-shadow: 2px 2px 10px black;
   }
+
   .top {
     padding-top: 100px;
   }
-  .box{
-    height:360px;
+
+  .box {
+    height: 360px;
   }
-  .caption{
-    height:90px;
+
+  .caption {
+    height: 90px;
   }
+
   .mytext {
-    font-size:16px;
+    font-size: 16px;
   }
+
   .about {
-    padding-bottom:20px;
+    padding-bottom: 20px;
   }
+
   .bottom {
-    padding-bottom:0px;
+    padding-bottom: 0px;
   }
+
   #page-top {
     bottom: 20px;
     right: 20px;
     font-size: 100%;
   }
+
   #page-top a {
     width: 100px;
-    height:40px;
+    height: 40px;
     padding: 8px 0;
   }
+
   #page-top a:hover {
     text-decoration: none;
     background: #999;
