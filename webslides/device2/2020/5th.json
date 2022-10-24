@@ -98,7 +98,7 @@
       {
         "list": [
           "map関数だけでは、25度未満、35度以上でも回り続けてしまう。",
-          "if文で25度未満の時は回転を止め、35度以上ではそれ以上速く羽が回らないようにする。",
+          "if文で25度未満の時は回転を止め、35度以上ではそれ以上速く回らないようにする。"
         ],
         "code": "let speed = 200\r\nbasic.forever(function () {\r\n    let temp = input.temperature()\r\n    if (25 <= temp) {\r\n        if(temp <= 35) {\r\n            speed = Math.map(input.temperature(), 25, 35, 200, 30)\r\n        }else {\r\n            speed = 30\r\n        }\r\n        basic.showLeds(`\r\n        . . # . .\r\n        . . # . .\r\n        # # # # #\r\n        . . # . .\r\n        . . # . .\r\n        `, speed)\r\n        basic.showLeds(`\r\n        . . . # .\r\n        # # . # .\r\n        . . # . .\r\n        . # . # #\r\n        . # . . .\r\n        `, speed)\r\n        basic.showLeds(`\r\n        # . . . #\r\n        . # . # .\r\n        . . # . .\r\n        . # . # .\r\n        # . . . #\r\n        `, speed)\r\n        basic.showLeds(`\r\n        . # . . .\r\n        . . # . #\r\n        . # # # .\r\n        # . # . .\r\n        . . . # .\r\n        `, speed)\r\n    }\r\n})\r\n"
       }
