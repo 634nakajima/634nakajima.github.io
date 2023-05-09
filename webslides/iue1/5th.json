@@ -28,14 +28,14 @@
       }
     ],
     [
-      "事例1 不適切な言動パターン",
+      "事例 1 不適切な言動パターン",
       "バイトテロ。",
       {
         "list": [
           "飲食店やコンビニのアルバイト従業員が、業務用機材や食品に対する<b>不衛生</b>な振る舞いを動画撮影し、SNSに投稿。",
           "この投稿が批判を浴び、当該授業員が<b>処分</b>、損害賠償請求される事例が多発。"
         ],
-        "image": "https://source.unsplash.com/SsKf1L6rWJk/480x360/"
+        "image": "https://source.unsplash.com/3BNrdARxbYo/480x360/"
       }
     ],
     [
@@ -57,7 +57,7 @@
         "list": [
           "出演番組での言動に対してネット上で<b>批判</b>があった。",
           "批判の中には多数の<b>誹謗中傷</b>が含まれていた。",
-          "誹謗中傷が彼女を<b>自殺</b>に追いやったと言われ、問題となっている。"
+          "誹謗中傷が彼女を<b>自殺</b>に追いやったと言われ、問題となった。"
         ],
         "image": "./pics/kimura2019.jpg",
         "caption": "<small><a href=\"https:\/\/commons.wikimedia.org\/wiki\/User:Yoccy441\">Yoccy441<\/a>, <a href=\"https:\/\/commons.wikimedia.org\/wiki\/File:\u6728\u6751\u82b12019.jpg\">\u6728\u6751\u82b12019<\/a>, \u4e0a\u534a\u8eab\u306e\u307f by 634nakajima,<br><a href=\"https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/legalcode\" rel=\"license\">CC BY-SA 4.0<\/a></small>"
