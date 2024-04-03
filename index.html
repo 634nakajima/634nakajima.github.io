@@ -91,6 +91,27 @@
         </div>
         <p class="bottom"><a class="btn btn-default" href="#Inverse" role="button">詳細を見る &raquo;</a></p>
       </div>
+      
+      <div class="col-sm-6 col-md-4 box">
+        <img class="img-responsive center-block" src="./pics/visibleLight.jpg" alt="">
+        <h3>LEDライトで音楽情報を送信しよう</h3>
+        <div class="caption">
+          <p>2022</p>
+          <p>LEDライトをかざすと音楽が流れる装置を通じて可視光通信のしくみを紹介。</p>
+        </div>
+        <p class="bottom"><a class="btn btn-default" href="#visibleLight" role="button">詳細を見る &raquo;</a></p>
+      </div>
+
+      <div class="col-sm-6 col-md-4 box">
+        <img class="img-responsive center-block" src="./pics/optfibcom.jpg" alt="">
+        <h3>光ファイバーで情報が伝わるしくみ</h3>
+        <div class="caption">
+          <p>2022</p>
+          <p>光ファイバケーブルを用いた通信の原理をわかりやすく紹介。</p>
+        </div>
+        <p class="bottom"><a class="btn btn-default" href="#optfibcom" role="button">詳細を見る &raquo;</a></p>
+      </div>
+      
       <div class="col-sm-6 col-md-4 box">
         <img class="img-responsive center-block" src="./pics/heartbeater.jpg" alt="HeartBeater">
         <h3>HeartBeater</h3>
@@ -253,6 +274,46 @@
         </div>
       </div>
     </div>
+    
+    <!-- 可視光通信 -->
+    <hr class="featurette-divider" id="visibleLight">
+    <div class="row featurette">
+      <div class="col-md-6 col-md-push-6">
+        <h2 class="featurette-heading">LEDライトで音楽情報を送信しよう</h2>
+        <p>2022</p>
+        <p class="mytext">
+          この作品では、音楽の情報を目に見える光で通信しています。赤色のライトを白い円柱状の装置にかざしてみてください。元から鳴っていた伴奏にメロディが加わるはずです。実は赤、青、黄色の光がそれぞれメロディ、リズム、ハーモニーの音楽情報を送信しており、中央のセンサーに光が当たると、その情報が音に変換されて再生されます。
+          <br><br>
+          このLEDライトは、内部のコンピュータから生成された音の電気信号を光の強さに変換して発光しています。そして、光センサーはLEDライトの光を受け取り、その強さを電気信号の大きさに変換しています。変換された音の電気信号がスピーカーに伝わって音楽が再生されています。このように、本作品では音の電気信号と光の強さが対応づけられていることで、音楽情報を送受信することができます。<br><br>
+        </p>
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <!-- YouTube -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UAb1hbWXk3Q?si=eU0uBSHCrlJVILrd&amp;start=133" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- 光ファイバー通信 -->
+    <hr class="featurette-divider" id="optfibcom">
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">光ファイバーで情報が伝わるしくみ</h2>
+        <p>2022</p>
+        <p class="mytext">
+          この作品では、光ファイバケーブルを用いた通信の原理をわかりやすく紹介しています。
+          <br><br>
+          電鍵と呼ばれる黒いボタンを使ってモールス信号を入力すると、光ファイバーケーブルに見立てた透明なプラスチック素材の中をレーザー光が伝わり、受信した文字情報をモニターに表示します。手元のモールス符号表を参考に、電鍵を短く押す“トン”と、長く押す“ツー”の組み合わせ方で、たくさんの文字情報を送信することができます。光ファイバーケーブルは、この作品におけるモールス信号のように、様々な情報を伝えることができます。
+        </p>
+      </div>
+      <div class="col-md-6">
+        <!-- YouTube -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UAb1hbWXk3Q?si=-vUZsbsw04z2mtN-&amp;start=153" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
     <!-- HeartBeater -->
     <hr class="featurette-divider" id="HeartBeater">
     <div class="row featurette">
@@ -577,7 +638,7 @@
 
       <div class="col-lg-4 col-md-6">
         <h3><a target="_blank" href="http://www.nicovideo.jp/watch/sm13142320">pulse</a></h3>
-        <p>（リンク先動画内2曲目)</p>
+        <p>(リンク先動画内2曲目)</p>
         <a href="http://www.crypton.co.jp/mp/pages/prod/vocaloid/cv02a.jsp" target="_blank">鏡音リン・レンAppend 公式デモソング</a>
       </div>
     </div>
@@ -659,6 +720,7 @@
 
           <li class="h4">国内研究発表</li>
           <ul class="list">
+            <li>中島武三志. "振動スピーカとソフトマテリアルによる音響・触感インタフェース", インタラクション2024論文集, pp.1127-1132, 2024.</li>
             <li>中島武三志. "HeartBeater: 他者の存在感や精神状態を示唆するマルチモーダル心音提示デバイス", インタラクション2022論文集, pp.316-319, 2022.
             </li>
             <li>植井康介, 中島武三志. "VR環境下における接触音の周波数特性が擬似触力覚に与える影響", インタラクション2021論文集, pp.457-462, 2021.</li>
@@ -699,6 +761,15 @@
 
           <li class="h4">国内作品展示</li>
           <ul class="list">
+            <li>吉田穂乃花，中島武三志. "色覚多様性の世界", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>中島武三志. "音の波形を見る", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>中島武三志. "いろんな触感", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>北島圭吾，瀧澤黎士，中島武三志. "色を聴く", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>中島武三志. "色に触れる", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>中島武三志. "鈴灯り", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>猪股 瑛仁，中島武三志. "色字共感覚の世界", 東京工芸大学カラボギャラリー第11回企画展 色を聴く、色に触れる -知覚の多様性-, 2024.</li>
+            <li>中島武三志. "LEDライトで音楽情報を送信しよう", 東京工芸大学カラボギャラリー第9回企画展 -光が伝わる、光で伝える-, 2022.</li>
+            <li>中島武三志. "光ファイバーで情報が伝わるしくみ", 東京工芸大学カラボギャラリー第9回企画展 -光が伝わる、光で伝える-, 2022.</li>
             <li>中島武三志. "Inverse", 東京工芸大学カラボギャラリー第9回企画展 -光が伝わる、光で伝える-, 2022.</li>
             <li>中島武三志. "LEDライトで音楽情報を送信しよう", 東京工芸大学カラボギャラリー第9回企画展 -光が伝わる、光で伝える-, 2022.</li>
             <li>中島武三志. "光ファイバーで情報が伝わるしくみ", 東京工芸大学カラボギャラリー第9回企画展 -光が伝わる、光で伝える-, 2022.</li>
