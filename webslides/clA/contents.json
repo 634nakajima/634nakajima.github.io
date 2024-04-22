@@ -67,13 +67,6 @@
         }
       ],
       [
-        "段組み",
-        "1行の文字数を少なくして可読性を向上する。",
-        {
-          "youtube": "https://www.youtube.com/embed/so0QZBhrEhk"
-        }
-      ],
-      [
         "レポートの掟 1",
         "見出しはゴシック体フォントを利用する。"
       ],
@@ -165,17 +158,16 @@
   },
   "4th": {
     "number": 4,
-    "json": "./5th.json",
-    "classtitle": "スプレッドシート応用演習",
+    "json": "./4th.json",
+    "classtitle": "ワードプロセッシング応用演習",
     "chaptertitle": [
       "報告書の完成",
-      "レポートの掟（再掲）",
-      "まとめ"
+      "レポートの掟（再掲）"
     ]
   },
   "5th": {
     "number": 5,
-    "json": "./4th.json",
+    "json": "./5th.json",
     "classtitle": "スプレッドシート基礎演習",
     "chaptertitle": [
       "収集したデータの整理",
