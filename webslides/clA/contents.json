@@ -166,7 +166,7 @@
   "4th": {
     "number": 5,
     "json": "./4th.json",
-    "classtitle": "スプレッドシート演習",
+    "classtitle": "スプレッドシート基礎演習",
     "chaptertitle": [
       "収集したデータの整理",
       "見やすいグラフの作成",
@@ -176,7 +176,7 @@
   "5th": {
     "number": 6,
     "json": "./5th.json",
-    "classtitle": "ワープロとスプレッドシート応用演習",
+    "classtitle": "スプレッドシート応用演習",
     "chaptertitle": [
       "報告書の完成",
       "レポートの掟（再掲）",
