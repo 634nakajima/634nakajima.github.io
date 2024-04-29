@@ -67,7 +67,7 @@
           "<code>x()</code>, <code>y()</code>（座標）,<code> move()</code>（移動）,<code> turn()</code>（回転）といった関数を利用できる。",
           "これらを組み合わせて移動する敵を作ろう。"
         ],
-        "code": "let enemy = game.createSprite(0, 0)\/\/\u6575\u3092\u8868\u3059\u70b9\u3092\u751f\u6210\r\n\r\nbasic.forever(function () {\r\n    enemy.move(1)\/\/\u53f3\uff08\u5de6\uff09\u306b\u79fb\u52d5\r\n    \/\/\u6575\u306ex\u5ea7\u6a19\u304c0 \u307e\u305f\u306f 4\u306b\u306a\u3063\u305f\u3089\r\n    \/\/\uff08\u300c\u307e\u305f\u306f\u300d\u306f||\u3067\u8868\u3059\uff09\r\n    if (enemy.x() == 0 || enemy.x() == 4) {\r\n        enemy.turn(Direction.Right, 180)\/\/180\u5ea6\u65b9\u5411\u8ee2\u63db\r\n    }\r\n    basic.pause(500)\r\n})"
+        "code": "let enemy = game.createSprite(0, 0)\/\/\u6575\u3092\u8868\u3059\u70b9\u3092\u751f\u6210\r\n\r\nbasic.forever(function () {\r\n    enemy.move(1)\/\/\u53f3\uff08\u5de6\uff09\u306b\u79fb\u52d5\r\n    enemy.ifOnEdgeBounce()\/\/\u7aef\u306b\u3042\u308c\u3070\u53cd\u8ee2\r\n    basic.pause(500)\r\n})"
       }
     ],
     [
