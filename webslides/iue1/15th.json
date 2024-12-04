@@ -32,8 +32,8 @@
         "list": [
           "<strong>パートⅠ</strong>（第 2-3 回）フォーマルな文章の書き方を学習。",
           "<strong>パートⅡ</strong>（第 4-5 回）インターネットのリテラシーについて考察。",
-          "<strong>パートⅢ</strong>（第 6-7 回）データを整理し、分かりやすく伝える方法を学習。",
-          "<strong>パートⅣ</strong>（第 8-12 回）社会問題の現状と今後の課題について調査。"
+          "<strong>パートⅢ</strong>（第 6-9 回）データを整理し、分かりやすく伝える方法を学習。",
+          "<strong>パートⅣ</strong>（第 10-14 回）社会問題の現状と今後の課題について調査。"
         ],
         "image": "https://source.unsplash.com/OsC8HauR0e0/480x360"
       }
@@ -55,7 +55,7 @@
       {
         "list": [
           "検索を駆使して様々な情報の入手について練習し、漫画やネット画像の<b>著作権</b>について調査。",
-          "ネット投稿の問題事例を紹介し、学生の<b>SNS</b>に対する意識について考察。"
+          "ネット投稿の問題事例を紹介し、<b>SNS</b>が抱える課題について考察。"
         ],
         "image": "https://source.unsplash.com/DfMMzzi3rmg/480x360/"
       }
@@ -65,7 +65,7 @@
       "データを整理し、わかりやすく伝えるコツを紹介。",
       {
         "list": [
-          "Excel Onlineを用いてデータを集計し、<b>グラフ</b>作成の練習。",
+          "Excelを用いてデータを集計し、<b>グラフ</b>作成の練習。",
           "学術発表の流れに沿ったスライドのパターンを紹介し、シンプルなデザインで<b>スライド</b>を作成。"
         ],
         "image": "https://source.unsplash.com/6EnTPvPPL6I"
@@ -94,6 +94,10 @@
       }
     ],
     [
+      "Word（Web版）",
+      "Office365 Word（Web版）に移動。"
+    ],
+    [
       "課題 1, 2の提出",
       "Wordに入力し、提出してください。",
       {
@@ -120,7 +124,7 @@
       "半期の授業お疲れ様でした！",
       {
         "list": [
-          "<h6>今後の授業運営の参考にするため、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1LCBmcVXZwzkbVuxn7b7hi9RgTaSxxsWl/view?usp=sharing' target='_blank'>回答マニュアル</a>）。"
+          "<h6>今後の授業運営の参考にするため、大学全体で実施している<b>授業評価アンケート</b>への回答をお願いします（<a href='https://drive.google.com/file/d/1ubvsWHZsnLRvf_u7xeBr8dCCiKksudhq/view?usp=sharing' target='_blank'>回答マニュアル</a>）。"
         ],
         "image": "https://source.unsplash.com/Xaanw0s0pMk"
       }
