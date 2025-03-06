@@ -123,7 +123,8 @@
       "面白い！作ってみたい2Dデータベスト3を見つけよう。",
       {
         "list": [
-          "3axis.coの中から気になる作品データを探し、<b>3つ</b>選んでください。"
+          "3axis.coの中から気になる作品データを探し、<b>3つ</b>選んでください。",
+          "各作品の概要とURLを記載してください。"
         ],
         "image": "../../crossmodal/static/images/Ubiquitels.png"
       }
@@ -133,17 +134,18 @@
       "面白い！作ってみたい3Dデータベスト3を見つけよう。",
       {
         "list": [
-          "Thingiverseの中から気になる作品データを探し、<b>3つ</b>選んでください。"
+          "Thingiverseの中から気になる作品データを探し、<b>3つ</b>選んでください。",
+          "各作品の概要とURLを記載してください。"
         ],
         "image": "../../crossmodal/static/images/Ubiquitels.png"
       }
     ],
     [
       "課題の提出",
-      "リンクをClassroomに提出。",
+      "GoogleドキュメントをClassroomに提出。",
       {
         "list": [
-          "データ閲覧先へのリンクを提出。",
+          "概要とリンクを記載したドキュメントを提出。",
           "締切は次回授業<b>前日</b>。"
         ],
         "image": "http://source.unsplash.com/aQfhbxailCs/"

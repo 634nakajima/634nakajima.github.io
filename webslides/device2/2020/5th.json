@@ -81,20 +81,31 @@
       }
     ],
     [
-      "例題 4",
+      "例題 4-1",
       "LED扇風機を温度に応じて回そう。",
       {
         "list": [
           "<code><b>led.showLeds</b>()</code>で羽が回る4種類のコマを用意する。",
           "この関数の第2引数に入れる表示時間を温度に応じて変化させる。",
-          "<code><b>map</b>()</code>で、温度の大小（20-35°C）を表示時間の大小（1000-10 ms）に変換。"
+          "<code><b>map</b>()</code>で、温度の大小（25-35°C）を表示時間の大小（300-30 ms）に変換。"
         ],
-        "code": "basic.forever(function () {\r\n    let speed = Math.map(input.temperature(), 20, 35, 1000, 10)\r\n\r\n    basic.showLeds(`\r\n        # . . . #\r\n        . # . # .\r\n        . . # . .\r\n        . # . # .\r\n        # . . . #\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . # . . .\r\n        . . # . #\r\n        . # # # .\r\n        # . # . .\r\n        . . . # .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . . # . .\r\n        . . # . .\r\n        # # # # #\r\n        . . # . .\r\n        . . # . .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . . . # .\r\n        # . # . .\r\n        . # # # .\r\n        . . # . #\r\n        . # . . .\r\n        `, speed)\r\n})"
+        "code": "let speed = 200\r\nbasic.forever(function () {\r\n    speed = Math.map(input.temperature(), 25, 35, 200, 30)\r\n    basic.showLeds(`\r\n        . . # . .\r\n        . . # . .\r\n        # # # # #\r\n        . . # . .\r\n        . . # . .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . . . # .\r\n        # # . # .\r\n        . . # . .\r\n        . # . # #\r\n        . # . . .\r\n        `, speed)\r\n    basic.showLeds(`\r\n        # . . . #\r\n        . # . # .\r\n        . . # . .\r\n        . # . # .\r\n        # . . . #\r\n        `, speed)\r\n    basic.showLeds(`\r\n        . # . . .\r\n        . . # . #\r\n        . # # # .\r\n        # . # . .\r\n        . . . # .\r\n        `, speed)\r\n}\r\n})\r\n"
+      }
+    ],
+    [
+      "例題 4-2",
+      "温度の下限と上限を処理しよう。",
+      {
+        "list": [
+          "map関数だけでは、25度未満、35度以上でも回り続けてしまう。",
+          "if文で25度未満の時は回転を止め、35度以上ではそれ以上速く回らないようにする。"
+        ],
+        "code": "let speed = 200\r\nbasic.forever(function () {\r\n    let temp = input.temperature()\r\n    if (25 <= temp) {\r\n        if(temp <= 35) {\r\n            speed = Math.map(input.temperature(), 25, 35, 200, 30)\r\n        }else {\r\n            speed = 30\r\n        }\r\n        basic.showLeds(`\r\n        . . # . .\r\n        . . # . .\r\n        # # # # #\r\n        . . # . .\r\n        . . # . .\r\n        `, speed)\r\n        basic.showLeds(`\r\n        . . . # .\r\n        # # . # .\r\n        . . # . .\r\n        . # . # #\r\n        . # . . .\r\n        `, speed)\r\n        basic.showLeds(`\r\n        # . . . #\r\n        . # . # .\r\n        . . # . .\r\n        . # . # .\r\n        # . . . #\r\n        `, speed)\r\n        basic.showLeds(`\r\n        . # . . .\r\n        . . # . #\r\n        . # # # .\r\n        # . # . .\r\n        . . . # .\r\n        `, speed)\r\n    }\r\n})\r\n"
       }
     ],
     [
       "例題の提出",
-      "例題2, 3-2, 4をClassroomに提出。"
+      "例題2, 3-2, 4-2をClassroomに提出。"
     ],
     [
       "今回のまとめ",
