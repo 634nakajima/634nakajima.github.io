@@ -144,7 +144,7 @@
           "サンプルデータを用いてデータを集計し、表を作成。",
           "架空の成績表を元に<b>見やすい</b>グラフを作成。"
         ],
-        "image": "https://source.unsplash.com/pypeCEaJeZY"
+        "image": "./pics/graph.jpg"
       }
     ]
   ]
