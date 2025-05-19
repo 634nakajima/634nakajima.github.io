@@ -8,7 +8,7 @@
           "架空の高校の成績というテーマで表を作成。",
           "作成した表からグラフを作成。"
         ],
-        "image": "https://source.unsplash.com/JKUTrJ4vK00"
+        "image": "./pics/graph.jpg"
       }
     ],
     [
@@ -19,7 +19,7 @@
           "表を<b>見やすく</b>調整し、セルに必要なデータを入力。",
           "成績に関する<b>２</b>種類のグラフを作成。"
         ],
-        "image": "https://source.unsplash.com/hes6nUC1MVc"
+        "image": "./pics/classroom.jpg"
       }
     ],
     [
