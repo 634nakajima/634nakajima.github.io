@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Musashi Nakajima - Researcher / Sound Artist. Associate Professor, Dept. of Interactive Media, Faculty of Arts, Tokyo Polytechnic University.">
+  <meta name="author" content="Musashi Nakajima">
+  <title>634.nakajima</title>
+  <link rel="icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Logo'; src: url('../assets/digital-7i.ttf'); }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">634.nakajima</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+        <a href="../index.html" style="opacity:.6;font-size:.75rem;">JP</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-canvas">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">634.nakajima</h1>
+      <p class="hero-tagline">Researcher / Sound Artist</p>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title fade-in">Projects</h2>
+        <p class="section-subtitle fade-in">Interactive Art / Sound Art Works</p>
+
+        <div class="filter-bar fade-in">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="2020s">2020s</button>
+          <button class="filter-btn" data-filter="2010s">2010s</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Marine -->
+          <article class="project-card fade-in" data-modal="marine" data-era="2020s">
+            <img class="project-card-img" src="../pics/marine.jpg" alt="Marine" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2024</div>
+              <h3 class="project-card-title">Marine</h3>
+              <p class="project-card-desc">A sound installation where you feel sound and vibration through soft domes.</p>
+            </div>
+          </article>
+
+          <!-- The World of Color Vision Diversity -->
+          <article class="project-card fade-in" data-modal="shikikaku" data-era="2020s">
+            <img class="project-card-img" src="../pics/shikikaku.png" alt="The World of Color Vision Diversity" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">The World of Color Vision Diversity</h3>
+              <p class="project-card-desc">An experiential work that simulates how people with color vision deficiency see the world.</p>
+            </div>
+          </article>
+
+          <!-- Seeing Sound Waveforms -->
+          <article class="project-card fade-in" data-modal="soundWave" data-era="2020s">
+            <img class="project-card-img" src="../pics/soundWave.jpg" alt="Seeing Sound Waveforms" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">Seeing Sound Waveforms</h3>
+              <p class="project-card-desc">Visually experience the three elements of sound.</p>
+            </div>
+          </article>
+
+          <!-- Various Textures -->
+          <article class="project-card fade-in" data-modal="touch" data-era="2020s">
+            <img class="project-card-img" src="../pics/touch.jpg" alt="Various Textures" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">Various Textures</h3>
+              <p class="project-card-desc">Touch and explore materials with diverse textures.</p>
+            </div>
+          </article>
+
+          <!-- Hearing Colors -->
+          <article class="project-card fade-in" data-modal="hearColors" data-era="2020s">
+            <img class="project-card-img" src="../pics/hearColors.jpg" alt="Hearing Colors" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">Hearing Colors</h3>
+              <p class="project-card-desc">A sound art piece where the soundscape changes according to the color you touch.</p>
+            </div>
+          </article>
+
+          <!-- Touching Colors -->
+          <article class="project-card fade-in" data-modal="touchColors" data-era="2020s">
+            <img class="project-card-img" src="../pics/touchColors.jpg" alt="Touching Colors" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">Touching Colors</h3>
+              <p class="project-card-desc">Tiles whose color and temperature change, allowing you to "see" by touch.</p>
+            </div>
+          </article>
+
+          <!-- Suzuakari -->
+          <article class="project-card fade-in" data-modal="suzuakari" data-era="2020s">
+            <img class="project-card-img" src="../pics/suzuakari.jpg" alt="Suzuakari" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">Suzuakari</h3>
+              <p class="project-card-desc">A sound installation expressing the synesthetic world where music is perceived as color.</p>
+            </div>
+          </article>
+
+          <!-- The World of Grapheme-Color Synesthesia -->
+          <article class="project-card fade-in" data-modal="synesthesia" data-era="2020s">
+            <img class="project-card-img" src="../pics/synesthesia.jpg" alt="The World of Grapheme-Color Synesthesia" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2023</div>
+              <h3 class="project-card-title">The World of Grapheme-Color Synesthesia</h3>
+              <p class="project-card-desc">Expressing the synesthetic world where letters are perceived with color.</p>
+            </div>
+          </article>
+
+          <!-- Inverse -->
+          <article class="project-card fade-in" data-modal="Inverse" data-era="2020s">
+            <img class="project-card-img" src="../pics/Inverse.jpg" alt="Inverse" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2022</div>
+              <h3 class="project-card-title">Inverse</h3>
+              <p class="project-card-desc">A light and sound installation driven by the rhythm of blinking.</p>
+            </div>
+          </article>
+
+          <!-- Visible Light Communication -->
+          <article class="project-card fade-in" data-modal="visibleLight" data-era="2020s">
+            <img class="project-card-img" src="../pics/visibleLight.jpg" alt="Transmitting Music via LED Light" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2022</div>
+              <h3 class="project-card-title">Transmitting Music via LED Light</h3>
+              <p class="project-card-desc">A device that plays music when you shine an LED light on it, demonstrating visible light communication.</p>
+            </div>
+          </article>
+
+          <!-- Optical Fiber Communication -->
+          <article class="project-card fade-in" data-modal="optfibcom" data-era="2020s">
+            <img class="project-card-img" src="../pics/optfibcom.jpg" alt="How Optical Fiber Transmits Information" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2022</div>
+              <h3 class="project-card-title">How Optical Fiber Transmits Information</h3>
+              <p class="project-card-desc">An accessible introduction to the principles of fiber-optic communication.</p>
+            </div>
+          </article>
+
+          <!-- HeartBeater -->
+          <article class="project-card fade-in" data-modal="HeartBeater" data-era="2020s">
+            <img class="project-card-img" src="../pics/heartbeater.jpg" alt="HeartBeater" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2022</div>
+              <h3 class="project-card-title">HeartBeater</h3>
+              <p class="project-card-desc">A sound art piece where you can feel a heartbeat through sight, sound, and touch.</p>
+            </div>
+          </article>
+
+          <!-- Cyber Waterfall -->
+          <article class="project-card fade-in" data-modal="dennobakufu" data-era="2020s">
+            <img class="project-card-img" src="../pics/%E9%9B%BB%E8%84%B3%E7%80%91%E5%B8%83.png" alt="Cyber Waterfall" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2021</div>
+              <h3 class="project-card-title">Cyber Waterfall</h3>
+              <p class="project-card-desc">A VR experience that simulates the tactile sensation of touching a real waterfall.</p>
+            </div>
+          </article>
+
+          <!-- Loudbreather -->
+          <article class="project-card fade-in" data-modal="loudbreather" data-era="2010s">
+            <img class="project-card-img" src="../pics/Loudbreather.png" alt="Loudbreather" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2019</div>
+              <h3 class="project-card-title">Loudbreather</h3>
+              <p class="project-card-desc">Listen to a cappella through balloons and speakers that embody a singer's breathing.</p>
+            </div>
+          </article>
+
+          <!-- Listening to the Hole of a Donut -->
+          <article class="project-card fade-in" data-modal="donuts" data-era="2010s">
+            <img class="project-card-img" src="../pics/Donuts.jpg" alt="Listening to the Hole of a Donut" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2018</div>
+              <h3 class="project-card-title">Listening to the Hole of a Donut</h3>
+              <p class="project-card-desc">A sound installation where punching a hole in a donut brings about silence.</p>
+            </div>
+          </article>
+
+          <!-- AQUBE -->
+          <article class="project-card fade-in" data-modal="aqube" data-era="2010s">
+            <img class="project-card-img" src="../pics/Aqube.png" alt="AQUBE" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2017</div>
+              <h3 class="project-card-title">AQUBE</h3>
+              <p class="project-card-desc">A music generation system driven by the movement of fish swimming in an aquarium.</p>
+            </div>
+          </article>
+
+          <!-- Karin -->
+          <article class="project-card fade-in" data-modal="karin" data-era="2010s">
+            <img class="project-card-img" src="../pics/Karin.jpg" alt="Karin" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2016</div>
+              <h3 class="project-card-title">Karin</h3>
+              <p class="project-card-desc">A biotope where mist, light, and water sounds are linked to real weather data.</p>
+            </div>
+          </article>
+
+          <!-- Ubiquitel -->
+          <article class="project-card fade-in" data-modal="ubiquitel" data-era="2010s">
+            <img class="project-card-img" src="../pics/Ubiquitel.jpg" alt="Ubiquitel" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2016</div>
+              <h3 class="project-card-title">Ubiquitel</h3>
+              <p class="project-card-desc">A finger-shaped rhythm instrument that mirrors human intention.</p>
+            </div>
+          </article>
+
+          <!-- MITAI -->
+          <article class="project-card fade-in" data-modal="mitai" data-era="2010s">
+            <img class="project-card-img" src="../pics/MITAI.jpg" alt="MITAI" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2015</div>
+              <h3 class="project-card-title">MITAI</h3>
+              <p class="project-card-desc">Freely create new sonic experiences by linking everyday objects with sound.</p>
+            </div>
+          </article>
+
+          <!-- DropNotes -->
+          <article class="project-card fade-in" data-modal="dropnotes" data-era="2010s">
+            <img class="project-card-img" src="../pics/DropNotes.jpg" alt="DropNotes" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2013</div>
+              <h3 class="project-card-title">DropNotes</h3>
+              <p class="project-card-desc">A tabletop interface for making music by infusing colored water with sound and dropping it with a pipette.</p>
+            </div>
+          </article>
+
+          <!-- Shelltone -->
+          <article class="project-card fade-in" data-modal="shelltone" data-era="2010s">
+            <img class="project-card-img" src="../pics/Shelltone.png" alt="Shelltone" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2012</div>
+              <h3 class="project-card-title">Shelltone</h3>
+              <p class="project-card-desc">A seashell for actively listening to the waves of the information world.</p>
+            </div>
+          </article>
+
+          <!-- Sound Tiles -->
+          <article class="project-card fade-in" data-modal="soundtiles" data-era="2010s">
+            <img class="project-card-img" src="../pics/SoundTiles.png" alt="Sound Tiles" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">2012</div>
+              <h3 class="project-card-title">Sound Tiles</h3>
+              <p class="project-card-desc">An interface for "building" instruments by connecting tiles that form electronic instruments.</p>
+            </div>
+          </article>
+
+          <!-- Lecture Slides -->
+          <article class="project-card fade-in" data-era="other" onclick="window.open('../webslides/index.html','_blank')">
+            <img class="project-card-img" src="../pics/presentation.jpg" alt="Lecture Slides" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Lectures</div>
+              <h3 class="project-card-title">Lecture Slides</h3>
+              <p class="project-card-desc">Slides from current and past lectures and talks.</p>
+            </div>
+          </article>
+
+          <!-- Singing Covers -->
+          <article class="project-card fade-in" data-modal="sing" data-era="other">
+            <img class="project-card-img" src="../pics/mic.png" alt="Singing Covers" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Music</div>
+              <h3 class="project-card-title">Singing Covers</h3>
+              <p class="project-card-desc">A collection of Vocaloid song covers.</p>
+            </div>
+          </article>
+
+          <!-- Original Music -->
+          <article class="project-card fade-in" data-modal="make" data-era="other">
+            <img class="project-card-img" src="../pics/music.png" alt="Original Music" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Music</div>
+              <h3 class="project-card-title">Original Music</h3>
+              <p class="project-card-desc">A collection of original Vocaloid and other compositions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <h2 class="section-title fade-in">About</h2>
+        <p class="section-subtitle fade-in">Profile</p>
+
+        <div class="about-grid fade-in">
+          <div class="about-photo-wrap">
+            <img class="about-photo" src="../pics/musashi.jpg" alt="Musashi Nakajima" loading="lazy">
+          </div>
+          <div class="about-info">
+            <h3 class="about-name">Musashi Nakajima</h3>
+            <p class="about-affiliation">Dept. of Interactive Media, Faculty of Arts, Tokyo Polytechnic University</p>
+            <p class="about-affiliation">Associate Professor, Ph.D. (Engineering)</p>
+            <p class="about-role">Researcher / Sound Artist</p>
+            <a class="about-lab-link" href="https://www.634nakajima.com/affective-info-lab-site/" target="_blank" rel="noopener noreferrer">Lab Website &rarr;</a>
+
+            <div class="research-themes">
+              <h3>Research Themes</h3>
+              <div class="theme-item">
+                <div class="theme-item-en">Multimodal/Crossmodal Affectivity</div>
+                <div class="theme-item-ja">Expanding and transforming affective experiences through multisensory integration and crossmodal interaction</div>
+              </div>
+              <div class="theme-item">
+                <div class="theme-item-en">Enactive Affectivity</div>
+                <div class="theme-item-ja">Designing and analyzing environments where sensory delight and reflective curiosity emerge through bodily interaction with devices</div>
+              </div>
+              <div class="theme-item">
+                <div class="theme-item-en">Digital Kineticism</div>
+                <div class="theme-item-ja">Building environments where embodied information, informatized objects, and participants co-construct through motion</div>
+              </div>
+              <div class="theme-item">
+                <div class="theme-item-en">Hapsonic Art</div>
+                <div class="theme-item-ja">Exploring and practicing the significance of tactile sensation in sound art expression</div>
+              </div>
+            </div>
+
+            <div class="about-bio">
+              <h3>Biography</h3>
+              <p>Born in Tsukuba in 1987, raised mainly in Ehime and partly in Kobe.<br>
+                Engaged in research on sensation, perception, and embodiment in experiential art.<br>
+                Hobbies include driving.<br><br>
+                Motto: <em>"Wu Wei Zi Ran"</em> (Act naturally, without forcing)</p>
+            </div>
+
+            <div class="about-education">
+              <h3>Education</h3>
+              <p>Mar 2011: B.Eng., Dept. of Intermedia Art and Science, School of Fundamental Science and Engineering, Waseda University<br>
+                Mar 2013: M.Eng., Dept. of Intermedia Art and Science, Graduate School of Fundamental Science and Engineering, Waseda University<br>
+                Mar 2016: Coursework completed (Ph.D. program), Dept. of Intermedia Art and Science, Graduate School of Fundamental Science and Engineering, Waseda University<br>
+                Feb 2018: Ph.D. (Engineering)</p>
+            </div>
+
+            <div class="about-career">
+              <h3>Career</h3>
+              <p>Apr 2013 - Mar 2017: Research Associate, Dept. of Intermedia Art and Science, School of Fundamental Science and Engineering, Waseda University<br>
+                Apr 2017 - Mar 2025: Assistant Professor, Dept. of Interactive Media, Faculty of Arts, Tokyo Polytechnic University<br>
+                Apr 2025 - present: Associate Professor, Dept. of Interactive Media, Faculty of Arts, Tokyo Polytechnic University<br>
+                Apr 2019 - present: Part-time Lecturer, Dept. of Chinese Studies, Faculty of Foreign Languages, Mejiro University<br>
+                Apr 2021 - present: Part-time Lecturer, School of Fundamental Science and Engineering, Waseda University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKS ============ -->
+    <section class="section works-section" id="works">
+      <div class="container">
+        <h2 class="section-title fade-in">Works</h2>
+        <p class="section-subtitle fade-in">Academic Publications &amp; Activities</p>
+
+        <div class="fade-in">
+          <div class="works-tabs">
+            <button class="works-tab active" data-tab="tab-awards">Awards</button>
+            <button class="works-tab" data-tab="tab-papers">Papers</button>
+            <button class="works-tab" data-tab="tab-books">Books</button>
+            <button class="works-tab" data-tab="tab-bulletin">Bulletin</button>
+            <button class="works-tab" data-tab="tab-intl">International</button>
+            <button class="works-tab" data-tab="tab-domestic">Domestic</button>
+            <button class="works-tab" data-tab="tab-exhibitions">Exhibitions</button>
+            <button class="works-tab" data-tab="tab-other">Other</button>
+          </div>
+
+          <!-- Awards -->
+          <div class="works-panel active" id="tab-awards">
+            <ul class="works-list">
+              <li>Asia Digital Art Award FUKUOKA 2019, Interactive Art Category Award, "Loudbreather", 2019</li>
+              <li>KDCC2017 Shigeru Kobayashi Jury Award, "Ubiquitel", 2017 (co-authored)</li>
+              <li>Interaction 2017 Interactive Presentation Award, "Proposal of Real-time Music Generation System Using Fish Movement as Input in Aquariums", 2017 (co-authored)</li>
+            </ul>
+          </div>
+
+          <!-- Papers -->
+          <div class="works-panel" id="tab-papers">
+            <ul class="works-list">
+              <li>Musashi Nakajima. "Crossmodal Correspondences Between the Timbre of Artificial Complex Sounds and Thermal Sensations", Transactions of Japan Society of Kansei Engineering, Vol.24, No.4, pp.377-386, 2025.</li>
+              <li>Musashi Nakajima. "Media Expression Appealing to Kansei through the Five Senses", FORN (The Association of Radio Industries and Businesses), No.359, 2024.</li>
+              <li>Musashi Nakajima. "Hapsonic Art: Sound Art that Conveys Tactile Sensations", Transactions of the Virtual Reality Society of Japan, Vol.28, No.2, pp.71-79, 2023.</li>
+              <li>Musashi Nakajima, Kosuke Uei, Ryutaro Iida. "Influence of Simulated Contact Sound on Haptic Sensory Illusion in MR Environment", Transactions of the Virtual Reality Society of Japan, Vol.25, No.2, pp.127-137, 2020.</li>
+              <li>Akito Usui, Musashi Nakajima, Yoshihiro Kanno. "Presenting Pseudo-resistive Force of a Spring by Visual and Auditory Stimuli", Transactions of the Virtual Reality Society of Japan, Vol.23, No.4, pp.271-279, 2018.</li>
+              <li>Musashi Nakajima, Yoshihiro Kanno. "Augmented Food Texture by Delayed Auditory Feedback of Mastication Using Potatochips (Special Issue: Embodiment and VR in the Wearable Era)", Transactions of the Virtual Reality Society of Japan, Vol.21, No.4, pp.585-594, 2016.</li>
+              <li>Musashi Nakajima, Hidekazu Saegusa, Yuto Ozaki, Yoshihiro Kanno. "DropNotes: A Seamless Interface for Recording and Editing Sound Using Colored Water (Special Issue: Content Interaction)", Transactions of the Human Interface Society, Vol.17, No.1, pp.53-62, 2015.</li>
+            </ul>
+          </div>
+
+          <!-- Books -->
+          <div class="works-panel" id="tab-books">
+            <ul class="works-list">
+              <li>Musashi Nakajima. "What is 'Color Space'?" (in "Illustrated Guide to Color", supervised by Center for International Research on Color Science and Art, Tokyo Polytechnic University), Gijutsu-Hyoron-sha, pp.38-41, 2026.</li>
+            </ul>
+          </div>
+
+          <!-- Bulletin -->
+          <div class="works-panel" id="tab-bulletin">
+            <ul class="works-list">
+              <li>Musashi Nakajima. "Ubiquitel: A Virtual Finger Drummer Presenting the Performer's Presence", Bulletin of the Faculty of Arts, Tokyo Polytechnic University "Art World", Vol.24, pp.35-42, 2018.</li>
+            </ul>
+          </div>
+
+          <!-- International Conferences -->
+          <div class="works-panel" id="tab-intl">
+            <ul class="works-list">
+              <li>Daisuke Sasaki, Musashi Nakajima, Yoshihiro Kanno. "AQUBE: An Interactive Music Reproduction System for Aquariums", Proceedings of the 19th ACM International Conference on Multimodal Interaction. ACM, pp.512-513, 2017.</li>
+              <li>Musashi Nakajima, Hidekazu Saegusa, Yuto Ozaki, Yoshihiro Kanno. "DropNotes: A Music Composition Interface Utilizing the Combination of Affordances of Tangible Objects.", Advances in Computer Entertainment. Springer International Publishing, pp.604-607, 2013.</li>
+            </ul>
+          </div>
+
+          <!-- Domestic Presentations -->
+          <div class="works-panel" id="tab-domestic">
+            <ul class="works-list">
+              <li>Rensui Shiihara, Musashi Nakajima. "Mirror of Egoism: A Proposal for Interactive Art Based on Ryunosuke Akutagawa's 'The Nose'", Proceedings of the Entertainment Computing Symposium 2025, pp.343-347, 2025.</li>
+              <li>Musashi Nakajima. "A Study on a Fluid Music Interface with Thermal Feedback", Proceedings of Interaction 2025, pp.273-276, 2025.</li>
+              <li>Musashi Nakajima. "An Acoustic-Tactile Interface Using Vibration Speakers and Soft Materials", Proceedings of Interaction 2024, pp.1127-1132, 2024.</li>
+              <li>Musashi Nakajima. "HeartBeater: A Multimodal Heart Sound Presentation Device Suggesting the Presence and Mental State of Others", Proceedings of Interaction 2022, pp.316-319, 2022.</li>
+              <li>Kosuke Uei, Musashi Nakajima. "Effects of Frequency Characteristics of Contact Sounds on Pseudo-Haptic Force in VR Environments", Proceedings of Interaction 2021, pp.457-462, 2021.</li>
+              <li>Sho Miyashita, Musashi Nakajima, Yoshihiro Kanno. "Effects of Sound Presented During Gripping Motion on Force Perception", IPSJ SIG Technical Report (Entertainment Computing), Vol.54, No.3, pp.1-5, 2019.</li>
+              <li>Kosuke Uei, Ryutaro Iida, Musashi Nakajima, Yoshihiro Kanno. "Effects of Volume of Pseudo-Contact Sounds on Tactile Sensation in MR Environments", Proceedings of the Entertainment Computing Symposium 2019, pp.179-184, 2019.</li>
+              <li>Reo Oguri, Musashi Nakajima, Yoshihiro Kanno. "Pseudo-Pressure Presentation to the Sole via Vibration Speaker-Embedded Shoe Device in Virtual Reality", Proceedings of Interaction 2019, pp.803-806, 2019.</li>
+              <li>Kosuke Uei, Musashi Nakajima, Yoshihiro Kanno. "Enhancement of Pseudo-Haptics in MR Environments through Auditory Stimuli", Proceedings of Interaction 2019, pp.725-729, 2019.</li>
+              <li>Musashi Nakajima. "Karin: A Weather Information Medium Using Flower Appreciation Equipment", Proceedings of the Entertainment Computing Symposium 2017, pp.401-405, 2017.</li>
+              <li>Akito Usui, Musashi Nakajima, Yoshihiro Kanno. "Haptic illusion using cross-modal perception by visual and auditory stimulus", Proceedings of the Entertainment Computing Symposium 2017, pp.184-187, 2017.</li>
+              <li>Daisuke Sasaki, Musashi Nakajima, Yoshihiro Kanno. "The Proposal of Interactive Sound Feedbacks Systems in Educational Exhibition Facilities", Proceedings of the Entertainment Computing Symposium 2017, pp.168-173, 2017.</li>
+              <li>Daisuke Sasaki, Musashi Nakajima, Yoshihiro Kanno. "Proposal of Real-time Music Generation System Using Fish Movement as Input in Aquariums", Interactive Presentation, IPSJ Symposium Interaction 2017, 1-505-24, IPSJ, 2017.</li>
+              <li>Nanki Teramura, Musashi Nakajima, Yoshihiro Kanno. "Correlation between Monosyllable Frequency in Singing Voice and Age-Related Physical Changes", Musical Acoustics Research Group Technical Report, Vol.35, No.7, pp.7-12, 2017.</li>
+              <li>Shu Takahashi, Musashi Nakajima, Yoshihiro Kanno. "A Word Image Conversion System Based on Impressions from the Timbre of Japanese Syllables", Musical Acoustics Research Group Technical Report, Vol.35, No.5, pp.13-18, 2016.</li>
+              <li>Musashi Nakajima, Osamu Goto, Yoshihiro Kanno. "MITAI: A Proposal of Music Creation System Freely Utilizing Everyday Things", Proceedings of the Entertainment Computing Symposium 2015, pp.406-411, 2015.</li>
+              <li>Musashi Nakajima, Osamu Goto, Yoshihiro Kanno. "A Study on Easy Network Construction between Objects in Music Performance Systems", IPSJ SIG Technical Report (Music Information Science), Vol.2015, No.24, pp.1-6, 2015.</li>
+              <li>Musashi Nakajima, Yuto Ozaki, Hidekazu Saegusa, Yoshihiro Kanno. "Usability Evaluation of 'DropNotes': A Music Production Interface Using Colored Water and Bottles", IPSJ SIG Technical Report (Music Information Science), Vol.2013, No.3, pp.1-6, 2013.</li>
+              <li>Musashi Nakajima, Hidekazu Saegusa, Yuto Ozaki, Yoshihiro Kanno. "DropNotes: A Music Production Interface Focusing on Combination of Affordances of Physical Objects", IPSJ SIG Technical Report (Entertainment Computing), Vol.2013, No.2, pp.1-5, 2013.</li>
+              <li>Musashi Nakajima, Yoshihiro Kanno. "Distributed Networking of Music Performance Systems", IPSJ SIG Technical Report (Music Information Science), Vol.2012, No.1, pp.1-6, 2012.</li>
+              <li>Musashi Nakajima. "A Music Performance System Focusing on Spatial Expression", IPSJ SIG Technical Report (Music Information Science), Vol.2011, No.8, pp.1-6, 2011.</li>
+            </ul>
+          </div>
+
+          <!-- Domestic Exhibitions -->
+          <div class="works-panel" id="tab-exhibitions">
+            <ul class="works-list">
+              <li>Musashi Nakajima. "Touching Patterns", Tokyo Polytechnic University Color Gallery Permanent Exhibition: Hearing Colors, Touching Colors, Recording Colors, 2025.</li>
+              <li>Honoka Yoshida, Musashi Nakajima. "The World of Color Vision Diversity", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Musashi Nakajima. "Seeing Sound Waveforms", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Musashi Nakajima. "Various Textures", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Keigo Kitajima, Reiji Takizawa, Musashi Nakajima. "Hearing Colors", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Musashi Nakajima. "Touching Colors", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Musashi Nakajima. "Suzuakari", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Akihito Inomata, Musashi Nakajima. "The World of Grapheme-Color Synesthesia", Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2023.</li>
+              <li>Musashi Nakajima. "Inverse", Tokyo Polytechnic University Color Gallery 9th Exhibition: Light Transmits, Light Communicates, 2022.</li>
+              <li>Musashi Nakajima. "Transmitting Music via LED Light", Tokyo Polytechnic University Color Gallery 9th Exhibition: Light Transmits, Light Communicates, 2022.</li>
+              <li>Musashi Nakajima. "How Optical Fiber Transmits Information", Tokyo Polytechnic University Color Gallery 9th Exhibition: Light Transmits, Light Communicates, 2022.</li>
+              <li>Musashi Nakajima. "Shintora Moving Window Frame", Exhibition "Discover! Explore! Shiodome Shintra", Shinjuku Station Plaza, 2019.</li>
+              <li>Musashi Nakajima. "Shiodome-Shinbashi Digital Sand Picture", Exhibition "Discover! Explore! Shiodome Shintra", Shinjuku Station Plaza, 2019.</li>
+              <li>Yuki Kitahashi, Masahiro Maruyama, Daisuke Sasaki, Musashi Nakajima. "Listening to the Hole of a Donut", SICF19, SPIRAL, 2018.</li>
+              <li>Musashi Nakajima. "DropNotes", Tokyo Polytechnic University Faculty of Arts Festa 2017, Tokyo Polytechnic University, 2017.</li>
+              <li>Musashi Nakajima, Osamu Goto, Hidekazu Saegusa (as "Otokoko"). "Ubiquitel", Summer Design Festa, Tokyo Big Sight, 2017.</li>
+              <li>Musashi Nakajima, Osamu Goto, Hidekazu Saegusa (as "Otokoko"). "Ubiquitel", SICF18, SPIRAL, 2017.</li>
+              <li>Musashi Nakajima, Osamu Goto, Hidekazu Saegusa (as "Otokoko"). "Ubiquitel", KDCC2017, Nishi-Nippon Institute of Technology, 2017.</li>
+              <li>Musashi Nakajima. "Karin", Tokushima LED Art Festival 2016, Tokushima City, 2016.</li>
+              <li>Musashi Nakajima, Osamu Goto, Hidekazu Saegusa. "Ubiquitel", Tokyo Design Week 2016, Jingu Gaien, 2016.</li>
+              <li>Musashi Nakajima. "Sound Tiles", Intercollege Computer Music Concert 2012, Tokyo Denki University, 2012.</li>
+              <li>Hidekazu Saegusa, Musashi Nakajima. "Shelltone - A Window Frame of the World, One Shape and Landscape -", Intercollege Computer Music Concert 2012, Tokyo Denki University, 2012.</li>
+            </ul>
+          </div>
+
+          <!-- Other -->
+          <div class="works-panel" id="tab-other">
+            <ul class="works-list">
+              <li>Exhibition Director, Tokyo Polytechnic University Color Gallery 11th Exhibition: Hearing Colors, Touching Colors - Diversity of Perception -, 2024.</li>
+              <li>Exhibition Director, Tokyo Polytechnic University Color Gallery 9th Exhibition: Light Transmits, Light Communicates, 2022.</li>
+              <li>Music Composition, Official demo song "Pulse" for Crypton Future Media "Kagamine Rin/Len Append", 2010.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title fade-in">Contact</h2>
+        <div class="contact-content fade-in">
+          <p>
+            Please feel free to reach out at the following address.<br><br>
+            Dept. of Interactive Media, Faculty of Arts, Tokyo Polytechnic University<br>
+            2-9-5 Honcho, Nakano-ku, Tokyo 164-0012, Japan<br>
+            Email: <a href="mailto:m.nakajima@int.t-kougei.ac.jp">m.nakajima@int.t-kougei.ac.jp</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Musashi Nakajima, All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <!-- ============ PROJECT MODAL ============ -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-body" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ============ HIDDEN PROJECT DETAILS (for modal) ============ -->
+  <div style="display:none">
+    <!-- Marine -->
+    <div id="detail-marine">
+      <h2 class="modal-title">Marine</h2>
+      <p class="modal-year">2024</p>
+      <p class="modal-text">
+        This work is a sound installation consisting of soft dome-shaped acoustic vibration devices.<br><br>
+        The domes reproduce sound and vibration expressing an underwater world. By pressing the domes, the soundscape changes interactively, allowing you to perceive the world through both ears and hands. The domes are made of resilient material, expressing marine life in harmony with a soft impression.<br><br>
+        The rapid development of digital instruments has given rise to new musical experiences unrestricted by conventional instrument concepts. Unfortunately, however, we have not yet reached a stage where both hearing and deaf individuals can equally enjoy these experiences. Through this work, we ask what inclusive sound media should look like, enabling more people to experience music more richly.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/U345iavhEII?si=5uFxGqiG-QRU2kUp">
+        <img src="https://img.youtube.com/vi/U345iavhEII/hqdefault.jpg" alt="Marine video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- The World of Color Vision Diversity -->
+    <div id="detail-shikikaku">
+      <h2 class="modal-title">The World of Color Vision Diversity</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        In this work, panels display photographs of grilled meat, chalkboard writing, and door keys as seen by people with color vision deficiency. Turning a rotating stand reveals the actual objects, allowing visitors to see the real colors. Just as it is difficult for people with color vision deficiency to distinguish between raw and cooked meat, chalk colors, or key colors, there are many situations in daily life where color distinction is challenging. This work lets visitors experience those situations firsthand.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=WkEvoFlpc6LtA29g&start=22">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Seeing Sound Waveforms -->
+    <div id="detail-soundWave">
+      <h2 class="modal-title">Seeing Sound Waveforms</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        In this work, you can visually grasp the three elements of sound. The knobs in front of the display correspond to (1) loudness, (2) pitch, and (3) timbre from left to right. By turning each knob, you can experience how the sound changes along with its waveform.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=E0ML1e3d5EmU76gO&start=51">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Various Textures -->
+    <div id="detail-touch">
+      <h2 class="modal-title">Various Textures</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        In this work, you can experience the textures of various materials by hand. The names of the materials are intentionally omitted. In Japanese, there are many onomatopoeic words to describe textures, such as "zarazara" (rough), "petapeta" (sticky), and "tsurutsuru" (smooth). By describing what you feel from your fingertips without preconceptions, you can more deeply appreciate the textures that everyday materials possess.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=GRSWCN9EufkFfyV1&start=67">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Hearing Colors -->
+    <div id="detail-hearColors">
+      <h2 class="modal-title">Hearing Colors</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        In this work, when you touch the various colors displayed on the screen, sounds corresponding to the touched color are generated. Red corresponds to low-pitched sounds and blue to high-pitched sounds, reflecting the relationship between the wavelengths of light and sound. Additionally, achromatic colors such as gray and black-white correspond to noise with indistinct pitch, and brightness corresponds to volume. Both sighted and visually impaired people can perceive the work through sound.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=b3z6lkZb7sKOB-gR&start=86">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Touching Colors -->
+    <div id="detail-touchColors">
+      <h2 class="modal-title">Touching Colors</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        In this work, the colors of tiles change in wave-like patterns, and characters or patterns emerge on the surface. The colors are linked to the surface temperature of the tiles; by gently touching the surface, you can feel the color changes through temperature. The tile temperature is controlled by electric current, and a special sheet on the tile surface changes color from black to blue, green, orange, and purple as the temperature changes.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=w6Q1-E-RfCU8904J&start=115">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Suzuakari -->
+    <div id="detail-suzuakari">
+      <h2 class="modal-title">Suzuakari</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        This work plays music in which bell sounds are accompanied by different colored lights, with the tonality (the musical quality determined by scales and pitch arrangements, such as C major or D minor) changing throughout. The Russian composer Scriabin was said to be a synesthete who perceived colors in musical tonalities. Based on literature, this work expresses the synesthetic colors he perceived through light.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=goWp5REUospZW9_Z&start=150">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- The World of Grapheme-Color Synesthesia -->
+    <div id="detail-synesthesia">
+      <h2 class="modal-title">The World of Grapheme-Color Synesthesia</h2>
+      <p class="modal-year">2023</p>
+      <p class="modal-text">
+        This work is designed to let visitors experience the world of grapheme-color synesthetes, based on the perceptual world described in the literature. Black hiragana characters forming a picture-book-style narrative are projected on a screen. When viewed through a filter placed in front of the screen, colored hiragana appear above the black characters, simulating the synesthetic experience.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/IEk8xAnyUPM?si=EhIT_dyAZcLVEq4S&start=129">
+        <img src="https://img.youtube.com/vi/IEk8xAnyUPM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Inverse -->
+    <div id="detail-Inverse">
+      <h2 class="modal-title">Inverse</h2>
+      <p class="modal-year">2022</p>
+      <p class="modal-text">
+        "Inverse" is a sound installation in which fictitious eyes painted on multiple acrylic panels generate sound through their blinking.<br><br>
+        Each device in the work expresses blinking by alternately lighting LEDs on two transparent acrylic panels. Eye images are generated by publicly available face-generation AI on the web, and blinking information is extracted from online videos using image recognition algorithms. The blinking data is adjusted so that the overall soundscape remains harmonious, with each device generating its own timbre.<br><br>
+        Various rhythms exist in human activity, such as blinking, and these rhythms are known to synchronize when people interact. The way individual rhythms influence each other while maintaining overall harmony is akin to music itself; this work embodies the musicality generated by the human body.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/qSrexugSePw">
+        <img src="https://img.youtube.com/vi/qSrexugSePw/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Visible Light Communication -->
+    <div id="detail-visibleLight">
+      <h2 class="modal-title">Transmitting Music via LED Light</h2>
+      <p class="modal-year">2022</p>
+      <p class="modal-text">
+        In this work, music information is transmitted through visible light. When you hold an LED light over a white cylindrical device, musical phrases begin to play. The red, blue, and yellow lights each transmit melody, rhythm, and harmony information respectively. When the light hits the central sensor, the information is converted into sound and played back.<br><br>
+        The LED lights convert electrical audio signals generated by an internal computer into light intensity variations. The light sensor receives the LED light and converts its intensity back into electrical signal magnitude. The converted audio signals then reach the speaker for playback. In this way, the correspondence between audio electrical signals and light intensity enables the transmission and reception of music information.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/UAb1hbWXk3Q?si=eU0uBSHCrlJVILrd&start=133">
+        <img src="https://img.youtube.com/vi/UAb1hbWXk3Q/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Optical Fiber Communication -->
+    <div id="detail-optfibcom">
+      <h2 class="modal-title">How Optical Fiber Transmits Information</h2>
+      <p class="modal-year">2022</p>
+      <p class="modal-text">
+        This work provides an accessible introduction to the principles of fiber-optic communication.<br><br>
+        By inputting Morse code using a telegraph key (a black button), laser light travels through a transparent plastic material simulating an optical fiber cable, and the received text information is displayed on a monitor. Referring to a Morse code chart, you can transmit many characters by combining short presses ("dit") and long presses ("dah"). Optical fiber cables can transmit various types of information, just like the Morse signals in this work.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/UAb1hbWXk3Q?si=-vUZsbsw04z2mtN-&start=154">
+        <img src="https://img.youtube.com/vi/UAb1hbWXk3Q/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- HeartBeater -->
+    <div id="detail-HeartBeater">
+      <h2 class="modal-title">HeartBeater</h2>
+      <p class="modal-year">2022</p>
+      <p class="modal-text">
+        "HeartBeater" is a sound art piece that expresses the presence, vitality, and emotions of others by realistically presenting a heartbeat. Soft urethane resin is used to achieve a realistic appearance and texture, and the piece can be held in your hands to feel the heartbeat.<br><br>
+        Instead of directly recording heart sounds, this work measures pulse data. The pulse data is converted into MIDI (Musical Instrument Digital Interface) data, which plays pre-recorded heart sound samples through a built-in vibration speaker. Simultaneously, a built-in mechanism is driven to physically reproduce the beating.<br><br>
+        Through this work, we propose a future communication tool that lets you hold and feel the presence and mental state of others. Potential applications include presenting the heartbeats of athletes during professional sports events or actors during theatrical performances.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/XWC-d0EUwBM">
+        <img src="https://img.youtube.com/vi/XWC-d0EUwBM/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Cyber Waterfall -->
+    <div id="detail-dennobakufu">
+      <h2 class="modal-title">Cyber Waterfall</h2>
+      <p class="modal-year">2021</p>
+      <p class="modal-text">
+        This work is a VR sound art piece that applies pseudo-haptic illusion. A head-mounted display (HMD) presents fluid imagery and sound with varying velocity and particle sizes, allowing the experiencer to move their hands, virtually touch the fluid, and enjoy the sensory differences.<br><br>
+        When virtually touching fluid in a VR environment through the HMD, the CG hand's movement is slightly altered from the actual movement, creating an illusion of resistance from the fluid (pseudo-haptic force). When contact sounds of different frequency bands were added while touching the fluid, a greater perceived resistance was observed as the low-frequency band volume increased.<br><br>
+        Based on these findings, this work manipulates the CG hand position and the frequency characteristics of contact sounds to reproduce various resistance sensations, aiming to help experiencers focus on their own sensations and create immersion and relaxation effects.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/AfuhZs-N2PQ">
+        <img src="https://img.youtube.com/vi/AfuhZs-N2PQ/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Loudbreather -->
+    <div id="detail-loudbreather">
+      <h2 class="modal-title">Loudbreather</h2>
+      <p class="modal-year">2019</p>
+      <p class="modal-text">
+        Loudbreather is a sound installation where an a cappella piece plays from four speakers that embody a singer's breathing. Balloons attached to the top of the speakers inflate with each breath intake and deflate as the singer vocalizes. Air flows in and out through holes at the bottom of the speakers, as if the speakers themselves were breathing. The a cappella piece is an original composition designed to highlight the breathing characteristics of each of the four voices, creating the sensation that performers are singing right there.<br><br>
+        With the development of music media, we can now listen to music anytime, anywhere. However, current music media have not yet fully expressed the value of music as an embodied activity, including the sense of presence and unity between performers and audience.<br><br>
+        This work presents a richer vision of music media by endowing the conventional speaker with the physicality of breathing.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/qK5guOttjHQ">
+        <img src="https://img.youtube.com/vi/qK5guOttjHQ/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Listening to the Hole of a Donut -->
+    <div id="detail-donuts">
+      <h2 class="modal-title">Listening to the Hole of a Donut</h2>
+      <p class="modal-year">2018</p>
+      <p class="modal-text">
+        "Listening to the Hole of a Donut" is a sound art piece where punching a hole in donut dough causes the ambient everyday sounds to suddenly fall silent, inviting listeners to turn their ears to "silence."<br><br>
+        Our surroundings are filled with various sounds, yet we rarely notice their presence. However, when they suddenly vanish, we become aware of "silence" and realize the sounds that had always been there. This work overlays the world of sound onto donut dough, making the existence of sound tangible by punching a "silence" hole in the "sound" donut.<br><br>
+        The late Japanese broadcaster Ei Rokusuke once described a verse from the Heart Sutra, "form is emptiness," as "the hole of a donut" - something that is not there yet is; something that is, yet is not. This work, like that phrase, expresses how uncertain and elusive our ever-changing world truly is.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/Hz-NWGlxqCg">
+        <img src="https://img.youtube.com/vi/Hz-NWGlxqCg/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- AQUBE -->
+    <div id="detail-aqube">
+      <h2 class="modal-title">AQUBE</h2>
+      <p class="modal-year">2017</p>
+      <p class="modal-text">
+        AQUBE is a music generation system driven by the movement of fish swimming in an aquarium.<br><br>
+        With the concept of "sharing space and time," the system generates music that can only be heard by people present at that place and time, aiming to enhance the quality and value of viewing experiences at exhibition facilities such as aquariums. Three colored cubes placed in front of the tank each contain different sounds. Users place the cubes wherever they like in front of the tank. When a fish passes over a cube, the sound within is generated. Cubes that have generated sound gradually grow, eventually producing increasingly complex music.<br><br>
+        Through the experience of interacting with life and making music together, communication is born between people and fish, and between people.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/gQvc_wEATvo">
+        <img src="https://img.youtube.com/vi/gQvc_wEATvo/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Karin -->
+    <div id="detail-karin">
+      <h2 class="modal-title">Karin</h2>
+      <p class="modal-year">2016</p>
+      <p class="modal-text">
+        Karin is a biotope work where mist generation and water circulation through condensation allow you to "feel" the actual weather.<br><br>
+        Based on weather data obtained from the web, the bottom light and mist generation rate are controlled. Water droplets condensed on the upper acrylic panel drip onto the water surface. This sound is processed and played back as a suikinkutsu (water koto)-like tone, with wave-like light patterns appearing to the rhythm of the dripping water, coloring the plants.<br><br>
+        We perceive daily weather through various senses: looking up at the sky, listening to the rain, smelling the wet asphalt. Karin not only provides a small dose of natural healing, but also proposes a future where we can perceive the weather of distant places or the forecast through such natural means.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/9NQ8wuuYxVY">
+        <img src="https://img.youtube.com/vi/9NQ8wuuYxVY/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Ubiquitel -->
+    <div id="detail-ubiquitel">
+      <h2 class="modal-title">Ubiquitel</h2>
+      <p class="modal-year">2016</p>
+      <p class="modal-text">
+        Ubiquitel is a finger-shaped rhythm instrument.<br><br>
+        It memorizes rhythm patterns created by your fingertips and repeats them to keep the beat. The timbre changes depending on what material is tapped, and multiple "fingers" can be synchronized to enjoy different grooves. Ubiquitel invites viewers into a trance-like groove, as if living beings were responding to one another.<br><br>
+        Cast from real human fingers and infused with human will, Ubiquitel exists at the boundary between life and machine. Simultaneously evoking the inorganic and the presence of a person, this entity that blurs the line between the physical and digital worlds asks: what is the next-generation "space between" where living and non-living beings co-create?
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/iiwg8s8P1Zc">
+        <img src="https://img.youtube.com/vi/iiwg8s8P1Zc/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- MITAI -->
+    <div id="detail-mitai">
+      <h2 class="modal-title">MITAI</h2>
+      <p class="modal-year">2015</p>
+      <p class="modal-text">
+        MITAI is a sound art work themed around freely creating new sonic experiences by linking everyday objects with sound.<br><br>
+        Familiar objects such as a drawer, light, fan, coffee mill, and speaker are provided along with various sound sources. Using a tablet device, visitors link these objects and sounds together, freely creating their own sonic experiences within the work.<br><br>
+        The aim of this work is to add color to our daily lives through free-form creative combinations of everyday objects and sounds.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/AeVfI380gys">
+        <img src="https://img.youtube.com/vi/AeVfI380gys/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- DropNotes -->
+    <div id="detail-dropnotes">
+      <h2 class="modal-title">DropNotes</h2>
+      <p class="modal-year">2013</p>
+      <p class="modal-text">
+        DropNotes is a tabletop tangible interface for music production. After infusing colored water with sound, you draw it up with a pipette and drop it onto a glass table to create music.<br><br>
+        The goal of this work is to propose a more intuitive and flexible way to access sound information. Actions such as "putting a funnel in a bottle," "drawing up colored water with a pipette," and "dropping water onto the table" correspond to "recording," "sound source selection," and "editing," respectively.<br><br>
+        With the beauty of water droplets and the exciting feel of operating lab-like equipment, DropNotes realizes intuitive music production.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/5YNo5wCwURc">
+        <img src="https://img.youtube.com/vi/5YNo5wCwURc/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Sound Tiles -->
+    <div id="detail-soundtiles">
+      <h2 class="modal-title">Sound Tiles</h2>
+      <p class="modal-year">2012</p>
+      <p class="modal-text">
+        Sound Tiles is an interface for "building" instruments by connecting modules that constitute electronic instruments - performance interfaces, sound sources, effects, and speakers - in a real-time network.<br><br>
+        When users connect "tiles" representing electronic instrument components, the modules interconnect, and depending on the combination, various electronic instruments can be created. By representing each module as a tile and dedicating the interface to network construction, the system offers scalability, allowing users to add new modules or reuse existing ones.<br><br>
+        Furthermore, through this work, we pursue the possibility of improvisation in electronic instrument creation - rebuilding electronic instruments in real time while performing.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/Je5FYUfdkvo">
+        <img src="https://img.youtube.com/vi/Je5FYUfdkvo/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Shelltone -->
+    <div id="detail-shelltone">
+      <h2 class="modal-title">Shelltone</h2>
+      <p class="modal-year">2012</p>
+      <p class="modal-text">
+        Shelltone is a work themed around active perception of sound information.<br><br>
+        When a seashell-shaped sculpture is placed on a table onto which waves are projected, wave sounds are generated in sync with the wave imagery. Through the "peephole" of sound - the shell placed where you wish to listen - you can hear the wave sounds that presumably flow on the other side of the screen.<br><br>
+        We perceive the real world in highly active ways: touching things, straining our ears, peering closely. This is entirely natural for us. Shelltone expresses the possibility of new media that allow us to catch information naturally through such active engagement.
+      </p>
+      <div class="youtube-lazy" data-src="https://www.youtube.com/embed/QcMqBFvIOvk">
+        <img src="https://img.youtube.com/vi/QcMqBFvIOvk/hqdefault.jpg" alt="Video" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <!-- Singing Covers -->
+    <div id="detail-sing">
+      <h2 class="modal-title">Singing Covers</h2>
+      <p class="modal-year">Music</p>
+      <p class="modal-text">A collection of Vocaloid song covers.</p>
+      <div class="extra-grid">
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm28513092" target="_blank" rel="noopener">morning haze</a><p>Music: keenoP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm15594775" target="_blank" rel="noopener">Hello, Worker</a><p>Music: KEIP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm12171094" target="_blank" rel="noopener">Time Machine</a><p>Music: 1640mP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm9283882" target="_blank" rel="noopener">No Logic</a><p>Music: JimmyThumbP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm9026493" target="_blank" rel="noopener">Alice</a><p>Music: FurukawaP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm6500835" target="_blank" rel="noopener">Asayake, Kimi no Uta.</a><p>Music: NanowP</p></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm6135746" target="_blank" rel="noopener">Double Lariat</a><p>Music: AgoAnikiP</p></div>
+      </div>
+    </div>
+
+    <!-- Original Music -->
+    <div id="detail-make">
+      <h2 class="modal-title">Original Music</h2>
+      <p class="modal-year">Music</p>
+      <p class="modal-text">A collection of original Vocaloid and other compositions.</p>
+      <div class="extra-grid">
+        <div class="extra-item"><a href="https://www.youtube.com/watch?v=dFq_X4gVyvs" target="_blank" rel="noopener">Yume wo Kanaeru Basho</a></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm17041779" target="_blank" rel="noopener">Pink no Haburashi</a></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm15841160" target="_blank" rel="noopener">My Dear Child</a></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm13727810" target="_blank" rel="noopener">Tanpopo -Append ver.-</a></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm10540448" target="_blank" rel="noopener">Vanity</a></div>
+        <div class="extra-item"><a href="http://www.nicovideo.jp/watch/sm13142320" target="_blank" rel="noopener">Pulse</a><p>(2nd track in linked video) <a href="http://www.crypton.co.jp/mp/pages/prod/vocaloid/cv02a.jsp" target="_blank" rel="noopener">Kagamine Rin/Len Append Official Demo Song</a></p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
