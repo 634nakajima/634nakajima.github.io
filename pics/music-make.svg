@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0f0f18"/>
+  <!-- Eighth note 1 -->
+  <ellipse cx="330" cy="300" rx="28" ry="22" transform="rotate(-15 330 300)" fill="rgba(255,255,255,0.85)"/>
+  <line x1="356" y1="290" x2="356" y2="140" stroke="rgba(255,255,255,0.85)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Eighth note 2 -->
+  <ellipse cx="460" cy="280" rx="28" ry="22" transform="rotate(-15 460 280)" fill="rgba(255,255,255,0.85)"/>
+  <line x1="486" y1="270" x2="486" y2="120" stroke="rgba(255,255,255,0.85)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Beam connecting the two notes -->
+  <line x1="356" y1="140" x2="486" y2="120" stroke="rgba(255,255,255,0.85)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Small decorative notes -->
+  <ellipse cx="240" cy="210" rx="14" ry="11" transform="rotate(-15 240 210)" fill="rgba(255,255,255,0.2)"/>
+  <line x1="253" y1="204" x2="253" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="560" cy="230" rx="14" ry="11" transform="rotate(-15 560 230)" fill="rgba(255,255,255,0.2)"/>
+  <line x1="573" y1="224" x2="573" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Subtle staff lines -->
+  <line x1="200" y1="370" x2="600" y2="370" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <line x1="200" y1="390" x2="600" y2="390" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <line x1="200" y1="410" x2="600" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+</svg>

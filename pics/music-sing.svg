@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0f0f18"/>
+  <!-- Microphone head -->
+  <rect x="355" y="100" width="90" height="140" rx="45" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="4"/>
+  <!-- Microphone stand -->
+  <line x1="400" y1="240" x2="400" y2="340" stroke="rgba(255,255,255,0.85)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Microphone base arc -->
+  <path d="M340 200 Q340 270 400 270 Q460 270 460 200" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Microphone base -->
+  <line x1="365" y1="340" x2="435" y2="340" stroke="rgba(255,255,255,0.85)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Sound waves left -->
+  <path d="M310 140 Q290 170 310 200" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M285 120 Q255 170 285 220" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Sound waves right -->
+  <path d="M490 140 Q510 170 490 200" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M515 120 Q545 170 515 220" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linecap="round"/>
+</svg>
