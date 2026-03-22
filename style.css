@@ -371,6 +371,41 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ============================================
+   TEACHING & MUSIC SECTIONS
+   ============================================ */
+.teaching-section {
+  background: var(--bg-primary);
+}
+
+.music-section {
+  background: var(--bg-secondary);
+}
+
+/* Teaching card images: contain logos instead of cropping */
+.teaching-section .project-card-img {
+  object-fit: contain;
+  background: var(--bg-secondary);
+  padding: 20px;
+}
+
+/* Link cards (external links instead of modals) */
+.project-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card--link:hover {
+  color: inherit;
+}
+
+.project-card--link .project-card-title::after {
+  content: ' \2197';
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+/* ============================================
    PROJECT MODAL
    ============================================ */
 .modal-overlay {

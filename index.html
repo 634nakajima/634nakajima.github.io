@@ -23,6 +23,8 @@
       <a href="#" class="nav-logo">634.nakajima</a>
       <nav class="nav-links" id="nav-links">
         <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#music">Music</a>
         <a href="#about">About</a>
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
@@ -61,7 +63,6 @@
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="2020s">2020s</button>
           <button class="filter-btn" data-filter="2010s">2010s</button>
-          <button class="filter-btn" data-filter="other">Other</button>
         </div>
 
         <div class="projects-grid">
@@ -285,31 +286,92 @@
             </div>
           </article>
 
-          <!-- 授業・講演スライド -->
-          <article class="project-card fade-in" data-era="other" onclick="window.open('./webslides/index.html','_blank')">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEACHING ============ -->
+    <section class="section teaching-section" id="teaching">
+      <div class="container">
+        <h2 class="section-title fade-in">Teaching</h2>
+        <p class="section-subtitle fade-in">授業・教育ツール</p>
+
+        <div class="projects-grid">
+          <!-- デバイス演習II -->
+          <a class="project-card project-card--link fade-in" href="https://634nakajima.github.io/device-exercise-2/" target="_blank" rel="noopener">
+            <img class="project-card-img" src="./pics/teaching-device2.png" alt="デバイス演習II" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Course</div>
+              <h3 class="project-card-title">デバイス演習II</h3>
+              <p class="project-card-desc">micro:bitとPure Dataを用いたインタラクティブサウンドアート制作。</p>
+            </div>
+          </a>
+
+          <!-- コンピュータリテラシーA -->
+          <a class="project-card project-card--link fade-in" href="https://634nakajima.github.io/computer-literacy-A/" target="_blank" rel="noopener">
+            <img class="project-card-img" src="./pics/teaching-clA.png" alt="コンピュータリテラシーA" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Course</div>
+              <h3 class="project-card-title">コンピュータリテラシーA</h3>
+              <p class="project-card-desc">コンピュータの基本操作とリテラシーを身につける。</p>
+            </div>
+          </a>
+
+          <!-- デジタルファブリケーション演習 -->
+          <a class="project-card project-card--link fade-in" href="https://634nakajima.github.io/digital-fabrication-exercise/" target="_blank" rel="noopener">
+            <img class="project-card-img" src="./pics/teaching-digifab.png" alt="デジタルファブリケーション演習" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Course</div>
+              <h3 class="project-card-title">デジタルファブリケーション演習</h3>
+              <p class="project-card-desc">3Dプリンタやレーザーカッターを用いたものづくり。</p>
+            </div>
+          </a>
+
+          <!-- Reacture -->
+          <a class="project-card project-card--link fade-in" href="https://reacture-alpha.vercel.app/" target="_blank" rel="noopener">
+            <img class="project-card-img" src="./pics/teaching-reacture.png" alt="Reacture" loading="lazy">
+            <div class="project-card-body">
+              <div class="project-card-year">Tool</div>
+              <h3 class="project-card-title">Reacture</h3>
+              <p class="project-card-desc">学生がリアルタイムにリアクションを送れる授業支援ツール。</p>
+            </div>
+          </a>
+
+          <!-- 授業・講演スライド一覧 -->
+          <a class="project-card project-card--link fade-in" href="./webslides/index.html" target="_blank" rel="noopener">
             <img class="project-card-img" src="./pics/presentation.jpg" alt="授業・講演スライド一覧" loading="lazy">
             <div class="project-card-body">
               <div class="project-card-year">Lectures</div>
               <h3 class="project-card-title">授業・講演スライド一覧</h3>
               <p class="project-card-desc">現在開講中の授業や過去の講演のスライド集。</p>
             </div>
-          </article>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ============ MUSIC ============ -->
+    <section class="section music-section" id="music">
+      <div class="container">
+        <h2 class="section-title fade-in">Music</h2>
+        <p class="section-subtitle fade-in">歌ってみた・作ってみた</p>
+
+        <div class="projects-grid">
           <!-- 歌ってみた -->
-          <article class="project-card fade-in" data-modal="sing" data-era="other">
+          <article class="project-card fade-in" data-modal="sing">
             <img class="project-card-img" src="./pics/mic.png" alt="歌ってみた" loading="lazy">
             <div class="project-card-body">
-              <div class="project-card-year">Music</div>
+              <div class="project-card-year">Covers</div>
               <h3 class="project-card-title">歌ってみた</h3>
               <p class="project-card-desc">過去に歌ってみた、ボカロ曲集。</p>
             </div>
           </article>
 
           <!-- 作ってみた -->
-          <article class="project-card fade-in" data-modal="make" data-era="other">
+          <article class="project-card fade-in" data-modal="make">
             <img class="project-card-img" src="./pics/music.png" alt="作ってみた" loading="lazy">
             <div class="project-card-body">
-              <div class="project-card-year">Music</div>
+              <div class="project-card-year">Original</div>
               <h3 class="project-card-title">作ってみた</h3>
               <p class="project-card-desc">過去に作ってみた、ボカロその他の曲集。</p>
             </div>

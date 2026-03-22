@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Project filter --- */
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('#projects .project-card');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
