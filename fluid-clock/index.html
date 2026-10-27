@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fluid Clock">
+<title>Fluid Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;400&display=swap">
+<style>
+/* Layout: full-bleed fluid field (stable fluids on a grid); three ink emitters ride the hour / minute / second positions */
+:root{
+  --bg:#e5e7ea;        /* cool paper */
+  --ink-h:#27365f;     /* indigo: hour */
+  --ink-m:#1d7471;     /* deep teal: minute */
+  --ink-s:#4a8a1c;     /* leaf green: second */
+  --text:#2a2f38;
+  --muted:#8a9099;
+  --font-num:"Azeret Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1016; --ink-h:#4f63c9; --ink-m:#35b3a8; --ink-s:#8fd450;
+    --text:#d5d9df; --muted:#5f6772; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1016; --ink-h:#4f63c9; --ink-m:#35b3a8; --ink-s:#8fd450;
+  --text:#d5d9df; --muted:#5f6772; color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);overflow:hidden;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none}
+#stage{position:relative;width:100%;height:100%}
+#stage canvas{display:block}
+#hint{
+  position:fixed;left:0;right:0;top:0;
+  padding:calc(18px + env(safe-area-inset-top,0px)) 16px 0;
+  text-align:center;font:400 12px/1.4 var(--font-num);letter-spacing:.08em;color:var(--muted);
+  transition:opacity 1.2s ease;pointer-events:none;
+}
+#hint.gone{opacity:0}
+#palette{
+  position:fixed;
+  left:calc(14px + env(safe-area-inset-left,0px));
+  top:calc(14px + env(safe-area-inset-top,0px));
+  display:flex;align-items:center;gap:10px;
+  padding:8px 12px 8px 10px;border:0;border-radius:999px;
+  background:transparent;color:var(--muted);
+  font:400 12px/1 var(--font-num);letter-spacing:.06em;cursor:pointer;
+  opacity:.55;transition:opacity .4s ease;
+}
+#palette:hover,#palette:focus-visible,#palette.show{opacity:1}
+#palette:focus-visible{outline:1.5px solid var(--muted);outline-offset:2px}
+#palette .dots{display:flex}
+#palette .dots i{width:12px;height:12px;border-radius:50%;margin-right:-3px;border:1.5px solid var(--bg)}
+#palette .name{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .5s ease}
+#palette.show .name{max-width:12em}
+</style>
+<style>html,body{margin:0}</style>
+</head>
+<body>
+
+
+<div id="stage" role="img" aria-label="流体時計"></div>
+<p id="hint">タップで全画面・スリープ防止 ／ 触れるとインクが落ちます</p>
+<button id="palette" type="button" aria-label="配色を切り替え">
+  <span class="dots"><i></i><i></i><i></i></span><span class="name"></span>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script>
+const stage = document.getElementById('stage');
+const hint = document.getElementById('hint');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- 配色パターン ---------- */
+// null の項目は CSS の既定（端末のライト/ダークに追従）を使う
+const PALETTES = [
+  { name:'墨流し（自動）', v:null },
+  { name:'夜光',   v:{ bg:'#0a0f1a', h:'#2f6fe0', m:'#9b5de5', s:'#f5c451', text:'#e4e8ef', muted:'#56617a', dark:true } },
+  { name:'苔庭',   v:{ bg:'#e8eae2', h:'#3e4f1f', m:'#86985a', s:'#c27a12', text:'#2b3024', muted:'#8e9384' } },
+  { name:'珊瑚礁', v:{ bg:'#edf3f4', h:'#0b5563', m:'#46a9c0', s:'#e8615d', text:'#1f3439', muted:'#87a0a6' } },
+  { name:'残り火', v:{ bg:'#130d0b', h:'#7d1f2c', m:'#d4480f', s:'#ffb44d', text:'#efe2d4', muted:'#6c5a50', dark:true } },
+  { name:'桜',     v:{ bg:'#f4eef0', h:'#6b2d4a', m:'#d97a99', s:'#4d7c8a', text:'#3a2830', muted:'#a4949a' } },
+  { name:'墨一色', v:{ bg:'#efefec', h:'#141414', m:'#5c5c5c', s:'#a5a5a2', text:'#141414', muted:'#9a9a96' } },
+];
+let palIndex = 0;
+try { palIndex = Math.min(PALETTES.length-1, Math.max(0, parseInt(localStorage.getItem('fluidClockPalette') || '0', 10) || 0)); } catch(e){}
+
+const palBtn = document.getElementById('palette');
+const palName = palBtn.querySelector('.name');
+const palDots = palBtn.querySelectorAll('.dots i');
+let palHideTimer = null;
+
+function applyPalette(i, announce){
+  palIndex = i;
+  const root = document.documentElement, p = PALETTES[i].v;
+  const keys = { bg:'--bg', h:'--ink-h', m:'--ink-m', s:'--ink-s', text:'--text', muted:'--muted' };
+  for (const [k, css] of Object.entries(keys)){
+    if (p) root.style.setProperty(css, p[k]); else root.style.removeProperty(css);
+  }
+  root.style.colorScheme = p ? (p.dark ? 'dark' : 'light') : '';
+  try { localStorage.setItem('fluidClockPalette', String(i)); } catch(e){}
+  const cs = getComputedStyle(root);
+  ['--ink-h','--ink-m','--ink-s'].forEach((v, n) => palDots[n].style.background = cs.getPropertyValue(v).trim());
+  palName.textContent = PALETTES[i].name;
+  if (typeof color === 'function' && typeof width !== 'undefined') readTheme();
+  if (announce){
+    palBtn.classList.add('show');
+    clearTimeout(palHideTimer);
+    palHideTimer = setTimeout(() => palBtn.classList.remove('show'), 2500);
+  }
+}
+palBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  applyPalette((palIndex + 1) % PALETTES.length, true);
+});
+palBtn.addEventListener('pointerdown', e => e.stopPropagation());
+applyPalette(palIndex, false);
+
+/* ---------- テーマ ---------- */
+let pal = {};
+function readTheme(){
+  const cs = getComputedStyle(document.documentElement);
+  const rgb = n => { const c = color(cs.getPropertyValue(n).trim()); return [red(c), green(c), blue(c)]; };
+  pal = { bg:rgb('--bg'), inks:[rgb('--ink-h'), rgb('--ink-m'), rgb('--ink-s')], text:rgb('--text'), muted:rgb('--muted') };
+}
+
+/* ---------- 流体（Jos Stam の Stable Fluids） ---------- */
+let NX, NY, W, H, SIZE;
+let u, v, u0, v0, p, div, curl;
+let dyes = [], dye0;
+const DISSIPATE = [0.996, 0.992, 0.984];   // 時・分・秒インクの消えやすさ
+const ITER = 16;
+const SPEED = 0.2;   // 流れの速さ（1 = 元の速さ、小さいほどゆったり）
+let off, offCtx, img;
+
+const IX = (i, j) => i + j * W;
+
+function initGrid(){
+  const maxN = 150;
+  if (width >= height){ NX = maxN; NY = Math.max(40, Math.round(maxN * height / width)); }
+  else { NY = maxN; NX = Math.max(40, Math.round(maxN * width / height)); }
+  W = NX + 2; H = NY + 2; SIZE = W * H;
+  const F = () => new Float32Array(SIZE);
+  u = F(); v = F(); u0 = F(); v0 = F(); p = F(); div = F(); curl = F(); dye0 = F();
+  dyes = [F(), F(), F()];
+  off = document.createElement('canvas'); off.width = NX; off.height = NY;
+  offCtx = off.getContext('2d');
+  img = offCtx.createImageData(NX, NY);
+}
+
+function setBnd(b, x){
+  for (let i = 1; i <= NX; i++){
+    x[IX(i,0)]    = b === 2 ? -x[IX(i,1)]  : x[IX(i,1)];
+    x[IX(i,NY+1)] = b === 2 ? -x[IX(i,NY)] : x[IX(i,NY)];
+  }
+  for (let j = 1; j <= NY; j++){
+    x[IX(0,j)]    = b === 1 ? -x[IX(1,j)]  : x[IX(1,j)];
+    x[IX(NX+1,j)] = b === 1 ? -x[IX(NX,j)] : x[IX(NX,j)];
+  }
+  x[IX(0,0)]       = 0.5*(x[IX(1,0)] + x[IX(0,1)]);
+  x[IX(0,NY+1)]    = 0.5*(x[IX(1,NY+1)] + x[IX(0,NY)]);
+  x[IX(NX+1,0)]    = 0.5*(x[IX(NX,0)] + x[IX(NX+1,1)]);
+  x[IX(NX+1,NY+1)] = 0.5*(x[IX(NX,NY+1)] + x[IX(NX+1,NY)]);
+}
+
+function advect(b, d, d0, uu, vv){
+  for (let j = 1; j <= NY; j++){
+    for (let i = 1; i <= NX; i++){
+      const k = IX(i,j);
+      let x = i - uu[k]*SPEED, y = j - vv[k]*SPEED;
+      if (x < 0.5) x = 0.5; if (x > NX + 0.5) x = NX + 0.5;
+      if (y < 0.5) y = 0.5; if (y > NY + 0.5) y = NY + 0.5;
+      const i0 = x | 0, j0 = y | 0, s1 = x - i0, t1 = y - j0, s0 = 1 - s1, t0 = 1 - t1;
+      d[k] = s0*(t0*d0[IX(i0,j0)] + t1*d0[IX(i0,j0+1)]) + s1*(t0*d0[IX(i0+1,j0)] + t1*d0[IX(i0+1,j0+1)]);
+    }
+  }
+  setBnd(b, d);
+}
+
+function project(){
+  for (let j = 1; j <= NY; j++){
+    for (let i = 1; i <= NX; i++){
+      const k = IX(i,j);
+      div[k] = -0.5*(u[k+1] - u[k-1] + v[k+W] - v[k-W]);
+      p[k] = 0;
+    }
+  }
+  setBnd(0, div); setBnd(0, p);
+  for (let it = 0; it < ITER; it++){
+    for (let j = 1; j <= NY; j++){
+      for (let i = 1; i <= NX; i++){
+        const k = IX(i,j);
+        p[k] = (div[k] + p[k-1] + p[k+1] + p[k-W] + p[k+W]) * 0.25;
+      }
+    }
+    setBnd(0, p);
+  }
+  for (let j = 1; j <= NY; j++){
+    for (let i = 1; i <= NX; i++){
+      const k = IX(i,j);
+      u[k] -= 0.5*(p[k+1] - p[k-1]);
+      v[k] -= 0.5*(p[k+W] - p[k-W]);
+    }
+  }
+  setBnd(1, u); setBnd(2, v);
+}
+
+// 渦度強調：小さな渦を保って「流体らしさ」を出す
+function vorticity(eps){
+  for (let j = 1; j <= NY; j++){
+    for (let i = 1; i <= NX; i++){
+      const k = IX(i,j);
+      curl[k] = 0.5*((v[k+1] - v[k-1]) - (u[k+W] - u[k-W]));
+    }
+  }
+  for (let j = 2; j < NY; j++){
+    for (let i = 2; i < NX; i++){
+      const k = IX(i,j);
+      const dx = 0.5*(Math.abs(curl[k+1]) - Math.abs(curl[k-1]));
+      const dy = 0.5*(Math.abs(curl[k+W]) - Math.abs(curl[k-W]));
+      const len = Math.hypot(dx, dy) + 1e-5;
+      u[k] += eps * (dy/len) * curl[k];
+      v[k] -= eps * (dx/len) * curl[k];
+    }
+  }
+}
+
+function splat(gx, gy, fx, fy, di, amt, rad){
+  const r2 = rad*rad, R = Math.ceil(rad*3);
+  const ci = Math.round(gx), cj = Math.round(gy);
+  for (let j = Math.max(1, cj-R); j <= Math.min(NY, cj+R); j++){
+    for (let i = Math.max(1, ci-R); i <= Math.min(NX, ci+R); i++){
+      const dx = i - gx, dy = j - gy;
+      const g = Math.exp(-(dx*dx + dy*dy) / r2);
+      if (g < 0.01) continue;
+      const k = IX(i,j);
+      u[k] += fx * g; v[k] += fy * g;
+      if (di >= 0) dyes[di][k] = Math.min(1.6, dyes[di][k] + amt * g);
+    }
+  }
+}
+
+function step(){
+  vorticity((reduceMotion ? 0.12 : 0.28) * SPEED);
+  u0.set(u); v0.set(v);
+  advect(1, u, u0, u0, v0);
+  advect(2, v, v0, u0, v0);
+  for (let k = 0; k < SIZE; k++){ u[k] *= 0.998; v[k] *= 0.998; }
+  project();
+  for (let n = 0; n < 3; n++){
+    dye0.set(dyes[n]);
+    advect(0, dyes[n], dye0, u, v);
+    const d = dyes[n], f = Math.pow(DISSIPATE[n], SPEED);
+    for (let k = 0; k < SIZE; k++) d[k] *= f;
+  }
+}
+
+/* ---------- 時計の針 = インクの噴出口 ---------- */
+let t0;
+function emitters(){
+  const d = new Date();
+  const s = d.getSeconds() + d.getMilliseconds()/1000;
+  const m = d.getMinutes() + s/60;
+  const h = (d.getHours() % 12) + m/60;
+  const t = (millis() - t0) / 1000;
+  const base = Math.min(NX, NY) / 2 * 0.88;
+  const cxg = NX/2 + 0.5, cyg = NY/2 + 0.5;
+  const k = reduceMotion ? 0.4 : 1;
+
+  const mk = (frac, rFrac) => {
+    const th = -HALF_PI + TWO_PI*frac;
+    return { th, gx: cxg + Math.cos(th)*base*rFrac, gy: cyg + Math.sin(th)*base*rFrac };
+  };
+  // 噴出口は各針の先端
+  const H_ = mk(h/12, 0.50), M_ = mk(m/60, 0.76), S_ = mk(s/60, 0.86);
+
+  // 時：ゆっくり向きを変える大きくやわらかな流れ
+  { const a = H_.th + PI + Math.sin(t*0.17)*1.3;
+    splat(H_.gx, H_.gy, Math.cos(a)*0.35*k, Math.sin(a)*0.35*k, 0, 0.036, 4.8); }
+  // 分：針の進行方向を軸に揺れる中くらいの噴流
+  { const a = M_.th + HALF_PI + Math.sin(t*0.31)*0.9;
+    splat(M_.gx, M_.gy, Math.cos(a)*0.55*k, Math.sin(a)*0.55*k, 1, 0.054, 3.2); }
+  // 秒：1秒ごとに脈打つ鼓動
+  { const pulse = Math.exp(-(s % 1) * 5);
+    const a = S_.th + HALF_PI + 0.35;
+    const f = (0.25 + 1.6*pulse) * k;
+    splat(S_.gx, S_.gy, Math.cos(a)*f, Math.sin(a)*f, 2, 0.048 + 0.21*pulse, 2.2); }
+
+  return { d, H_, M_, S_, cxg, cyg, base };
+}
+
+/* ---------- 描画 ---------- */
+function render(){
+  const data = img.data, bg = pal.bg, ink = pal.inks;
+  let o = 0;
+  for (let j = 1; j <= NY; j++){
+    for (let i = 1; i <= NX; i++){
+      const k = IX(i,j);
+      let r = bg[0], g = bg[1], b = bg[2];
+      for (let n = 0; n < 3; n++){
+        let a = dyes[n][k]; if (a <= 0.003) continue; if (a > 1) a = 1;
+        a = a * (2 - a); // ease-out：薄いところも少し見えるように
+        r += (ink[n][0] - r) * a; g += (ink[n][1] - g) * a; b += (ink[n][2] - b) * a;
+      }
+      data[o++] = r; data[o++] = g; data[o++] = b; data[o++] = 255;
+    }
+  }
+  offCtx.putImageData(img, 0, 0);
+  const ctx = drawingContext;
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(off, 0, 0, width, height);
+}
+
+function toScreen(gx, gy){ return [(gx - 0.5) / NX * width, (gy - 0.5) / NY * height]; }
+
+// 背景色の縁取り付きで線を引く（インクの上でも針が埋もれないように）
+function haloLine(x1, y1, x2, y2, c, w, alpha = 255){
+  const b = pal.bg;
+  strokeCap(ROUND);
+  stroke(c[0], c[1], c[2], alpha); strokeWeight(w);
+  line(x1, y1, x2, y2);
+}
+
+function drawDial(e){
+  const [cx, cy] = toScreen(e.cxg, e.cyg);
+  const Rpx = e.base * (width / NX);          // 文字盤の半径（px）
+  const U = Rpx / 300;                         // 太さの基準
+  const t = pal.text, mu = pal.muted;
+
+  // 目盛：60分刻み＋12時間刻み
+  for (let i = 0; i < 60; i++){
+    const th = -HALF_PI + TWO_PI*i/60;
+    const c = Math.cos(th), s = Math.sin(th);
+    const major = i % 5 === 0;
+    const r0 = Rpx * (major ? 0.88 : 0.94);
+    haloLine(cx + c*r0, cy + s*r0, cx + c*Rpx*0.985, cy + s*Rpx*0.985,
+             major ? t : mu, (major ? 4.2 : 1.6) * U, major ? 255 : 210);
+  }
+
+  // 数字 12・3・6・9
+  const ctx = drawingContext;
+  const fs = Rpx * 0.11;
+  ctx.font = `200 ${fs}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.lineJoin = 'round';
+  [[12,0],[3,3],[6,6],[9,9]].forEach(([label, pos]) => {
+    const th = -HALF_PI + TWO_PI*pos/12;
+    const x = cx + Math.cos(th)*Rpx*0.74, y = cy + Math.sin(th)*Rpx*0.74 + fs*0.04;
+    ctx.fillStyle = `rgb(${t.join(',')})`;
+    ctx.fillText(String(label), x, y);
+  });
+
+  // 針：時・分は文字色、秒は朱
+  const hand = (m, len, tail, c, w) => {
+    const ux = Math.cos(m.th), uy = Math.sin(m.th);
+    haloLine(cx - ux*Rpx*tail, cy - uy*Rpx*tail, cx + ux*Rpx*len, cy + uy*Rpx*len, c, w);
+  };
+  hand(e.H_, 0.50, 0.08, t, 9*U);
+  hand(e.M_, 0.76, 0.08, t, 5.5*U);
+  hand(e.S_, 0.86, 0.18, pal.inks[2], 2*U);
+
+  // 秒針の先の噴出口と、中心のキャップ
+  const sx = cx + Math.cos(e.S_.th)*Rpx*0.86, sy = cy + Math.sin(e.S_.th)*Rpx*0.86;
+  const si = pal.inks[2];
+  noStroke(); fill(si[0], si[1], si[2]); circle(sx, sy, 7*U);
+  fill(t[0], t[1], t[2]); circle(cx, cy, 16*U);
+  fill(si[0], si[1], si[2]); circle(cx, cy, 7*U);
+}
+
+const WD = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+function drawReadout(d){
+  const sz = Math.min(width, height) * 0.03;
+  const hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
+  const date = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} ${WD[d.getDay()]}`;
+  const ctx = drawingContext;
+  const pad = Math.max(20, Math.min(width, height)*0.035);
+  const x = width - pad, y = height - pad;
+  ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+  ctx.font = `200 ${sz}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.fillStyle = `rgb(${pal.text.join(',')})`;
+  ctx.fillText(`${hh}:${mm}`, x, y - sz*0.5);
+  ctx.font = `400 ${sz*0.38}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.fillStyle = `rgb(${pal.muted.join(',')})`;
+  ctx.fillText(date, x, y);
+}
+
+/* ---------- p5 ---------- */
+function setup(){
+  const c = createCanvas(stage.clientWidth, stage.clientHeight);
+  c.parent(stage);
+  pixelDensity(Math.min(2, window.devicePixelRatio || 1));
+  readTheme(); initGrid();
+  t0 = millis();
+  setTimeout(() => hint.classList.add('gone'), 6000);
+}
+
+function windowResized(){ resizeCanvas(stage.clientWidth, stage.clientHeight); initGrid(); }
+
+function draw(){
+  if (frameCount % 60 === 1) readTheme();
+  const e = emitters();
+  stirFromPointer();
+  step();
+  render();
+  drawDial(e);
+  drawReadout(e.d);
+}
+
+/* ---------- タッチでかき混ぜる ---------- */
+let last = null;
+let tapInk = 0;   // タップごとに 時→分→秒 のインクを順に使う
+function stirFromPointer(){
+  if (!(mouseIsPressed || touches.length)) { last = null; return; }
+  const px = touches.length ? touches[0].x : mouseX, py = touches.length ? touches[0].y : mouseY;
+  const gx = px / width * NX + 0.5, gy = py / height * NY + 0.5;
+  if (!last){
+    // 触れた瞬間：インクを一滴落とし、周りにふわっと広がる流れを作る
+    tapInk = (tapInk + 1) % 3;
+    splat(gx, gy, 0, 0, tapInk, 0.9, 3.2);
+    const ring = 8, rr = 3.5;
+    for (let n = 0; n < ring; n++){
+      const a = TWO_PI * n / ring;
+      splat(gx + Math.cos(a)*rr, gy + Math.sin(a)*rr, Math.cos(a)*2.4, Math.sin(a)*2.4, -1, 0, 2.2);
+    }
+  } else {
+    // なぞっている間：同じ色のインクを引きながらかき混ぜる
+    const fx = (gx - last[0]) * 0.8, fy = (gy - last[1]) * 0.8;
+    splat(gx, gy, fx, fy, tapInk, 0.12, 2.6);
+  }
+  last = [gx, gy];
+}
+
+/* ---------- 全画面・スリープ防止 ---------- */
+let wakeLock = null;
+async function keepAwake(){
+  try { if ('wakeLock' in navigator && !wakeLock){ wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } } catch(e){}
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') keepAwake(); });
+stage.addEventListener('pointerup', () => {
+  keepAwake();
+  const el = document.documentElement;
+  try {
+    if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(() => {});
+    else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) el.webkitRequestFullscreen();
+  } catch(e){}
+  hint.classList.add('gone');
+});
+keepAwake();
+</script>
+
+</body>
+</html>
