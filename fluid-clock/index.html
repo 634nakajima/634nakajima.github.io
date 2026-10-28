@@ -148,7 +148,8 @@ let u, v, u0, v0, p, div, curl;
 let dyes = [], dye0;
 const DISSIPATE = [0.996, 0.992, 0.984];   // 時・分・秒インクの消えやすさ
 const ITER = 16;
-const SPEED = 0.2;   // 流れの速さ（1 = 元の速さ、小さいほどゆったり）
+const SPEED = 0.14;  // 流れの速さ（1 = 元の速さ、小さいほどゆったり）
+const INK = 0.6;     // 針から出るインクの量（1 = 元の量）
 let off, offCtx, img;
 
 const IX = (i, j) => i + j * W;
@@ -294,15 +295,15 @@ function emitters(){
 
   // 時：ゆっくり向きを変える大きくやわらかな流れ
   { const a = H_.th + PI + Math.sin(t*0.17)*1.3;
-    splat(H_.gx, H_.gy, Math.cos(a)*0.35*k, Math.sin(a)*0.35*k, 0, 0.036, 4.8); }
+    splat(H_.gx, H_.gy, Math.cos(a)*0.35*k, Math.sin(a)*0.35*k, 0, 0.036*INK, 4.8); }
   // 分：針の進行方向を軸に揺れる中くらいの噴流
   { const a = M_.th + HALF_PI + Math.sin(t*0.31)*0.9;
-    splat(M_.gx, M_.gy, Math.cos(a)*0.55*k, Math.sin(a)*0.55*k, 1, 0.054, 3.2); }
+    splat(M_.gx, M_.gy, Math.cos(a)*0.55*k, Math.sin(a)*0.55*k, 1, 0.054*INK, 3.2); }
   // 秒：1秒ごとに脈打つ鼓動
   { const pulse = Math.exp(-(s % 1) * 5);
     const a = S_.th + HALF_PI + 0.35;
     const f = (0.25 + 1.6*pulse) * k;
-    splat(S_.gx, S_.gy, Math.cos(a)*f, Math.sin(a)*f, 2, 0.048 + 0.21*pulse, 2.2); }
+    splat(S_.gx, S_.gy, Math.cos(a)*f, Math.sin(a)*f, 2, (0.048 + 0.21*pulse)*INK, 2.2); }
 
   return { d, H_, M_, S_, cxg, cyg, base };
 }
