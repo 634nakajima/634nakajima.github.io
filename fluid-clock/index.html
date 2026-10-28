@@ -35,7 +35,10 @@
 html,body{height:100%}
 html{background:var(--bg)}
 body{background:var(--bg);color:var(--text);overflow:hidden;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none}
-#stage{position:fixed;left:0;top:0;width:100%;height:100%}
+/* iPadOS 26 のホーム画面アプリでは表示領域がステータスバーの分だけ短く報告され、
+   fixed の要素はその下に描かれない。ページ自体を画面の下端まで伸ばし、時計は通常の配置で置く */
+html.standalone{height:min(100lvh, calc(100% + env(safe-area-inset-top,0px)))}
+#stage{position:relative;width:100%;height:100%}
 #stage canvas{display:block}
 #inset{position:fixed;visibility:hidden;pointer-events:none;
   padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) 0}
@@ -64,6 +67,10 @@ body{background:var(--bg);color:var(--text);overflow:hidden;-webkit-user-select:
 #palette.show .name{max-width:12em}
 </style>
 <style>html,body{margin:0}</style>
+<script>
+const standalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
+if (standalone) document.documentElement.classList.add('standalone');
+</script>
 </head>
 <body>
 
@@ -399,23 +406,8 @@ function drawReadout(d){
 }
 
 /* ---------- p5 ---------- */
-// iPad のホーム画面アプリ（black-translucent）では、表示領域がステータスバーの分だけ短く報告され、
-// 下に余白が残ることがある。全画面表示のときは画面そのものの高さに合わせる
-function stageSize(){
-  const w = window.innerWidth;
-  let h = window.innerHeight;
-  if (navigator.standalone){
-    const land = w > h;
-    const sw = land ? Math.max(screen.width, screen.height) : Math.min(screen.width, screen.height);
-    const sh = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
-    if (Math.abs(w - sw) < 2 && h < sh && sh - h <= 60) h = sh;
-  }
-  stage.style.height = h + 'px';
-  return [w, h];
-}
-
 function setup(){
-  const c = createCanvas(...stageSize());
+  const c = createCanvas(stage.clientWidth, stage.clientHeight);
   c.parent(stage);
   pixelDensity(Math.min(2, window.devicePixelRatio || 1));
   readTheme(); initGrid();
@@ -423,7 +415,7 @@ function setup(){
   setTimeout(() => hint.classList.add('gone'), 6000);
 }
 
-function windowResized(){ resizeCanvas(...stageSize()); initGrid(); }
+function windowResized(){ resizeCanvas(stage.clientWidth, stage.clientHeight); initGrid(); }
 
 function draw(){
   if (frameCount % 60 === 1) readTheme();
@@ -465,10 +457,12 @@ async function keepAwake(){
   try { if ('wakeLock' in navigator && !wakeLock){ wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } } catch(e){}
 }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') keepAwake(); });
+// ホーム画面アプリはすでに画面いっぱいなので、閉じるボタンが出る全画面表示は使わない
+if (standalone) hint.textContent = 'タップでスリープ防止 ／ 触れるとインクが落ちます';
 stage.addEventListener('pointerup', () => {
   keepAwake();
   const el = document.documentElement;
-  try {
+  if (!standalone) try {
     if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(() => {});
     else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) el.webkitRequestFullscreen();
   } catch(e){}
