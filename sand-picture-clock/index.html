@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sand Clock">
+<title>Sand Picture Clock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;400&display=swap">
+<style>
+/* Layout: full-bleed sand picture (falling-sand grid in liquid); the frame flips every 10 minutes; analog dial floats on top */
+:root{
+  --bg-top:#e9ebee;  --bg-bot:#dde0e4;   /* liquid */
+  --sand-1:#23283a;  --sand-2:#4f6f9f;  --sand-3:#c7ae80;  --sand-4:#f7f5ef;
+  --accent:#4a8a1c;                      /* second hand */
+  --text:#2a2f38;    --muted:#8a9099;
+  --font-num:"Azeret Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg-top:#111824; --bg-bot:#0a0e16;
+    --sand-1:#ece6d6; --sand-2:#3f74c0; --sand-3:#c9a25a; --sand-4:#2a3247;
+    --accent:#8fd450; --text:#d5d9df; --muted:#5f6772; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg-top:#111824; --bg-bot:#0a0e16;
+  --sand-1:#ece6d6; --sand-2:#3f74c0; --sand-3:#c9a25a; --sand-4:#2a3247;
+  --accent:#8fd450; --text:#d5d9df; --muted:#5f6772; color-scheme:dark;
+}
+/* 全画面表示中は Safari がルートに白背景を当てるため、ルート自体も同じ色で塗る */
+html{background:var(--bg-bot)}
+html,body{height:100%}
+body{background:var(--bg-bot);color:var(--text);overflow:hidden;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#stage{position:fixed;left:0;top:0;width:100%;height:100%}
+#stage canvas{display:block}
+#inset{position:fixed;visibility:hidden;pointer-events:none;
+  padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) 0}
+#hint{
+  position:fixed;left:0;right:0;top:0;
+  padding:calc(18px + env(safe-area-inset-top,0px)) 16px 0;
+  text-align:center;font:400 12px/1.4 var(--font-num);letter-spacing:.08em;color:var(--muted);
+  transition:opacity 1.2s ease;pointer-events:none;
+}
+#hint.gone{opacity:0}
+#palette{
+  position:fixed;
+  left:calc(14px + env(safe-area-inset-left,0px));
+  top:calc(14px + env(safe-area-inset-top,0px));
+  display:flex;align-items:center;gap:10px;
+  padding:8px 12px 8px 10px;border:0;border-radius:999px;
+  background:transparent;color:var(--muted);
+  font:400 12px/1 var(--font-num);letter-spacing:.06em;cursor:pointer;
+  opacity:.55;transition:opacity .4s ease;
+}
+#palette:hover,#palette:focus-visible,#palette.show{opacity:1}
+#palette:focus-visible{outline:1.5px solid var(--muted);outline-offset:2px}
+#palette .dots{display:flex}
+#palette .dots i{width:12px;height:12px;border-radius:50%;margin-right:-3px;border:1.5px solid var(--bg-top)}
+#palette .name{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .5s ease}
+#palette.show .name{max-width:12em}
+#flip{
+  position:fixed;
+  left:calc(14px + env(safe-area-inset-left,0px));
+  bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  width:44px;height:44px;border:0;border-radius:50%;
+  display:grid;place-items:center;
+  background:transparent;color:var(--muted);cursor:pointer;
+  opacity:.55;transition:opacity .4s ease, transform .6s ease;
+}
+#flip:hover,#flip:focus-visible{opacity:1}
+#flip:focus-visible{outline:1.5px solid var(--muted);outline-offset:2px}
+#flip:active{transform:rotate(180deg)}
+#flip svg{width:24px;height:24px}
+</style>
+<style>html,body{margin:0}</style>
+</head>
+<body>
+
+
+<div id="stage" role="img" aria-label="サンドピクチャー時計"></div>
+<div id="inset" aria-hidden="true"></div>
+<p id="hint">タップで全画面・スリープ防止 ／ ダブルタップか左下のボタンで額をひっくり返します</p>
+<button id="flip" type="button" aria-label="額をひっくり返す">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="6.5" y="3.5" width="11" height="17" rx="1.5"/>
+    <path d="M6.5 13.5 9 11l2.5 2 2-3 4 4"/>
+    <path d="M20.5 8a9 9 0 0 1 0 8"/><path d="m21.6 14.4-1.1 1.6-1.7-.9"/>
+  </svg>
+</button>
+<button id="palette" type="button" aria-label="配色を切り替え">
+  <span class="dots"><i></i><i></i><i></i><i></i></span><span class="name"></span>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script>
+/* ================= 調整用パラメータ ================= */
+const CYCLE_MIN = 10;    // 何分ごとに額がひっくり返るか（0分・10分・20分…に反転）
+const FILL      = 0.40;  // 画面に対する砂の量
+const GRAINS    = 500;   // 画面の短い辺に並ぶ砂粒の数（大きいほど細かい。iPadで重ければ350前後に）
+const FALL      = 0.4;   // 1フレームで砂粒が1マス落ちる確率（小さいほどゆっくり沈む）
+const WOBBLE    = 0.025;  // 沈む途中で横にぶれる確率
+const SLOPE     = 2;     // 上の砂がえぐれていく漏斗の急さ
+const FLIP_MS   = 3400;  // 反転アニメーションの長さ
+/* =================================================== */
+
+const stage = document.getElementById('stage');
+const hint = document.getElementById('hint');
+const insetProbe = document.getElementById('inset');
+
+/* ---------- 配色パターン ---------- */
+const PALETTES = [
+  { name:'ガラスと砂（自動）', v:null },
+  { name:'白黒',  v:{ top:'#e4e6e8', bot:'#d8dbde', s:['#141414','#4a4a4a','#9b9b98','#f7f7f4'], accent:'#7a7a76', text:'#141414', muted:'#8f918f' } },
+  { name:'深海',  v:{ top:'#0d3346', bot:'#061823', s:['#f1e9d6','#3bb0c4','#0f5f78','#d7c07a'], accent:'#d7c07a', text:'#e6eef2', muted:'#5b7a88', dark:true } },
+  { name:'夕凪',  v:{ top:'#3a1d33', bot:'#170b15', s:['#ffb46b','#e0584a','#7c2b5e','#f5e6cc'], accent:'#ffb46b', text:'#f3e4d6', muted:'#7a5a6a', dark:true } },
+  { name:'苔庭',  v:{ top:'#e8eae1', bot:'#dadcd1', s:['#2f3a18','#7e9150','#c9b98a','#f4f2e8'], accent:'#c27a12', text:'#2b3024', muted:'#8e9384' } },
+  { name:'桜',    v:{ top:'#f5eff1', bot:'#ebe1e5', s:['#5e2741','#d97a99','#f6e3ea','#4d7c8a'], accent:'#4d7c8a', text:'#3a2830', muted:'#a4949a' } },
+];
+let palIndex = 0;
+try { palIndex = Math.min(PALETTES.length-1, Math.max(0, parseInt(localStorage.getItem('sandClockPalette') || '0', 10) || 0)); } catch(e){}
+
+const palBtn = document.getElementById('palette');
+const palName = palBtn.querySelector('.name');
+const palDots = palBtn.querySelectorAll('.dots i');
+let palHideTimer = null, ready = false;
+
+function applyPalette(i, announce){
+  palIndex = i;
+  const root = document.documentElement, p = PALETTES[i].v;
+  const set = (k, val) => p ? root.style.setProperty(k, val) : root.style.removeProperty(k);
+  set('--bg-top', p && p.top); set('--bg-bot', p && p.bot);
+  for (let n = 0; n < 4; n++) set('--sand-' + (n+1), p && p.s[n]);
+  set('--accent', p && p.accent); set('--text', p && p.text); set('--muted', p && p.muted);
+  root.style.colorScheme = p ? (p.dark ? 'dark' : 'light') : '';
+  try { localStorage.setItem('sandClockPalette', String(i)); } catch(e){}
+  const cs = getComputedStyle(root);
+  palDots.forEach((d, n) => d.style.background = cs.getPropertyValue('--sand-' + (n+1)).trim());
+  palName.textContent = PALETTES[i].name;
+  if (ready) readTheme();
+  if (announce){
+    palBtn.classList.add('show');
+    clearTimeout(palHideTimer);
+    palHideTimer = setTimeout(() => palBtn.classList.remove('show'), 2500);
+  }
+}
+palBtn.addEventListener('click', e => { e.stopPropagation(); applyPalette((palIndex + 1) % PALETTES.length, true); });
+palBtn.addEventListener('pointerup', e => e.stopPropagation());
+applyPalette(palIndex, false);
+
+/* ---------- テーマ → 色テーブル ---------- */
+let pal = {}, lut = new Uint32Array(33), bgRow;
+const pack = (r, g, b) => ((255 << 24) | (Math.round(b) << 16) | (Math.round(g) << 8) | Math.round(r)) >>> 0;
+const clamp255 = x => x < 0 ? 0 : x > 255 ? 255 : x;
+
+function readTheme(){
+  const cs = getComputedStyle(document.documentElement);
+  const rgb = n => { const c = color(cs.getPropertyValue(n).trim()); return [red(c), green(c), blue(c)]; };
+  pal = { top:rgb('--bg-top'), bot:rgb('--bg-bot'), sands:[1,2,3,4].map(n => rgb('--sand-' + n)),
+          accent:rgb('--accent'), text:rgb('--text'), muted:rgb('--muted') };
+  // 砂粒：1色につき8段階の明るさ違い
+  for (let c = 0; c < 4; c++){
+    const s = pal.sands[c];
+    for (let k = 0; k < 8; k++){
+      const f = 0.84 + k * 0.045;
+      lut[1 + c*8 + k] = pack(clamp255(s[0]*f), clamp255(s[1]*f), clamp255(s[2]*f));
+    }
+  }
+  if (GH){
+    bgRow = new Uint32Array(GH);
+    for (let y = 0; y < GH; y++){
+      const t = y / (GH - 1);
+      bgRow[y] = pack(pal.top[0] + (pal.bot[0]-pal.top[0])*t, pal.top[1] + (pal.bot[1]-pal.top[1])*t, pal.top[2] + (pal.bot[2]-pal.top[2])*t);
+    }
+  }
+}
+
+/* ---------- 砂のグリッド ----------
+   grid[i] = 0 は液体、1..32 は砂粒（色4種 × 明るさ8段階）
+   h[x] = 上に張り付いている砂の深さ。y < h[x] のマスは「まだ落ちていない砂」 */
+let RF = 1;   // 粒の細かさの倍率（250粒を基準）
+let GW = 0, GH = 0, grid, h, off, offCtx, img, buf32;
+let R0 = 1, Rcur = 0, flipT = 0, endT = 0, gaps = [];
+let flipping = null;
+
+function initGrid(){
+  const cell = Math.max(1.2, Math.min(width, height) / GRAINS);
+  GW = Math.max(60, Math.floor(width / cell));
+  GH = Math.max(60, Math.floor(height / cell));
+  RF = Math.min(GW, GH) / 250;
+  grid = new Uint8Array(GW * GH);
+  h = new Int16Array(GW);
+  off = document.createElement('canvas'); off.width = GW; off.height = GH;
+  offCtx = off.getContext('2d');
+  img = offCtx.createImageData(GW, GH);
+  buf32 = new Uint32Array(img.data.buffer);
+  readTheme();
+  fillReservoir();
+  scheduleCycle();
+}
+
+// 起動時：額をひっくり返した直後のように、上側に砂の層が張り付いた状態を作る
+function fillReservoir(){
+  noiseSeed(Math.floor(Math.random() * 1e6));
+  const span = Math.ceil(GH * 1.6), bandOf = new Uint8Array(span);
+  let y = 0, prev = -1;
+  while (y < span){
+    let c; do { c = Math.floor(Math.random() * 4); } while (c === prev);
+    prev = c;
+    const t = Math.round((2 + Math.pow(Math.random(), 1.6) * 16) * RF);
+    for (let k = 0; k < t && y < span; k++) bandOf[y++] = c;
+  }
+  const depth = FILL * GH;
+  for (let x = 0; x < GW; x++){
+    let d = depth + (noise(x*0.025/RF, 7.3) - 0.5) * GH * 0.30 + (noise(x*0.12/RF, 3.1) - 0.5) * GH * 0.07;
+    d = Math.round(Math.max(4, Math.min(GH * 0.75, d)));
+    h[x] = d;
+    for (let yy = 0; yy < d; yy++){
+      const v = yy + (noise(x*0.012/RF, yy*0.006/RF, 1.7) - 0.5) * GH * 0.35 + GH * 0.3;
+      const c = bandOf[Math.max(0, Math.min(span-1, Math.floor(v)))];
+      grid[x + yy*GW] = 1 + c*8 + Math.floor(Math.random() * 8);
+    }
+  }
+}
+
+function scheduleCycle(){
+  const now = Date.now(), cyc = CYCLE_MIN * 60000;
+  flipT = now;
+  endT = Math.ceil((now + 1) / cyc) * cyc;
+  if (endT - now < cyc * 0.3) endT += cyc;
+  Rcur = 0; for (let x = 0; x < GW; x++) Rcur += h[x];
+  R0 = Math.max(1, Rcur);
+  // 砂が抜け落ちる「穴」（空気が入り込む場所）を2〜4か所
+  // 3〜5か所を横幅に散らして配置（偏らないよう区画ごとに1つ）
+  gaps = [];
+  const n = 3 + Math.floor(Math.random() * 3);
+  for (let k = 0; k < n; k++){
+    const g = { seed: Math.random() * 1000, drift: Math.random() * 1000 };
+    respawnGap(g, (k + 0.15 + 0.7 * Math.random()) / n * GW);
+    gaps.push(g);
+  }
+}
+
+// 穴を別の場所に移す。一定量を落とした穴は寿命を迎え、砂がたくさん残っている場所に新しく開く
+function respawnGap(g, at){
+  if (at === undefined){
+    let best = -1, bx = 0;
+    for (let k = 0; k < 6; k++){
+      const x = Math.floor(Math.random() * GW);
+      const score = h[x] * (0.6 + 0.4 * Math.random());
+      if (score > best){ best = score; bx = x; }
+    }
+    at = bx;
+  }
+  g.c = at;
+  g.w = (2 + Math.random() * 3) * RF;
+  g.col = undefined;
+  g.left = R0 / (gaps.length || 4) / 2.5 * (0.6 + 0.8 * Math.random());
+}
+
+// 予定どおり砂が減るように、目標の残量を時間で決める（ゆっくり呼吸するように増減）
+function targetRemaining(now){
+  const dur = Math.max(60000, endT - flipT - 25000);
+  const u = Math.min(1, Math.max(0, (now - flipT) / dur));
+  const k = 9, a = 0.85;
+  const g = u - (a / (TWO_PI * k)) * Math.sin(TWO_PI * k * u);
+  return R0 * (1 - g);
+}
+
+// col >= 0 のときは、落ちる粒をその色にそろえる（流れごとに色がまとまり、地層がくっきりする）
+function releaseCol(x, col = -1){
+  if (x < 0 || x >= GW || h[x] <= 0 || h[x] >= GH) return false;
+  if (grid[x + h[x]*GW] !== 0) return false;   // 真下が埋まっている
+  h[x]--; Rcur--;
+  if (col >= 0){ const i = x + h[x]*GW; grid[i] = 1 + col*8 + ((grid[i] - 1) & 7); }
+  return true;
+}
+
+function cascade(c, col){
+  for (const dir of [-1, 1]){
+    let prev = c, x = c + dir, k = 0;
+    while (x >= 0 && x < GW && k < 14*RF && h[x] - h[prev] > SLOPE){
+      if (!releaseCol(x, col)) break;
+      prev = x; x += dir; k++;
+    }
+  }
+}
+
+function nearestWithMass(c){
+  c = Math.round(c);
+  for (let d = 1; d < GW; d++){
+    if (c - d >= 0 && h[c - d] > 0) return c - d;
+    if (c + d < GW && h[c + d] > 0) return c + d;
+  }
+  return c;
+}
+
+function release(now, t){
+  for (const g of gaps){
+    g.c += (noise(g.drift + t * 0.02) - 0.5) * 0.06 * RF;
+    g.c = Math.max(0, Math.min(GW - 1, g.c));
+  }
+  if (Rcur <= 0) return;
+  let need = Math.floor(Rcur - targetRemaining(now));
+  need = Math.min(need, Math.ceil(6 * RF * RF));
+  let tries = 0;
+  while (need > 0 && tries < 24 * RF * RF){
+    tries++;
+    let tot = 0;
+    for (const g of gaps){ g.a = Math.pow(noise(g.seed + t * 0.05), 3) + 0.01; tot += g.a; }
+    let r = Math.random() * tot, g = gaps[0];
+    for (const q of gaps){ r -= q.a; if (r <= 0){ g = q; break; } }
+    let c = Math.max(0, Math.min(GW - 1, Math.round(g.c + randomGaussian() * g.w)));
+    if (h[c] <= 0 || g.left <= 0){ respawnGap(g); continue; }
+    // 近くでいちばん垂れ下がっている列から落とす → 下面が少しずつ削れていく
+    for (const dx of [-1, 1]){ const n = c + dx; if (n >= 0 && n < GW && h[n] > h[c]) c = n; }
+    // 漏斗の先端の色に、少し遅れて追従する（色が細かく入れ替わらないように）
+    const tip = (grid[c + (h[c]-1)*GW] - 1) >> 3;
+    if (g.col === undefined || (tip !== g.col && Math.random() < 0.03)) g.col = tip;
+    if (releaseCol(c, g.col)){ const before = Rcur + 1; cascade(c, g.col); need--; g.left -= before - Rcur; }
+  }
+}
+
+function step(){
+  const W = GW, H = GH, gr = grid, hh = h;
+  const flipDir = frameCount & 1;
+  for (let y = H - 2; y >= 0; y--){
+    const ltr = (y & 1) ^ flipDir, row = y * W;
+    for (let k = 0; k < W; k++){
+      const x = ltr ? k : W - 1 - k;
+      const i = row + x, v = gr[i];
+      if (v === 0 || y < hh[x]) continue;      // 液体 or まだ張り付いている砂
+      const b = i + W;
+      if (gr[b] === 0){
+        if (Math.random() < FALL){
+          if (Math.random() < WOBBLE){
+            const dx = Math.random() < 0.5 ? -1 : 1, nx = x + dx;
+            if (nx >= 0 && nx < W && gr[b + dx] === 0){ gr[b + dx] = v; gr[i] = 0; continue; }
+          }
+          gr[b] = v; gr[i] = 0;
+        }
+      } else {
+        // 積もった砂：斜め下が2マス以上空いているときだけ崩れる → 急な山になる
+        const first = Math.random() < 0.5 ? -1 : 1;
+        for (let s = 0; s < 2; s++){
+          const dx = s ? -first : first, nx = x + dx;
+          if (nx < 0 || nx >= W) continue;
+          const d1 = b + dx;
+          if (gr[d1] !== 0) continue;
+          if (y + 2 >= H || gr[d1 + W] !== 0) continue;
+          gr[d1] = v; gr[i] = 0; break;
+        }
+      }
+    }
+  }
+}
+
+function render(){
+  const W = GW, H = GH, gr = grid;
+  for (let y = 0; y < H; y++){
+    const bgc = bgRow[y], row = y * W;
+    for (let x = 0; x < W; x++){
+      const v = gr[row + x];
+      buf32[row + x] = v ? lut[v] : bgc;
+    }
+  }
+  offCtx.putImageData(img, 0, 0);
+}
+
+function finishFlip(){
+  grid.reverse();                                  // 180°回転
+  for (let x = 0; x < GW; x++){
+    let y = 0; while (y < GH && grid[x + y*GW] !== 0) y++;
+    h[x] = y;
+  }
+  scheduleCycle();
+}
+
+/* ---------- 時計の文字盤 ---------- */
+const WD = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+
+function drawDial(d){
+  const cx = width / 2, cy = height / 2;
+  const Rpx = Math.min(width, height) / 2 * 0.86;
+  const U = Rpx / 300;
+  const t = pal.text, mu = pal.muted;
+  const s = d.getSeconds() + d.getMilliseconds() / 1000;
+  const m = d.getMinutes() + s / 60;
+  const hr = (d.getHours() % 12) + m / 60;
+  strokeCap(ROUND);
+
+  for (let i = 0; i < 60; i++){
+    const th = -HALF_PI + TWO_PI * i / 60;
+    const c = Math.cos(th), sn = Math.sin(th), major = i % 5 === 0;
+    const r0 = Rpx * (major ? 0.88 : 0.94);
+    if (major) stroke(t[0], t[1], t[2]); else stroke(mu[0], mu[1], mu[2], 210);
+    strokeWeight((major ? 4.2 : 1.6) * U);
+    line(cx + c*r0, cy + sn*r0, cx + c*Rpx*0.985, cy + sn*Rpx*0.985);
+  }
+
+  const ctx = drawingContext, fs = Rpx * 0.11;
+  ctx.font = `200 ${fs}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = `rgb(${t.join(',')})`;
+  [[12,0],[3,3],[6,6],[9,9]].forEach(([label, pos]) => {
+    const th = -HALF_PI + TWO_PI * pos / 12;
+    ctx.fillText(String(label), cx + Math.cos(th)*Rpx*0.74, cy + Math.sin(th)*Rpx*0.74 + fs*0.04);
+  });
+
+  const hand = (frac, len, tail, c, w) => {
+    const th = -HALF_PI + TWO_PI * frac, ux = Math.cos(th), uy = Math.sin(th);
+    stroke(c[0], c[1], c[2]); strokeWeight(w);
+    line(cx - ux*Rpx*tail, cy - uy*Rpx*tail, cx + ux*Rpx*len, cy + uy*Rpx*len);
+  };
+  hand(hr / 12, 0.50, 0.08, t, 9 * U);
+  hand(m / 60, 0.76, 0.08, t, 5.5 * U);
+  hand(s / 60, 0.86, 0.18, pal.accent, 2 * U);
+
+  noStroke();
+  fill(t[0], t[1], t[2]); circle(cx, cy, 16 * U);
+  fill(pal.accent[0], pal.accent[1], pal.accent[2]); circle(cx, cy, 7 * U);
+}
+
+function drawReadout(d, now){
+  const sz = Math.min(width, height) * 0.03;
+  const hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
+  const date = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} ${WD[d.getDay()]}`;
+  const left = Math.max(0, Math.ceil((endT - now) / 1000));
+  const next = flipping ? 'FLIP' : `FLIP ${Math.floor(left/60)}:${String(left%60).padStart(2,'0')}`;
+  const ctx = drawingContext;
+  const pad = Math.max(20, Math.min(width, height) * 0.035);
+  // ホームインジケータ等のセーフエリアを避ける
+  const ps = getComputedStyle(insetProbe);
+  const x = width - pad - (parseFloat(ps.paddingRight) || 0);
+  const y = height - pad - (parseFloat(ps.paddingBottom) || 0);
+  ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+  ctx.font = `200 ${sz}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.fillStyle = `rgb(${pal.text.join(',')})`;
+  ctx.fillText(`${hh}:${mm}`, x, y - sz*0.95);
+  ctx.font = `400 ${sz*0.38}px "Azeret Mono", ui-monospace, Menlo, monospace`;
+  ctx.fillStyle = `rgb(${pal.muted.join(',')})`;
+  ctx.fillText(date, x, y - sz*0.42);
+  ctx.fillText(next, x, y);
+}
+
+/* ---------- p5 ---------- */
+// iPad のホーム画面アプリ（black-translucent）では、表示領域がステータスバーの分だけ短く報告され、
+// 下に余白が残ることがある。全画面表示のときは画面そのものの高さに合わせる
+function stageSize(){
+  const w = window.innerWidth;
+  let h = window.innerHeight;
+  if (navigator.standalone){
+    const land = w > h;
+    const sw = land ? Math.max(screen.width, screen.height) : Math.min(screen.width, screen.height);
+    const sh = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
+    if (Math.abs(w - sw) < 2 && h < sh && sh - h <= 60) h = sh;
+  }
+  stage.style.height = h + 'px';
+  return [w, h];
+}
+
+function setup(){
+  const c = createCanvas(...stageSize());
+  c.parent(stage);
+  pixelDensity(Math.min(2, window.devicePixelRatio || 1));
+  frameRate(60);
+  ready = true;
+  initGrid();
+  setTimeout(() => hint.classList.add('gone'), 6000);
+}
+
+function windowResized(){ resizeCanvas(...stageSize()); flipping = null; initGrid(); }
+
+function draw(){
+  if (frameCount % 60 === 1) readTheme();
+  const now = Date.now(), t = millis() / 1000;
+
+  if (!flipping && now >= endT) flipping = { start: millis() };
+
+  const frame = pal.bot.map((v, i) => v + (pal.text[i] - v) * 0.1);
+  background(frame[0], frame[1], frame[2]);
+  const ctx = drawingContext;
+  ctx.imageSmoothingEnabled = false;
+
+  if (flipping){
+    const p = Math.min(1, (millis() - flipping.start) / FLIP_MS);
+    const e = p < 0.5 ? 4*p*p*p : 1 - Math.pow(-2*p + 2, 3) / 2;
+    render();
+    push();
+    translate(width/2, height/2);
+    rotate(PI * e);
+    const sc = 1 - 0.2 * Math.sin(PI * p);
+    scale(sc);
+    ctx.drawImage(off, -width/2, -height/2, width, height);
+    pop();
+    if (p >= 1){ flipping = null; finishFlip(); }
+  } else {
+    release(now, t);
+    step();
+    render();
+    ctx.drawImage(off, 0, 0, width, height);
+  }
+
+  const d = new Date(now);
+  drawDial(d);
+  drawReadout(d, now);
+}
+
+/* ---------- タップ：全画面・スリープ防止／ダブルタップ：反転 ---------- */
+let wakeLock = null, lastTap = 0;
+async function keepAwake(){
+  try { if ('wakeLock' in navigator && !wakeLock){ wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } } catch(e){}
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') keepAwake(); });
+stage.addEventListener('pointerup', () => {
+  keepAwake();
+  const el = document.documentElement;
+  try {
+    if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(() => {});
+    else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) el.webkitRequestFullscreen();
+  } catch(e){}
+  hint.classList.add('gone');
+  const n = performance.now();
+  if (n - lastTap < 350 && !flipping && ready) flipping = { start: millis() };
+  lastTap = n;
+});
+const flipBtn = document.getElementById('flip');
+flipBtn.addEventListener('pointerup', e => e.stopPropagation());
+flipBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  if (!flipping && ready) flipping = { start: millis() };
+});
+keepAwake();
+</script>
+
+</body>
+</html>
